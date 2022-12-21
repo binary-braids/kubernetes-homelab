@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: minecraft-survival
+  namespace: minecraft
+  labels:
+    app: minecraft-survival
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: minecraft-survival
+  serviceName: minecraft-survival
+  template:
+    metadata:
+      labels:
+        app: minecraft-survival
+    spec:
+      containers:
+      - name: minecraft-survival
+        image: itzg/minecraft-bedrock-server:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 19132
+          protocol: UDP
+        env:
+        - name: DIFFICULTY
+          value: easy
+        - name: EULA
+          value: "true"
+        - name: GAMEMODE
+          value: survival
+        - name: ONLINE_MODE
+          value: "false"
+        - name: SERVER_NAME
+          value: minecraft-survival
+        volumeMounts:
+        - mountPath: data
+          name: minecraft-data
+      volumes:
+      - name: minecraft-data
+        persistentVolumeClaim:
+          claimName: minecraft-survival-pvc
