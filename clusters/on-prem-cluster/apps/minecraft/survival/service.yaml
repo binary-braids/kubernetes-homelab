@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: mc-survival-service
+  namespace: minecraft-bedrock-server
+spec:
+  selector:
+    app: minecraft-bedrock-survival
+  type: LoadBalancer
+  ports:
+    - protocol: UDP
+      port: 19132
+      targetPort: 19132

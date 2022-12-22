@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: phpipam-configmap
+  namespace: phpipam
+data:
+  database_url: phpipam-mysql-service

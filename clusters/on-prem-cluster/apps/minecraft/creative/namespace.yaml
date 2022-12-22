@@ -1,0 +1,6 @@
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: minecraft-bedrock-server
+  labels:
+    name: minecraft-bedrock-server
