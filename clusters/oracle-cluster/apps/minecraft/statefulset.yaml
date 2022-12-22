@@ -36,8 +36,8 @@ spec:
           value: minecraft-survival
         volumeMounts:
         - mountPath: data
-          name: minecraft-data
+          name: data
       volumes:
-      - name: minecraft-data
+      - name: data
         persistentVolumeClaim:
           claimName: minecraft-survival-pvc
