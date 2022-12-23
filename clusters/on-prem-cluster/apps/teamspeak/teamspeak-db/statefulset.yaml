@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: teamspeak-db
+  namespace: teamspeak
+  labels:
+    app: teamspeak-db
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: teamspeak-db
+  serviceName: teamspeak-db
+  template:
+    metadata:
+      labels:
+        app: teamspeak-db
+    spec:
+      containers:
+      - name: teamspeak-db
+        image: mariadb
+        ports:
+        - containerPort: 3306
+        env:
+        - name: MYSQL_ROOT_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: teamspeak-secret
+              key: mysql_root_password
+        - name: MYSQL_DATABASE
+          valueFrom: 
+            configMapKeyRef:
+              name: teamspeak-configmap
+              key: database
+        volumeMounts:
+          - mountPath: "/var/lib/mysql"
+            name: teamspeak-db-volume
+      volumes:
+      - name: teamspeak-db-volume
+        persistentVolumeClaim:
+          claimName: teamspeak-db-pvc
+
+
+
+
