@@ -4,7 +4,6 @@ namespace: teamspeak
 
 resources:
 - namespace.yaml
-- configmap.yaml
-- secret.sops.yaml
-- teamspeak-db
-- teamspeak
+- service.yaml
+- persitentvolumeclaim.yaml
+- statefulset.yaml
