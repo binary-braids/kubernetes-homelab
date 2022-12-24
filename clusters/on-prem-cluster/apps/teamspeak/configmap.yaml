@@ -1,8 +1,0 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: teamspeak-configmap
-  namespace: teamspeak
-data:
-  database_url: teamspeak-db-service
-  database: teamspeak
