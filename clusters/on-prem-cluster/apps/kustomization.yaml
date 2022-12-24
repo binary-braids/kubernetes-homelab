@@ -4,7 +4,3 @@ kind: Kustomization
 resources:
 - minecraft-creative
 - minecraft-survival
-- zabbix
-- mealie
-- phpipam
-- teamspeak
