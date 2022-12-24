@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: mc-creative-service
-  namespace: minecraft-bedrock-server
+  name: mc-survival-service
+  namespace: minecraft-survival
 spec:
   selector:
-    app: minecraft-bedrock-creative
+    app: minecraft-bedrock-survival
   type: LoadBalancer
   ports:
     - protocol: UDP
-      port: 19133
+      port: 19132
       targetPort: 19132

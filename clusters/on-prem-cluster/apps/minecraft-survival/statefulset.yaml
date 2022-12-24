@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
-  name: minecraft-bedrock-survival
-  namespace: minecraft-bedrock-server
+  name: minecraft-survival
+  namespace: minecraft-survival
   labels:
     app: minecraft-bedrock-survival
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: minecraft-bedrock-survival
-  serviceName: minecraft-bedrock-survival
+      app: minecraft-survival
+  serviceName: minecraft-survival
   template:
     metadata:
       labels:
-        app: minecraft-bedrock-survival
+        app: minecraft-survival
     spec:
       containers:
-      - name: minecraft-bedrock-survival
+      - name: minecraft-survival
         image: itzg/minecraft-bedrock-server:latest
         imagePullPolicy: Always
         ports:
@@ -33,7 +33,7 @@ spec:
         - name: ONLINE_MODE
           value: "false"
         - name: SERVER_NAME
-          value: minecraft-bedrock-survival
+          value: minecraft-survival
         volumeMounts:
         - mountPath: data
           name: vol1

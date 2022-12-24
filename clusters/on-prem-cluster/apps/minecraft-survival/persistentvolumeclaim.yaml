@@ -2,7 +2,7 @@ apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: minecraft-data
-  namespace: minecraft-bedrock-server
+  namespace: minecraft-survival
 spec:
   accessModes:
     - ReadWriteOnce
