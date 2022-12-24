@@ -4,3 +4,4 @@ kind: Kustomization
 resources:
 - minecraft-creative
 - minecraft-survival
+- mealie
