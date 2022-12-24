@@ -8,13 +8,13 @@ spec:
     app: teamspeak
   type: LoadBalancer
   ports:
-    - name: TS_9987  
+    - name: ts-9987  
       protocol: UDP
       port: 9987
       targetPort: 9987
-    - name: TS_10011  
+    - name: ts-10011  
       port: 10011
       targetPort: 10011
-    - name: TS_30033  
+    - name: ts-30033  
       port: 30033
       targetPort: 30033
