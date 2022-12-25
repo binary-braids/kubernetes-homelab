@@ -40,6 +40,35 @@ metadata:
 data:
   default-setting.yaml: |-
 ---
+# Source: longhorn/templates/storageclass.yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: longhorn-storageclass
+  namespace: longhorn-system
+  labels:
+    app.kubernetes.io/name: longhorn
+    app.kubernetes.io/instance: longhorn
+    app.kubernetes.io/version: v1.4.0-dev
+data:
+  storageclass.yaml: |
+    kind: StorageClass
+    apiVersion: storage.k8s.io/v1
+    metadata:
+      name: longhorn
+      annotations:
+        storageclass.kubernetes.io/is-default-class: "true"
+    provisioner: driver.longhorn.io
+    allowVolumeExpansion: true
+    reclaimPolicy: "Reclaim"
+    volumeBindingMode: Immediate
+    parameters:
+      numberOfReplicas: "2"
+      staleReplicaTimeout: "30"
+      fromBackup: ""
+      fsType: "ext4"
+      dataLocality: "disabled"
+---
 # Source: longhorn/templates/crds.yaml
 apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
@@ -3713,13 +3742,13 @@ metadata:
   name: longhorn-frontend
   namespace: longhorn-system
 spec:
-  type: LoadBalancer
+  type: ClusterIP
   selector:
     app: longhorn-ui
   ports:
   - name: http
-    port: 8000
-    targetPort: 8000
+    port: 80
+    targetPort: http
     nodePort: null
 ---
 # Source: longhorn/templates/services.yaml
