@@ -1,0 +1,32 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+    name: wildcard-prod-cert
+    namespace: kube-system
+spec:
+    secretName: wildcard-prod-cert-tls
+    dnsNames:
+        - ENC[AES256_GCM,data:Syd8BuWlTYVleBBMnAqXNGnD,iv:+nw66RoaT2mf/Tfb+XvhruappEgMycHTM1gBTdLJHtI=,tag:VlvaVe4/XwvHVqx5wO3Nuw==,type:str]
+    issuerRef:
+        name: letsencrypt-prod
+        kind: ClusterIssuer
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1guzav4sek0x4l3sqx498d34w3z7yy8jact0yav53uza3zrmyf43qcvyza6
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBNQ1I3WEJOWkdqd0RjaUcz
+            L2lMQ2tXamRpbDZua1Z2dUhEUzloa3FTc0UwClRqTVZZaDI3bXEyTW5raGhiMVQ2
+            RjdJanFKNU51MDVjenYyek9yV0NYK2MKLS0tIEZVYkJCYTN4VGs1QjJnTWtkRGVi
+            TmdnRXBNd1ExNUY0bWR5cDFmd2Y0ek0KJHw0iB08XyghfNlCvMxmurynDo/svRvB
+            JeJtHAO72DiL6CFVL3jkiNJdT3/FtkdadyHe6b46FgcvFHwRPhto4Q==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2022-12-25T09:49:19Z"
+    mac: ENC[AES256_GCM,data:BYXiBgAmnClx3MHzWJfgeTSyzb8wsZH8jCJv42Nscd9asUJcrKITsIBBDPrwMCNUoPn4qi7+I5jFKLQ2AqWUYHlsY5Kn9RkFzXF8xngsip2stq6qlpqomEiRJYnhiFeIqsMxSleU+4IDKxkn9vOB+o3ehnmO/oVwb03bUbjWDOU=,iv:9w0fiQt+biSNvnHgevEXVwW4ERQ2D45bxrOGbXLgzeM=,tag:JF/xD9Pl459oeZSXlRiLQg==,type:str]
+    pgp: []
+    encrypted_regex: ^(data|stringData|email|dnsNames|hosts|host)$
+    version: 3.7.3
