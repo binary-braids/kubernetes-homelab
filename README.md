@@ -75,7 +75,7 @@ spec:
     branch: main
   secretRef:
     name: flux-system
-  url: ssh://git@github.com/qman-being/kubernetes-homelab
+  url: ssh://git@github.com/myname/myrepo
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
