@@ -5,7 +5,7 @@ metadata:
   namespace: minecraft-survival
 spec:
   selector:
-    app: minecraft-bedrock-survival
+    app: minecraft-survival
   type: LoadBalancer
   ports:
     - protocol: UDP
