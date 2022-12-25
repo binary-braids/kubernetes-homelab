@@ -4,3 +4,4 @@ kind: Kustomization
 resources:
 - ingress.sops.yaml
 - longhorn-system.yaml
+- storageclass.yaml
