@@ -5,5 +5,4 @@ namespace: phpipam
 resources:
 - persistentvolumeclaim.yaml
 - service.yaml
-- secret.sops.yaml
 - statefulset.yaml
