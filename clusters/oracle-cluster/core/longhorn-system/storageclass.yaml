@@ -6,7 +6,7 @@ metadata:
     storageclass.kubernetes.io/is-default-class: "true"
 provisioner: driver.longhorn.io
 allowVolumeExpansion: true
-reclaimPolicy: "Reclaim"
+reclaimPolicy: "Retain"
 volumeBindingMode: Immediate
 parameters:
   numberOfReplicas: "2"
