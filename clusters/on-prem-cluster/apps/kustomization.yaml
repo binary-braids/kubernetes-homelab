@@ -3,7 +3,7 @@ kind: Kustomization
 
 resources:
 - minecraft-creative
-- minecraft-survival
+#- minecraft-survival
 - mealie
 - teamspeak
 - phpipam
