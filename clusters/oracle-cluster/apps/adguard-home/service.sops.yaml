@@ -1,0 +1,43 @@
+apiVersion: v1
+kind: Service
+metadata:
+    name: adguard-home-service
+    namespace: adguard-home
+spec:
+    selector:
+        app: adguard-home
+    type: LoadBalancer
+    ports:
+        - name: dns
+          protocol: UDP
+          port: 53
+          targetPort: 53
+        - name: adguard-ui-config
+          port: 3000
+          targetPort: 3000
+        - name: adguard-ui
+          port: 8082
+          targetPort: 80
+    externalIPs:
+        - ENC[AES256_GCM,data:QxYQ4JB0qvjKl5IBaCb7,iv:aFN6fntVjp2mQAsGvb7CEcGb37fgd2CTQP449c3bOhc=,tag:YJmJwjrOVJMFY6rTAo5LWw==,type:str]
+        - ENC[AES256_GCM,data:bHK7PKtXbUyP8q0TBQo=,iv:5KmfktF9syADcUT8ddvA6YtgqFqh9EAbvTTIVypimoQ=,tag:iAn0q9SLI7s3uBqVntK7ww==,type:str]
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1guzav4sek0x4l3sqx498d34w3z7yy8jact0yav53uza3zrmyf43qcvyza6
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBSQVcrT1EwdzE1SzBQZmZ0
+            S1RoSGx5eFZ1U3dEZ3VsQ2NSeEpMUE8rQ3pjCjMwUXZOM3ZBZE1Sd3VoTkRlNGRp
+            ek9DQy8xWWZxVVhDNHd4TkRhcWt3M0UKLS0tIGRvWE5ZSVc3WXJIUm9RTFEwUm1P
+            Tnd1YWFocEMrRVU4Z2c4TXpJSy9HMkEKKmcd7CaC9psJzqUktPcFYJiyRwvy3vrX
+            6tmaStSo2wRydR+N/IGvvdYlZ7L9IgpZ8ylZNxvOhXLEdvqFGhOpFg==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2022-12-26T14:19:26Z"
+    mac: ENC[AES256_GCM,data:0yAKOraDlWMXaKGHzCS1BwEUQI11AoaLx/0l7GBkVBWWsyuKj4LCCwznnFT7vqgEhFixnkZ98ExIquUJP/q5VBMcNEYnDVfuiJnOU3VmXpJItb3zPYlsl30Jbn3LzynYhhh5U9PcnLZFKmluXFbaiyl5Yi9rxX2idK9PGo96jFA=,iv:QCdUsysEdkZykmhdVYXlEggVc744LwVP1Ov0zGCaWAs=,tag:aMN5y+RLskWctuuQmCwvHw==,type:str]
+    pgp: []
+    encrypted_regex: ^(data|stringData|email|dnsNames|hosts|host|externalIPs)$
+    version: 3.7.3
