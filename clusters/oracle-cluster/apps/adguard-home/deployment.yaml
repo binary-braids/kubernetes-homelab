@@ -1,11 +1,12 @@
 apiVersion: apps/v1
-kind: DaemonSet
+kind: Deployment
 metadata:
   name: adguard-home
   namespace: adguard-home
   labels:
     app: adguard-home
 spec:
+  replicas: 1
   selector:
     matchLabels:
       app: adguard-home
@@ -13,10 +14,7 @@ spec:
     metadata:
       labels:
         app: adguard-home
-    spec:
-      tolerations:
-      - key: node-role.kubernetes.io/master
-        effect: NoSchedule
+    spec:    
       containers:
       - name: adguard-home
         image: adguard/adguardhome:latest
