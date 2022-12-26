@@ -41,7 +41,7 @@ flux bootstrap github \
   --path=./clusters/my-cluster \
   --personal
 ```  
-The above will bootstrap your cluster and syncronize it with the ./clusters/my-cluster path in the repo. You will notice in the repo that a new flux-system folder will appear. This is what Flux creates when it runs the bootstrap operation.
+The above will bootstrap your cluster and synchronize it with the ./clusters/my-cluster path in the repo. You will notice in the repo that a new flux-system folder will appear. This is what Flux creates when it runs the bootstrap operation.
 
 For simple setups you can place subfolders in the ./cluster/my-cluster path with your app manifests and Flux will automatically pick this up and deploy it to your cluster.
 
