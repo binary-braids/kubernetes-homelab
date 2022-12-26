@@ -12,6 +12,9 @@ spec:
       protocol: UDP
       port: 53
       targetPort: 53
-    - name: adguard-ui
+    - name: adguard-ui-config
       port: 3000
       targetPort: 3000
+    - name: adguard-ui
+      port: 8082
+      targetPort: 80
