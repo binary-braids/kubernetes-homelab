@@ -23,8 +23,8 @@ spec:
           port: 8082
           targetPort: 80
     externalIPs:
-        - ENC[AES256_GCM,data:QxYQ4JB0qvjKl5IBaCb7,iv:aFN6fntVjp2mQAsGvb7CEcGb37fgd2CTQP449c3bOhc=,tag:YJmJwjrOVJMFY6rTAo5LWw==,type:str]
-        - ENC[AES256_GCM,data:bHK7PKtXbUyP8q0TBQo=,iv:5KmfktF9syADcUT8ddvA6YtgqFqh9EAbvTTIVypimoQ=,tag:iAn0q9SLI7s3uBqVntK7ww==,type:str]
+        - ENC[AES256_GCM,data:NH8FH5pkZEzQSiDciB6V,iv:JBO2uHYCdYQ6wvYIiIUEKxjuVSZc11rBBv/SoEv/IWs=,tag:tdVtpOL6RRY3vD2Ka9RB0w==,type:str]
+        - ENC[AES256_GCM,data:ZjN/Td8fCKnUUgQEWLU=,iv:mBZORiARY/Iku6auyQ+iZIEMj90EXechiUx/rlicNlY=,tag:uVKIJHVWxYbj4E83XSyJpA==,type:str]
 sops:
     kms: []
     gcp_kms: []
@@ -34,14 +34,14 @@ sops:
         - recipient: age1guzav4sek0x4l3sqx498d34w3z7yy8jact0yav53uza3zrmyf43qcvyza6
           enc: |
             -----BEGIN AGE ENCRYPTED FILE-----
-            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBSQVcrT1EwdzE1SzBQZmZ0
-            S1RoSGx5eFZ1U3dEZ3VsQ2NSeEpMUE8rQ3pjCjMwUXZOM3ZBZE1Sd3VoTkRlNGRp
-            ek9DQy8xWWZxVVhDNHd4TkRhcWt3M0UKLS0tIGRvWE5ZSVc3WXJIUm9RTFEwUm1P
-            Tnd1YWFocEMrRVU4Z2c4TXpJSy9HMkEKKmcd7CaC9psJzqUktPcFYJiyRwvy3vrX
-            6tmaStSo2wRydR+N/IGvvdYlZ7L9IgpZ8ylZNxvOhXLEdvqFGhOpFg==
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSA4aWkzTWxwWE15Qkw0Umo2
+            VHErUGFZazQyZjJZbmR3eUE5bGVoOS9sdlU0CldrbWVYTzM0UmczaTNxVkZrOTRF
+            VEwzZ1M4TDUwaGRQN3padnpUSlJzTXcKLS0tIDBqR3R0amp3RERpQnQraHFCcGtQ
+            cTVPdFFaT1dYK09nRS9QT3daMmlFMkkKooHzc3GPV74jb+6b5zY9tumMXXlZVj+a
+            995V++vzeE3PHI+007lUrNDN7iu3JGVD4v4T4b5RMFEAw5gVnsvveQ==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2022-12-26T14:19:26Z"
-    mac: ENC[AES256_GCM,data:0yAKOraDlWMXaKGHzCS1BwEUQI11AoaLx/0l7GBkVBWWsyuKj4LCCwznnFT7vqgEhFixnkZ98ExIquUJP/q5VBMcNEYnDVfuiJnOU3VmXpJItb3zPYlsl30Jbn3LzynYhhh5U9PcnLZFKmluXFbaiyl5Yi9rxX2idK9PGo96jFA=,iv:QCdUsysEdkZykmhdVYXlEggVc744LwVP1Ov0zGCaWAs=,tag:aMN5y+RLskWctuuQmCwvHw==,type:str]
+    lastmodified: "2022-12-26T15:03:25Z"
+    mac: ENC[AES256_GCM,data:fF0+fp9v5xd3FZn1sb49yGsCZgVb3rXKbZE/9jAkvq3S3aN5h91IVadFCCC3+nPlfRw+corj3BlCYt2FCwaOmYdGP6SuDOYFimPdahC46jI8/ATL2gf4ivrcgJavDDG+ODjhHYenF3OOpxqNGoSRyuuZt50f94jn5a6FUNLbing=,iv:i79JS52GVRyRazIJoS+j82B4xez1fGI5RcIbH0MjfLs=,tag:r5q3z0vY7Em/r5AvpTpj3g==,type:str]
     pgp: []
     encrypted_regex: ^(data|stringData|email|dnsNames|hosts|host|externalIPs)$
     version: 3.7.3

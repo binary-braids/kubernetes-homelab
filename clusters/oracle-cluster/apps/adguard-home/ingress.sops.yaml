@@ -9,9 +9,9 @@ metadata:
 spec:
     tls:
         - hosts:
-            - ENC[AES256_GCM,data:SHG8Vhpzt50G0WiptwqhWuhpEAwnOXkgyEqjRW1anjM=,iv:7jbUPAVWweotUVmuqTu+Btyt8PsyW0d6DNpBO1+VFUk=,tag:U13DHLr28ntiqT4m/JjLtQ==,type:str]
+            - ENC[AES256_GCM,data:PxM9rm6wPJ2y91h5bGKkuNDT4ntB8+iq7+OmF1PK3JI=,iv:Zaa3M3zBf+UoR1eZtaeLXQ+kNbmB50y80KLq2cLbJzc=,tag:nEfMnSAAAjd0MYaAbQ/fAA==,type:str]
     rules:
-        - host: ENC[AES256_GCM,data:94tXurOivHxSMODjUqBK4BP+BdWZwS7mbaKQZF3O0po=,iv:pfPL2NTcfG+jOIL/hV29OK8UHApdgcL/350xmiBIHIU=,tag:hb++ysE+3sf0nAnFUmgu7g==,type:str]
+        - host: ENC[AES256_GCM,data:rcRtgI/6dr1yBUbjgiHpRVrEH/hjEc4J7U8J4mRCKMw=,iv:1mnIWh2ywJlua8b9prdAPycKqvg2seGu798b0ovl0vQ=,tag:V0vpxjrdncSAaJWl5Fy0pg==,type:str]
           http:
             paths:
                 - path: /
@@ -30,14 +30,14 @@ sops:
         - recipient: age1guzav4sek0x4l3sqx498d34w3z7yy8jact0yav53uza3zrmyf43qcvyza6
           enc: |
             -----BEGIN AGE ENCRYPTED FILE-----
-            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSA5bUw2cXNlWVk1cVZkOWJ4
-            MXpMQXFkaUlVaGJPWEVtbGhmNUMwQ1hoZVQ4CitLbXNpV05uMmV2UEpMM0lvdjln
-            bndDd1IyODJRZ1dIRHJGUkZ0azJ4aFUKLS0tIGdEdjNZRnlyakJCeFN6SG1LRFk0
-            K2IrU3MzMHRIRU9FL1VCOXRiY2V0SWcKYTYXIyPJway2HwOhg12MB4lVp8ztef57
-            G7pT24Ie58X9EyvJNSe6e7zly3ux6DYMOSMdcGxATrFyHnKRy2cTGQ==
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBPbGRvNDNBay94eEVjOFZm
+            UjQvblJBaDlKVjlhaVVNZW9udld4TnNneDE4Cjk0elVId1lZVkZyeWhzNXQ4Wmlp
+            Z042VldVVEhKZ1VKUXY5UGFvWkJ4ZXMKLS0tIEFxWUpYbE9VbDMzYnIyaGY2aVI3
+            R0tpM2xyUUMwNjB4Sk05OXVzR05EZXcKdfzuTw4jwlPc8+arfayAQcAYlhZ74lB1
+            Q+RrEnX6jJ5A8cgwSVmcooATUhO1C16tL/6PbThs8rM8VUC3wsAtJQ==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2022-12-25T19:31:22Z"
-    mac: ENC[AES256_GCM,data:sSFCzG2bEAXCpCIWhY0GjKENNpqRXj/6+Tp2lyHozD1FINHU5T7TCNhKDza2AaOoYrz2jjmukZN+f3VIVnKvhT3paGqAg3bUD94gIY+FDORE0N056OpVbCkljiRdTWju9C+9itqnn8tqKdUqhN2f8vLwM0syojBF17p9ZrHgtHM=,iv:trvtWBAi2lf12pUDeX01YaaCkAnopTCbLjpGCcAUxmo=,tag:/mYXPzRgFgKRFwaewXulvg==,type:str]
+    lastmodified: "2022-12-26T15:03:10Z"
+    mac: ENC[AES256_GCM,data:2AiLggDX3+JKPOwW/UmQpL+07071/KBI7NzMgYCckM0DGsHWqG0jQcbUNcAfqcY4L25Y1bbT62sQ7RmnehLCALSGeccGI0tgmkvJyKkjc19yjQ6iskqF3MIKSRGHLF4SYzONwtYjbM2sTDOdB5RlBaqsBDIAX1CzEe8K+CPPuZI=,iv:osrOLzXuOJ/z3RKLJPCagikZ2hUcBHSXmQ2eaBDKU5I=,tag:VUr6/ol+q/tWKNq0XhZRcA==,type:str]
     pgp: []
-    encrypted_regex: ^(data|stringData|email|dnsNames|hosts|host)$
+    encrypted_regex: ^(data|stringData|email|dnsNames|hosts|host|externalIPs)$
     version: 3.7.3
