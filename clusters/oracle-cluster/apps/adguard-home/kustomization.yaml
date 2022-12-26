@@ -7,4 +7,4 @@ resources:
 - ingress.sops.yaml
 - namespace.yaml
 - persistentvolumeclaim.yaml
-- service.yaml
+- service.sops.yaml
