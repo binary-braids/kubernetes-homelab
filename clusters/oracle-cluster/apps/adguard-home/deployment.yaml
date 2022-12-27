@@ -18,7 +18,6 @@ spec:
       containers:
       - name: adguard-home
         image: adguard/adguardhome:latest
-        imagePullPolicy: Always
         ports:
           - containerPort: 53
             protocol: UDP
