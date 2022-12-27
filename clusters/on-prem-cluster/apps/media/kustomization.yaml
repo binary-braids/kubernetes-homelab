@@ -8,3 +8,4 @@ resources:
 - prowlarr
 - radarr
 - namespace.yaml
+- ingress.sops.yaml
