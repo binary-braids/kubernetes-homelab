@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: prowlarr
+  namespace: media
+  labels:
+    app: prowlarr
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: prowlarr
+  template:
+    metadata:
+      labels:
+        app: prowlarr
+    spec:
+      containers:
+      - name: prowlarr
+        image: lscr.io/linuxserver/prowlarr:develop
+        ports:
+        - containerPort: 8686
+        env:
+        - name: TZ
+          value: Africa/Johannesburg
+        volumeMounts:
+          - name: config
+            mountPath: /config
+            subPath: config
+          - name: downloads
+            mountPath: /downloads
+            subPath: downloads
+      volumes:
+        - name: config
+          persistentVolumeClaim:
+            claimName: prowlarr-pvc
+    
+
+  
+
+
