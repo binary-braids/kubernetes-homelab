@@ -20,7 +20,7 @@ spec:
                     service:
                         name: longhorn-frontend
                         port:
-                            number: 80
+                            number: 8000
 sops:
     kms: []
     gcp_kms: []
