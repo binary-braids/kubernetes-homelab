@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: lidarr
+  namespace: media
+  labels:
+    app: lidarr
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: lidarr
+  template:
+    metadata:
+      labels:
+        app: lidarr
+    spec:
+      containers:
+      - name: lidarr
+        image: lscr.io/linuxserver/lidarr:latest
+        ports:
+        - containerPort: 8686
+        env:
+        - name: TZ
+          value: Africa/Johannesburg
+        volumeMounts:
+          - name: config
+            mountPath: /config
+            subPath: config
+          - name: downloads
+            mountPath: /downloads
+            subPath: downloads
+      volumes:
+        - name: config
+          persistentVolumeClaim:
+            claimName: lidarr-pvc
+        - name: downloads
+          hostPath:
+            path: /mnt/media
+    
+
+  
+
+

@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: radarr
+  namespace: media
+  labels:
+    app: radarr
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: radarr
+  template:
+    metadata:
+      labels:
+        app: radarr
+    spec:
+      containers:
+      - name: radarr
+        image: lscr.io/linuxserver/radarr:latest
+        ports:
+        - containerPort: 7878
+        env:
+        - name: TZ
+          value: Africa/Johannesburg
+        volumeMounts:
+          - name: config
+            mountPath: /config
+            subPath: config
+          - name: downloads
+            mountPath: /downloads
+            subPath: downloads
+      volumes:
+        - name: config
+          persistentVolumeClaim:
+            claimName: radarr-pvc
+        - name: downloads
+          hostPath:
+            path: /mnt/media
+    
+
+  
+
+

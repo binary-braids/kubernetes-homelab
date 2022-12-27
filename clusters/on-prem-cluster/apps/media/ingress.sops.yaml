@@ -1,0 +1,83 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+    name: media-ingress
+    namespace: media
+    annotations:
+        kubernetes.io/ingress.class: traefik
+        cert-manager.io/cluster-issuer: letsencrypt-prod
+spec:
+    tls:
+        - hosts:
+            - ENC[AES256_GCM,data:3HNMAktfScSlDs8hoQB075uwyEHOSA==,iv:6Skv0mmcMwFn6q21CNaBOkpcTV31EpUZuiu4ku1tH3k=,tag:Qrbt8d8rrZvPqa83kpb0jg==,type:str]
+    rules:
+        - host: ENC[AES256_GCM,data:tk0gKt5ko4PP/PznqIaz0ZW3dGAmZQ==,iv:YSoKDkgapQJ8r8Xh76MKwpvofFf8hMEeJMTViXJjVNk=,tag:QNKuOuz5XcBT+IzX44GKHQ==,type:str]
+          http:
+            paths:
+                - path: /qbittorrent
+                  pathType: Prefix
+                  backend:
+                    service:
+                        name: qbittorrent-service
+                        port:
+                            number: 8080
+        - host: ENC[AES256_GCM,data:Kbl4nrLiiljdlItc2wFDqyzRwNjsYQ==,iv:BQayFprY0Mjr+PL0W2L/8O2bAcSedJ+CsUPWzcoa4TQ=,tag:PPsQ628C4MxY4CL3S2MSlw==,type:str]
+          http:
+            paths:
+                - path: /sonarr
+                  pathType: Prefix
+                  backend:
+                    service:
+                        name: sonarr-service
+                        port:
+                            number: 8989
+        - host: ENC[AES256_GCM,data:aCjfsXP7eNhfbRldS1kyiRyN9l9GWA==,iv:iFEO3taqzau8calZIjVw9G9waj6RZyYMsAm1AFu75uk=,tag:iIoLWH+HW5IYlctADikvTQ==,type:str]
+          http:
+            paths:
+                - path: /radarr
+                  pathType: Prefix
+                  backend:
+                    service:
+                        name: radarr-service
+                        port:
+                            number: 7878
+        - host: ENC[AES256_GCM,data:a5i0onXqish2sAjm/yaUx8OdK0g2Xw==,iv:3VpZ4bldQAU2qoLLxeadnDOeEtLERR0Ghd0wVuHMa00=,tag:nA0MrtKdA4fdVfmredB+bg==,type:str]
+          http:
+            paths:
+                - path: /lidarr
+                  pathType: Prefix
+                  backend:
+                    service:
+                        name: lidarr-service
+                        port:
+                            number: 8686
+        - host: ENC[AES256_GCM,data:d2Xx8ABnFFnqqzXBuvQtZyAfHWi6LA==,iv:GTBonvnOdadZ8sNM4ZaUkEDqNMu2Chi6eMorYl8PfPI=,tag:MFOmAK01Gji3L6dmF1mVNA==,type:str]
+          http:
+            paths:
+                - path: /prowlarr
+                  pathType: Prefix
+                  backend:
+                    service:
+                        name: prowlarr-service
+                        port:
+                            number: 9696
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1xl8mrtu70kvhjdl2nva6dpt8wsy3fhmz6605fmwjujc3zztyeyzqd07nvv
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBvVDBGOURRWUdMWU9DRHgv
+            UTFvd21qdThlSGJndUNyVDkwV0JNd3cza0hvCjV5RE44SXF1VGppdlF4Y05JdHh3
+            cDVpSHdQd2dsaGpuRlRVbm9CTTVZYWsKLS0tIG40a2RHUmdWQ1ZFQmZIckJRRkhN
+            Yms3SytjVnRJZ0UzT0ZwR3B0MzJZK2MKyoIGvU+KJAuPZN99bFuqr+0q0+k+dZXk
+            e6iBefhK7F/IdUuAzs7LiTMflI3lF2TuOW4gTzdEGRSLMAzEmS5vIg==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2022-12-27T19:09:42Z"
+    mac: ENC[AES256_GCM,data:jM9lSK4dM1BYc/koz5ceZkJH1KHIa7oTkDsVdGScomkNAb35bQTJH2tUbeJUFnawYu5Ow3TZVeZUfROYWxpZhEAUJDq7F1VbR8FeSpb8PrP9RM/g+tuPV7Sgo+bRk8S6Xl+4YR6XP0Y8JlClL2PmFZ1EcwlqJKsDIsL92w4Y6pM=,iv:3FSp7A6lQz6KW/v8ou3hXpE/hGs0MHh4flocH7wglQI=,tag:diaJypi3MIuhgbEg89xpgQ==,type:str]
+    pgp: []
+    encrypted_regex: ^(data|stringData|email|dnsNames|hosts|host|externalIPs)$
+    version: 3.7.3

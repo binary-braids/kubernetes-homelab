@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: qbittorrent
+  namespace: media
+  labels:
+    app: qbittorrent
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: qbittorrent
+  template:
+    metadata:
+      labels:
+        app: qbittorrent
+    spec:
+      containers:
+      - name: qbittorrent
+        image: lscr.io/linuxserver/qbittorrent:latest
+        ports:
+        - containerPort: 8080
+        - containerPort: 6881
+        - containerPort: 6881
+          protocol: UDP
+        env:
+        - name: TZ
+          value: Africa/Johannesburg
+        volumeMounts:
+          - name: config
+            mountPath: /config
+            subPath: config
+          - name: downloads
+            mountPath: /downloads
+            subPath: downloads
+      volumes:
+        - name: config
+          persistentVolumeClaim:
+            claimName: qbittorrent-pvc
+        - name: downloads
+          hostPath:
+            path: /mnt/media
+    
+
+  
+
+
