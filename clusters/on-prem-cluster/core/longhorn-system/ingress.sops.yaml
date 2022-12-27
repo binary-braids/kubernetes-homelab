@@ -1,0 +1,43 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+    name: longhorn-ingress
+    namespace: longhorn-system
+    annotations:
+        kubernetes.io/ingress.class: traefik
+        cert-manager.io/cluster-issuer: letsencrypt-prod
+spec:
+    tls:
+        - hosts:
+            - ENC[AES256_GCM,data:s0PcEI6CbI9o5W1f5g9RL7XQwoNcp+s+Lw==,iv:gkrm3zS+XnEBbVxfEYIiJRIpXk94ctSzPdhYxODeEIM=,tag:E4CYjIW25QaPBZPl9rcifA==,type:str]
+    rules:
+        - host: ENC[AES256_GCM,data:OQMmMq3EC5XrlM+KBu2YO3ik7kOv4N++nQ==,iv:usmlLLrRUHnwrUb/wW9du2HrTHWwX6HPqdLXN2O8khI=,tag:I+0WAQzm+1eraLgkLk/f3w==,type:str]
+          http:
+            paths:
+                - path: /
+                  pathType: Prefix
+                  backend:
+                    service:
+                        name: longhorn-frontend
+                        port:
+                            number: 80
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1xl8mrtu70kvhjdl2nva6dpt8wsy3fhmz6605fmwjujc3zztyeyzqd07nvv
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBRcGJkTEtQT3o2Vlh4Wmc5
+            Z0NldGJGeFFZd25ablZoemZFRVhQTXJZRHcwCjUwdkx2M1MyUEZreXlhMWVGdC93
+            dENHNjY5MXJYMmwzQWlnWUxJQVJmV3cKLS0tIDhPUHlONjNzdDZkekxHMnBEYWUz
+            aTVQbWo2Vy9aMU5RY3l3OVNRbWhUb1UK1zA5wu+UkIghQfxaJHFzexb8g9F4pdn8
+            nGK4HPkXkr/mSAhKGAMYPmrbqGx/c10gSAXCiKDtQFqE224+O5YjzQ==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2022-12-27T09:29:40Z"
+    mac: ENC[AES256_GCM,data:Ch/st7tcTyDlfOlQfEatW6i5VE7DcZzIRNoP50B50hj1/Nzf+vs6CZGwZUa1Gis9/tO0GwjhCi43Z8cPbQthhW8a+TtexuxVQIgozM8ZhV7e9N0ywKSa3EFT4uxhK8ZfjE01VLoqPYxiRm2nW095ldIcAsZzqgXtj3QdxigWVrI=,iv:pez6N43uFAKvIYwhaT37IXzB5c/y9nCsQ3TXzTjeqdU=,tag:hraF9Rr61J5AQRzpHlYYhA==,type:str]
+    pgp: []
+    encrypted_regex: ^(data|stringData|email|dnsNames|hosts|host|externalIPs)$
+    version: 3.7.3
