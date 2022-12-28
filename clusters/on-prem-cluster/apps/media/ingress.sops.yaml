@@ -6,7 +6,6 @@ metadata:
     annotations:
         kubernetes.io/ingress.class: traefik
         cert-manager.io/cluster-issuer: letsencrypt-prod
-        traefik.ingress.kubernetes.io/rule-type: "PathPrefixStrip"
 spec:
     tls:
         - hosts:
@@ -16,7 +15,6 @@ spec:
           http:
             paths:
                 - path: /qbittorrent
-                  pathType: Prefix
                   backend:
                     service:
                         name: qbittorrent-service
@@ -26,7 +24,6 @@ spec:
           http:
             paths:
                 - path: /sonarr
-                  pathType: Prefix
                   backend:
                     service:
                         name: sonarr-service
@@ -36,7 +33,6 @@ spec:
           http:
             paths:
                 - path: /radarr
-                  pathType: Prefix
                   backend:
                     service:
                         name: radarr-service
@@ -46,7 +42,6 @@ spec:
           http:
             paths:
                 - path: /lidarr
-                  pathType: Prefix
                   backend:
                     service:
                         name: lidarr-service
@@ -56,7 +51,6 @@ spec:
           http:
             paths:
                 - path: /prowlarr
-                  pathType: Prefix
                   backend:
                     service:
                         name: prowlarr-service
