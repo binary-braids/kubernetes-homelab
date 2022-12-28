@@ -7,8 +7,8 @@ metadata:
 spec:
   stripPrefix:
     prefixes:
-      - /qbittorrent
-      - /sonarr
-      - /radarr
-      - /lidarr
-      - /prowlarr
+      - /qbittorrent/
+      - /sonarr/
+      - /radarr/
+      - /lidarr/
+      - /prowlarr/
