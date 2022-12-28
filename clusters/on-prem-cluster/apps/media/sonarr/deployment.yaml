@@ -26,15 +26,16 @@ spec:
         volumeMounts:
           - name: config
             mountPath: /config
-          - name: downloads
-            mountPath: /downloads
+          - name: tvshows
+            mountPath: /tvshows
       volumes:
         - name: config
           persistentVolumeClaim:
             claimName: sonarr-pvc
-        - name: downloads
+        - name: tvshows
           hostPath:
-            path: /mnt/media
+            path: /mnt/media/tvshows
+            type: DirectoryOrCreate
     
 
   

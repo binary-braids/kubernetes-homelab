@@ -26,15 +26,16 @@ spec:
         volumeMounts:
           - name: config
             mountPath: /config
-          - name: downloads
-            mountPath: /downloads
+          - name: movies
+            mountPath: /movies
       volumes:
         - name: config
           persistentVolumeClaim:
             claimName: radarr-pvc
-        - name: downloads
+        - name: movies
           hostPath:
-            path: /mnt/media
+            path: /mnt/media/movies
+            type: DirectoryOrCreate
     
 
   
