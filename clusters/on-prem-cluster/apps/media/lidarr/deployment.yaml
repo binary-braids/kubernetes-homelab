@@ -26,15 +26,16 @@ spec:
         volumeMounts:
           - name: config
             mountPath: /config
-          - name: downloads
-            mountPath: /downloads
+          - name: music
+            mountPath: /music
       volumes:
         - name: config
           persistentVolumeClaim:
             claimName: lidarr-pvc
-        - name: downloads
+        - name: music
           hostPath:
-            path: /mnt/media
+            path: /mnt/media/music
+            type: DirectoryOrCreate
     
 
   
