@@ -9,4 +9,4 @@ resources:
 - radarr
 - namespace.yaml
 - ingress.sops.yaml
-#- middleware.yaml
+- middleware.yaml
