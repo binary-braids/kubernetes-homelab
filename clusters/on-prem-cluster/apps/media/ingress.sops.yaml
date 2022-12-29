@@ -10,9 +10,9 @@ metadata:
 spec:
     tls:
         - hosts:
-            - ENC[AES256_GCM,data:fB4pxLoX31MZQ1X0vMm/9r1mSr+tqw==,iv:C364X7cOaGIhhkr6g9sbAl91EiQi9DYr54q/PL5C560=,tag:y1ErH1dDDr+yJPyPHY4VMw==,type:str]
+            - ENC[AES256_GCM,data:JMOkYdLxrVbr8VFrc1q2zN6CRMBaXA==,iv:7ZQoN3ADo8I4dc1336uG9i9IxnMKOVWFsSDfvtBe5q4=,tag:Ma2mOfQuaxZgH0mIcrxv0w==,type:str]
     rules:
-        - host: ENC[AES256_GCM,data:6A/1qnaIgrFsxQqRt3N+FJg2DaJ1Sg==,iv:LFKH3ZYm0p5rytXM+htcXgVXS1elAJCXp2b7kDgJRh4=,tag:TTwsiBd1NwOKpDo7V3EV+w==,type:str]
+        - host: ENC[AES256_GCM,data:ZnUfuK+Zic4xyHZL8HcEcik6dyCLzg==,iv:oiEWYuTOUffMPk11Bu6sTqjhdsu5zEbhoH8e2wR8PXM=,tag:Iy2bfjHUgF8DB70RkKotlw==,type:str]
           http:
             paths:
                 - path: /qbittorrent
@@ -22,7 +22,7 @@ spec:
                         name: qbittorrent-service
                         port:
                             number: 8080
-        - host: ENC[AES256_GCM,data:a93OsXNpSnM94fx6HEXqqZ78CoUyZg==,iv:8+dIBTzvT0eKWmOt5njRMnHBBHoSYoJRjsMKAJLYCG0=,tag:Tck+4LR8AG73lJOfnQmpEw==,type:str]
+        - host: ENC[AES256_GCM,data:yhF63dXERPoemga95waqva/y1avoRg==,iv:mF/LfqQ9rTYCZ0jBITInxulrGP5I8Lf4Nc1oG70Jx+w=,tag:d471Gy6ar3znL17MXaY0Xg==,type:str]
           http:
             paths:
                 - path: /sonarr
@@ -32,7 +32,7 @@ spec:
                         name: sonarr-service
                         port:
                             number: 8989
-        - host: ENC[AES256_GCM,data:F8x9F0ABQWFjhDrLiNjKKBCbS36mhg==,iv:dTxd5/39h48+NfRFdQdDw3qoqq4iufm7vkf7ChFyI/0=,tag:IwRmNQFgMNwoYkB7K3jQKA==,type:str]
+        - host: ENC[AES256_GCM,data:Q8rzci4vSd0/tmnw4jRgcNQI1TxpXg==,iv:CkfEBa01B3umBfstKGgDRpwxiWjMzEnRYjPQ06MeNcM=,tag:bL4qn27dp59fb2Df4Rn1lA==,type:str]
           http:
             paths:
                 - path: /radarr
@@ -42,7 +42,7 @@ spec:
                         name: radarr-service
                         port:
                             number: 7878
-        - host: ENC[AES256_GCM,data:1ZMGOk2BlmBOsJLzzHb4lY3uofLQwQ==,iv:2jarel5w8XeaL42KlQJszI1Z5FlIcJyaqAQaBAydWD8=,tag:fktpknsIriqr9WF4C15Heg==,type:str]
+        - host: ENC[AES256_GCM,data:UQyQgatOIpFbqtObfdB9uupVSqgjLA==,iv:3P8qlD7jyy0FTvJkGp1pZf7fp3Ez3e/5GTul02azIu8=,tag:UR2pkXei+UjCpgEOEh3LbQ==,type:str]
           http:
             paths:
                 - path: /lidarr
@@ -52,7 +52,7 @@ spec:
                         name: lidarr-service
                         port:
                             number: 8686
-        - host: ENC[AES256_GCM,data:DgmtqKXudfqz4RgcVWMB0Cm6zGHEJg==,iv:aJAnTDeh1Lbqe9zeptTMKie1BRMfm6GC2SzaBV+4U3s=,tag:KVW7Pw9kwItNcMoTUiz6Fw==,type:str]
+        - host: ENC[AES256_GCM,data:xHO/DW0GZpJJHIyfxVpOraS5rREgTQ==,iv:i/b5EbG5z9mHEZxfVeRStOPom4I0jzjNRUxEhswNvok=,tag:mZXfKsHGcwiHO5jVHEPdSA==,type:str]
           http:
             paths:
                 - path: /prowlarr
@@ -62,6 +62,16 @@ spec:
                         name: prowlarr-service
                         port:
                             number: 9696
+        - host: ENC[AES256_GCM,data:UnVuVhEXrb4HUfKQkeqRlg5UUiGp1w==,iv:C+1XKLI7FQC2jXR5eeYUeDyY2rZGRk7WJuVKQ+kUG4A=,tag:imq/Y+Fhht++WwjUsdlQEw==,type:str]
+          http:
+            paths:
+                - path: /jellyfin
+                  pathType: Prefix
+                  backend:
+                    service:
+                        name: jellyfin-service
+                        port:
+                            number: 8096
 sops:
     kms: []
     gcp_kms: []
@@ -71,14 +81,14 @@ sops:
         - recipient: age1xl8mrtu70kvhjdl2nva6dpt8wsy3fhmz6605fmwjujc3zztyeyzqd07nvv
           enc: |
             -----BEGIN AGE ENCRYPTED FILE-----
-            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBmRllKYnAwU0Q0UFh6L3RY
-            YlZmamlCV0VwZlZsT0h0OUFjQjZjM3JUNFdzCmlwYk5QVlFlOWxtQytycWw5a0lZ
-            TUo0Q1BNRzhxUjhZY0VOLzJ3Y3lMRmcKLS0tIGQ3Z2FUMFFSZXUwUnd3Z2JDcU4y
-            MnJyaW80UTVaSDRiWDcxYmo3L3M2M3cKWBN0ULnxDL1aCYDL6lAyRO5rZ4G2uZvE
-            TMrkRNqpwnXqapQfAmH8u9ZUtiEd99fDVCh4qf9X1ynr/xD7OmpkdA==
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBZUmJuRTFJTDc4VzdDR3Ey
+            ZmxSUTkxYjVycnpyeE1IcXl1d085aFFnTmpnCjhwUmJUUE1hbXZOdU51WEhiWTNW
+            T3JFVEdEK29CcmxiTm0rUlpESzhVS2MKLS0tIEN4L0pxN253V2ZBZnE3Y05CSitz
+            QndnN0tYWkFBeDZLbjhIV0ZZWlgzejgK1sOOA4ihcCtEBg/wNE4wUP/QnjJy9gww
+            IF5Igapf2aIdrnVslEcTfdcEA7iGb++50GpHHDKubNB1D2ne1/f57A==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2022-12-28T12:09:51Z"
-    mac: ENC[AES256_GCM,data:QRVaB4jPECfNaZlbmQjBNIBK5qa/GduZpYsEgNuNTMC6qHDK5ggQyPejP4V7zK6QUuyTj7XVZ+jqH3JX/ET66qYWGhQ77N/PnOH+NgwGpOIhSgCYKJTm0fI9/yEaYY3Wb0VZtDV7tCiZoYdQmhFzD6IYVmRsV3ZxOGu00/T6ruQ=,iv:uRFUP8HypKaBCSTaF2KxnVE0BLBb370DjS64ouslVoI=,tag:78wppDse0JufHX+ywhK25w==,type:str]
+    lastmodified: "2022-12-29T17:07:12Z"
+    mac: ENC[AES256_GCM,data:zr9z4LY6gAXnfgBYUE2Ulxqfq+Vk+Unr0x93W7bNbkc7HdtWEqEytiLKi1CbPyUVfMZzmc9Hc1VSBKjRpXEbMVVf71/k57QxuKIgOcxbuCd0W1Yhn45KP3ysD4EzJGVu+7BpkYuAMYjSsaQ38Qt4SBvCx1akVPjbO/VxGdAhWZM=,iv:k28pIWbp0NfM+aKSCBNFcPCMenQRJ9q3JaQGX1P4VVA=,tag:zqijVnXaSPC1BfLNbVx7nA==,type:str]
     pgp: []
     encrypted_regex: ^(data|stringData|email|dnsNames|hosts|host|externalIPs)$
     version: 3.7.3
