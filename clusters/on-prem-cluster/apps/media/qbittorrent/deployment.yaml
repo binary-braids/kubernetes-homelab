@@ -26,6 +26,10 @@ spec:
         env:
         - name: TZ
           value: Africa/Johannesburg
+        - name: PUID
+          value: "1000"
+        - name: PGID
+          value: "1000"  
         volumeMounts:
           - name: config
             mountPath: /config
