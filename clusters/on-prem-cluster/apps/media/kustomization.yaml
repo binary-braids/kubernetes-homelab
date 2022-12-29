@@ -3,10 +3,10 @@ kind: Kustomization
 
 resources:
 - qbittorrent
-#- sonarr
-#- lidarr
+- sonarr
+- lidarr
 - prowlarr
-#- radarr
+- radarr
 - namespace.yaml
 - ingress.sops.yaml
 - middleware.yaml
