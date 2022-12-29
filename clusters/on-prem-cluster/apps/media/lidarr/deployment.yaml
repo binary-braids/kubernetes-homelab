@@ -32,6 +32,8 @@ spec:
             mountPath: /config
           - name: music
             mountPath: /music
+          - name: downloads
+            mountPath: /downloads  
       volumes:
         - name: config
           persistentVolumeClaim:
@@ -39,6 +41,10 @@ spec:
         - name: music
           hostPath:
             path: /mnt/media/music
+            type: DirectoryOrCreate
+        - name: downloads
+          hostPath:
+            path: /mnt/media/downloads
             type: DirectoryOrCreate
     
 

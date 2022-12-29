@@ -41,7 +41,7 @@ spec:
             claimName: qbittorrent-pvc
         - name: downloads
           hostPath:
-            path: /mnt/media
+            path: /mnt/media/downloads
     
 
   

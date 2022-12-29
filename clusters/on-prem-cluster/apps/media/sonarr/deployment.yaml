@@ -32,6 +32,8 @@ spec:
             mountPath: /config
           - name: tvshows
             mountPath: /tvshows
+          - name: downloads
+            mountPath: /downloads
       volumes:
         - name: config
           persistentVolumeClaim:
@@ -39,6 +41,10 @@ spec:
         - name: tvshows
           hostPath:
             path: /mnt/media/tvshows
+            type: DirectoryOrCreate
+        - name: downloads
+          hostPath:
+            path: /mnt/media/downloads
             type: DirectoryOrCreate
     
 

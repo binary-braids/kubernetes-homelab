@@ -32,6 +32,8 @@ spec:
             mountPath: /config
           - name: movies
             mountPath: /movies
+          - name: downloads
+            mountPath: /downloads 
       volumes:
         - name: config
           persistentVolumeClaim:
@@ -39,6 +41,10 @@ spec:
         - name: movies
           hostPath:
             path: /mnt/media/movies
+            type: DirectoryOrCreate
+        - name: downloads
+          hostPath:
+            path: /mnt/media/downloads
             type: DirectoryOrCreate
     
 
