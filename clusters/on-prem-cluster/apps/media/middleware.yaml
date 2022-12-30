@@ -8,4 +8,3 @@ spec:
   stripPrefix:
     prefixes:
       - /qbittorrent
-      - /calibre-web
