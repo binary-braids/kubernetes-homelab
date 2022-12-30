@@ -8,5 +8,5 @@ spec:
     app: calibre-web
   ports:
     - protocol: TCP
-      port: 8686
-      targetPort: 8686
+      port: 8083
+      targetPort: 8083
