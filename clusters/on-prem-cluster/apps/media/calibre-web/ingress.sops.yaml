@@ -1,0 +1,43 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+    name: calibre-web-ingress
+    namespace: media
+    annotations:
+        kubernetes.io/ingress.class: traefik
+        cert-manager.io/cluster-issuer: letsencrypt-prod
+spec:
+    tls:
+        - hosts:
+            - ENC[AES256_GCM,data:ezbEC1n96QZgh5NJcJSfQ/hs+fyr+GqNTjDE2g==,iv:ry2wg5LiJBW8C5huA6OHq94b7Kioa3dN9z9Sy8kXwPQ=,tag:O9wEtdEOYKQy/3EspG5Y0A==,type:str]
+    rules:
+        - host: ENC[AES256_GCM,data:qA3JfQq0Yx3rBouAv4X+7oqzd+IvwkMw+tG/YQ==,iv:Eic+JjpTQz3r7nac6qAFfURli9MZgaUSP37smxTt29s=,tag:8fnPXuhZVICDXP9fRD2fdA==,type:str]
+          http:
+            paths:
+                - path: /
+                  pathType: Prefix
+                  backend:
+                    service:
+                        name: calibre-web-service
+                        port:
+                            number: 8083
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1xl8mrtu70kvhjdl2nva6dpt8wsy3fhmz6605fmwjujc3zztyeyzqd07nvv
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSAxSWdIMG1TU1RhcHVmVXc3
+            eW45VTZ4TG45YkFpay84L3VmSVIyYWY2elJvCklIMlRVS0Z3V3J5cDRhMlExL1Fn
+            c1pZTmVHT3kvZk1TalBObnExbndvTlUKLS0tIFF4UThoakt4a3pSbStjYWdkNWk0
+            NTIwZHgyS3U5cGhLQWVsbmZLYzZERFUKIHdKHST7jTeT2szpvpdInXV68t8PiuFk
+            TN/Of9nC3dkOb9AxXLl5an/xy79WP0RC7FHFknIC0gpmc+eiXek6xA==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2022-12-30T06:44:58Z"
+    mac: ENC[AES256_GCM,data:ALT4HgPmyuOdTVdHZ35nrLOC3ryjeGShh16bdkU5gUxTjXJiaKwJh8Dpv554OsdQi0Nm1kIgH4PV9ijVvRZffKnrFFX0zwJp2A9sdZPUe8gbvhkP5IgMViPYTBtv3Azpnva+4BlPRglGCFMGzdeHfmcJEh+R8NVBTrkoR5kve1s=,iv:l8bFazpkM/zr7ucEDokfQ5lqRA0tjTtDqhFpJtWjA/E=,tag:CPNgm6Ojc1uriAh2INMWFA==,type:str]
+    pgp: []
+    encrypted_regex: ^(data|stringData|email|dnsNames|hosts|host|externalIPs)$
+    version: 3.7.3
