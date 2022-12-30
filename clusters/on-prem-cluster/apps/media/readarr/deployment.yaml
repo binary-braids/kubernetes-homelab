@@ -33,7 +33,11 @@ spec:
           - name: books
             mountPath: /books
           - name: downloads
-            mountPath: /downloads  
+            mountPath: /downloads
+        resources:
+          limits:
+            memory: '256Mi'
+            cpu: '100m'  
       volumes:
         - name: config
           persistentVolumeClaim:
