@@ -8,6 +8,8 @@ resources:
 - prowlarr
 - radarr
 - jellyfin
+- readarr
+- calibre-web
 - namespace.yaml
 - ingress.sops.yaml
 - middleware.yaml

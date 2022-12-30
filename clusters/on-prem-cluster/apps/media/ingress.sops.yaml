@@ -10,9 +10,9 @@ metadata:
 spec:
     tls:
         - hosts:
-            - ENC[AES256_GCM,data:JMOkYdLxrVbr8VFrc1q2zN6CRMBaXA==,iv:7ZQoN3ADo8I4dc1336uG9i9IxnMKOVWFsSDfvtBe5q4=,tag:Ma2mOfQuaxZgH0mIcrxv0w==,type:str]
+            - ENC[AES256_GCM,data:8cbho5/+9JWj4h8Rgl9y/K8lqada4g==,iv:elTHnmNZQm61GtMYAphPdLlHzIYKFcTPsj7Y5HHNw6Y=,tag:0rRMagbN6pfwx/86M4NW5g==,type:str]
     rules:
-        - host: ENC[AES256_GCM,data:ZnUfuK+Zic4xyHZL8HcEcik6dyCLzg==,iv:oiEWYuTOUffMPk11Bu6sTqjhdsu5zEbhoH8e2wR8PXM=,tag:Iy2bfjHUgF8DB70RkKotlw==,type:str]
+        - host: ENC[AES256_GCM,data:jHgNw76dZfksQd/nUYK6mvwSuV00HA==,iv:S6vKaT5raSOwaebZ1TJ375z+eyL2V6HVHLpl+QK1zQ8=,tag:QFyljNEZm8mgX5NBsaVX1g==,type:str]
           http:
             paths:
                 - path: /qbittorrent
@@ -22,7 +22,7 @@ spec:
                         name: qbittorrent-service
                         port:
                             number: 8080
-        - host: ENC[AES256_GCM,data:yhF63dXERPoemga95waqva/y1avoRg==,iv:mF/LfqQ9rTYCZ0jBITInxulrGP5I8Lf4Nc1oG70Jx+w=,tag:d471Gy6ar3znL17MXaY0Xg==,type:str]
+        - host: ENC[AES256_GCM,data:8IR3UX0bJByhvLG8+nq0ry36o5jpsQ==,iv:BR/5nNvhDzG1gBmUD1jnlIZ49Lzc279XyY8AOxDvodc=,tag:92AbMibGwwTYRt6HSBJxRA==,type:str]
           http:
             paths:
                 - path: /sonarr
@@ -32,7 +32,7 @@ spec:
                         name: sonarr-service
                         port:
                             number: 8989
-        - host: ENC[AES256_GCM,data:Q8rzci4vSd0/tmnw4jRgcNQI1TxpXg==,iv:CkfEBa01B3umBfstKGgDRpwxiWjMzEnRYjPQ06MeNcM=,tag:bL4qn27dp59fb2Df4Rn1lA==,type:str]
+        - host: ENC[AES256_GCM,data:R3w/PWNRRP6nUSIju7RglG4nXP8SXQ==,iv:6TIqDOTLJ1BlPYPx46qLUKBOWIAVCo+02hhCYtSXAS0=,tag:b7Jr1tjCSZ0NWZJOGFUrGQ==,type:str]
           http:
             paths:
                 - path: /radarr
@@ -42,7 +42,7 @@ spec:
                         name: radarr-service
                         port:
                             number: 7878
-        - host: ENC[AES256_GCM,data:UQyQgatOIpFbqtObfdB9uupVSqgjLA==,iv:3P8qlD7jyy0FTvJkGp1pZf7fp3Ez3e/5GTul02azIu8=,tag:UR2pkXei+UjCpgEOEh3LbQ==,type:str]
+        - host: ENC[AES256_GCM,data:3JcAoSnhKyM/l4G/pkbJrUZVApT43g==,iv:92NdeGKc2cESoolMqaBcp6BM26S+8Fxr9K6vM7/3h6k=,tag:THQK317s2bj61EmE5jgywA==,type:str]
           http:
             paths:
                 - path: /lidarr
@@ -52,7 +52,7 @@ spec:
                         name: lidarr-service
                         port:
                             number: 8686
-        - host: ENC[AES256_GCM,data:xHO/DW0GZpJJHIyfxVpOraS5rREgTQ==,iv:i/b5EbG5z9mHEZxfVeRStOPom4I0jzjNRUxEhswNvok=,tag:mZXfKsHGcwiHO5jVHEPdSA==,type:str]
+        - host: ENC[AES256_GCM,data:pp6C4dQzQEj+7zlhSS0fnjCr0iuzHg==,iv:/WCrXu9ZA2knL2NmT02tr8Rr79WX+Wr8nnIbO9Lb9CQ=,tag:IjxVNX7cdS2vl1/nhIVxLw==,type:str]
           http:
             paths:
                 - path: /prowlarr
@@ -62,7 +62,7 @@ spec:
                         name: prowlarr-service
                         port:
                             number: 9696
-        - host: ENC[AES256_GCM,data:UnVuVhEXrb4HUfKQkeqRlg5UUiGp1w==,iv:C+1XKLI7FQC2jXR5eeYUeDyY2rZGRk7WJuVKQ+kUG4A=,tag:imq/Y+Fhht++WwjUsdlQEw==,type:str]
+        - host: ENC[AES256_GCM,data:VOVkmXBimK4doetgrL0Hevm6b+cwLQ==,iv:NIcouMrRT+yPh+XtNRLJLJqPVPfCyOQkQdWnhV/Oe5U=,tag:yAODKX4nwxziF8iCWceTNQ==,type:str]
           http:
             paths:
                 - path: /jellyfin
@@ -72,6 +72,26 @@ spec:
                         name: jellyfin-service
                         port:
                             number: 8096
+        - host: ENC[AES256_GCM,data:oc2Jp1FAFDa6J0Jt4GVurrrQycZE8w==,iv:OlU7dOa1ByTWoFKBoj6XRB60NBUb7BoKDRZKuwRqrdc=,tag:gowvgJFJdsDbXZYQg8EdXQ==,type:str]
+          http:
+            paths:
+                - path: /readarr
+                  pathType: Prefix
+                  backend:
+                    service:
+                        name: readarr-service
+                        port:
+                            number: 8787
+        - host: ENC[AES256_GCM,data:35Ek+hTnwwlalnT4daT3UR2DrhTXYw==,iv:bpgIQ0faoUwwYlp14aw+eBRzmyWSwHRpxGdMqTd7R/g=,tag:8UNb5lk25ypLOzkqohXcbg==,type:str]
+          http:
+            paths:
+                - path: /calibre-web
+                  pathType: Prefix
+                  backend:
+                    service:
+                        name: calibre-web-service
+                        port:
+                            number: 8083
 sops:
     kms: []
     gcp_kms: []
@@ -81,14 +101,14 @@ sops:
         - recipient: age1xl8mrtu70kvhjdl2nva6dpt8wsy3fhmz6605fmwjujc3zztyeyzqd07nvv
           enc: |
             -----BEGIN AGE ENCRYPTED FILE-----
-            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBZUmJuRTFJTDc4VzdDR3Ey
-            ZmxSUTkxYjVycnpyeE1IcXl1d085aFFnTmpnCjhwUmJUUE1hbXZOdU51WEhiWTNW
-            T3JFVEdEK29CcmxiTm0rUlpESzhVS2MKLS0tIEN4L0pxN253V2ZBZnE3Y05CSitz
-            QndnN0tYWkFBeDZLbjhIV0ZZWlgzejgK1sOOA4ihcCtEBg/wNE4wUP/QnjJy9gww
-            IF5Igapf2aIdrnVslEcTfdcEA7iGb++50GpHHDKubNB1D2ne1/f57A==
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBrVHgydkhlSXpBRytZangy
+            dHdCS1pMR2VaWDdUeWc1azQ1N0tLdHpHOUVvCmVsT3g2ZXBtaElaLzU5aWpIUkZZ
+            cGV5QzdZMEZhVGNlbE9KRDExMUE5RWsKLS0tIFRldHZ5aGp1L2FKRlBheVNNYzFo
+            dEpFNFpJSmdlb25Wa05lbkhmTHFKdm8KfKJ+A15i/of6miHyl+CbsczsJmT4g0S6
+            PdzS+XpJh2x03cO7hL7sLcZf28qmw4XJr5OloLFh/Kb5sYh8uGGO/w==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2022-12-29T17:07:12Z"
-    mac: ENC[AES256_GCM,data:zr9z4LY6gAXnfgBYUE2Ulxqfq+Vk+Unr0x93W7bNbkc7HdtWEqEytiLKi1CbPyUVfMZzmc9Hc1VSBKjRpXEbMVVf71/k57QxuKIgOcxbuCd0W1Yhn45KP3ysD4EzJGVu+7BpkYuAMYjSsaQ38Qt4SBvCx1akVPjbO/VxGdAhWZM=,iv:k28pIWbp0NfM+aKSCBNFcPCMenQRJ9q3JaQGX1P4VVA=,tag:zqijVnXaSPC1BfLNbVx7nA==,type:str]
+    lastmodified: "2022-12-30T06:07:48Z"
+    mac: ENC[AES256_GCM,data:9alMrw6gFJnZwOrvcETI4i7YDHWTe5CkA5zz4xEwhF08iYEMs3JwK36ezNpB7aipCmNN6LaAIaK5ZblX+qlFL+Y0x8bcVOM0HjRBWqB/lfDmjfYaC45QZC0Jt6xW62Gubun+3On5WdRJuE8cdkK7A5Do1et6Qu9XIydL7KWa63Q=,iv:+ghUtnz3wtNUO3c1NndWw0B8X6ZnCAQYPJuHbMDYDSo=,tag:4Cthc3/17/PW3R3wAwB3oQ==,type:str]
     pgp: []
     encrypted_regex: ^(data|stringData|email|dnsNames|hosts|host|externalIPs)$
     version: 3.7.3
