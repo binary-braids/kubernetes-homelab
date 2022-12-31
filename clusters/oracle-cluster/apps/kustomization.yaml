@@ -3,3 +3,4 @@ kind: Kustomization
 
 resources:
 - adguard-home
+- minecraft-survival
