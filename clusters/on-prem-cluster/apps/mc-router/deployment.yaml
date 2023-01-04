@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    run: mc-router
+  name: mc-router
+  namespace: mc-router
+spec:
+  selector:
+    matchLabels:
+      run: mc-router
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        run: mc-router
+    spec:
+      serviceAccountName: mc-router
+      containers:
+      - image: itzg/mc-router:latest
+        name: mc-router
+        args: ["--in-kube-cluster"]
+        ports:
+        - name: proxy
+          containerPort: 25565
+        resources:
+          requests:
+            memory: 50Mi
+            cpu: "100m"
+          limits:
+            memory: 100Mi
+            cpu: "250m"
