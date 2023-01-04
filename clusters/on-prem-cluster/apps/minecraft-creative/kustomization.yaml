@@ -4,6 +4,6 @@ namespace: minecraft-creative
 
 resources:
 - namespace.yaml
-- service.sops.yaml
+- service.yaml
 - persistentvolumeclaim.yaml
 - statefulset.yaml
