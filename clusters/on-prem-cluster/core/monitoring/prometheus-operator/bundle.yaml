@@ -4469,7 +4469,7 @@ spec:
                   routes:
                     description: Child routes.
                     items:
-                      x-kubernetes-preserve-unknown-fields: false
+                      x-kubernetes-preserve-unknown-fields: true
                     type: array
                 type: object
             type: object
