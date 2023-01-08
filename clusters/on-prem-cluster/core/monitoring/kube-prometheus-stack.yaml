@@ -9,7 +9,7 @@ spec:
       chart: kube-prometheus-stack
       sourceRef:
         kind: HelmRepository
-        name: prometheus-community-charts
+        name: prometheus-charts
         namespace: flux-system
   interval: 5m
   install:
