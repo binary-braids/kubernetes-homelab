@@ -17,3 +17,5 @@ spec:
     remediation:
       retries: 3
   targetNamespace: monitoring
+  valuesFiles:
+    - kube-prometheus-stack.yaml
