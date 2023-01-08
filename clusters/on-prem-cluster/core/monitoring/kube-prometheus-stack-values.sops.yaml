@@ -1,0 +1,42 @@
+prometheus:
+    retention: 2d
+    ingress:
+        enabled: true
+        annotations:
+            kubernetes.io/ingress.class: traefik
+            cert-manager.io/cluster-issuer: letsencrypt-prod
+        hosts:
+            - ENC[AES256_GCM,data:i2WHxYhySj8Fn6Td6ryvdztunqkRcNHsy2Wz,iv:dNXf8+go5/zLW6j9EZUvZDI7hLdAL6t/emRuH0lMDrQ=,tag:pZNfxkqWo7Y3B/mRd6etKw==,type:str]
+        paths:
+            - /prometheus
+        tls:
+            hosts:
+                - ENC[AES256_GCM,data:kBedmD/jUX0CXEUSm21S59MULv5zrM+a5Qb7,iv:2VTaxOC3cuy0b8aQtGbLRYi8T8fSWF7hXQcOlUlO4o0=,tag:8hsmr/31fwJDGlFbvidqdA==,type:str]
+    prometheusSpec:
+        externalUrl: ENC[AES256_GCM,data:8XaMRa5Wg9jZFOup5AUHmJUfvRjeO5MYpvN79WS2Ij8re47voapumr+NO6wORA==,iv:3Gl7n2DkAiBK8Y85jnkSXFW/VAO0+iq6gILBkE3Y+xI=,tag:lRGF+qCqSk0SBBdabwGfGA==,type:str]
+        storageSpec:
+            volumeClaimTemplate:
+                spec:
+                    resources:
+                        requests:
+                            storage: 1Gi
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1xl8mrtu70kvhjdl2nva6dpt8wsy3fhmz6605fmwjujc3zztyeyzqd07nvv
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBYb0Q0RVMzM0huYmdtcDRX
+            NHZON0daZE9ybEl1VTNVSUsvZVpoYXlnbG44CldiYjI1K3grME1WOXBtYjNNL3dF
+            NGtkL1k4NnJUV0VLaXFOQThGSjZ4UUUKLS0tIDhYRzUwYTM0MWo1TjVhT1IxdUVy
+            UU1nUGZpdnM4VHBGTmhyMFJEcmlTS2cKkDpbgaNKgF1d+jsXNByu9WJV/PT1C1LD
+            qdd2DKILjH4VYMZrhIMuuWEhVwZgrC23qpnUY4N9wCw02pmxD0SCtQ==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2023-01-08T17:55:41Z"
+    mac: ENC[AES256_GCM,data:qPt32HTXTxAmOH6k/GMrNg2I5m/ILXcbtfV7SNJrzdegpxh0ST3nxl2SVnrmH7eZSKdgt1Wp6pBB+Ql5+E2CTOmXTPTerL3Oj5AY7JN/jDZvkEWfCQuhKcTsJnImi2YZ3AH8WA7N7FUWhKf6K8M1/P4jIM/zMTqFmrVa+nIq54E=,iv:wn/PBx/u6IAlMxviO2fT+4iIbe0kY8iDC3a1vX81EU4=,tag:wPysd6P8e8xiqsFJVGZygw==,type:str]
+    pgp: []
+    encrypted_regex: ^(data|stringData|email|dnsNames|hosts|host|externalUrl)$
+    version: 3.7.3
