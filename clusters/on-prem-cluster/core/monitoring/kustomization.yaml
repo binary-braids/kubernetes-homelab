@@ -3,3 +3,4 @@ kind: Kustomization
 
 resources:
 - kube-prometheus-stack.yaml
+- kube-prometheus-stack-source.yaml
