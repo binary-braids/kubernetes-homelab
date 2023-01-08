@@ -10,7 +10,7 @@ spec:
         kind: HelmRepository
         name: prometheus-community
         namespace: monitoring
-        version: "43.1.4"
+      version: 43.1.4
   interval: 5m
   install:
     remediation:
