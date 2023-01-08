@@ -5,3 +5,4 @@ namespace: monitoring
 resources:
 - namespace.yaml
 - kube-prometheus-stack.yaml
+- kube-prometheus-stack-source.yaml
