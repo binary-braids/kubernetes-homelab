@@ -15,7 +15,6 @@ spec:
   install:
     remediation:
         retries: 3
-  createNamespace: true
   targetNamespace: monitoring
   valuesFrom:
     - kind: ConfigMap
