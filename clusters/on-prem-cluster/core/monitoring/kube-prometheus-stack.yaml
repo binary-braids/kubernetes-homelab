@@ -13,10 +13,10 @@ spec:
         namespace: flux-system
   interval: 5m
   install:
-    createNamespace: true
-    targetNamespace: monitoring
     remediation:
         retries: 3
+  createNamespace: true
+  targetNamespace: monitoring
   valuesFrom:
     - kind: ConfigMap
       name: values
