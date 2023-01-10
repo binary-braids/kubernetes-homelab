@@ -1,61 +1,23 @@
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
-    name: kube-prometheus-stack
-    namespace: flux-system
+  name: kube-prometheus-stack
+  namespace: flux-system
 spec:
-    chart:
-        spec:
-            chart: kube-prometheus-stack
-            sourceRef:
-                kind: HelmRepository
-                name: prometheus-charts
-                namespace: flux-system
-    interval: 5m
-    install:
-        createNamespace: true
-        remediation:
-            retries: 3
+  chart:
+    spec:
+      chart: kube-prometheus-stack
+      sourceRef:
+        kind: HelmRepository
+        name: prometheus-charts
+        namespace: flux-system
+  interval: 5m
+  install:
+    createNamespace: true
     targetNamespace: monitoring
-    values:
-        prometheus:
-            ingress:
-                enabled: true
-                annotations:
-                    kubernetes.io/ingress.class: traefik
-                    cert-manager.io/cluster-issuer: letsencrypt-prod
-                hosts:
-                    - ENC[AES256_GCM,data:Q31vCE+DC/PSxAsr9UcoJ9Al2VKueU8J0V9e,iv:LA7hyLXDuF5f8Wi4bIa989B+zM9HkkS+Z6RfxamhnIs=,tag:IwkV/Ao26JPV941z5epjtg==,type:str]
-                paths:
-                    - /prometheus
-                tls:
-                    hosts:
-                        - ENC[AES256_GCM,data:x2RaGcxxgj2mvGKUWEkQ6xnxBJbbUQM6DBfI,iv:pEQdt7lWpCE7hsOuUNy3jcv4niHsEWl6wXjPb8exslI=,tag:xgde/Y8xqPizDDtcvnB5Qg==,type:str]
-            prometheusSpec:
-                externalUrl: ENC[AES256_GCM,data:+2tIbZoeQNqYRCTXHty4YrtY1fd/1KjICMV49SSg1oniYuVsClmcG4ol4Pot/w==,iv:o1doe186TaLnpyaTduHi5cZdtvoqHHifITcG5wkbPDQ=,tag:yUmikaYDJfXIowhPBdo/UQ==,type:str]
-                storageSpec:
-                    volumeClaimTemplate:
-                        spec:
-                            resources:
-                                requests:
-                                    storage: 1Gi
-sops:
-    kms: []
-    gcp_kms: []
-    azure_kv: []
-    hc_vault: []
-    age:
-        - recipient: age1xl8mrtu70kvhjdl2nva6dpt8wsy3fhmz6605fmwjujc3zztyeyzqd07nvv
-          enc: |
-            -----BEGIN AGE ENCRYPTED FILE-----
-            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBhZFZiRk54bTJqT3pZMWEz
-            TFU1MUVldTZBRnVOWldXaXBwODlvTkxUdUgwCjFNSlVhUytwaER2YloxbWZ3Tktv
-            LytObHc1eVA3aU0vaytGNjdrK1dENEEKLS0tIFZWQ3l0UnF1WXZqK1ZVQlVuelox
-            TmdULys5UGFEakNXbUpha3luQThVdlEKCB2wu/urCSj/NFOcVL1oJgPTTu3rzuDU
-            Yq5BFNzQtNn4eHOZowDNj6sIhvOZmBAfwktTRIBEzx5rHBzNdH3ToQ==
-            -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2023-01-08T18:18:28Z"
-    mac: ENC[AES256_GCM,data:Mf2PXZFL7VnlDooAAe+kCt3UUcnJSGB+w7+DeeFy7wQl0u0/y5H0ORHrXEoQ62ebZS5/hDqgANoIvIppD8Avudlp/GQX7RZtb83+elL8FW2eWkdqwAnFCRiNCck6uL2YuQfynzlfGACcPrwJmOslSaG3d4JF/bHFhFqFQn68zDs=,iv:FbnfiNNvEcpZDORXLiF97jUMjqtwJUw0pytOD6LHf5I=,tag:ppXHk15UwaYKfQrMGOl+jA==,type:str]
-    pgp: []
-    encrypted_regex: ^(data|stringData|email|dnsNames|hosts|host|externalUrl)$
-    version: 3.7.3
+    remediation:
+        retries: 3
+  valuesFrom:
+    - kind: ConfigMap
+      name: values
+      valuesKey: values.yaml
