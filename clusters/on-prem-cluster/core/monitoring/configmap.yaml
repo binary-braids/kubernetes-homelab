@@ -4,24 +4,12 @@ metadata:
     name: values
     namespace: flux-system
 data:
-    values.yaml: ENC[AES256_GCM,data:H0F6iXtBrp2Sd6ZGQt1wWvjaUPi7tnzOgqDbBKPKW3/p1Ii85NgZUlTcE03LZFZbA2M0qOjwa/D3dfHYB8yxK0vsYjY9hlvC7E+OPbIEae43+uhaLxPJFpGm5IpKJ/Em0oG/y0FH6gOWiJEvsScdqWezY9KGtBnStMQQgQyCxBoCCq76rivgFygqkuP6E1kawBdwACdAfT/lt3UAzk7RWOOYotCwSGW+6kGixMhapaE8Lc62sUfQqdFcSY5ZMYS7vFo76r4uXeNwtGBNvnreMvwb6QEZFjBQCnwVob7gJbhcUdRrr/fhRk0QelovloEkCbH4xU5uf3NNLDJCCUq+E14bGcywVIiA0Z5VV/Y9ha5yP82e5O7XTgeW/36//E1Ca28dgj0robn7XXMCejr33u6fMPnPy6qyVyL8ocsvOnKA/3SQ/dl577rhDP6b/0+2uY8Xu6lOR8StMf4LqOuKcwBR5bYYxp6+lEvJyEyl1bFtydUDZqykbv/asJB0EkC8t+4k+LCCbbbdN43Gkk8hYniC/um8O1hcof7SU/Wh0RK4pcMe3HZxWFh/NiigBbzE+kpKhiJt+LyV13tGfFsuhJjwxImmdzv6r83af3r2XKdMg/qDFusT68Q1fiIKqCbAEKXxLOEKZnZEE1/IqEqgUxDlC7A9H5Q8ArFN1j7zkcynsJobotaJtPe0RvUuuYo9IP0sYaqheY1BPw==,iv:B3+QasYvlGgvwJiUxue8erWmj2B9uIdlyxN5IIMONXU=,tag:aLkeBIbTPC7ROOODyo2+7Q==,type:str]
-sops:
-    kms: []
-    gcp_kms: []
-    azure_kv: []
-    hc_vault: []
-    age:
-        - recipient: age1xl8mrtu70kvhjdl2nva6dpt8wsy3fhmz6605fmwjujc3zztyeyzqd07nvv
-          enc: |
-            -----BEGIN AGE ENCRYPTED FILE-----
-            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSB5YjU3LzNNSFBIRjVRWlY1
-            aUxDM0tSNWdybUZqQklIeVZlVWpHYStMOGdvClNFbWg1T2pYS0VManhIMk1XMUFv
-            K2hVRHFoOHpoTjVudEZGQ0lVbGdQUDgKLS0tIGdqTDdMdW1pdnhuem54UXNMZnlk
-            a0lUbW12NkMwTnk0Qjh3N2dQa3lWOGsKctVNVBaOpWY1YNXK9IFjK6PYmdan5mLU
-            5ZC/8Iw4eaN4KgPxPTFTpYR/ogqYfWfxo0h+yq+/AdVZ8LDgtoWCfQ==
-            -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2023-01-10T18:06:36Z"
-    mac: ENC[AES256_GCM,data:zHiT49Mh0EShqLMGPFTHmmz3MAdodrrm2QxouNyHmuYH107xznSp3eu8ap6X5ELNJMPiPNMxB8QjcGvYnm5YlEWzSdvRmBDIRSbC9IM/B0flkWXKcCpzSspQJUqjlmB6R3zzVMhRw4/uod5r0CrpOVd7NwfV8by2/9erHaTLAPM=,iv:bv/JYD0MDKcqruQ4J2vVlxGmH9Rb1iSxrwGyKuuwtAM=,tag:7hG5bcqCth2Zur41sx8yZQ==,type:str]
-    pgp: []
-    encrypted_regex: ^(data|stringData|email|dnsNames|hosts|host|externalUrl)$
-    version: 3.7.3
+    values.yaml: |-
+          prometheusSpec:
+            storageSpec:
+              volumeClaimTemplate:
+                spec:
+                  storageClassName: longhorn
+                  resources:
+                    requests:
+                      storage: 1Gi
