@@ -1,25 +1,26 @@
 apiVersion: apps/v1
-kind: Deployment
+kind: StatefulSet
 metadata:
-  name: radarr
+  name: sonarr
   namespace: media
   labels:
-    app: radarr
+    app: sonarr
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: radarr
+      app: sonarr
+  serviceName: sonarr
   template:
     metadata:
       labels:
-        app: radarr
+        app: sonarr
     spec:
       containers:
-      - name: radarr
-        image: lscr.io/linuxserver/radarr:latest
+      - name: sonarr
+        image: lscr.io/linuxserver/sonarr:latest
         ports:
-        - containerPort: 7878
+        - containerPort: 8989
         env:
         - name: TZ
           value: Africa/Johannesburg
@@ -30,17 +31,17 @@ spec:
         volumeMounts:
           - name: config
             mountPath: /config
-          - name: movies
-            mountPath: /movies
+          - name: tvshows
+            mountPath: /tvshows
           - name: downloads
-            mountPath: /downloads 
+            mountPath: /downloads
       volumes:
         - name: config
           persistentVolumeClaim:
-            claimName: radarr-pvc
-        - name: movies
+            claimName: sonarr-pvc
+        - name: tvshows
           hostPath:
-            path: /mnt/media/movies
+            path: /mnt/media/tvshows
             type: DirectoryOrCreate
         - name: downloads
           hostPath:

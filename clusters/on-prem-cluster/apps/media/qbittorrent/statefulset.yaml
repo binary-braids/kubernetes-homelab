@@ -1,25 +1,29 @@
 apiVersion: apps/v1
-kind: Deployment
+kind: StatefulSet
 metadata:
-  name: sonarr
+  name: qbittorrent
   namespace: media
   labels:
-    app: sonarr
+    app: qbittorrent
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: sonarr
+      app: qbittorrent
+  serviceName: qbittorrent
   template:
     metadata:
       labels:
-        app: sonarr
+        app: qbittorrent
     spec:
       containers:
-      - name: sonarr
-        image: lscr.io/linuxserver/sonarr:latest
+      - name: qbittorrent
+        image: lscr.io/linuxserver/qbittorrent:latest
         ports:
-        - containerPort: 8989
+        - containerPort: 8080
+        - containerPort: 6881
+        - containerPort: 6881
+          protocol: UDP
         env:
         - name: TZ
           value: Africa/Johannesburg
@@ -30,22 +34,15 @@ spec:
         volumeMounts:
           - name: config
             mountPath: /config
-          - name: tvshows
-            mountPath: /tvshows
           - name: downloads
             mountPath: /downloads
       volumes:
         - name: config
           persistentVolumeClaim:
-            claimName: sonarr-pvc
-        - name: tvshows
-          hostPath:
-            path: /mnt/media/tvshows
-            type: DirectoryOrCreate
+            claimName: qbittorrent-pvc
         - name: downloads
           hostPath:
             path: /mnt/media/downloads
-            type: DirectoryOrCreate
     
 
   
