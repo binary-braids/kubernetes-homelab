@@ -1,5 +1,5 @@
 apiVersion: apps/v1
-kind: statefulset
+kind: StatefulSet
 metadata:
   name: lidarr
   namespace: media
