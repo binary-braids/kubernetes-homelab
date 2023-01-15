@@ -5,4 +5,4 @@ namespace: media
 resources:
 - service.yaml
 - persistentvolumeclaim.yaml
-- deployment.yaml
+- statefulset.yaml

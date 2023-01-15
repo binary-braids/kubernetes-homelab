@@ -1,5 +1,5 @@
 apiVersion: apps/v1
-kind: Deployment
+kind: statefulset
 metadata:
   name: lidarr
   namespace: media
@@ -10,6 +10,7 @@ spec:
   selector:
     matchLabels:
       app: lidarr
+  serviceName: lidarr
   template:
     metadata:
       labels:

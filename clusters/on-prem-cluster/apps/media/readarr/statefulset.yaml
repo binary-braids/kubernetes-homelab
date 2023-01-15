@@ -1,46 +1,55 @@
 apiVersion: apps/v1
-kind: Deployment
+kind: StatefulSet
 metadata:
-  name: calibre-web
+  name: readarr
   namespace: media
   labels:
-    app: calibre-web
+    app: readarr
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: calibre-web
+      app: readarr
+  serviceName: readarr
   template:
     metadata:
       labels:
-        app: calibre-web
+        app: readarr
     spec:
       containers:
-      - name: calibre-web
-        image: lscr.io/linuxserver/calibre-web:latest
+      - name: readarr
+        image: lscr.io/linuxserver/readarr:develop
         ports:
-        - containerPort: 8083
+        - containerPort: 8787
         env:
         - name: TZ
           value: Africa/Johannesburg
         - name: PUID
           value: "1000"
         - name: PGID
-          value: "1000"
-        - name: DOCKER_MODS
-          value: linuxserver/mods:universal-calibre
+          value: "1000"  
         volumeMounts:
           - name: config
             mountPath: /config
           - name: books
             mountPath: /books
+          - name: downloads
+            mountPath: /downloads
+        resources:
+          limits:
+            memory: '256Mi'
+            cpu: '100m'  
       volumes:
         - name: config
           persistentVolumeClaim:
-            claimName: calibre-web-pvc
+            claimName: readarr-pvc
         - name: books
           hostPath:
             path: /mnt/media/books
+            type: DirectoryOrCreate
+        - name: downloads
+          hostPath:
+            path: /mnt/media/downloads
             type: DirectoryOrCreate
     
 
