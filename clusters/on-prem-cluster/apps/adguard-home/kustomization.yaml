@@ -3,7 +3,7 @@ kind: Kustomization
 namespace: adguard-home
 
 resources:
-- deployment.yaml
+- statefulset.yaml
 - ingress.sops.yaml
 - namespace.yaml
 - persistentvolumeclaim.yaml
