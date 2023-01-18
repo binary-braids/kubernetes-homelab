@@ -20,7 +20,7 @@ spec:
       - name: prowlarr
         image: lscr.io/linuxserver/prowlarr:develop
         ports:
-        - containerPort: 8686
+        - containerPort: 9696
         env:
         - name: TZ
           value: Africa/Johannesburg
