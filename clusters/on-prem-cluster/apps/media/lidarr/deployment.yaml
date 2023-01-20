@@ -1,50 +1,48 @@
 apiVersion: apps/v1
-kind: StatefulSet
+kind: Deployment
 metadata:
-  name: qbittorrent
+  name: lidarr
   namespace: media
   labels:
-    app: qbittorrent
+    app: lidarr
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: qbittorrent
-  serviceName: qbittorrent
+      app: lidarr
   template:
     metadata:
       labels:
-        app: qbittorrent
+        app: lidarr
     spec:
       containers:
-      - name: qbittorrent
-        image: lscr.io/linuxserver/qbittorrent:latest
+      - name: lidarr
+        image: lscr.io/linuxserver/lidarr:latest
         ports:
-        - containerPort: 8080
-        - containerPort: 6881
-        - containerPort: 6881
-          protocol: UDP
+        - containerPort: 8686
         env:
         - name: TZ
           value: Africa/Johannesburg
         - name: PUID
           value: "1000"
         - name: PGID
-          value: "1000"  
+          value: "1000"
         volumeMounts:
           - name: config
             mountPath: /config
+          - name: music
+            mountPath: /music
           - name: downloads
             mountPath: /downloads
       volumes:
         - name: config
           persistentVolumeClaim:
-            claimName: qbittorrent-pvc
+            claimName: lidarr-pvc
+        - name: music
+          hostPath:
+            path: /mnt/media/music
+            type: DirectoryOrCreate
         - name: downloads
           hostPath:
             path: /mnt/media/downloads
-    
-
-  
-
-
+            type: DirectoryOrCreate

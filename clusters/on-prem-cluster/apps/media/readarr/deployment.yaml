@@ -1,25 +1,25 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: sonarr
+  name: readarr
   namespace: media
   labels:
-    app: sonarr
+    app: readarr
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: sonarr
+      app: readarr
   template:
     metadata:
       labels:
-        app: sonarr
+        app: readarr
     spec:
       containers:
-      - name: sonarr
-        image: lscr.io/linuxserver/sonarr:latest
+      - name: readarr
+        image: lscr.io/linuxserver/readarr:develop
         ports:
-        - containerPort: 8989
+        - containerPort: 8787
         env:
         - name: TZ
           value: Africa/Johannesburg
@@ -30,17 +30,21 @@ spec:
         volumeMounts:
           - name: config
             mountPath: /config
-          - name: tvshows
-            mountPath: /tvshows
+          - name: books
+            mountPath: /books
           - name: downloads
             mountPath: /downloads
+        resources:
+          limits:
+            memory: '256Mi'
+            cpu: '100m'
       volumes:
         - name: config
           persistentVolumeClaim:
-            claimName: sonarr-pvc
-        - name: tvshows
+            claimName: readarr-pvc
+        - name: books
           hostPath:
-            path: /mnt/media/tvshows
+            path: /mnt/media/books
             type: DirectoryOrCreate
         - name: downloads
           hostPath:

@@ -25,7 +25,7 @@ spec:
         - containerPort: 10011
         - containerPort: 30033
         env:
-        - name: TS3SERVER_LICENSE 
+        - name: TS3SERVER_LICENSE
           value: accept
         volumeMounts:
           - mountPath: "/var/ts3server"
@@ -34,7 +34,3 @@ spec:
       - name: teamspeak-volume
         persistentVolumeClaim:
           claimName: teamspeak-pvc
-
-
-
-

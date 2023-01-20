@@ -33,7 +33,7 @@ spec:
               name: zabbix-secret
               key: zabbix_postgres_password
         - name: PGDATA
-          value: /var/lib/postgresql/data/pgdata   
+          value: /var/lib/postgresql/data/pgdata
         volumeMounts:
           - mountPath: "/var/lib/postgresql/data"
             name: postgres-volume
@@ -41,7 +41,3 @@ spec:
       - name: postgres-volume
         persistentVolumeClaim:
           claimName: zabbix-postgres-pvc
-
-
-
-
