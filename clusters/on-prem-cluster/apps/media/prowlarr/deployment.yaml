@@ -1,5 +1,5 @@
 apiVersion: apps/v1
-kind: StatefulSet
+kind: Deployment
 metadata:
   name: prowlarr
   namespace: media
@@ -10,7 +10,6 @@ spec:
   selector:
     matchLabels:
       app: prowlarr
-  serviceName: prowlarr
   template:
     metadata:
       labels:
@@ -31,8 +30,3 @@ spec:
         - name: config
           persistentVolumeClaim:
             claimName: prowlarr-pvc
-    
-
-  
-
-

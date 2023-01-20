@@ -37,7 +37,7 @@ spec:
         volumeMounts:
         - mountPath: data
           name: vol1
-          subPath: data 
+          subPath: data
       volumes:
       - name: vol1
         persistentVolumeClaim:

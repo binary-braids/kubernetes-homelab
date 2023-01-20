@@ -32,16 +32,12 @@ spec:
               name: zabbix-secret
               key: zabbix_postgres_password
         - name: DB_SERVER_HOST
-          valueFrom: 
+          valueFrom:
             configMapKeyRef:
               name: zabbix-configmap
               key: database_url
         - name: ZBX_SERVER_HOST
-          valueFrom: 
+          valueFrom:
             configMapKeyRef:
               name: zabbix-configmap
               key: server_url
-
-  
-
-

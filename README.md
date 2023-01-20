@@ -17,22 +17,22 @@ The Git repository contains the following directories:
 ```sh
 📁 clusters
 ├─📁 on-prem-cluster
-│  ├─📁 apps          
+│  ├─📁 apps
 │  └─📁 flux-system
 ├─📁 oracle cluster
-   ├─📁 apps     
+   ├─📁 apps
    └─📁 flux-system
 ```
-## Getting started 
+## Getting started
 
-The following assumptions are made: 
+The following assumptions are made:
 
 - You have an existing K8s cluster
 - You have the Flux CLI installed (instructions [here](https://fluxcd.io/flux/get-started/))
 
-### Flux 
+### Flux
 
-The quickest way to get up and running is to bootstrap your cluster with flux by doing the following: 
+The quickest way to get up and running is to bootstrap your cluster with flux by doing the following:
 
 ```
 flux bootstrap github \
@@ -41,7 +41,7 @@ flux bootstrap github \
   --branch=main \
   --path=./clusters/my-cluster \
   --personal
-```  
+```
 The above will bootstrap your cluster and synchronize it with the ./clusters/my-cluster path in the repo. You will notice in the repo that a new flux-system folder will appear. This is what Flux creates when it runs the bootstrap operation.
 
 For simple setups you can place subfolders in the ./cluster/my-cluster path with your app manifests and Flux will automatically pick this up and deploy it to your cluster.
@@ -50,13 +50,13 @@ For simple setups you can place subfolders in the ./cluster/my-cluster path with
 
 Visit the Mozilla SOPS [repo](https://github.com/mozilla/sops) to setup SOPS which you will use with Age encryption below
 
-### Age 
+### Age
 
 You can review the following [repo](https://github.com/FiloSottile/age) which will detail setting up Age encryption
 
-## Configuring Flux with SOPS 
+## Configuring Flux with SOPS
 
-Now that you have Flux, SOPS and Age setup we'll get into integrating this all together. First you will need to copy over your Age created key to your flux-system namespace: 
+Now that you have Flux, SOPS and Age setup we'll get into integrating this all together. First you will need to copy over your Age created key to your flux-system namespace:
 
 ```
 cat age.agekey | kubectl create secret generic sops-age --namespace=flux-system --from-file=age.agekey=/dev/stdin

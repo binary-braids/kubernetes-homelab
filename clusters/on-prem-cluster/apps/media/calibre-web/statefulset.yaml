@@ -43,8 +43,3 @@ spec:
           hostPath:
             path: /mnt/media/books
             type: DirectoryOrCreate
-    
-
-  
-
-

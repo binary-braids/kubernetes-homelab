@@ -31,7 +31,7 @@ spec:
               name: phpipam-secret
               key: mysql_root_password
         - name: MYSQL_ENV_MYSQL_HOST
-          valueFrom: 
+          valueFrom:
             configMapKeyRef:
               name: phpipam-configmap
               key: database_url

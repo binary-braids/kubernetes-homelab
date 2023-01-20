@@ -34,14 +34,14 @@ spec:
           value: "true"
         - name: SERVER_NAME
           value: "false"
-        - name: RECIPE_DISABLE_AMOUNT 
+        - name: RECIPE_DISABLE_AMOUNT
           value: "false"
         - name: WEB_CONCURRENCY
           value: "1"
         - name: WORKERS_PER_CORE
-          value: "0.5"  
+          value: "0.5"
         - name: MAX_WORKERS
-          value: "1"  
+          value: "1"
         volumeMounts:
         - mountPath: /app/data
           name: mealie-volume
