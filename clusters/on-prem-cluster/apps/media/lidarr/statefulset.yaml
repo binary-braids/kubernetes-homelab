@@ -1,25 +1,26 @@
 apiVersion: apps/v1
-kind: Deployment
+kind: StatefulSet
 metadata:
-  name: jellyfin
+  name: lidarr
   namespace: media
   labels:
-    app: jellyfin
+    app: lidarr
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: jellyfin
+      app: lidarr
+  serviceName: lidarr    
   template:
     metadata:
       labels:
-        app: jellyfin
+        app: lidarr
     spec:
       containers:
-      - name: jellyfin
-        image: lscr.io/linuxserver/jellyfin:latest
+      - name: lidarr
+        image: lscr.io/linuxserver/lidarr:latest
         ports:
-        - containerPort: 8096
+        - containerPort: 8686
         env:
         - name: TZ
           value: Africa/Johannesburg
@@ -30,22 +31,19 @@ spec:
         volumeMounts:
           - name: config
             mountPath: /config
-          - name: tvshows
-            mountPath: /tvshows
-          - name: movies
-            mountPath: /movies
           - name: music
             mountPath: /music
+          - name: downloads
+            mountPath: /downloads
       volumes:
         - name: config
           persistentVolumeClaim:
-            claimName: jellyfin-pvc
-        - name: tvshows
-          hostPath:
-            path: /mnt/media/tvshows
-        - name: movies
-          hostPath:
-            path: /mnt/media/movies
+            claimName: lidarr-pvc
         - name: music
           hostPath:
             path: /mnt/media/music
+            type: DirectoryOrCreate
+        - name: downloads
+          hostPath:
+            path: /mnt/media/downloads
+            type: DirectoryOrCreate
