@@ -8,9 +8,10 @@ metadata:
         cert-manager.io/cluster-issuer: letsencrypt-prod
 spec:
     tls:
-        - hosts: ENC[AES256_GCM,data:sGQcT9S2ybhgdzMd0CoIqKusgGii2bsgSQ==,iv:1xulwkYTB+thWABdpYq7jSdCUMvx6/Xtp/i9DukfdrY=,tag:ZbF+DygPQw8LCpCC7Ezqow==,type:str]
+        - hosts:
+            - ENC[AES256_GCM,data:o8XQ3uomX+9lbALtleHrfoeajssKIjxMSA==,iv:k3u0ImRXElj6CJzXqGyOzr/8fwVj3INgSZ/vvrSewxM=,tag:HnNBZeyRv5JFdTDSJt96+A==,type:str]
     rules:
-        - host: ENC[AES256_GCM,data:dkTvB20m4XOyC0YJN9O+JEDH0BO8zMdQig==,iv:QtjLSGHswsJc/TEnSqYPeS5XOU/s9mF5uhAFOQ1YgaQ=,tag:ofrllvyCwLa3P+ph9Fmrow==,type:str]
+        - host: ENC[AES256_GCM,data:L/+g6qY+Cr9/K7VbcFRJOKT9P5/Jtscl2Q==,iv:usc2i+x+N+duAKB1uqqKE0za8VFJCtQPZstMVcd89pQ=,tag:jgodAb0fJMXvVf/aDPwRgg==,type:str]
           http:
             paths:
                 - path: /
@@ -29,14 +30,14 @@ sops:
         - recipient: age1xl8mrtu70kvhjdl2nva6dpt8wsy3fhmz6605fmwjujc3zztyeyzqd07nvv
           enc: |
             -----BEGIN AGE ENCRYPTED FILE-----
-            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBOY3FkWVZubUozaDE5SXZl
-            Y09UVHo1SWRBazBaU3VXVkw3OS8ySHQ5Mm5BCjVhL2lHRGd1VGxhTXFBb0FGL0Yv
-            cHVRdzR3YVhVK0RRald4cnFaNDZONDQKLS0tIEMvRnhCR21xN2JqSVF4S2F6TTZv
-            TzAxRmxSbG55RmF4dHBYbFI1cU02MFUKytS0gKjp0XEbDJZdEb3/WCklz/o9znEE
-            ha/A4afBCTNQis/8f/nE465w8DgWbmEloAgSAKoaqMcBZa86DVfPhQ==
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBBUGZHdjVnV0F2d1dOUDdP
+            aWM0ZS9qZ2dZRkdmV2FZT2Ftd1BLbVJhZUQwCk43cTBwTmd5M0ZDN2JGVEREUFhB
+            TmEvWkxURnZUMnlBVStaWXdzSkU4SWMKLS0tIEFRK011a0RoZHVPVVJKVDV3VkFq
+            dmI3L2xIbmxncXNGNHphR1FUMTBhTXcK06FZeC/USwBkJ+30vzwowtuzDkESOIcV
+            J5Wv/3VDZy0l1GsrqidaTmiPsbJ3MjWdF2zf2dRbVBFcFZ074IAckg==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2023-01-21T18:55:41Z"
-    mac: ENC[AES256_GCM,data:dg8fQUV8sB1HFHRV9HRljlIrMgfI96aCahvnTUHSkmNRdH7sohJzBduHHjukCi3NqqVxJEToWRPy+WTkI/CyrdZdYKQ0I4pwRKGrsH3DFbsVv8+xy4yueAMQjxAn4unehIf6ejtTkbC5UFk4L10ItMViWUJHwBhpWGnMqVjaPok=,iv:FiCCJKyh8/AOCkBXPPAuGsuAFLNxgDgYzPJCieH5gBQ=,tag:x7hVrH61R4QDG5POVSik6A==,type:str]
+    lastmodified: "2023-01-21T18:59:51Z"
+    mac: ENC[AES256_GCM,data:n5cQSz1mBrts0yRFZZb+B3KRBrx05sYWizWc+DQOjG/HLWYe0jjRu/BKyWj1pn2w+vmhRa9264C8JUKYyygr6xBhr9jhKrAfGRbcu0GeFzBcQK0jdkgMiYXmqi+aP6ijizoyrqWGc5vkOgicJW1rIlGZXOc1U7WqQdTD/ETULwM=,iv:6hcVQbZ0XIYGJBk6V4cyNeo6aljIJriP6ozLfT5efZg=,tag:zxdYCVvdXyJttu2xNJ8DtQ==,type:str]
     pgp: []
     encrypted_regex: ^(data|stringData|email|dnsNames|hosts|host|externalUrl)$
     version: 3.7.3
