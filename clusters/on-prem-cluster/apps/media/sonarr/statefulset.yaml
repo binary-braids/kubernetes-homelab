@@ -10,11 +10,11 @@ spec:
   selector:
     matchLabels:
       app: sonarr
+  serviceName: sonarr
   template:
     metadata:
       labels:
         app: sonarr
-    serviceName: sonarr
     spec:
       containers:
       - name: sonarr
