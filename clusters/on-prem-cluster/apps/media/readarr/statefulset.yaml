@@ -1,25 +1,26 @@
 apiVersion: apps/v1
-kind: Deployment
+kind: StatefulSet
 metadata:
-  name: radarr
+  name: readarr
   namespace: media
   labels:
-    app: radarr
+    app: readarr
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: radarr
+      app: readarr
+  serviceName: readarr
   template:
     metadata:
       labels:
-        app: radarr
+        app: readarr
     spec:
       containers:
-      - name: radarr
-        image: lscr.io/linuxserver/radarr:latest
+      - name: readarr
+        image: lscr.io/linuxserver/readarr:develop
         ports:
-        - containerPort: 7878
+        - containerPort: 8787
         env:
         - name: TZ
           value: Africa/Johannesburg
@@ -30,17 +31,21 @@ spec:
         volumeMounts:
           - name: config
             mountPath: /config
-          - name: movies
-            mountPath: /movies
+          - name: books
+            mountPath: /books
           - name: downloads
             mountPath: /downloads
+        resources:
+          limits:
+            memory: '256Mi'
+            cpu: '100m'
       volumes:
         - name: config
           persistentVolumeClaim:
-            claimName: radarr-pvc
-        - name: movies
+            claimName: readarr-pvc
+        - name: books
           hostPath:
-            path: /mnt/media/movies
+            path: /mnt/media/books
             type: DirectoryOrCreate
         - name: downloads
           hostPath:
