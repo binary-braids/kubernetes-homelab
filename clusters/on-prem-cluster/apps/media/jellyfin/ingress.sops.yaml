@@ -1,0 +1,42 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+    name: jellyfin-ingress
+    namespace: media
+    annotations:
+        kubernetes.io/ingress.class: traefik
+        cert-manager.io/cluster-issuer: letsencrypt-prod
+spec:
+    tls:
+        - hosts: ENC[AES256_GCM,data:sGQcT9S2ybhgdzMd0CoIqKusgGii2bsgSQ==,iv:1xulwkYTB+thWABdpYq7jSdCUMvx6/Xtp/i9DukfdrY=,tag:ZbF+DygPQw8LCpCC7Ezqow==,type:str]
+    rules:
+        - host: ENC[AES256_GCM,data:dkTvB20m4XOyC0YJN9O+JEDH0BO8zMdQig==,iv:QtjLSGHswsJc/TEnSqYPeS5XOU/s9mF5uhAFOQ1YgaQ=,tag:ofrllvyCwLa3P+ph9Fmrow==,type:str]
+          http:
+            paths:
+                - path: /
+                  pathType: Prefix
+                  backend:
+                    service:
+                        name: jellyfin-service
+                        port:
+                            number: 8096
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1xl8mrtu70kvhjdl2nva6dpt8wsy3fhmz6605fmwjujc3zztyeyzqd07nvv
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBOY3FkWVZubUozaDE5SXZl
+            Y09UVHo1SWRBazBaU3VXVkw3OS8ySHQ5Mm5BCjVhL2lHRGd1VGxhTXFBb0FGL0Yv
+            cHVRdzR3YVhVK0RRald4cnFaNDZONDQKLS0tIEMvRnhCR21xN2JqSVF4S2F6TTZv
+            TzAxRmxSbG55RmF4dHBYbFI1cU02MFUKytS0gKjp0XEbDJZdEb3/WCklz/o9znEE
+            ha/A4afBCTNQis/8f/nE465w8DgWbmEloAgSAKoaqMcBZa86DVfPhQ==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2023-01-21T18:55:41Z"
+    mac: ENC[AES256_GCM,data:dg8fQUV8sB1HFHRV9HRljlIrMgfI96aCahvnTUHSkmNRdH7sohJzBduHHjukCi3NqqVxJEToWRPy+WTkI/CyrdZdYKQ0I4pwRKGrsH3DFbsVv8+xy4yueAMQjxAn4unehIf6ejtTkbC5UFk4L10ItMViWUJHwBhpWGnMqVjaPok=,iv:FiCCJKyh8/AOCkBXPPAuGsuAFLNxgDgYzPJCieH5gBQ=,tag:x7hVrH61R4QDG5POVSik6A==,type:str]
+    pgp: []
+    encrypted_regex: ^(data|stringData|email|dnsNames|hosts|host|externalUrl)$
+    version: 3.7.3

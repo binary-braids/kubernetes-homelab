@@ -10,9 +10,9 @@ metadata:
 spec:
     tls:
         - hosts:
-            - ENC[AES256_GCM,data:fA2daaJ1N6jBuSnlhHQ2gASF5x6oQg==,iv:KAhE1j2ES//UzN24txM8v5IfQ/OnSBv6ve2ltxhE4GU=,tag:xky8Z8+iBgRwCC7spnM8iw==,type:str]
+            - ENC[AES256_GCM,data:S7oqj4YcCMQuXnSY8BMoLJKg+8FtSQ==,iv:O8tr+rZVVtAyySsyAk/B5st/ddwFMMdf/HIpoIMK10s=,tag:1f/DJKr/NbULNnxZ/c1TBQ==,type:str]
     rules:
-        - host: ENC[AES256_GCM,data:sBnLj5tdAVCIXCqTkm7vB3hWBdeNfA==,iv:dwIOAuDqvlSsgNbh97Si7mtPGo1PvVBg8tqGs3BUqLE=,tag:I9oqq8JUyvo21EEMTlf5DQ==,type:str]
+        - host: ENC[AES256_GCM,data:7PNpaJdoCnae44bzq0AJ3QWCp0XPJA==,iv:Hl6YeV22RAepMEAi8ebGz8omw/Ad7tDLxkqayK2rG9U=,tag:C/bE3rHhz+OZxwL2OCnggA==,type:str]
           http:
             paths:
                 - path: /qbittorrent
@@ -22,7 +22,7 @@ spec:
                         name: qbittorrent-service
                         port:
                             number: 8080
-        - host: ENC[AES256_GCM,data:3IFOJk/5m5CbLyCCEbr03PH9/q4NoA==,iv:Ex8lNLQQzh4OF/5+Q06XGQh4XI+js5Ma+rL0z0mD3gE=,tag:YDrGiHdIrFzERG89mxNlcQ==,type:str]
+        - host: ENC[AES256_GCM,data:dsaQ0YLmBWFHhsxa99ULnPzXfQqdLw==,iv:sYnT/1cCrSBCEKbNmtb5LAoQCgn+49zI/sSNffMlHNw=,tag:xk8JRd6bNR9YGIheDgNlmw==,type:str]
           http:
             paths:
                 - path: /sonarr
@@ -32,7 +32,7 @@ spec:
                         name: sonarr-service
                         port:
                             number: 8989
-        - host: ENC[AES256_GCM,data:9Z98eHBYmZpsIYcgn4FhhobsMEz3Xg==,iv:fnCIJ9QkR+tO5sM+zFwgmdcPKj/nY//EtIDCBgvoKPI=,tag:B1WTXnK5/I5b948v+Jiu4g==,type:str]
+        - host: ENC[AES256_GCM,data:hEyw/7kT9lSyABR1nXT4kdX3bz5aNA==,iv:MtqzHoxDQsy3lV9Pq9ql+fw2ii6Sv64OBhJJp9AwI3o=,tag:aoDW3tXkrD7Y0+Dd2+3Kag==,type:str]
           http:
             paths:
                 - path: /radarr
@@ -42,7 +42,7 @@ spec:
                         name: radarr-service
                         port:
                             number: 7878
-        - host: ENC[AES256_GCM,data:9W+qYxJES+tSmPS5PDsr231v8NBAqQ==,iv:5QBBIuAmVclmEPjjmj3OUApytNmGyyZNrHMUHoxKzLs=,tag:ECtr3tbpBuyWXekR5SecIQ==,type:str]
+        - host: ENC[AES256_GCM,data:yltfmnRRjuBGztAllUWi4jSjzX486Q==,iv:9qv1S97V3+Ez5bJ3h1U6D4A586cgIhcNKqE0nI+YYZA=,tag:ZBLQ0m9UyEV3LsbtEW2ULQ==,type:str]
           http:
             paths:
                 - path: /lidarr
@@ -52,7 +52,7 @@ spec:
                         name: lidarr-service
                         port:
                             number: 8686
-        - host: ENC[AES256_GCM,data:qcX4uRtPh92Ge/u8/LVW/d4ODq8gHw==,iv:3yZTPRiGosN3mz9yK51jnlIWdRRoY5V1njtwNERRV78=,tag:lytw6YJC1np0ACGVfUjyIw==,type:str]
+        - host: ENC[AES256_GCM,data:lzz+Okvi9Ip4veQZyzpsBpi+742afg==,iv:czGDp5w04LAX1CO+kI23JhRzi3DfIrqcU3y2TiRUyN4=,tag:nTYGymezNMsbx0zQCz4yiw==,type:str]
           http:
             paths:
                 - path: /prowlarr
@@ -62,17 +62,7 @@ spec:
                         name: prowlarr-service
                         port:
                             number: 9696
-        - host: ENC[AES256_GCM,data:cJcupWDIF6SJEk0tWWoZNpO+l7GUjg==,iv:0X77yfiKCEJ8QCEu9SniJo8q/LUlGeDW8fTCwdm8yzg=,tag:s/86KWq+IdBwjCo0cOQM2w==,type:str]
-          http:
-            paths:
-                - path: /jellyfin
-                  pathType: Prefix
-                  backend:
-                    service:
-                        name: jellyfin-service
-                        port:
-                            number: 8096
-        - host: ENC[AES256_GCM,data:vJ0HwvivyZ0pEIFnXZh5TTfbbBtw0w==,iv:v1cQw5caTzhfVMCB4mCBJ37sEeRVxmNi3mCvwE6+knI=,tag:a8gcgMtRyuSgomILCmxExA==,type:str]
+        - host: ENC[AES256_GCM,data:FP2k/opZM+ykHxudSv3xUvaJCDHP8g==,iv:xtuUv8+SrqvR4vFBibU/NH62jt4V0Yo5OZaszes2r30=,tag:E5X5WErHx/TitQ5oltWEZw==,type:str]
           http:
             paths:
                 - path: /readarr
@@ -91,14 +81,14 @@ sops:
         - recipient: age1xl8mrtu70kvhjdl2nva6dpt8wsy3fhmz6605fmwjujc3zztyeyzqd07nvv
           enc: |
             -----BEGIN AGE ENCRYPTED FILE-----
-            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBBN3M4TVR2ZlMxK2VITU9z
-            SzlnUUtHVndpeHdkSFVsWG1Cc0ZQNkYzL1E4CjV5WXI4dGc5YkswNGdkcllhQlk0
-            ZFRUbEJtb2hhcUtMMTRvNldrNHpQUFUKLS0tIFpHSWpTVE81TEFOOUxOTWwvaE5m
-            V3RtRWRGcTFNMkhlSUk4bXpydlhiNzAKhEf30lZShX9AZgZlTUCTBdxaWOLI0gfr
-            twZARoQVO2ENW1wcFriRi6fVto/jtv1ki/N3asFpPvcvvi+kCO/gSw==
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBvVGdhOGpOR3dXdUFBbldS
+            bEtuTjhLelVuQjV3cFE0eUM5anEyOHJac21ZCkdzZ3gxOTgxWDU5cmlvV0gwb3c0
+            UmRtZUFweW15T0pKRGJxWDRMeTBTSWcKLS0tIHNySmg5ZXltN1l5bWxtbzRuWHRi
+            N0NpdkVKcGd1M3pzbVFSUE1zeTcwcHcKDeDE8BuqUyMhRSvOlpc+RU0U6hUC8qfE
+            i0QTfXt5/luVfSWLrw2llxU/y9WA+HDWKy6AL3BXpxSLiwBrj+loyQ==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2022-12-30T06:44:44Z"
-    mac: ENC[AES256_GCM,data:AYj2r9/1cDfcuk2fcrTDFYoYwEgrEIb0O5Rg3OARHFW/XA0FtOFve5v3FW8yKkFkiFg+gG8cXwaks4gwlVQgmtAaUEP1VliAM64AIYer6AsHPgEXAq9yzpraY++541YtFiwi+gmDlSlF8qSgBtIweAMStkNxSbiobIYU+yXy4zQ=,iv:Zfq8wjgYnl2wmYZIHCP+I8kX4Gl9OmNZdCIIa+Z80l4=,tag:tEaS4DcW/2x9Ug1GWF7W2A==,type:str]
+    lastmodified: "2023-01-21T18:53:06Z"
+    mac: ENC[AES256_GCM,data:mvSeHO9hE3FT3FkBktQz0eqakDxEh39LGmA/Ev15NvuOH00z7QM+14hVY0UjVLtDjOQXMFtb1Esr3RNp+RPyLJKP5tq74uikrgHE08z9gt6sD0Oc6fMaRusU8hRe8XWk/emv4CJtz8RO7WIhUiRK9wqqAo86Z8DtxkqtY0D6jYI=,iv:JPBjZcpHMK13SxbHYPM/MXEV0kOM1mS+nwaN92Hz5mU=,tag:NBaBwdbr22QIevEXDMsMmg==,type:str]
     pgp: []
-    encrypted_regex: ^(data|stringData|email|dnsNames|hosts|host|externalIPs)$
+    encrypted_regex: ^(data|stringData|email|dnsNames|hosts|host|externalUrl)$
     version: 3.7.3
