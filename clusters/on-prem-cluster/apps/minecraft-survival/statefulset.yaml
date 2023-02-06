@@ -35,10 +35,9 @@ spec:
         - name: SERVER_NAME
           value: minecraft-survival
         volumeMounts:
-        - mountPath: data
-          name: vol1
-          subPath: data
+        - mountPath: /data
+          name: minecraft-volume
       volumes:
-      - name: vol1
+      - name: minecraft-volume
         persistentVolumeClaim:
-          claimName: minecraft-data
+          claimName: minecraft-data-pvc
