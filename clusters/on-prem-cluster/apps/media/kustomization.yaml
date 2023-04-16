@@ -9,8 +9,8 @@ resources:
 - radarr
 - jellyfin
 - readarr
-- calibre-web
+# - calibre-web
 - namespace.yaml
 - ingress.sops.yaml
 - middleware.yaml
-- calibre
+# - calibre
