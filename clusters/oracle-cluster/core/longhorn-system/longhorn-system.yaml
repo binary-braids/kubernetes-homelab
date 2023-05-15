@@ -6,7 +6,7 @@ metadata:
 spec:
   chart:
     spec:
-      chart: longhorn-system
+      chart: longhorn
       sourceRef:
         kind: HelmRepository
         name: longhorn-charts
