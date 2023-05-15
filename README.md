@@ -18,9 +18,11 @@ The Git repository contains the following directories:
 📁 clusters
 ├─📁 on-prem-cluster
 │  ├─📁 apps
+|  ├─📁 core
 │  └─📁 flux-system
-├─📁 oracle cluster
+└─📁 oracle cluster
    ├─📁 apps
+   ├─📁 core
    └─📁 flux-system
 ```
 ## Getting started
