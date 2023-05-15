@@ -3,6 +3,6 @@ kind: Kustomization
 
 resources:
 - configmap.yaml
-- ingress.sops.yaml
+#- ingress.sops.yaml
 - longhorn-system-source.yaml
 - longhorn-system.yaml
