@@ -97,4 +97,4 @@ spec:
     secretRef:          ##
       name: sops-age    ##
 ```
-Once that change is made, FLux should reconcile these changes. You are now ready to encrypt secrets and add them into your repo and Flux will automatically decrypt them
+Once that change is made, Flux should reconcile these changes. You are now ready to encrypt secrets and add them into your repo and Flux will automatically decrypt them
