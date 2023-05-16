@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: freshrss
+  namespace: freshrss
+  labels:
+    app: freshrss
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: freshrss
+  template:
+    metadata:
+      labels:
+        app: freshrss
+    spec:
+      containers:
+      - name: freshrss
+        image: linuxserver/freshrss:latest
+        ports:
+          - containerPort: 80
+            protocol: TCP
+        env:
+          - name: PUID
+            value: "1000"
+          - name: PGID
+            value: "1000"
+          - name: TZ
+            value: "Etc/GMT+2"
+        volumeMounts:
+        - name: freshrss-data
+          mountPath: /config
+      terminationGracePeriodSeconds: 30
+      volumes:
+      - name: freshrss-data
+        persistentVolumeClaim:
+          claimName: freshrss-pvc
