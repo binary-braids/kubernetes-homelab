@@ -9,9 +9,9 @@ metadata:
 spec:
     tls:
         - hosts:
-            - ENC[AES256_GCM,data:s0PcEI6CbI9o5W1f5g9RL7XQwoNcp+s+Lw==,iv:gkrm3zS+XnEBbVxfEYIiJRIpXk94ctSzPdhYxODeEIM=,tag:E4CYjIW25QaPBZPl9rcifA==,type:str]
+            - ENC[AES256_GCM,data:sGM8Bi0Wdhrh2bC+8wiGuWOkbhkAlrHFVg==,iv:MYqvPpcDfv/lkI/HoVm7hYyQ4OQTWgZodViYefzZDSA=,tag:LXhEnF/Y3+J79gMNdBqFZA==,type:str]
     rules:
-        - host: ENC[AES256_GCM,data:OQMmMq3EC5XrlM+KBu2YO3ik7kOv4N++nQ==,iv:usmlLLrRUHnwrUb/wW9du2HrTHWwX6HPqdLXN2O8khI=,tag:I+0WAQzm+1eraLgkLk/f3w==,type:str]
+        - host: ENC[AES256_GCM,data:gAfECE8D+eXe8eJuALNURJnMBNrhiM/NFg==,iv:8oPdEYlkyVkH7JGVyhN8XBDdtYeDNeek2HTg1sKS+kU=,tag:922NAUzPUCy+kZyMo+DshA==,type:str]
           http:
             paths:
                 - path: /
@@ -20,7 +20,7 @@ spec:
                     service:
                         name: longhorn-frontend
                         port:
-                            number: 8000
+                            number: 80
 sops:
     kms: []
     gcp_kms: []
@@ -30,14 +30,14 @@ sops:
         - recipient: age1xl8mrtu70kvhjdl2nva6dpt8wsy3fhmz6605fmwjujc3zztyeyzqd07nvv
           enc: |
             -----BEGIN AGE ENCRYPTED FILE-----
-            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBRcGJkTEtQT3o2Vlh4Wmc5
-            Z0NldGJGeFFZd25ablZoemZFRVhQTXJZRHcwCjUwdkx2M1MyUEZreXlhMWVGdC93
-            dENHNjY5MXJYMmwzQWlnWUxJQVJmV3cKLS0tIDhPUHlONjNzdDZkekxHMnBEYWUz
-            aTVQbWo2Vy9aMU5RY3l3OVNRbWhUb1UK1zA5wu+UkIghQfxaJHFzexb8g9F4pdn8
-            nGK4HPkXkr/mSAhKGAMYPmrbqGx/c10gSAXCiKDtQFqE224+O5YjzQ==
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBMNStqdWtNb01MZCtsa2Ir
+            V05NNG9pdnRwVVljUnhQRHVVZ21mUzExUG5BCkpDeDBibkdYNkJLWDk2VFdWSmJI
+            WE5HNkhMQXNwb2ZjdU0xTk9xZXpoU0UKLS0tIERmREJ6NHhkMnZPZkNlMUprdFJh
+            T2NadHpmQlJoWDN0TzQ4cjI5V1ZTRWsKK6C2Tw+A4FqJANOE42fypatyFMIfJpx+
+            AwvBYA2k9Fgna64vsTyjKEiwtPwshS8bomQLKFgfg8dDT1dU5zooUQ==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2022-12-27T09:29:40Z"
-    mac: ENC[AES256_GCM,data:Ch/st7tcTyDlfOlQfEatW6i5VE7DcZzIRNoP50B50hj1/Nzf+vs6CZGwZUa1Gis9/tO0GwjhCi43Z8cPbQthhW8a+TtexuxVQIgozM8ZhV7e9N0ywKSa3EFT4uxhK8ZfjE01VLoqPYxiRm2nW095ldIcAsZzqgXtj3QdxigWVrI=,iv:pez6N43uFAKvIYwhaT37IXzB5c/y9nCsQ3TXzTjeqdU=,tag:hraF9Rr61J5AQRzpHlYYhA==,type:str]
+    lastmodified: "2023-05-17T06:02:57Z"
+    mac: ENC[AES256_GCM,data:F50iLwnokitJepN7pdLMiZGpxhVnjn1GKv4GW76FXCUj+RSlfgk6YpflpLf+fvgPaJO3CVy9qT6tbSYZtUXVjhkH2ZiVqWMVXPTPZ03S1cjPf3ZFD5SkpISQxxljiPFkcGaqdZWtp7CKliKToMzFyXxA7Opg3T+6PkhHeYBPZIY=,iv:lfpkTVPE8DCwvo4lI25D6n0F7ZlbCmoA43WyOJfHEGE=,tag:pCKs61Nsl01Buhp/iucFMw==,type:str]
     pgp: []
-    encrypted_regex: ^(data|stringData|email|dnsNames|hosts|host|externalIPs)$
+    encrypted_regex: ^(data|stringData|email|dnsNames|hosts|host|externalUrl)$
     version: 3.7.3
