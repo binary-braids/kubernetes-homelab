@@ -22,3 +22,5 @@ spec:
     - kind: ConfigMap
       name: values
       valuesKey: values.yaml
+    - kind: Secret
+      name: encrypted-values
