@@ -7,3 +7,8 @@ resources:
 - ingress.sops.yaml
 - longhorn-system-source.yaml
 - longhorn-system.yaml
+
+secretGenerator:
+  - name: encrypted-values
+    files:
+      - values.yaml=values.sops.yaml
