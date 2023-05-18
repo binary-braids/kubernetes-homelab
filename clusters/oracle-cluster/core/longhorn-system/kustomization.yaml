@@ -10,6 +10,7 @@ resources:
 
 secretGenerator:
   - name: encrypted-values
+    namespace: longhorn-system
     files:
       - values.yaml=values.sops.yaml
 
