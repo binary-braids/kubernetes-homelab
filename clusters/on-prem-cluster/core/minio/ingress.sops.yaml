@@ -1,0 +1,54 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+    name: minio-ingress
+    namespace: minio
+    annotations:
+        kubernetes.io/ingress.class: traefik
+        cert-manager.io/cluster-issuer: letsencrypt-prod
+spec:
+    tls:
+        - hosts:
+            - ENC[AES256_GCM,data:P9TdKhTw1P21BreYEmsNDjat7+ECTw==,iv:Pyr0UFTo6jrXVawdloNmQ+2Jbvr+tP5RqgH8dLAGrAw=,tag:lfg6AFCvcYkDukVsWixmog==,type:str]
+            - ENC[AES256_GCM,data:iIu+uwYX9s5UxefLj6n+lmBKzqNGLsUu0McuLn9D,iv:yKytrR/mAM08Zsdkx7Yxi4QJ4Dcyxa+8SyNpNojE+BY=,tag:JCndeqq6+X3wEjXhgxnHrA==,type:str]
+    rules:
+        - host: ENC[AES256_GCM,data:iIxTU4Jl7Eb9FoJK1wCbrLadDjhrLA==,iv:mGPqmvhiqg2+xVjGh55zBnMhXC7ZimoR2r7c7c5pbIk=,tag:HseR2WQpfGa5SCt6Hdqxxg==,type:str]
+          http:
+            paths:
+                - path: /
+                  pathType: Prefix
+                  backend:
+                    service:
+                        name: minio-service
+                        port:
+                            number: 9000
+        - host: ENC[AES256_GCM,data:8CCWNAGqWWuArZ6kRlT67/vzqy6+IDBaia+8+nOK,iv:0eOBYJAICKd4grh4ClKLtrhyMRlI6L7vYOr/tWGeA/M=,tag:Iod7X4sw99HdNp2Farrx4g==,type:str]
+          http:
+            paths:
+                - path: /
+                  pathType: Prefix
+                  backend:
+                    service:
+                        name: minio-service
+                        port:
+                            number: 9001
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1xl8mrtu70kvhjdl2nva6dpt8wsy3fhmz6605fmwjujc3zztyeyzqd07nvv
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBpYUdkK2FTaTd1VEtuZ3Nw
+            VzVBakFOcy9lYytja2dJQWV4dnBNM3pxVUVrCnBqdFRqN2syUVIvY1E4MzY5Y2dk
+            d3oxSnltcTRkdzZKemxabVFaV0xyRkEKLS0tIGdoR1A3QTVyTDJKeTAveXk1RFZ0
+            OE55enE5K1VQdWRscmlQV3JzNzZMZ3MKpOY7wyZqy5Axe/7QzRwE73gG1nC/OdPi
+            fkcLxtCE/gbL8t5dkaypSJBIpWm/0nORZXBGwH5g1OR40r6U4Vp4pw==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2023-05-18T12:28:39Z"
+    mac: ENC[AES256_GCM,data:X8vWzdRsT6tpkDXe45iSWx2xUdVMFxmFuEz5VFxGJsUGfqXW9cS09/pzJr97qC6BbKVI1wbgJy6XQsuOV4GKQBHD5m+AL7boS+AWdCO+v4KG0rCfPgIXdRXbQfiOqjHrmrj0CQkovc777DXBTRVewB29aFwUj5e/lM3fjItvpXw=,iv:Lwxi6DSrk5y2eXADcUvcpDnS7JQ6UH5rPllz/gT3Z24=,tag:9GSN2XVES/mgoZ0ACu2tcQ==,type:str]
+    pgp: []
+    encrypted_regex: ^(data|stringData|email|dnsNames|hosts|host|externalUrl)$
+    version: 3.7.3
