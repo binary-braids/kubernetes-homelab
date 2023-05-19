@@ -6,7 +6,7 @@ resources:
 #- minecraft-creative
 - minecraft-survival
 - mealie
-#- teamspeak
+- teamspeak
 #- phpipam
 #- zabbix
 - media
