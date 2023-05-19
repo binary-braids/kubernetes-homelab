@@ -4,7 +4,7 @@ kind: Kustomization
 resources:
 - qbittorrent
 #- sonarr
-- lidarr
+#- lidarr
 - prowlarr
 #- radarr
 #- jellyfin
