@@ -3,11 +3,11 @@ kind: Kustomization
 
 resources:
 - qbittorrent
-#- sonarr
+- sonarr
 - lidarr
 - prowlarr
-#- radarr
-#- jellyfin
+- radarr
+- jellyfin
 - readarr
 #- calibre-web
 - namespace.yaml

@@ -7,6 +7,7 @@ resources:
 - ingress.sops.yaml
 - longhorn-system-source.yaml
 - longhorn-system.yaml
+- recurringjob.yaml
 
 secretGenerator:
   - name: encrypted-values
