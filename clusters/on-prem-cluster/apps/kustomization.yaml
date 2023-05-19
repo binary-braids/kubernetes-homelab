@@ -4,7 +4,7 @@ kind: Kustomization
 resources:
 #- adguard-home
 #- minecraft-creative
-#- minecraft-survival
+- minecraft-survival
 - mealie
 #- teamspeak
 #- phpipam
