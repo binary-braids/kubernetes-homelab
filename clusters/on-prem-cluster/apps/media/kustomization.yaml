@@ -4,11 +4,11 @@ kind: Kustomization
 resources:
 - qbittorrent
 #- sonarr
-#- lidarr
+- lidarr
 - prowlarr
 #- radarr
 #- jellyfin
-#- readarr
+- readarr
 #- calibre-web
 - namespace.yaml
 - ingress.sops.yaml
