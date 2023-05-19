@@ -4,6 +4,6 @@ namespace: minecraft-survival
 
 resources:
 - namespace.yaml
-#- service.yaml
-#- persistentvolumeclaim.yaml
-#- statefulset.yaml
+- service.yaml
+- persistentvolumeclaim.yaml
+- statefulset.yaml
