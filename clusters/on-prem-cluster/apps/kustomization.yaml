@@ -5,7 +5,7 @@ resources:
 #- adguard-home
 #- minecraft-creative
 #- minecraft-survival
-#- mealie
+- mealie
 #- teamspeak
 #- phpipam
 #- zabbix
