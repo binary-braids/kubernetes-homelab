@@ -9,4 +9,4 @@ resources:
 #- teamspeak
 #- phpipam
 #- zabbix
-#- media
+- media
