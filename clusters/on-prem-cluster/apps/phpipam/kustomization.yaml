@@ -4,7 +4,7 @@ namespace: phpipam
 
 resources:
 - namespace.yaml
-- configmap.yaml
+#- configmap.yaml
 #- secret.sops.yaml
-- phpipam-db
-- phpipam-web
+#- phpipam-db
+#- phpipam-web
