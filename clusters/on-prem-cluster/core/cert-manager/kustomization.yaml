@@ -9,3 +9,4 @@ resources:
 - prod-clusterissuer.sops.yaml
 - secret.sops.yaml
 - tlsstore.yaml
+- namespace.yaml
