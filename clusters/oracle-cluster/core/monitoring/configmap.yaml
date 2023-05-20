@@ -15,8 +15,6 @@ data:
                     requests:
                       storage: 5Gi
         alertmanager:
-          ingress:
-            enabled: true
           alertmanagerSpec:
             storage:
               volumeClaimTemplate:
