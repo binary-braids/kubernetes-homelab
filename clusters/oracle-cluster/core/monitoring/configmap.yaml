@@ -14,3 +14,15 @@ data:
                   resources:
                     requests:
                       storage: 5Gi
+        alertmanager:
+          ingress:
+            enabled: true
+          alertmanagerSpec:
+            storage:
+              volumeClaimTemplate:
+                spec:
+                  storageClassName: longhorn
+                  resources:
+                    requests:
+                      storage: 200Mi
+                       
