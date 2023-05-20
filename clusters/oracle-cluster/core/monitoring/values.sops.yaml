@@ -1,4 +1,4 @@
-alertManager:
+alertmanager:
     ingress:
         enabled: true
         annotations:
