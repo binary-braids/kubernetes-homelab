@@ -1,17 +1,17 @@
-alertmanager:
-    ingress:
-        annotations:
-            kubernetes.io/ingress.class: traefik
-            cert-manager.io/cluster-issuer: letsencrypt-prod
-        tls:
-            - hosts:
-                - ENC[AES256_GCM,data:JMfI0hOqJPTC+y76wbA0QsQlPd/fFr2Mrlq9a4DrRoHx,iv:6H2K6b41HkuZPUnhHjIbCIxSfJrdvzAqiZ6G87E6HUM=,tag:x89V4pg7P7dnZdTM0RW/YA==,type:str]
-        rules:
-            - host: ENC[AES256_GCM,data:7EsU++edF5HGD2lRAoog1VJGqohJBsPC6fCs21Zi7R+g,iv:feHBOER8KZHF7n4BhCRaGHwhIrF4172obEp0AfVjPGs=,tag:sds9JKCUJUB9lwPqjNcJyQ==,type:str]
-              http:
-                paths:
-                    - path: /
-                      pathType: Prefix
+alertManager:
+    ingress: null
+    annotations:
+        kubernetes.io/ingress.class: traefik
+        cert-manager.io/cluster-issuer: letsencrypt-prod
+    tls:
+        - hosts:
+            - ENC[AES256_GCM,data:oQ4+AufYZdU05gIOJpNgj19kjBNb1cwi8KSk4uwfifyA,iv:KB4swxDQOwHk64OuvZHLvYS+baCawidvjR1p6p+5lIk=,tag:jkjsc9YtHQJKv35YBK/zXA==,type:str]
+    rules:
+        - host: ENC[AES256_GCM,data:8eb26Z/xawhb4XWT/B1iOiWxAlHrBFmYrmlHCEXuUtdp,iv:O1cF2I1ENmzDQiQ3VuRU2NISEStVHDDw22jNNnSeimc=,tag:yuDSHa0HTA0O7jev+yl0mQ==,type:str]
+          http:
+            paths:
+                - path: /
+                  pathType: Prefix
 sops:
     kms: []
     gcp_kms: []
@@ -21,14 +21,14 @@ sops:
         - recipient: age1guzav4sek0x4l3sqx498d34w3z7yy8jact0yav53uza3zrmyf43qcvyza6
           enc: |
             -----BEGIN AGE ENCRYPTED FILE-----
-            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSB5UzR0MnlSQU9mNmhZdEZF
-            enoralRJWDA4eXAzems0aWtxUkRITnFjSXdrCmtCRDlORjRTRHlkUUJNSlFIVm9s
-            ZTUxTWtSVklCejdIRHd3S0hUYWVPTU0KLS0tIG9sZldmUEtRa1dINkV4bXE4OGl1
-            TmplZzdOY01ublgyTUc4djIzZVZ6bmsKZ2QpJIC7XxFD4H69CvX0g9GkNP+sMZeN
-            sebk7z9hiiKZQ01VPBbTf50Z/FH2wTzx9eTMLBsV5A6AKprsAOMGOA==
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBtajkvcnMwV3kwWWFhMTZO
+            ZFJOZThJZXJVOE9PY1UrSTRpUFo3VGhNTjJ3CjdkVjhJbS9RT2NBOVUzN0F3VEIr
+            RHlTVnFvTThzYmVwMnNSTng1OEtTZTgKLS0tIGJBMVZ3ZWZzeUdXSFhtbVNmS1Na
+            VGh0bmt2SGtxOTB6YktrWktwMWJ0L0kKrURVyP9LNyP+CaB5xlqmo6gLr/0bntkI
+            b2hNmVG+7F9X96iieCgPrWi+QLi9gKL2FYkAu2+ZY0xPcadfMt4POA==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2023-05-20T15:36:40Z"
-    mac: ENC[AES256_GCM,data:fTqHT8Pv3KnrSfQGym3lBeNFy/8W/X7Ahnv3xueeLFVn885rpLhbVq7LjnHwIgSWshSzKARRjGutFp+AbXTLCXOfJf51S+mZXVB3r+WY1e9uQ0Qfu3jNKf3KsECF7hFY8BgAU5Mzv8+qHNPprwgqY93cQa63RKx7I47HD2sMOFg=,iv:cbewoTGpQMJMIE2UH2Y/8XlxPwkYLJTtSLhsrpbXRcc=,tag:9WC+fVWS+P+9XMq//YlTsw==,type:str]
+    lastmodified: "2023-05-20T16:08:50Z"
+    mac: ENC[AES256_GCM,data:PBTzXF2BMSFJicT82FVhim44q+qMoRB0i62q9ppU6jTMDmRglYuYdta3Phg62Q1EXz+9aQ42O1i7IBZGx4Jzbe7cxYfLCkduk6Qaz0IC/gVNaMa/BETGdQLw+kq56vK3g5avmPu1C1RrrJreyyaHTcyhLhNOCoHiIlTb2H5IBws=,iv:4Nscs9qAx7lHUNDfy5BCBxT41guia2Bgwh7kUpJ+tXM=,tag:a2UJXKnXXbiBm2HQhXF8kQ==,type:str]
     pgp: []
     encrypted_regex: ^(data|stringData|email|dnsNames|hosts|host|externalIPs)$
     version: 3.7.3
