@@ -5,6 +5,7 @@ metadata:
     namespace: flux-system
 data:
     values.yaml: |-
+        prometheus:
           prometheusSpec:
             storageSpec:
               volumeClaimTemplate:
@@ -13,6 +14,3 @@ data:
                   resources:
                     requests:
                       storage: 5Gi
-          alertmanager:
-            ingress:
-              enabled: true
