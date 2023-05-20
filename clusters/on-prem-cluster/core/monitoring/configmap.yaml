@@ -5,6 +5,7 @@ metadata:
     namespace: flux-system
 data:
     values.yaml: |-
+        prometheus:
           prometheusSpec:
             storageSpec:
               volumeClaimTemplate:

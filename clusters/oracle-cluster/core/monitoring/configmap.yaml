@@ -12,4 +12,7 @@ data:
                   storageClassName: longhorn
                   resources:
                     requests:
-                      storage: 1Gi
+                      storage: 5Gi
+          alertmanager:
+            ingress:
+              enabled: true
