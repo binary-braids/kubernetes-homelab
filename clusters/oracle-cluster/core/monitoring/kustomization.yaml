@@ -5,12 +5,6 @@ resources:
 - kube-prometheus-stack.yaml
 - kube-prometheus-stack-source.yaml
 - configmap.yaml
-
-secretGenerator:
-  - name: kube-prometheus-stack-encrypted-values
-    namespace: flux-system
-    files:
-      - values.yaml=values.sops.yaml
-
-configurations:
-  - kustomizeconfig.yaml
+- alertmanager-ingress.sops.yaml
+- grafana-ingress.sops.yaml
+- prometheus-ingress.sops.yaml
