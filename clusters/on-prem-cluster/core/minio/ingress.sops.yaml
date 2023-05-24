@@ -9,10 +9,10 @@ metadata:
 spec:
     tls:
         - hosts:
-            - ENC[AES256_GCM,data:P9TdKhTw1P21BreYEmsNDjat7+ECTw==,iv:Pyr0UFTo6jrXVawdloNmQ+2Jbvr+tP5RqgH8dLAGrAw=,tag:lfg6AFCvcYkDukVsWixmog==,type:str]
-            - ENC[AES256_GCM,data:iIu+uwYX9s5UxefLj6n+lmBKzqNGLsUu0McuLn9D,iv:yKytrR/mAM08Zsdkx7Yxi4QJ4Dcyxa+8SyNpNojE+BY=,tag:JCndeqq6+X3wEjXhgxnHrA==,type:str]
+            - ENC[AES256_GCM,data:zkjVk2/ruXgsTcKgY+lEqJd57N5Fyg==,iv:BfhjlxMH4A70qzeuaS7pgi2s/SnVkW2Z/aDgHWWyilY=,tag:KXhsMFLjoRCjAsRIZIwf5g==,type:str]
+            - ENC[AES256_GCM,data:Eqw/BlyHWLcN02hA1OsGfnu+8lz5zx7fPtM/m81G,iv:H1vSdyk5bgdtZxKC1EdEGaulk+T12fJz4DHnh/Kkf44=,tag:FUWrKfhWoxJVJEVE2nq5IA==,type:str]
     rules:
-        - host: ENC[AES256_GCM,data:iIxTU4Jl7Eb9FoJK1wCbrLadDjhrLA==,iv:mGPqmvhiqg2+xVjGh55zBnMhXC7ZimoR2r7c7c5pbIk=,tag:HseR2WQpfGa5SCt6Hdqxxg==,type:str]
+        - host: ENC[AES256_GCM,data:6rQsB+/2xK281gQJDUaXmNLpTyVLAg==,iv:Mz1axcKrJzQA+IzIlG8sP8Qizecc9u7Qp7pZWH8HVPY=,tag:cVtl+HyhUTGt4PlEhcdw5Q==,type:str]
           http:
             paths:
                 - path: /
@@ -22,7 +22,7 @@ spec:
                         name: minio-service
                         port:
                             number: 9000
-        - host: ENC[AES256_GCM,data:8CCWNAGqWWuArZ6kRlT67/vzqy6+IDBaia+8+nOK,iv:0eOBYJAICKd4grh4ClKLtrhyMRlI6L7vYOr/tWGeA/M=,tag:Iod7X4sw99HdNp2Farrx4g==,type:str]
+        - host: ENC[AES256_GCM,data:8VetniRn41yHjVIjGatQN5okZJ3M8ivnPU1PsPVl,iv:oPwGkhtgHQVoHN/vSnRk6KrscjwGJ/Sd7oUaFLpc5L8=,tag:fQJvnFNzSBITgmooIXAxgQ==,type:str]
           http:
             paths:
                 - path: /
@@ -41,14 +41,14 @@ sops:
         - recipient: age1xl8mrtu70kvhjdl2nva6dpt8wsy3fhmz6605fmwjujc3zztyeyzqd07nvv
           enc: |
             -----BEGIN AGE ENCRYPTED FILE-----
-            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBpYUdkK2FTaTd1VEtuZ3Nw
-            VzVBakFOcy9lYytja2dJQWV4dnBNM3pxVUVrCnBqdFRqN2syUVIvY1E4MzY5Y2dk
-            d3oxSnltcTRkdzZKemxabVFaV0xyRkEKLS0tIGdoR1A3QTVyTDJKeTAveXk1RFZ0
-            OE55enE5K1VQdWRscmlQV3JzNzZMZ3MKpOY7wyZqy5Axe/7QzRwE73gG1nC/OdPi
-            fkcLxtCE/gbL8t5dkaypSJBIpWm/0nORZXBGwH5g1OR40r6U4Vp4pw==
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBDTnI1aHh1SnppMFBoNm1a
+            emlCa1kyS1V6SytKUG1ldTNMOXAyVUJPUlhRCllEYWhxclRyRTN0T3hodzJsL2VG
+            TzIzVmUxTjlmajA2Z0xYUEZBMnA4dTQKLS0tIEhCbHcyTnNBMWZqd29tbFczMEdk
+            QWNpRWFzUTk1S3lIaFpPQzdHc0Y2TFEKoEvfBO1rq/0T3otHf1o8xJRUCbB4hljC
+            J+sD2RQN/SXheoLN4NN1Jx0nFqeT8VbhfdK0vXh/T1uTZ6tDxBcEqg==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2023-05-18T12:28:39Z"
-    mac: ENC[AES256_GCM,data:X8vWzdRsT6tpkDXe45iSWx2xUdVMFxmFuEz5VFxGJsUGfqXW9cS09/pzJr97qC6BbKVI1wbgJy6XQsuOV4GKQBHD5m+AL7boS+AWdCO+v4KG0rCfPgIXdRXbQfiOqjHrmrj0CQkovc777DXBTRVewB29aFwUj5e/lM3fjItvpXw=,iv:Lwxi6DSrk5y2eXADcUvcpDnS7JQ6UH5rPllz/gT3Z24=,tag:9GSN2XVES/mgoZ0ACu2tcQ==,type:str]
+    lastmodified: "2023-05-24T18:50:53Z"
+    mac: ENC[AES256_GCM,data:SS1ChRgx1YZFAjs7eX0m4ykYshgys6319mySP3I/BpF/0nOPA/wvlJXB21uGu3SRCioRC465+W3aKgnWuG1X7KqsAXWG9xN9r5MjNwcPj6QYjIPuM3yfyZggPibvZ53g/3aIumCStEtEVumF0JuCuAdbmVNG5qkLqmMIMPg3gfI=,iv:O8agiS4ZJYUv++3QSJwhzjvS2YBRhLVn+UJISLDG+Yk=,tag:VHoJHOVmK78H7UGSFVFLag==,type:str]
     pgp: []
     encrypted_regex: ^(data|stringData|email|dnsNames|hosts|host|externalUrl)$
     version: 3.7.3
