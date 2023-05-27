@@ -9,23 +9,23 @@ metadata:
 spec:
     tls:
         - hosts:
-            - ENC[AES256_GCM,data:1RgEnktx/GAYSIa7MeswovllByBab/7jwA==,iv:Iqdxtxrgv0EYXYEJmWpxrjO9B1LtO30APbv4DV8GvJk=,tag:INBRFF+VssDvRPUR6aj/Ww==,type:str]
+            - ENC[AES256_GCM,data:7e5QLAa/I7230rtNxo8eTJsQlIQrs2qzSQ==,iv:9HS5VL5nNauMWG9h+c9ahGBQitEbxE0TKoUqi8gSIfg=,tag:mNKazRAKKwxlLZ8cSFTfNg==,type:str]
     rules:
-        - host: ENC[AES256_GCM,data:xg46ty1Q8k35b8ObeQW5h2E9pDt2LovLig==,iv:Zx82e+elZvFz8NZvu1cevAi/dqzZ2chQp8QC5xHIeGQ=,tag:LjHxJAow/SZRGUJ8uu/ZTA==,type:str]
+        - host: ENC[AES256_GCM,data:cUqbeKO21hYSYRiK7TORJ04B5bt/orwv3A==,iv:arZoitzOGlhEsA0K0BP0qavQR2uak8xvEJ/Tvynk5as=,tag:VtqadBapQ9sUuTxS7BxYUg==,type:str]
           http:
             paths:
                 - path: /
                   pathType: Prefix
                   backend:
                     service:
-                        name: keycloak-http
+                        name: keycloak-keycloak
                         port:
                             number: 80
                 - path: /auth
                   pathType: Prefix
                   backend:
                     service:
-                        name: keycloak-http
+                        name: keycloak-keycloak
                         port:
                             number: 80
 sops:
@@ -37,14 +37,14 @@ sops:
         - recipient: age1xl8mrtu70kvhjdl2nva6dpt8wsy3fhmz6605fmwjujc3zztyeyzqd07nvv
           enc: |
             -----BEGIN AGE ENCRYPTED FILE-----
-            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBaOUJPT1VaenUrR3NBWFZx
-            U2QwVUJQN29NNy9PL3dNaHZKWEVXUEZZbnhzCkVtRyszQ1NQcDdKL3Mrd1ZEeTJE
-            ZkFnOS9VMWxweGNtbDJMSzVycTBpUlUKLS0tIHBqMm5xajhUYWQ3T1RFVUxkd0k3
-            ZkFCUStFT081ZE9uZXR6YWhXL3J3M2sKpYNp/mfTPW5il5uriC9RGcKoMxdbRi/A
-            vFLjASJ/dQ+5tqA5kRpwsvR+dU4bfAqZzCRKZdTtQqT6sisNo4yI8A==
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBZQjRrNk45MlNMUWZrdlY5
+            azZyckFlcjc5ZjFaTjRlQ3VORHJQcE5kU0RNCmpjNmtwL2ZLWE5LSERJbmc4VGhS
+            dFBIMFBmRGxvdm4zdFpNZERlT25ON2sKLS0tIElOUnpXR0xtU1JTejJWcFhZb1pG
+            NW9FL0MvSmREL3UwTTF5WFZLOW5ZbDQKroHkG05Ym2jFbMZjVkLD1fv8ak3UsTn5
+            7AOaMTb1ktwLJ+aIt2kZlVW34bHCHkuPg6GeDLKCHR9/hZc1qVJuUg==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2023-05-27T06:01:34Z"
-    mac: ENC[AES256_GCM,data:FCP5I4X3jkmnq6vkav0p7s0yo9rbZMJ4OkyWtQBpxEoWwurkOLc289//d15A7Pyyi4xTeyHsPQqq1K9k5RWM4pYKIHKg+dqKvwnh8Dkpf1ncrOipgXuxbLShCpOm9f83P6d58gmySjQjPAIoXdnEXgu3TY4qSyn4aBkP15BjLvQ=,iv:lSeauDlRrKglwNdkCPqVIZ7CkfwYOJ1/xaQ9Dg9MQu4=,tag:jrYGvbxe7T+Qtk0li0yGjg==,type:str]
+    lastmodified: "2023-05-27T11:37:54Z"
+    mac: ENC[AES256_GCM,data:Ch6TBhKcJkx/0r0JC12M/uoc+P8hD3YX0KVPDxlIz91LmLz4UDD/zsqzsVdHa50nm+iNlvfoLAvJPOFFqGCIRCUKd7oSRqyHDdDcVMRETswwkhy0OxE7TSd0GxiHY+736nRJXF1+6WF7JEOM4GHvDcARilgNryOkckEB1UeKIEk=,iv:pGHZynmghq5m2CwYPxe2xzMU+bMlmuXZPY/PnUnfe3A=,tag:pciF7zbgXYgPwgZWPO/9gg==,type:str]
     pgp: []
     encrypted_regex: ^(data|stringData|email|dnsNames|hosts|host|externalUrl)$
     version: 3.7.3
