@@ -1,0 +1,25 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: keycloak
+  namespace: flux-system
+spec:
+  chart:
+    spec:
+      chart: keycloak
+      version: "18.4.3"
+      sourceRef:
+        kind: HelmRepository
+        name: longhorn-charts
+        namespace: flux-system
+  interval: 5m
+  install:
+    remediation:
+        retries: 3
+    createNamespace: true
+  targetNamespace: keycloak
+  valuesFrom:
+    - kind: Secret
+      name: keycloak-db-secret
+      valuesKey: postgresqlPassword
+      targetPath: postgresql.postgresqlPassword
