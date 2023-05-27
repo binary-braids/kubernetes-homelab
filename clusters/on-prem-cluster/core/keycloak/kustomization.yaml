@@ -7,3 +7,4 @@ resources:
 - keycloak.yaml
 - namespace.yaml
 - secret.sops.yaml
+- namespace.yaml
