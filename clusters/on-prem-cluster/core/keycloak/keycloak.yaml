@@ -7,7 +7,7 @@ spec:
   chart:
     spec:
       chart: keycloak
-      version: "18.4.3"
+      version: "15.1.2"
       sourceRef:
         kind: HelmRepository
         name: keycloak
@@ -19,7 +19,6 @@ spec:
     createNamespace: true
   targetNamespace: keycloak
   valuesFrom:
-    - kind: Secret
-      name: keycloak-db-secret
-      valuesKey: postgresqlPassword
-      targetPath: postgresql.postgresqlPassword
+    - kind: ConfigMap
+      name: values
+      valuesKey: values.yaml
