@@ -6,3 +6,4 @@ resources:
 - longhorn-system
 - monitoring
 - keycloak
+- oauth2-proxy
