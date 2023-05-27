@@ -7,9 +7,8 @@ spec:
   chart:
     spec:
       chart: keycloak
-      version: "15.1.2"
       sourceRef:
-        kind: HelmRepository
+        kind: OCIRepository
         name: keycloak
         namespace: flux-system
   interval: 5m
