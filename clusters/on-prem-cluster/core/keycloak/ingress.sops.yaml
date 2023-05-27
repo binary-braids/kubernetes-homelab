@@ -1,0 +1,50 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+    name: keycloak-ingress
+    namespace: keycloak
+    annotations:
+        kubernetes.io/ingress.class: traefik
+        cert-manager.io/cluster-issuer: letsencrypt-prod
+spec:
+    tls:
+        - hosts:
+            - ENC[AES256_GCM,data:1RgEnktx/GAYSIa7MeswovllByBab/7jwA==,iv:Iqdxtxrgv0EYXYEJmWpxrjO9B1LtO30APbv4DV8GvJk=,tag:INBRFF+VssDvRPUR6aj/Ww==,type:str]
+    rules:
+        - host: ENC[AES256_GCM,data:xg46ty1Q8k35b8ObeQW5h2E9pDt2LovLig==,iv:Zx82e+elZvFz8NZvu1cevAi/dqzZ2chQp8QC5xHIeGQ=,tag:LjHxJAow/SZRGUJ8uu/ZTA==,type:str]
+          http:
+            paths:
+                - path: /
+                  pathType: Prefix
+                  backend:
+                    service:
+                        name: keycloak-http
+                        port:
+                            number: 80
+                - path: /auth
+                  pathType: Prefix
+                  backend:
+                    service:
+                        name: keycloak-http
+                        port:
+                            number: 80
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1xl8mrtu70kvhjdl2nva6dpt8wsy3fhmz6605fmwjujc3zztyeyzqd07nvv
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBaOUJPT1VaenUrR3NBWFZx
+            U2QwVUJQN29NNy9PL3dNaHZKWEVXUEZZbnhzCkVtRyszQ1NQcDdKL3Mrd1ZEeTJE
+            ZkFnOS9VMWxweGNtbDJMSzVycTBpUlUKLS0tIHBqMm5xajhUYWQ3T1RFVUxkd0k3
+            ZkFCUStFT081ZE9uZXR6YWhXL3J3M2sKpYNp/mfTPW5il5uriC9RGcKoMxdbRi/A
+            vFLjASJ/dQ+5tqA5kRpwsvR+dU4bfAqZzCRKZdTtQqT6sisNo4yI8A==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2023-05-27T06:01:34Z"
+    mac: ENC[AES256_GCM,data:FCP5I4X3jkmnq6vkav0p7s0yo9rbZMJ4OkyWtQBpxEoWwurkOLc289//d15A7Pyyi4xTeyHsPQqq1K9k5RWM4pYKIHKg+dqKvwnh8Dkpf1ncrOipgXuxbLShCpOm9f83P6d58gmySjQjPAIoXdnEXgu3TY4qSyn4aBkP15BjLvQ=,iv:lSeauDlRrKglwNdkCPqVIZ7CkfwYOJ1/xaQ9Dg9MQu4=,tag:jrYGvbxe7T+Qtk0li0yGjg==,type:str]
+    pgp: []
+    encrypted_regex: ^(data|stringData|email|dnsNames|hosts|host|externalUrl)$
+    version: 3.7.3
