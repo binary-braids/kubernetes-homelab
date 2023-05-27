@@ -6,3 +6,4 @@ resources:
 - longhorn-system
 - minio
 - cert-manager
+- keycloak
