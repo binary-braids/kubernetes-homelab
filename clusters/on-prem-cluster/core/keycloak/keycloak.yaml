@@ -8,7 +8,7 @@ spec:
     spec:
       chart: keycloak
       sourceRef:
-        kind: OCIRepository
+        kind: HelmRepository
         name: keycloak
         namespace: flux-system
   interval: 5m
