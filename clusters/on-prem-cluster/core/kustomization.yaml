@@ -7,3 +7,4 @@ resources:
 - minio
 - cert-manager
 - keycloak
+- oauth2-proxy
