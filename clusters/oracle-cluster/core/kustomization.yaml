@@ -5,3 +5,4 @@ resources:
 - cert-manager
 - longhorn-system
 - monitoring
+- keycloak
