@@ -20,5 +20,5 @@ spec:
   targetNamespace: keycloak
   valuesFrom:
     - kind: ConfigMap
-      name: values
+      name: keycloak-values
       valuesKey: values.yaml
