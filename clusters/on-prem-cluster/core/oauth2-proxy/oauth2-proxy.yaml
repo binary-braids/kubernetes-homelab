@@ -37,17 +37,6 @@ spec:
       targetPath: config.cookieName
     - kind: Secret
       name: oauth2-proxy-secret
-      valuesKey: OAUTH2_PROXY_PROVIDER
-    - kind: Secret
-      name: oauth2-proxy-secret
-      valuesKey: OAUTH2_PROXY_OIDC_ISSUER_URL
-    - kind: Secret
-      name: oauth2-proxy-secret
-      valuesKey: OAUTH2_PROXY_HTTP_ADDRESS
-    - kind: Secret
-      name: oauth2-proxy-secret
-      valuesKey: OAUTH2_PROXY_REDIRECT_URL
-    - kind: Secret
-      name: oauth2-proxy-secret
-      valuesKey: OAUTH2_PROXY_EMAIL_DOMAINS
+      valuesKey: configFile
+      targetPath: config.configFile
 
