@@ -6,5 +6,5 @@ resources:
 - longhorn-system
 - minio
 - cert-manager
-- keycloak
+#- keycloak
 - oauth2-proxy
