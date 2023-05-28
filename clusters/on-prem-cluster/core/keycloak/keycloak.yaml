@@ -22,3 +22,19 @@ spec:
     - kind: ConfigMap
       name: keycloak-values
       valuesKey: values.yaml
+    - kind: Secret 
+      name: keycloak-secret
+      valuesKey: keycloak-admin-username
+      targetPath: auth.adminUser
+    - kind: Secret
+      name: keycloak-secret
+      valuesKey: keycloak-admin-password
+      targetPath: auth.adminPassword
+    - kind: Secret
+      name: keycloak-secret
+      valuesKey: keycloak-db-user
+      targetPath: postgresql.auth.username
+    - kind: Secret
+      name: keycloak-secret
+      valuesKey: keycloak-db-password
+      targetPath: postgresql.auth.password  
