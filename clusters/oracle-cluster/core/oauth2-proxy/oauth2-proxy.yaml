@@ -35,3 +35,7 @@ spec:
       name: oauth2-proxy-secret
       valuesKey: cookieName
       targetPath: config.cookieName
+    - kind: Secret
+      name: oauth2-proxy-secret
+      valuesKey: configFile
+      targetPath: config.configFile
