@@ -2,7 +2,7 @@
 [![flux](https://img.shields.io/badge/GitOps-Flux-blue?style=for-the-badge&logo=git)](https://fluxcd.io/)
 [![renovate](https://img.shields.io/badge/renovate-enabled-brightgreen?style=for-the-badge&logo=renovatebot)](https://github.com/renovatebot/renovate)
 
-![visitors](https://visitor-badge.glitch.me/badge?page_id=qman-being.kubernetes-homelab&left_color=grey&right_color=red)
+[![HitCount](https://hits.dwyl.com/qman-being/kubernetes-homelab.svg?style=for-the-badge&show=unique)](http://hits.dwyl.com/qman-being/kubernetes-homelab)
 
 # Kubernetes Homelab
 
