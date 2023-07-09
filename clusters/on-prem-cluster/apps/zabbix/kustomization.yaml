@@ -6,6 +6,7 @@ resources:
 - namespace.yaml
 - configmap.yaml
 - secret.sops.yaml
+- zabbix-agent
 - zabbix-db
 - zabbix-server
 - zabbix-web
