@@ -1,0 +1,42 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+    name: zabbix-ingress
+    annotations:
+        kubernetes.io/ingress.class: traefik
+        cert-manager.io/cluster-issuer: letsencrypt-prod
+spec:
+    tls:
+        - hosts:
+            - ENC[AES256_GCM,data:xIC5vI08bzVZ+emh1BhpBmhMYX5wgL0=,iv:yd3BqE1jaeURpud0eJwvXsEMRuaH+9Eu5hJHXyeBbKg=,tag:Q2Fea3LCRG52aWEn84yAGg==,type:str]
+    rules:
+        - host: ENC[AES256_GCM,data:F+vL/WN4LmaSqfIVwTrBbEymP5WfCn8=,iv:Vv5Bx+Uzhh88rJDLLPjoBCynrHb5lFx/lmIAK/zNOdA=,tag:8WogVCJyEYZ9tVUOcHIBdQ==,type:str]
+          http:
+            paths:
+                - pathType: Prefix
+                  path: /
+                  backend:
+                    service:
+                        name: zabbix-web-service
+                        port:
+                            number: 8080
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1guzav4sek0x4l3sqx498d34w3z7yy8jact0yav53uza3zrmyf43qcvyza6
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSA4d01WK2lqcTV3b3FsNk9Z
+            aFhlazg1bzBjRDlsWGVSOG9qMXFrdE03QWs0Cm9Oa2pLQkFjV1ZIUzlUeUN4cEN4
+            Z21yTFJTV002R2lndE5UUEdodDNwYncKLS0tIGc1VjNTOEhUSXEzSEREbzdkRlVk
+            d3N6cHMvSkgzTnFaRkkrVFhXL1gxOG8KU/egjHRaungqya2fA+H0nTS5G6AZVMOD
+            kq9EhtQoVy7GKXaZ12GF6RvCPuhrNDOug1J5Dl32GUdtGVUJchUOtg==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2023-07-14T18:16:22Z"
+    mac: ENC[AES256_GCM,data:kRWalaG/dIdY5CfUiqHwhbA4yuarMnGnOS4lNo/Hw1j1qcxRycHjp4kBTbzPsq8pMMgOwAmEOgAZ/qj9tpZ7OlRuWvpKe73DdNNI2Lc6UAB163CjU9zeZG0uqvEFtryrfqrCBRY+XL5AqjydXlkUp8YsGPXagLTlzkZpogXWMpQ=,iv:zxAvRqrigByfyhkaUn3H6fKJsK+5p6Kaa9+rgANNQ/Q=,tag:SW1xVNB+vwDI14IR8waGJA==,type:str]
+    pgp: []
+    encrypted_regex: ^(data|stringData|email|dnsNames|hosts|host|externalIPs)$
+    version: 3.7.3
