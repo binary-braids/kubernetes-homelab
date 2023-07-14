@@ -8,5 +8,5 @@ resources:
 - mealie
 - teamspeak
 - phpipam
-#- zabbix
+- zabbix
 - media
