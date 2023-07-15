@@ -6,11 +6,12 @@ metadata:
 spec:
   selector:
     app: zabbix-server
-  type: LoadBalancer
   ports:
     - name: server-port
       port: 10051
       targetPort: 10051
+      type: LoadBalancer
     - name: agent-port
       port: 10050
       targetPort: 10050
+      type: ClusterIP
