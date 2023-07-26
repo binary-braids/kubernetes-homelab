@@ -1,0 +1,77 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: osticket
+  namespace: osticket
+  labels:
+    app: osticket
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: osticket
+  template:
+    metadata:
+      labels:
+        app: osticket
+    spec:
+      containers:
+      - name: osticket
+        image: tiredofit/osticket
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
+          protocol: TCP
+        env:
+        - name: DB_USER
+          value: "osticket"
+        - name: DB_PASS
+          valueFrom:
+            secretKeyRef:
+              name: osticket-secret
+              key: osticket_db_password
+        - name: DB_HOST
+          valueFrom:
+            configMapKeyRef:
+              name: osticket-configmap
+              key: database_url
+        - name: DB_NAME
+          value: "osticket"
+        - name: SMTP_HOST
+          valueFrom:
+            secretKeyRef:
+              name: osticket-secret
+              key: smtp_host
+        - name: SMTP_PORT
+          value: "587"
+        - name: SMTP_FROM
+          valueFrom:
+            secretKeyRef:
+              name: osticket-secret
+              key: smtp_from
+        - name: SMTP_USER
+          valueFrom:
+            secretKeyRef:
+              name: osticket-secret
+              key: smtp_user
+        - name: SMTP_PASS
+          valueFrom:
+            secretKeyRef:
+              name: osticket-secret
+              key: smtp_pass
+        - name: INSTALL_NAME
+          valueFrom:
+            secretKeyRef:
+              name: osticket-secret
+              key: install_name
+        - name: ADMIN_FIRSTNAME
+          value: "osTicket"
+        - name: ADMIN_LASTNAME
+          value: "Admin"
+        - name: ADMIN_USER
+          value: "osticket-admin"
+        - name: ADMIN_PASS
+          valueFrom:
+            secretKeyRef:
+              name: osticket-secret
+              key: admin_pass
