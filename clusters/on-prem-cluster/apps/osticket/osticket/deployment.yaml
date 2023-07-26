@@ -36,7 +36,7 @@ spec:
           valueFrom:
             configMapKeyRef:
               name: osticket-configmap
-              key: db_host
+              key: db_host_url
         - name: DB_NAME
           value: "osticket"
         - name: SMTP_HOST
