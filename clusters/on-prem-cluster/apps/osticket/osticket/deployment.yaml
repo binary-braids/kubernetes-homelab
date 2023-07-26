@@ -75,3 +75,15 @@ spec:
             secretKeyRef:
               name: osticket-secret
               key: admin_pass
+        - name: INSTALL_EMAIL
+          valueFrom:
+            secretKeyRef:
+              name: osticket-secret
+              key: install_email
+        - name: ADMIN_EMAIL
+          valueFrom:
+            secretKeyRef:
+              name: osticket-secret
+              key: admin_email
+        - name: CRON_INTERVAL
+          value: "10"
