@@ -23,6 +23,8 @@ spec:
         - containerPort: 80
           protocol: TCP
         env:
+        - name: TIMEZONE
+          value: Africa/Johannesburg
         - name: DB_USER
           value: "osticket"
         - name: DB_PASS
@@ -80,6 +82,11 @@ spec:
             secretKeyRef:
               name: osticket-secret
               key: install_email
+        - name: INSTALL_SECRET
+          valueFrom:
+            secretKeyRef:
+              name: osticket-secret
+              key: install_secret
         - name: ADMIN_EMAIL
           valueFrom:
             secretKeyRef:
@@ -87,3 +94,14 @@ spec:
               key: admin_email
         - name: CRON_INTERVAL
           value: "10"
+        volumeMounts:
+        - name: osticket-data
+          mountPath: /www/osticket
+          subPath: osticket
+        - name: osticket-data
+          mountPath: /www/logs
+          subPath: logs
+      volumes:
+      - name: osticket-data
+        persistentVolumeClaim:
+          claimName: osticket-pvc
