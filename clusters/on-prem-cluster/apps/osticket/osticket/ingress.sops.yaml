@@ -1,0 +1,43 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+    name: osticket-ingress
+    namespace: osticket
+    annotations:
+        kubernetes.io/ingress.class: traefik
+        cert-manager.io/cluster-issuer: letsencrypt-prod
+spec:
+    tls:
+        - hosts:
+            - ENC[AES256_GCM,data:J50MAVeCIb7wt9JGzv3iA22uI9K12LCztQ==,iv:dOxPfQ7+qHC32z9ShFN7F1nNV7XLXKTQBe8AOoUu28k=,tag:Yak7cnIadNx7JvdZOpFlGg==,type:str]
+    rules:
+        - host: ENC[AES256_GCM,data:RxDg7jhLGhMbWlOn4XMJviemtai9cdvOxQ==,iv:49WMd9XkfoWvKzX+0GRDlBj9apU23M7da7YZX01KaD0=,tag:TTG2f+Zsi08a7pEufaZbUw==,type:str]
+          http:
+            paths:
+                - path: /
+                  pathType: Prefix
+                  backend:
+                    service:
+                        name: osticket-service
+                        port:
+                            number: 80
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1xl8mrtu70kvhjdl2nva6dpt8wsy3fhmz6605fmwjujc3zztyeyzqd07nvv
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBOeG1KMFUydWo4ZENlU3NT
+            dU5vcTRvQ2svTC8rdmJtanlXWGJQK0dLUEJNCnB1aDkzaGZBMTY2V29rNlAvYlc3
+            VzdDN1ZFN1czcER4TmhVOFlVTWllazQKLS0tIG53Vk9RTFE0TmlBZC83azNJNDlt
+            N3lUODdiWXpXRzBIYkt5ZVdyMzlmUGcKcAD+vDwZc/bwl6Cr6X6Vj8lT2ftnFn0u
+            gwEHoXmk0pldouG7CvqCswXkQexSutAVxgm+oIlZGzAEJ7Wwzhtt4Q==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2023-07-26T08:09:51Z"
+    mac: ENC[AES256_GCM,data:rxpw5jjkRqqM9MlJABn3VFyi5OYM7b1MCg+cLmDwE4OsAakbDEYZ0mqr2MYPELltDyLI9gd7utdWwBhWcHdjwLakQZy7PaENokbV4HOuj+RLwDAMzCJc/Ar7FDUHxE4hDd9i+fBWFcjgNpkz6K/slFePYTTnb6Op6q5c3K/Y+gM=,iv:HCcabKvV2XOm/mS1REpdurolL1t+DVU0aHebstUHgVA=,tag:Vt2MpIbdVJ2G1CrqMNhqug==,type:str]
+    pgp: []
+    encrypted_regex: ^(data|stringData|email|dnsNames|hosts|host|externalUrl)$
+    version: 3.7.3
