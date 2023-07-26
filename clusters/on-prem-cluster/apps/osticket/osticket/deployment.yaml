@@ -27,6 +27,8 @@ spec:
           value: Africa/Johannesburg
         - name: DB_USER
           value: "osticket"
+        - name: DB_PORT
+          value: "3306"
         - name: DB_PASS
           valueFrom:
             secretKeyRef:
