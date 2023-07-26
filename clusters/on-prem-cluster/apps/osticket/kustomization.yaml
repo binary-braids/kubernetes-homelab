@@ -7,3 +7,4 @@ resources:
 - osticket-db
 - configmap.yaml
 - secret.sops.yaml
+- namespace.yaml
