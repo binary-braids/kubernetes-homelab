@@ -4,4 +4,4 @@ metadata:
   name: osticket-configmap
   namespace: osticket
 data:
-  database_url: osticket-mariadb-service
+  db_host: osticket-mariadb-0
