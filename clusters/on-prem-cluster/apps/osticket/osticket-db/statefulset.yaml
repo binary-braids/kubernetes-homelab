@@ -29,6 +29,15 @@ spec:
             secretKeyRef:
               name: osticket-secret
               key: mariadb_root_password
+        - name: MARIADB_DATABASE
+          value: "osticket"
+        - name: MARIADB_USER
+          value: "osticket"
+        - name: MARIADB_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: osticket-secret
+              key: osticket_db_password
         volumeMounts:
         - mountPath: /var/lib/mysql
           name: osticket-mariadb-volume
