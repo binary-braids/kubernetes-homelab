@@ -5,3 +5,4 @@ resources:
 #- adguard-home
 - freshrss
 - zabbix
+- osticket
