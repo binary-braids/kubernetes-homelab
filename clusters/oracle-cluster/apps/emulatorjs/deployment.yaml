@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: emulatorjs
+  namespace: emulatorjs
+  labels:
+    app: emulatorjs
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: emulatorjs
+  template:
+    metadata:
+      labels:
+        app: emulatorjs
+    spec:
+      containers:
+      - name: emulatorjs
+        image: lscr.io/linuxserver/emulatorjs:1.7.2
+        ports:
+          - containerPort: 80
+            protocol: TCP
+          - containerPort: 3000
+            protocol: TCP
+        env:
+          - name: PUID
+            value: "1000"
+          - name: PGID
+            value: "1000"
+          - name: TZ
+            value: "Etc/GMT+2"
+        volumeMounts:
+        - name: emulatorjs-volume
+          mountPath: /config
+        - name: emulatorjs-volume
+          mountPath: /data
+      terminationGracePeriodSeconds: 30
+      volumes:
+      - name: emulatorjs-volume
+        persistentVolumeClaim:
+          claimName: emulatorjs-pvc
