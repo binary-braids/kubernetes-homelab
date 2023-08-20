@@ -8,9 +8,9 @@ metadata:
         cert-manager.io/cluster-issuer: letsencrypt-prod
 spec:
     tls:
-        - hosts: ENC[AES256_GCM,data:I9Vn/0SeHRu8qzri8fJXzjuFaAtu+A9ohQj4Xc11,iv:gm+Y8TxHz0rBazr1I7Hly7uDqDQFPe05SdxUTt5zjns=,tag:k6nO+UjzyMwroFOPl9UneQ==,type:str]
+        - hosts: ENC[AES256_GCM,data:CPdXH5ERlFdwlbcr1QWS48VQ1Dx2ZsqmL7pJzya/,iv:3fGgzwnlVvO1RA/1hgJVzdpUK4qAlIEvikus0+67Y6Q=,tag:uLc8uL8f9MJMLY/O0dDyxg==,type:str]
     rules:
-        - host: ENC[AES256_GCM,data:DWiu2J+1e05Am8A4ckElVwGre7lXr4nB/K58Ew/4,iv:rXVXxWwdbVGaqDMvOJwj5csIxKrd/c3F5yCMgRMlYOY=,tag:iLhtC/I9bUvoRox2oE9oOQ==,type:str]
+        - host: ENC[AES256_GCM,data:hw8XIw17lV2mtQsnjTsiu2eWPDnTl7iCNlBOhIvV,iv:pHZAo3ChwzzJSbNMj3YKQTTANTvcmju9EWYw/K/EH3Q=,tag:hKcoNwT65uyxmcBMYld8VA==,type:str]
           http:
             paths:
                 - pathType: Prefix
@@ -20,7 +20,7 @@ spec:
                         name: emulatorjs-80
                         port:
                             number: 80
-        - host: ENC[AES256_GCM,data:JqYjsuiyvDiCiVAXLzV2JJurYgY1VfyEUxJJd+9B,iv:An+eTjTUwyZFtyOa11QuH+fP37ptB5AT1MVPiHUR9AQ=,tag:BreHkuMpuEQaufmQSHqaVQ==,type:str]
+        - host: ENC[AES256_GCM,data:bJzkzA4hijcXsnzstA66o3kp+RhtgXH/HTYrHlxp,iv:JDwl/MUmMc6L/Ieo0ScRS5NXlh87hbz33fW2MFCGdd4=,tag:xzPYP52Pm57ddceVkZVw2w==,type:str]
           http:
             paths:
                 - pathType: Prefix
@@ -29,7 +29,7 @@ spec:
                     service:
                         name: emulatorjs-3000
                         port:
-                            number: 3000h
+                            number: 3000
 sops:
     kms: []
     gcp_kms: []
@@ -39,14 +39,14 @@ sops:
         - recipient: age1guzav4sek0x4l3sqx498d34w3z7yy8jact0yav53uza3zrmyf43qcvyza6
           enc: |
             -----BEGIN AGE ENCRYPTED FILE-----
-            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSB3d1B2em5VUVFOQkhybzNI
-            cFNiOXVIeEIrRkcrQ3paMEtMRm9yN0p4eDE4CnV2VDV1RWZ1ZzRsdlJoaHY0RUdB
-            YXU4ZjQwdWxKUHdkYjBZNGFEeXBKdDgKLS0tIDVKb010Q1dBMElxTzBhdlcxck9C
-            Ymlzd2p6aG91T0pCS2lHdUUwTVdvSlkKbACNbG9M1PfLwVwAuUP1UW3vGTsH1syI
-            BQ3Qs9wdJzWWPtejqoCyk2tY424OlRh/NZuFYZNvwBiDrBA/9viJkg==
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBxb3k0czBHNVVqMVdVRlBt
+            ekpRV0oyTDNpWUVQUm9VQlg5d0xyS3YxQUJzClBsRGs0QVluRHFTZlgrOGlIVnVx
+            bDY0VnlmUmdHa1J5QUVNODhMbElIUGMKLS0tIGdLOGRMd0pBdk44ZlNxekhoZXJZ
+            bFArSDk3OU9pSHVnWHhyandLV2JEajAKfUCDxZzH7dGBTGoONZHb4mQMtUGnc/eZ
+            pxVZ8cowr9mIspUEbW96z+xeb7bpEMuYIZoZN2CsrdsRKMlcNppBqg==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2023-08-20T08:57:02Z"
-    mac: ENC[AES256_GCM,data:2hcl5Gae/tDd18+x59G6PY8eRttg7pquQAiGU/GjXHzXlL0ZZSrxUtXtTXmLB1MDdo/TI5vBJurE3IMq7MxHgPGbi1iGMoLYOIobUypFdq7oVQJAKLI0FtJl5xZNvbwDEBtMT+VDb6bwlPufiE+qv0a0GgVS96nyFb4F+JKGoLc=,iv:PwA18DbRlRbSA+8tQRDI1sNDau6XCCnDkQgO66LuXAQ=,tag:vwIBVIUyB8YDjTFNq7JMmA==,type:str]
+    lastmodified: "2023-08-20T09:06:02Z"
+    mac: ENC[AES256_GCM,data:4PqEjpglUjeENDi4S+3pHR1qHjJ8uoRqd2VZ69RI2a2L1HOESNoHgAqNI96bsgOgdOBgBpsijHr++WpkDOYY4omw0XNz0M47MjXv9FTCmx4pC9nBw/VAdOp1POJ0p/yQKeXL8IxEDn2sBn5izef+PdhuM/PRVz5Aqnrx7N2bpgc=,iv:1ISB+FxHHfD2gbUn2Gf1AEeq6U4djByaXpngvacf8FE=,tag:QgD7f19qi2D4s6+xUj2weQ==,type:str]
     pgp: []
     encrypted_regex: ^(data|stringData|email|dnsNames|hosts|host|externalIPs)$
     version: 3.7.3
