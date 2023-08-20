@@ -8,9 +8,10 @@ metadata:
         cert-manager.io/cluster-issuer: letsencrypt-prod
 spec:
     tls:
-        - hosts: ENC[AES256_GCM,data:CPdXH5ERlFdwlbcr1QWS48VQ1Dx2ZsqmL7pJzya/,iv:3fGgzwnlVvO1RA/1hgJVzdpUK4qAlIEvikus0+67Y6Q=,tag:uLc8uL8f9MJMLY/O0dDyxg==,type:str]
+        - hosts:
+            - ENC[AES256_GCM,data:BB8eQpHnLcrxBi0DEYj+NSmzehyyMCP8jQ6cgEfP,iv:CJO2Tot8UBOu8Nppgi0i6wGzbSDDgAhqU2aJQqw6EL0=,tag:WOEXg1A7PZbItE72jlarBw==,type:str]
     rules:
-        - host: ENC[AES256_GCM,data:hw8XIw17lV2mtQsnjTsiu2eWPDnTl7iCNlBOhIvV,iv:pHZAo3ChwzzJSbNMj3YKQTTANTvcmju9EWYw/K/EH3Q=,tag:hKcoNwT65uyxmcBMYld8VA==,type:str]
+        - host: ENC[AES256_GCM,data:f7kfdQGW4u9aoPNDW4o+XxPRcuyyaM8CAxYY1eUY,iv:oTVc669IGuG049iCpIMEP8FO+gbLzhdXWUXu2W/zva4=,tag:9DuV3cRL6cfxoSEIbevdUA==,type:str]
           http:
             paths:
                 - pathType: Prefix
@@ -20,7 +21,7 @@ spec:
                         name: emulatorjs-80
                         port:
                             number: 80
-        - host: ENC[AES256_GCM,data:bJzkzA4hijcXsnzstA66o3kp+RhtgXH/HTYrHlxp,iv:JDwl/MUmMc6L/Ieo0ScRS5NXlh87hbz33fW2MFCGdd4=,tag:xzPYP52Pm57ddceVkZVw2w==,type:str]
+        - host: ENC[AES256_GCM,data:DJJG0UQt4RUSru6JZ9eEsVcwmot1MOAUPsfpS5C1,iv:9to7XJZmxw7At/USswciUxSJzI9zvEtgdSfdr+4LxkE=,tag:XR1x7Aas38sBIcPZIljp6g==,type:str]
           http:
             paths:
                 - pathType: Prefix
@@ -39,14 +40,14 @@ sops:
         - recipient: age1guzav4sek0x4l3sqx498d34w3z7yy8jact0yav53uza3zrmyf43qcvyza6
           enc: |
             -----BEGIN AGE ENCRYPTED FILE-----
-            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBxb3k0czBHNVVqMVdVRlBt
-            ekpRV0oyTDNpWUVQUm9VQlg5d0xyS3YxQUJzClBsRGs0QVluRHFTZlgrOGlIVnVx
-            bDY0VnlmUmdHa1J5QUVNODhMbElIUGMKLS0tIGdLOGRMd0pBdk44ZlNxekhoZXJZ
-            bFArSDk3OU9pSHVnWHhyandLV2JEajAKfUCDxZzH7dGBTGoONZHb4mQMtUGnc/eZ
-            pxVZ8cowr9mIspUEbW96z+xeb7bpEMuYIZoZN2CsrdsRKMlcNppBqg==
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSA1cTdWVDFybEN2RDlXS2ZL
+            cW14U05pMGVUMFdIV1d1akNFeXZqU3VkUWlvClRVMXVqTWQ0TVNGVWVoSjlnWjZB
+            cWRuSjJrNXZKNnN6QlN2WGhONXdFaGMKLS0tIFE1QXNtcUt2WkFiZGRGSW5uQkpF
+            S2QzK3N5T04wa0N1NFJ5NXR0UWRpMlUKVSCbv4ihGVWj6/SqOLTZXWMrpA2pukK9
+            NZK2cLao7yqS9FyAq4U8NTbjvapCiPnb3O9VE8wStLC7A6cXtPzteg==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2023-08-20T09:06:02Z"
-    mac: ENC[AES256_GCM,data:4PqEjpglUjeENDi4S+3pHR1qHjJ8uoRqd2VZ69RI2a2L1HOESNoHgAqNI96bsgOgdOBgBpsijHr++WpkDOYY4omw0XNz0M47MjXv9FTCmx4pC9nBw/VAdOp1POJ0p/yQKeXL8IxEDn2sBn5izef+PdhuM/PRVz5Aqnrx7N2bpgc=,iv:1ISB+FxHHfD2gbUn2Gf1AEeq6U4djByaXpngvacf8FE=,tag:QgD7f19qi2D4s6+xUj2weQ==,type:str]
+    lastmodified: "2023-08-20T09:09:52Z"
+    mac: ENC[AES256_GCM,data:yVN454Q8Ta/Z6LZk8uDWjncw5ES93DNNtsMQ09qTK+NcJbdA9YbtjJ3xA36bX6CTXunjWBrxMqNozQkBhFbYxCNeDhI8KZerCerHsObEbZLGeFG3I0fM/OjePxAyUqVcyI29sNS5XrSQTrY3iZIjIWcMmyY0LYE0fJnJrptgXXg=,iv:jNn/Ljy4UZhc2RiwIrCYEEmpXykCEKQBLKDzcHK1FXU=,tag:uQdvP5igh+o/2O1M7U1IwQ==,type:str]
     pgp: []
     encrypted_regex: ^(data|stringData|email|dnsNames|hosts|host|externalIPs)$
     version: 3.7.3
