@@ -8,3 +8,4 @@ resources:
 - namespace.yaml
 - persistentvolumeclaim.yaml
 - service.yaml
+- middleware.yaml
