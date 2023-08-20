@@ -6,13 +6,13 @@ metadata:
     annotations:
         kubernetes.io/ingress.class: traefik
         cert-manager.io/cluster-issuer: letsencrypt-prod
-        traefik.ingress.kubernetes.io/router.middlewares: emulatorjs-ingress-stripprefix@kubernetescrd
 spec:
     tls:
         - hosts:
-            - ENC[AES256_GCM,data:BXGdoxY5lc5aI3mUmgu0+qLpgGqd1inO0ePX7GUM,iv:+OQp1x/IeJ5Kg9vkGWW11a83r5dvxaBWmVPhBViB9z8=,tag:hvRPZ+URZpqklni/QuhHVQ==,type:str]
+            - ENC[AES256_GCM,data:9/pJDdUS2Bb0FjzkRzpon3tKgBNe6Cr7KjcCYXiq,iv:lX3tn7Wv9Pt+mOeNoUq0914HebRQQ3Z1XoH/TF3EZFs=,tag:cBsJN7r6mcNxIMVldcHUIg==,type:str]
+            - ENC[AES256_GCM,data:jklclFJf1N6Hfs6jjEUCk6CNcF6rzHy1kWk6BoIq867m8cHg9A==,iv:aEz3W8ArEpNT4TqO7D5J4pQVyiwPnTOrW+DS7RVWM7Y=,tag:rxXhlbTcBA5X6pP9k8C1GQ==,type:str]
     rules:
-        - host: ENC[AES256_GCM,data:XzNnwzsFCvqCJ5qrcbyO6LeQpCqowdOPmALLqf7P,iv:rTMxNwzJoxHeH2Z6GBWtNqfgE3ObxWGlW6QTAbluYIk=,tag:/LqX1jG4NZePKfgy6yCN5w==,type:str]
+        - host: ENC[AES256_GCM,data:tqhpjOmRFWHwxHFP7BocBVEQW3nATbPykatBJZBr,iv:Md3WKsbCQI1PDJStR5yq8qFj4wDcn9yOQu+YSzDzRFs=,tag:pvp3hNZ1Ng58WxKxhcpo/w==,type:str]
           http:
             paths:
                 - pathType: Prefix
@@ -22,11 +22,11 @@ spec:
                         name: emulatorjs-service
                         port:
                             number: 80
-        - host: ENC[AES256_GCM,data:buIR4PS9vjxe0WlmMVcxoRl3KD4UI5QLNpGHIl+u,iv:mpS9LDJHR1m+UnDnbramqwCrY2uQsLntwqX6ruCYZPA=,tag:1QCz+psXJGyZtSl2Pgqepw==,type:str]
+        - host: ENC[AES256_GCM,data:zT+dMcWsq/2JjttGyj/h0FpusEd+JfY59m04AWi0NWNdi9F4bw==,iv:pbbJMH/AEUJEJrb7MmtH9Ah7fF2ujEQtWjnL/UeBn8w=,tag:ipGxYHYHccLjuOiAFvxGBw==,type:str]
           http:
             paths:
                 - pathType: Prefix
-                  path: /backend
+                  path: /
                   backend:
                     service:
                         name: emulatorjs-service
@@ -41,14 +41,14 @@ sops:
         - recipient: age1guzav4sek0x4l3sqx498d34w3z7yy8jact0yav53uza3zrmyf43qcvyza6
           enc: |
             -----BEGIN AGE ENCRYPTED FILE-----
-            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBLamttaDIvL2g5eGoyWVpX
-            MzY1Ry9uNHZjRzNocDlrTThBd3c3VTJqWlRZCkVLYUhGL0lvU0tFOXhJNmZEMFFz
-            Nmk1WHMvczVhT3BvVFhaamdMMDhrVGcKLS0tIGQrNWpIamM0Rmo3V3pYRjlkS2JJ
-            UUpPYVRIUEU0T2xRQWZZc1ByY21oMFUKo+kTUffKZw0onRatRkZR52Pp78ss22RT
-            YPkhl23lkkgJJyD/6ekSiZIS0SylvLFVq0Ggr7uriE+qsCI3UEPfWQ==
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSA0RSt6VE5FUEYyZ1BYaEx5
+            YjVoK0RJTEs3WUcxdVIzYVZPMFpQQ2Zmc1hFClZUQzJ2Ync4THd3WWJsdTVPZDhX
+            UFh4enJYVTF3eVM3cDUvMC9Hcm1waTAKLS0tIGoyb3hTbndmVlJGQmd3a3NOSFZ1
+            VDE3OWM0NWlpOU8xM21odXh0N21XSVEKDec6T0bwIeCEs/PlHkhsLcm8395mIf/r
+            uXuiB9eNsHzU71VDYjjKNpIDTml/ryy0ydPP9cQQ27D32d02qoxobQ==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2023-08-20T15:45:10Z"
-    mac: ENC[AES256_GCM,data:d16jPOvaQtJOhxIfCtfjHeXnV2OiafATj0D89F09lU9oc9x6EcP18JzJd64oeHyyNZjvTLYpoRUqQwlj6yqzeIm/CUoNcn4INFfFc0AXK7+ZTbj+XohKUdjxb+/vZkgYwk7qO5Q1nglijcVZEJ9k4Y40V1hWO4rkC5m7zwIumoA=,iv:EYUjSgj6bt1HXMuxVp2vyP517awzecJzO6iQb/JoGi4=,tag:n55GSQ+7Fk6m+4dVkNvFQw==,type:str]
+    lastmodified: "2023-08-20T16:11:11Z"
+    mac: ENC[AES256_GCM,data:HChZlMSG+ObyFFOH3FDNjSLq9/bBQLmDXCMTEOjWyMxhoHQaTsti+QuqO14lDt8+QCGLHz+nFk4JORcWa8w/DkSeA1kVJNSn7IjERJXIsAeOEq2j3Ac0rVvG4ZlYIw1cWnaovUngEc8OvOWlZ9YJ7gxcsWpLzsVmta9cbUEbIuY=,iv:ZmpUEcrZL7cYvEWbKoUZmjGhAisxXX9s2jxs+HD/rE8=,tag:ZJkL/XLBR2FXuXRtAsPSxg==,type:str]
     pgp: []
     encrypted_regex: ^(data|stringData|email|dnsNames|hosts|host|externalIPs)$
     version: 3.7.3
