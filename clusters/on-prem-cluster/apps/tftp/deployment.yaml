@@ -27,6 +27,10 @@ spec:
           value: Africa/Johannesburg
         - name: CREATE
           value: "1"
+        - name: PUID
+          value: "1000"
+        - name: PGID
+          value: "1000"
         volumeMounts:
         - name: tftpd-hpa-data
           mountPath: /tftpboot
