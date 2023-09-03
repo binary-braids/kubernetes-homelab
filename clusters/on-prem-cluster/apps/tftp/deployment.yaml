@@ -32,10 +32,10 @@ spec:
         - name: CREATE
           value: "1"
         volumeMounts:
-        - name: osticket-data
+        - name: tftpd-hpa-data
           mountPath: /tftpboot
       volumes:
-        - name: tftpd-hpa
+        - name: tftpd-hpa-data
           hostPath:
             path: /mnt/media/tftpd-hpa
             type: DirectoryOrCreate
