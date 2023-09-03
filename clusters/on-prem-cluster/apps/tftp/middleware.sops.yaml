@@ -1,0 +1,29 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: Middleware
+metadata:
+    name: ingress-ipwhitelist
+    namespace: tftpd-hpa
+spec:
+    ipWhiteList:
+        sourceRange:
+            - ENC[AES256_GCM,data:GV3Tpb9tJoUSy/qG,iv:UVyL8jyV+W2Sg3ZP8+aovkQXOKfjxf5bnxVjHlPfw8s=,tag:T6vgqUk3YBJqXgOyJmvG6Q==,type:str]
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1xl8mrtu70kvhjdl2nva6dpt8wsy3fhmz6605fmwjujc3zztyeyzqd07nvv
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBaUHR4SjdISnZBTkM2YmhF
+            N3hjRlFvYXdNK1hQb2kxb2pjTFdWMUtPRkNVClhxQUpFL21hU0RlRjlPUnd2YUN2
+            OUVSQWtHbnZYSVdXcW5JSXZLamlPQXMKLS0tIHJubVZtZUJ5eE9KbUhkRWhRYUMy
+            RUR5N0FwMmJmdVpuVGh3elFyUnh6SzAKFExhzJafoQtNV6MoL0X0SSa+858y6IiI
+            GASFqFYuTJzAe81oU7VUHr1gZS+QbRkgPkzRASjW3jVTRLRfupyUtw==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2023-09-03T08:18:26Z"
+    mac: ENC[AES256_GCM,data:ObgY7+2sAqM4TnGH8Dz92KxaB4P8agFyxM2x5dUoUgf+bmtXxcXxSTxoWpXuSSZ7VAW3Ns14/RpdLOuidkzY7XfugHS+eQRmowvssv667eDiSMhXIEPtVCgVuMTbqhVrdMjMqnEVC7PMGwI34wXbra+hojjswv0q+/RgBIIZz50=,iv:UK0hikL/rzlEhLqZWsu8uBPCc5PHApyDvDbFEZo01j8=,tag:jMLc2C4e+YKwLgmA9utjnw==,type:str]
+    pgp: []
+    encrypted_regex: ^(data|stringData|email|dnsNames|hosts|host|externalUrl|sourceRange)$
+    version: 3.7.3

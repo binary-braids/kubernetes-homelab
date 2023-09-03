@@ -1,0 +1,41 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+    name: tftpd-hpa-ingress
+    namespace: tftpd-hpa
+    annotations:
+        kubernetes.io/ingress.class: traefik
+        cert-manager.io/cluster-issuer: letsencrypt-prod
+        traefik.ingress.kubernetes.io/router.middlewares: tftpd-hpa-ingress-ipwhitelist@kubernetescrd
+spec:
+    rules:
+        - host: ENC[AES256_GCM,data:lnpvRq5ZIRgKQTEc812O4pGSj1Tq,iv:0GRp+V92XJ0LvlsziMVwC9wfeBC3ocDmPE1u8kCKOdU=,tag:/EIVxD/sx5UAdCmSFGVJJA==,type:str]
+          http:
+            paths:
+                - path: /
+                  pathType: Prefix
+                  backend:
+                    service:
+                        name: tftpd-hpa-service
+                        port:
+                            number: 69
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1xl8mrtu70kvhjdl2nva6dpt8wsy3fhmz6605fmwjujc3zztyeyzqd07nvv
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBVTUhvSTgxWE92bTFnM1J3
+            NGhuU0dFdUJ5MmIwQVMwQjcxRFJkS0x5aEVBCmF3bjlOVXNZY0FDY1JZcjJjZCsy
+            SklRL09vaUp1Lys4TTdRNEJQK0JCbTgKLS0tIDFsK20xelZTRTJLK1B3VmcvbjlC
+            Q0NFR2xXdHJQbHJjaHd4NzJ1MW53TFUKN/XnaUnGHOtsd9I06vkLRIwN0puGSa+r
+            Z3yzFtayndk0l6MV9xY7jt22rR9FuYkbNh/Lcq9GMQLbJLGAxwBTcA==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2023-09-03T08:18:19Z"
+    mac: ENC[AES256_GCM,data:C2mkCNhMFWijHTaWsH0ihOTPIEYWhIouthLBhUJtmf6II+pJmqI9vivhrBOTbG9gcV4/RwgWV4XZ4EmOLMLRqMQhAyWHVyB/hCLCWX0H/7Drmw9h9rgQor44LEQPrnFLMwMhRastCIDbwEnhmfFzM5YhGHJo8ODN1DLU2t84aHc=,iv:VvtvCSRKVfWztmwWN9AInu3Sw1MGY6bJclRAmOw3W8M=,tag:Jv+OxqMsHbNY7BNXOP5bNA==,type:str]
+    pgp: []
+    encrypted_regex: ^(data|stringData|email|dnsNames|hosts|host|externalUrl|sourceRange)$
+    version: 3.7.3
