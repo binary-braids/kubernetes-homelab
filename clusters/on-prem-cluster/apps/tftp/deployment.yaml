@@ -25,10 +25,6 @@ spec:
         env:
         - name: TIMEZONE
           value: Africa/Johannesburg
-        - name: PUID
-          value: "9069"
-        - name: PGID
-          value: "9069"
         - name: CREATE
           value: "1"
         volumeMounts:
