@@ -8,17 +8,20 @@ metadata:
         cert-manager.io/cluster-issuer: letsencrypt-prod
         traefik.ingress.kubernetes.io/router.middlewares: tftpd-hpa-ingress-ipwhitelist@kubernetescrd
 spec:
+    tls:
+        - hosts:
+            - ENC[AES256_GCM,data:+HvH59JoDwEero4b089fqKtEPGeP,iv:oUTwdkORsMdrDWIeHoOy++yam1TNDSgsw5uwmfibrns=,tag:o8L2RXSBo1/mxOCh2hnWDw==,type:str]
     rules:
-        - host: ENC[AES256_GCM,data:lnpvRq5ZIRgKQTEc812O4pGSj1Tq,iv:0GRp+V92XJ0LvlsziMVwC9wfeBC3ocDmPE1u8kCKOdU=,tag:/EIVxD/sx5UAdCmSFGVJJA==,type:str]
+        - host: ENC[AES256_GCM,data:v9nepsqCBIKWND1vcKr9Tsel21IE,iv:WiMd3eZ/XDWQVVAS9LGRBJ0hJoDDibnoL1jeNPwnoA0=,tag:XCDxslD5hF+cSvaibC3nmg==,type:str]
           http:
             paths:
                 - path: /
                   pathType: Prefix
-                  backend:
-                    service:
-                        name: tftpd-hpa-service
-                        port:
-                            number: 69
+                  backend: null
+                  service:
+                    name: tftpd-hpa-service
+                    port:
+                        number: 69
 sops:
     kms: []
     gcp_kms: []
@@ -28,14 +31,14 @@ sops:
         - recipient: age1xl8mrtu70kvhjdl2nva6dpt8wsy3fhmz6605fmwjujc3zztyeyzqd07nvv
           enc: |
             -----BEGIN AGE ENCRYPTED FILE-----
-            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBVTUhvSTgxWE92bTFnM1J3
-            NGhuU0dFdUJ5MmIwQVMwQjcxRFJkS0x5aEVBCmF3bjlOVXNZY0FDY1JZcjJjZCsy
-            SklRL09vaUp1Lys4TTdRNEJQK0JCbTgKLS0tIDFsK20xelZTRTJLK1B3VmcvbjlC
-            Q0NFR2xXdHJQbHJjaHd4NzJ1MW53TFUKN/XnaUnGHOtsd9I06vkLRIwN0puGSa+r
-            Z3yzFtayndk0l6MV9xY7jt22rR9FuYkbNh/Lcq9GMQLbJLGAxwBTcA==
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBJa2wyOThTWUVpdit3enJS
+            bTgzZTdmMngyYTVIT1NxZ0V5SDY3R0ErZjJnClUrQWJKZXVaVCthYnJIV2xwYVBa
+            Q1ppcGM3SXpmOElMdFJRYVBRbm5HYncKLS0tIEdyV3JQa0ptZXE4Q21ybWp6MUhH
+            blk5bzlhR0hIN2FzWWJ0RDkxTDFlNGcKQm5YlkCTpfATsw9gSOT+PIK+Tc4L/A6m
+            lW0wfAJeLxNM4aGfDV2otaYAJCT09rRIJKmTslHnRnrDKPc/wXd02Q==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2023-09-03T08:18:19Z"
-    mac: ENC[AES256_GCM,data:C2mkCNhMFWijHTaWsH0ihOTPIEYWhIouthLBhUJtmf6II+pJmqI9vivhrBOTbG9gcV4/RwgWV4XZ4EmOLMLRqMQhAyWHVyB/hCLCWX0H/7Drmw9h9rgQor44LEQPrnFLMwMhRastCIDbwEnhmfFzM5YhGHJo8ODN1DLU2t84aHc=,iv:VvtvCSRKVfWztmwWN9AInu3Sw1MGY6bJclRAmOw3W8M=,tag:Jv+OxqMsHbNY7BNXOP5bNA==,type:str]
+    lastmodified: "2023-09-03T14:08:50Z"
+    mac: ENC[AES256_GCM,data:dzb9o7qz1tadc5IZGIhy591wgN/uTiO0S+HZ23Idai6zBSAXuVPf002GgWuLagqU/AxYbxt3MzzN8saIpyGxjTeUweh4f++Qh2HUbo3xwrXF0bauSW3f1wb13462y6Py/utpIOn1mw6B4c9C4IiaHsUhPhVMfDAhMk6mc4oGs1A=,iv:x7MjouxAKOqukkafPTXV+hKdAMurCHfU4WlKa5+DZGE=,tag:EQSd3pTjNCzQuj/sjTt5fw==,type:str]
     pgp: []
-    encrypted_regex: ^(data|stringData|email|dnsNames|hosts|host|externalUrl|sourceRange)$
+    encrypted_regex: ^(data|stringData|email|dnsNames|hosts|host|externalUrl)$
     version: 3.7.3
