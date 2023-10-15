@@ -11,7 +11,7 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: mongodb-charts
-        namespace: your-spotify
+        namespace: flux-system
   interval: 5m
   install:
     remediation:
