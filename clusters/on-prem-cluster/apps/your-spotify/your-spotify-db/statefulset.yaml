@@ -39,6 +39,8 @@ spec:
             secretKeyRef:
               name: your-spotify-secret
               key: mongo_root_password
+        - name: MONGO_INITDB_DATABASE
+          value: your_spotify
         volumeMounts:
         - mountPath: /data/db
           name: your-spotify-db-volume
