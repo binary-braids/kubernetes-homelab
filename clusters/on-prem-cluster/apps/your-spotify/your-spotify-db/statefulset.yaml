@@ -19,7 +19,6 @@ spec:
       containers:
       - name: your-spotify-db
         image: mongo:5.0.21
-        command: ["wiredTigerCacheSizeGB"]
         imagePullPolicy: Always
         resources:
           limits:
