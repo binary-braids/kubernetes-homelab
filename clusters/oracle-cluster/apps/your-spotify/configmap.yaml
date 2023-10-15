@@ -4,4 +4,4 @@ metadata:
   name: your-spotify-configmap
   namespace: your-spotify
 data:
-  mongo_endpoint: your-spotify-db-service
+  mongo_endpoint: mongodb://your-spotify-db-service:27017/your_spotify
