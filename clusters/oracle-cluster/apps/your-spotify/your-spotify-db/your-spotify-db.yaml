@@ -10,7 +10,7 @@ spec:
       version: "14.0.10"
       sourceRef:
         kind: HelmRepository
-        name: your-spotify-db
+        name: mongodb
         namespace: flux-system
   interval: 5m
   install:
