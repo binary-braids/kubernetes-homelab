@@ -4,5 +4,5 @@ namespace: your-spotify
 
 resources:
 - configmap.yaml
-#- your-spotify-db-source.yaml
-#- your-spotify-db.yaml
+- your-spotify-db-source.yaml
+- your-spotify-db.yaml
