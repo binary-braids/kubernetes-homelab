@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: your-spotify-configmap
+  namespace: media
+data:
+  mongo_endpoint: your-spotify-db-service

@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: your-spotify-db
+  namespace: media
+  labels:
+    app: your-spotify-db
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: your-spotify-db
+  serviceName: your-spotify-db
+  template:
+    metadata:
+      labels:
+        app: your-spotify-db
+    spec:
+      containers:
+      - name: your-spotify-db
+        image: mongo:7.0.2
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 27017
+          protocol: TCP
+        env:
+        - name: MONGO_INITDB_ROOT_USERNAME
+          valueFrom:
+            secretKeyRef:
+              name: your-spotify-secret
+              key: mongo_root_user
+        - name: MONGO_INITDB_ROOT_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: your-spotify-secret
+              key: mongo_root_password
+        volumeMounts:
+        - mountPath: /data/db
+          name: your-spotify-db-volume
+      volumes:
+      - name: your-spotify-db-volume
+        persistentVolumeClaim:
+          claimName: your-spotify-db-pvc
