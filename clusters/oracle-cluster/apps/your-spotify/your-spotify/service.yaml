@@ -1,8 +1,8 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: your-spotify
-  namespace: media
+  name: your-spotify-service
+  namespace: your-spotify
 spec:
   selector:
     app: your-spotify

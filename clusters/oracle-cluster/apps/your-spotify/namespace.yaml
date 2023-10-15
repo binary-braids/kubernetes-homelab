@@ -1,0 +1,6 @@
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: your-spotify
+  labels:
+    name: your-spotify
