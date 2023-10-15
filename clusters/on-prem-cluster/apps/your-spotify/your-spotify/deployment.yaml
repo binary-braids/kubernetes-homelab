@@ -19,6 +19,13 @@ spec:
       - name: your-spotify
         image: lscr.io/linuxserver/your_spotify:latest
         imagePullPolicy: Always
+        resources:
+          limits:
+            cpu: 500m
+            memory: 256Mi
+          requests:
+            cpu: 500m
+            memory: 256Mi
         ports:
         - containerPort: 80
         - containerPort: 443
@@ -42,6 +49,6 @@ spec:
               key: spotify_secret
         - name: MONGO_ENDPOINT
           valueFrom:
-            configMapKeyRef:
-              name: your-spotify-configmap
+            secretKeyRef:
+              name: your-spotify-secret
               key: mongo_endpoint
