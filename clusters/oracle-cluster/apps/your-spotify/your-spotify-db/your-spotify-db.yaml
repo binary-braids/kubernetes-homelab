@@ -10,8 +10,8 @@ spec:
       version: "14.0.10"
       sourceRef:
         kind: HelmRepository
-        name: mongodb-charts
-        namespace: your-spotify
+        name: bitnami-charts
+        namespace: flux-system
   interval: 5m
   install:
     remediation:

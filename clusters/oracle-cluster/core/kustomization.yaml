@@ -7,3 +7,4 @@ resources:
 - monitoring
 - keycloak
 - oauth2-proxy
+- bitnami-chart-source.yaml

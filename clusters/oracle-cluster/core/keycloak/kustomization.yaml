@@ -3,7 +3,6 @@ kind: Kustomization
 
 resources:
 - ingress.sops.yaml
-- keycloak-source.yaml
 - keycloak.yaml
 - namespace.yaml
 - secret.sops.yaml
