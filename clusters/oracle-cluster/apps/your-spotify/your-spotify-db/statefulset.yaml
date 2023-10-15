@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: your-spotify-db
-  namespace: media
+  namespace: your-spotify
   labels:
     app: your-spotify-db
 spec:
