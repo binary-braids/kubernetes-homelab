@@ -49,6 +49,6 @@ spec:
               key: spotify_secret
         - name: MONGO_ENDPOINT
           valueFrom:
-            secretKeyRef:
-              name: your-spotify-secret
+            configMapKeyRef:
+              name: your-spotify-configmap
               key: mongo_endpoint
