@@ -7,5 +7,9 @@ data:
     values.yaml: |-
           global:
             storageClass: "longhorn"
+            namespaceOverride: "your-spotify"
           persistence:
+            enabled: true
+            storageClass: "longhorn"
             size: 100Mi
+          useStatefulSet: true

@@ -16,8 +16,6 @@ spec:
   install:
     remediation:
         retries: 3
-    createNamespace: false
-  targetNamespace: your-spotify
   valuesFrom:
     - kind: ConfigMap
       name: your-spotify-db-values
