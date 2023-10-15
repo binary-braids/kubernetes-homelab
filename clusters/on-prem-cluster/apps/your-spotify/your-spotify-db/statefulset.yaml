@@ -19,7 +19,13 @@ spec:
       containers:
       - name: your-spotify-db
         image: mongo:5.0.21
+        command: ["wiredTigerCacheSizeGB"]
         imagePullPolicy: Always
+        resources:
+          limits:
+            memory: 256Mi
+          requests:
+            memory: 256Mi
         ports:
         - containerPort: 27017
           protocol: TCP
