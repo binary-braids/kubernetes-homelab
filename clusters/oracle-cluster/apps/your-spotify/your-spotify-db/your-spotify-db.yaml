@@ -1,0 +1,24 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: your-spotify-db
+  namespace: flux-system
+spec:
+  chart:
+    spec:
+      chart: mongodb
+      version: "14.0.10"
+      sourceRef:
+        kind: HelmRepository
+        name: your-spotify-db
+        namespace: flux-system
+  interval: 5m
+  install:
+    remediation:
+        retries: 3
+    createNamespace: false
+  targetNamespace: your-spotify-db
+  valuesFrom:
+    - kind: ConfigMap
+      name: your-spotify-db-values
+      valuesKey: values.yaml

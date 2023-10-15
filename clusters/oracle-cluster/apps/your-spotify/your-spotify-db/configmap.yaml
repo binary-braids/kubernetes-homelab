@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: your-spotify-db-values
+  namespace: your-spotify
+data:
+    values.yaml: |-
+          global:
+            storageClass: "longhorn"
+          persistence:
+            size: 100Mi

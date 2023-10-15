@@ -18,24 +18,24 @@ spec:
     spec:
       containers:
       - name: your-spotify-db
-        image: mongo:6.0.11
+        image: bitnami/mongodb:6.0.11
         imagePullPolicy: Always
         ports:
         - containerPort: 27017
           protocol: TCP
         env:
-        - name: MONGO_INITDB_ROOT_USERNAME
+        - name: MONGODB_ROOT_USER
           valueFrom:
             secretKeyRef:
               name: your-spotify-secret
               key: mongo_root_user
-        - name: MONGO_INITDB_ROOT_PASSWORD
+        - name: MONGODB_ROOT_PASSWORD
           valueFrom:
             secretKeyRef:
               name: your-spotify-secret
               key: mongo_root_password
         volumeMounts:
-        - mountPath: /data/db
+        - mountPath: /bitnami/mongodb
           name: your-spotify-db-volume
       volumes:
       - name: your-spotify-db-volume
