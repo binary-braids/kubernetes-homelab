@@ -3,7 +3,8 @@ kind: Kustomization
 namespace: your-spotify
 
 resources:
-- your-spotify
+- your-spotify-client
+- your-spotify-server
 - your-spotify-db
 - secret.sops.yaml
 - namespace.yaml
