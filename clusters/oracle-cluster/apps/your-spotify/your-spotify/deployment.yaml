@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: your-spotify
+  namespace: media
+  labels:
+    app: your-spotify
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: your-spotify
+  template:
+    metadata:
+      labels:
+        app: your-spotify
+    spec:
+      containers:
+      - name: your-spotify
+        image: lscr.io/linuxserver/your_spotify:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
+        - containerPort: 443
+        env:
+        - name: TIMEZONE
+          value: Africa/Johannesburg
+        - name: APP_URL
+          valueFrom:
+            secretKeyRef:
+              name: your-spotify-secret
+              key: app_url
+        - name: SPOTIFY_PUBLIC
+          valueFrom:
+            secretKeyRef:
+              name: your-spotify-secret
+              key: spotify_public
+        - name: SPOTIFY_SECRET
+          valueFrom:
+            secretKeyRef:
+              name: your-spotify-secret
+              key: spotify_secret
+        - name: MONGO_ENDPOINT
+          valueFrom:
+            configMapKeyRef:
+              name: your-spotify-configmap
+              key: mongo_endpoint
