@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: your-spotify
+  name: your-spotify-server
   namespace: your-spotify
   labels:
-    app: your-spotify
+    app: your-spotify-server
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: your-spotify
+      app: your-spotify-server
   template:
     metadata:
       labels:
-        app: your-spotify
+        app: your-spotify-server
     spec:
       containers:
-      - name: your-spotify
-        image: lscr.io/linuxserver/your_spotify:latest
+      - name: your-spotify-server
+        image: yooooomi/your_spotify_server
         imagePullPolicy: Always
         resources:
           limits:
@@ -27,16 +27,20 @@ spec:
             cpu: 500m
             memory: 256Mi
         ports:
-        - containerPort: 80
-        - containerPort: 443
+        - containerPort: 8080
         env:
         - name: TIMEZONE
           value: Africa/Johannesburg
-        - name: APP_URL
+        - name: API_ENDPOINT
           valueFrom:
             secretKeyRef:
               name: your-spotify-secret
-              key: app_url
+              key: api_endpoint
+        - name: CLIENT_ENDPOINT
+          valueFrom:
+            secretKeyRef:
+              name: your-spotify-secret
+              key: client_endpoint
         - name: SPOTIFY_PUBLIC
           valueFrom:
             secretKeyRef:
