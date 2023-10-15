@@ -1,9 +1,8 @@
 apiVersion: source.toolkit.fluxcd.io/v1beta2
-kind: HelmRepository
+kind: OCIRepository
 metadata:
   name: mongodb-charts
   namespace: flux-system
 spec:
-  type: "oci"
   interval: 2m
   url: oci://registry-1.docker.io/bitnamicharts/mongodb
