@@ -3,6 +3,6 @@ kind: Kustomization
 namespace: your-spotify
 
 resources:
-- service.yaml
-- persistentvolumeclaim.yaml
-- statefulset.yaml
+- configmap.yaml
+- your-spotify-db-source.yaml
+- your-spotify-db.yaml
