@@ -28,19 +28,6 @@ spec:
         ports:
         - containerPort: 27017
           protocol: TCP
-        env:
-        - name: MONGO_INITDB_ROOT_USERNAME
-          valueFrom:
-            secretKeyRef:
-              name: your-spotify-secret
-              key: mongo_root_user
-        - name: MONGO_INITDB_ROOT_PASSWORD
-          valueFrom:
-            secretKeyRef:
-              name: your-spotify-secret
-              key: mongo_root_password
-        - name: MONGO_INITDB_DATABASE
-          value: your_spotify
         volumeMounts:
         - mountPath: /data/db
           name: your-spotify-db-volume
