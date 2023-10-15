@@ -6,5 +6,3 @@ resources:
 - persistentvolumeclaim.yaml
 - service.yaml
 - statefulset.yaml
-#- configmap.yaml
-#- your-spotify-db.yaml
