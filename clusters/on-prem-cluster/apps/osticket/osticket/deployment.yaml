@@ -6,7 +6,7 @@ metadata:
   labels:
     app: osticket
 spec:
-  replicas: 1
+  replicas: 0
   selector:
     matchLabels:
       app: osticket
