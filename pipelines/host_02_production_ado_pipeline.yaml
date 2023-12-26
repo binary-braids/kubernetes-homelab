@@ -1,0 +1,113 @@
+variables:
+  - group: terraform_esxi_host_02
+  - group: terraform_k3s_host_02
+  - group: terraform_esxi_host_02_workspace
+
+parameters:
+  - name: terraformVersion
+    type: string
+    default: 'latest'
+  - name: agentPool
+    displayName: 'Agent Pool Selection'
+    type: string
+    default: Self-Hosted
+    values:
+    - Self-Hosted
+    - Oracle-Cloud
+
+trigger:
+- none
+
+stages:
+  - stage: 'KubernetesHost02Plan'
+    dependsOn: []
+    displayName: 'Kubernetes Host 02 Terraform Plan'
+
+    jobs:
+      - job: 'terraforminitplan'
+        displayName: 'Initialize and Plan Terraform for Host 02 Resources'
+        pool: ${{ parameters.agentPool }}
+
+        steps:
+
+          - task: TerraformInstaller@1
+            displayName: 'Terraform Install'
+            inputs:
+              terraformVersion: ${{ parameters.terraformVersion }}
+
+          - task: replacetokens@5
+            displayName: Replace tokens
+            inputs:
+              rootDirectory: '$(System.DefaultWorkingDirectory)/terraform/host_02/'
+              targetFiles: |
+                **/*.*
+              encoding: 'auto'
+              tokenPattern: 'default'
+              writeBOM: true
+              actionOnMissing: 'warn'
+              enableTelemetry: false
+
+          - task: CmdLine@2
+            displayName: 'Terraform Init'
+            inputs:
+              script: |
+                terraform init
+              workingDirectory: '$(System.DefaultWorkingDirectory)/terraform/host_02/'
+
+          - task: CmdLine@2
+            displayName: 'Terraform Plan'
+            inputs:
+              script: |
+                terraform plan -out ${BUILD_BUILDNUMBER}.tfplan
+              workingDirectory: '$(System.DefaultWorkingDirectory)/terraform/host_02/'
+
+          - task: ArchiveFiles@2
+            condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
+            displayName: 'Create Plan Artifact'
+            inputs:
+              rootFolderOrFile: '$(System.DefaultWorkingDirectory)/terraform/host_02/'
+              includeRootFolder: false
+              archiveType: 'tar'
+              tarCompression: 'gz'
+              archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildNumber).tgz'
+              replaceExistingArchive: true
+
+          - task: PublishPipelineArtifact@1
+            condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
+            displayName: 'Publish Plan Artifact'
+            inputs:
+              targetPath: '$(Build.ArtifactStagingDirectory)'
+              artifactName: 'kubernetes-host-02-plan'
+
+  - stage: 'KubernetesHost02Apply'
+    dependsOn: 'KubernetesHost02Plan'
+    displayName: Kubernetes Host 02 Apply
+
+    jobs:
+      - deployment: 'TerraformApplyKubernetesHost02'
+        displayName: ' Apply Terraform for Kubernetes Host 02 Resources'
+        pool: ${{ parameters.agentPool }}
+        environment: 'ESXI - Kubernetes'
+        strategy:
+          runOnce:
+            deploy:
+              steps:
+
+              - task: TerraformInstaller@1
+                displayName: 'Terraform Install'
+                inputs:
+                  terraformVersion: ${{ parameters.terraformVersion }}
+
+              - task: ExtractFiles@1
+                displayName: 'Extract Plan Artifact'
+                inputs:
+                  archiveFilePatterns: '$(Pipeline.Workspace)/kubernetes-host-02-plan/$(Build.BuildNumber).tgz'
+                  destinationFolder: '$(System.DefaultWorkingDirectory)/terraform/host_02/'
+                  cleanDestinationFolder: true
+
+              - task: CmdLine@2
+                displayName: 'Terraform Apply'
+                inputs:
+                  script: |
+                    terraform apply ${BUILD_BUILDNUMBER}.tfplan
+                  workingDirectory: '$(System.DefaultWorkingDirectory)/terraform/host_02/'
