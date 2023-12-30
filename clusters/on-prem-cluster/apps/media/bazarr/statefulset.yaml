@@ -1,0 +1,49 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: bazarr
+  namespace: media
+  labels:
+    app: bazarr
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: bazarr
+  serviceName: bazarr    
+  template:
+    metadata:
+      labels:
+        app: bazarr
+    spec:
+      containers:
+      - name: bazarr
+        image: lscr.io/linuxserver/bazarr:latest
+        ports:
+        - containerPort: 6767
+        env:
+        - name: TZ
+          value: Africa/Johannesburg
+        - name: PUID
+          value: "1000"
+        - name: PGID
+          value: "1000"
+        volumeMounts:
+          - name: config
+            mountPath: /config
+          - name: tvshows
+            mountPath: /tvshows
+          - name: movies
+            mountPath: /movies
+      volumes:
+        - name: config
+          persistentVolumeClaim:
+            claimName: bazarr-pvc
+        - name: tvshows
+          hostPath:
+            path: /mnt/media/tvshows
+            type: DirectoryOrCreate
+        - name: movies
+          hostPath:
+            path: /mnt/media/movies
+            type: DirectoryOrCreate
