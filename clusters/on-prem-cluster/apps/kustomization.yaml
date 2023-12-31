@@ -8,8 +8,8 @@ resources:
 - mealie
 - teamspeak
 - phpipam
-- zabbix
+#- zabbix
 - media
-- osticket
-- tftp
-- your-spotify
+#- osticket
+#- tftp
+#- your-spotify
