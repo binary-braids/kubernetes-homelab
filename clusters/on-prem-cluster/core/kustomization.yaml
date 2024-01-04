@@ -8,3 +8,4 @@ resources:
 - cert-manager
 - keycloak
 - oauth2-proxy
+- uptime-kuma
