@@ -8,7 +8,7 @@ resources:
 - minecraft-survival
 - mealie
 - teamspeak
-- phpipam
+#- phpipam
 #- zabbix
 - media
 #- osticket
