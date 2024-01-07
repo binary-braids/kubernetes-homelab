@@ -1,0 +1,43 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+    name: filezilla-ingress
+    namespace: filezilla
+    annotations:
+        kubernetes.io/ingress.class: traefik
+        cert-manager.io/cluster-issuer: letsencrypt-prod
+spec:
+    tls:
+        - hosts:
+            - ENC[AES256_GCM,data:co38hOJS+wTPxfngJvcoYiSsX7iaFH4EbTY=,iv:IPim1Vv/XItoQosJkiWQpEUM2+rYWzLVtgvrRLhE6NE=,tag:oEfOs8GoKY5Lhzf9O45GOw==,type:str]
+    rules:
+        - host: ENC[AES256_GCM,data:WrA44yTi3JKVupjVhADLRHqfAQjVU3AGfkU=,iv:Prv2MWlg5UwTOrOgZFmx49a8KfHoRThBZOonP1E6CHw=,tag:YvnUWFr7BrM6SI7uUVhgew==,type:str]
+          http:
+            paths:
+                - pathType: Prefix
+                  path: /
+                  backend:
+                    service:
+                        name: filezilla-service
+                        port:
+                            number: 3000
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1xl8mrtu70kvhjdl2nva6dpt8wsy3fhmz6605fmwjujc3zztyeyzqd07nvv
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSAzTDlTaHlmOXd0Q3Q4VDVL
+            K1pzT05lUS9NQldIcVR2aTVTRGZ2Q3lmYXpjClFqb3VUUzFkRG5LNXdZd1cvQ3oy
+            ajNqWGt0TUxvOVJBWFNoWWY4NnRleVkKLS0tIFZwc1lscE1mY3V1Q09oR0FhN1pa
+            TmkzWTFEdFZXb0NzM2FVeUZieVFSTUUKrYm1h3c8gaNrWhgFVzxWhnUHL7VvsD5a
+            iEP0bDjX64UPJmdhK/yfxwyP0SDpesDyJPpGZ0MJV5MMP7M2pAdmgg==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2024-01-07T11:36:29Z"
+    mac: ENC[AES256_GCM,data:zTZXW5DgdxJOhhQzV+lUcG4Ykw7b+OA6txo4QI9802nT3AY45HEPAOTjnoKJ26FqenpAFWBU5KileV7YkmlbWf9go933XbKUGTRUyjcFYTrl1TCOx3By0FKD+OcFcoJSjcb8PL0U9xbhD3xWgvSBLZWlUqSYA/8j4lvu9o5Aq8w=,iv:rtE2lXYJw9IFlFVsv793xu2GwleXYD72MxpMqYSl0jw=,tag:bFjqmuqYmIJnTeqmks9FVA==,type:str]
+    pgp: []
+    encrypted_regex: ^(data|stringData|email|dnsNames|hosts|host|externalUrl)$
+    version: 3.8.1
