@@ -1,6 +1,6 @@
 kind: Namespace
 apiVersion: v1
 metadata:
-  name: filezilla
+  name: openssh-server
   labels:
-    name: filezilla
+    name: openssh-server

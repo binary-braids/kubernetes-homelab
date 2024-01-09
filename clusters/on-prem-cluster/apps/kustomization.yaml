@@ -14,4 +14,4 @@ resources:
 #- osticket
 #- tftp
 #- your-spotify
-- filezilla
+- openssh-server
