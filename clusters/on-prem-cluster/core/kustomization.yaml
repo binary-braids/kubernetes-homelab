@@ -9,3 +9,4 @@ resources:
 - keycloak
 - oauth2-proxy
 - uptime-kuma
+- goldilocks

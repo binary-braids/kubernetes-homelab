@@ -1,0 +1,43 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+    name: goldilocks-ingress
+    namespace: goldilocks
+    annotations:
+        kubernetes.io/ingress.class: traefik
+        cert-manager.io/cluster-issuer: letsencrypt-prod
+spec:
+    tls:
+        - hosts:
+            - ENC[AES256_GCM,data:MSr56kjuUwkO84epE3WEqC1gOJYje+H73CTk,iv:lAl7TZWRJWWFN9aRuHUdtjq3G66jaPRyIsANvBs9THM=,tag:CkbTuFXBf7XOekIJt1/jCA==,type:str]
+    rules:
+        - host: ENC[AES256_GCM,data:fcd/TzUGP8MrZ0Jve+9rCZDd8yBMJj6Y8YFs,iv:1M9ZMAuv7rc1VRB9rn2Rexi6QngJToARXZfv9fddre0=,tag:2hwWq+zlmaeiOzWdPG/5MQ==,type:str]
+          http:
+            paths:
+                - pathType: Prefix
+                  path: /
+                  backend:
+                    service:
+                        name: goldilocks-dashboard
+                        port:
+                            number: 80
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1xl8mrtu70kvhjdl2nva6dpt8wsy3fhmz6605fmwjujc3zztyeyzqd07nvv
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBrWXE5dUFORkZiRElMYmsw
+            VERCL1ZwdXpoQWxrb1FxeXc1cEMyWjZtY1VrCmdMdDVZZWlHV1U4QWlVTXB0cmN5
+            UER2d0VBcW11UzVRU2x6SmVBM0duaTQKLS0tIHRpZXJVeUU3aFVOYW5XMDU4WXdQ
+            TzA0MkRuelVDUmFBTEVCM2NYQnBnZWMKWMyBdGKo+36wAGxKhqg8b4pPE8KfLcBH
+            +x9XsF3SeqoKRN+ipOmr5dPT0jMHa3md2npW6fX5pI9dqdz9zihSqw==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2024-01-28T10:44:40Z"
+    mac: ENC[AES256_GCM,data:SPmrR2BqStr8SuNaTqxqBF4H6ZRN7UzT+okn+idpjW7MbfRRDmWdYM29j2Ir4JkQXiszIUl3vZMVYs1PjFJn1HPpyg8MlAUU+HB44fG9Q7ffeKfAdnu88rgCaGaX5KJBJV8hGUTNfHdAO+mb0O1bPEGKNxwLSMnIBEooTY3eOm8=,iv:IzwJRKI+a4ardopxCfzeT3jA7NJ9v2O1y9YHcP25rto=,tag:oT1EqaEDK/kap/wY/4kmOg==,type:str]
+    pgp: []
+    encrypted_regex: ^(data|stringData|email|dnsNames|hosts|host|externalUrl)$
+    version: 3.8.1
