@@ -9,16 +9,16 @@ metadata:
 spec:
     tls:
         - hosts:
-            - ENC[AES256_GCM,data:MSr56kjuUwkO84epE3WEqC1gOJYje+H73CTk,iv:lAl7TZWRJWWFN9aRuHUdtjq3G66jaPRyIsANvBs9THM=,tag:CkbTuFXBf7XOekIJt1/jCA==,type:str]
+            - ENC[AES256_GCM,data:EV+oy5+WQFSTNrftDUHzOf27+X8H3X3Yy7dq,iv:RFsDk1iCZy4FtQcRY+MA/qsxyCMff9/S1HswdbvcguY=,tag:4MXEENCKvL09I2WRr319VQ==,type:str]
     rules:
-        - host: ENC[AES256_GCM,data:fcd/TzUGP8MrZ0Jve+9rCZDd8yBMJj6Y8YFs,iv:1M9ZMAuv7rc1VRB9rn2Rexi6QngJToARXZfv9fddre0=,tag:2hwWq+zlmaeiOzWdPG/5MQ==,type:str]
+        - host: ENC[AES256_GCM,data:t8HbrnlcX/ABgFIm0cQ/WZ89qv0pMoznOomr,iv:+GiB65A+CJQbrbAtTtfwue86h9UhRgOBJJTLHAwoys0=,tag:4QYyp+AdXBS86/IQCn14Vg==,type:str]
           http:
             paths:
                 - pathType: Prefix
                   path: /
                   backend:
                     service:
-                        name: goldilocks-dashboard
+                        name: goldilocks-goldilocks-dashboard
                         port:
                             number: 80
 sops:
@@ -30,14 +30,14 @@ sops:
         - recipient: age1xl8mrtu70kvhjdl2nva6dpt8wsy3fhmz6605fmwjujc3zztyeyzqd07nvv
           enc: |
             -----BEGIN AGE ENCRYPTED FILE-----
-            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBrWXE5dUFORkZiRElMYmsw
-            VERCL1ZwdXpoQWxrb1FxeXc1cEMyWjZtY1VrCmdMdDVZZWlHV1U4QWlVTXB0cmN5
-            UER2d0VBcW11UzVRU2x6SmVBM0duaTQKLS0tIHRpZXJVeUU3aFVOYW5XMDU4WXdQ
-            TzA0MkRuelVDUmFBTEVCM2NYQnBnZWMKWMyBdGKo+36wAGxKhqg8b4pPE8KfLcBH
-            +x9XsF3SeqoKRN+ipOmr5dPT0jMHa3md2npW6fX5pI9dqdz9zihSqw==
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBaYTZHUlJvdmkzUzgzaFMz
+            Qlo3NG9MTjZPTlAxS3VxK2NBWE01Smt4bHhVCnoxQ3B0cTRwWU55bjNZOEZqYkFT
+            dExNNmZZckM2cHh0RVNwTTgwMTk5UW8KLS0tIG9FeGVQS2F1dWxjUzNrY3NlbUpL
+            WHNNWElRSUd5bVpDK1ZHcTRTdDhaeTgKwIiubVS0XFFwAmKfB/5miRB13AgAQxmM
+            NElDVH/lrZuZpR7/Xa+/be9mi9YaSgex++IERk3nD8XsTkiI7tv13Q==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2024-01-28T10:44:40Z"
-    mac: ENC[AES256_GCM,data:SPmrR2BqStr8SuNaTqxqBF4H6ZRN7UzT+okn+idpjW7MbfRRDmWdYM29j2Ir4JkQXiszIUl3vZMVYs1PjFJn1HPpyg8MlAUU+HB44fG9Q7ffeKfAdnu88rgCaGaX5KJBJV8hGUTNfHdAO+mb0O1bPEGKNxwLSMnIBEooTY3eOm8=,iv:IzwJRKI+a4ardopxCfzeT3jA7NJ9v2O1y9YHcP25rto=,tag:oT1EqaEDK/kap/wY/4kmOg==,type:str]
+    lastmodified: "2024-01-28T10:53:57Z"
+    mac: ENC[AES256_GCM,data:dLkwosyFl4jjBruUmci59LFXtm9qlimubpXANwpB5QyvpEGS+mi+6PuWQJwQLMf0Nkw5t0NFn4FFFEjQVT6KSVNEaf1aOAHJ4CKBbIKFJd669K5G2rhJ64ELa5a5JCFYzAIFB19uIgehxrfwlfeQ5HX/og8VVojcq48khjdi6Ug=,iv:UZuTNnA/GHmcqh7qBjp64H/VeTwwTsIIW/192k0uLP8=,tag:F9JXvADSvXwrp+OYACSERg==,type:str]
     pgp: []
     encrypted_regex: ^(data|stringData|email|dnsNames|hosts|host|externalUrl)$
     version: 3.8.1
