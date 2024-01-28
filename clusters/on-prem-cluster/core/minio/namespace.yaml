@@ -4,3 +4,4 @@ metadata:
   name: minio
   labels:
     name: minio
+    goldilocks.fairwinds.com/enabled: "true"

@@ -4,3 +4,4 @@ metadata:
   name: oauth2-proxy
   labels:
     name: oauth2-proxy
+    goldilocks.fairwinds.com/enabled: "true"
