@@ -4,3 +4,4 @@ metadata:
   name: uptime-kuma
   labels:
     name: uptime-kuma
+    goldilocks.fairwinds.com/enabled: "true"

@@ -4,3 +4,4 @@ metadata:
   name: keycloak
   labels:
     name: keycloak
+    goldilocks.fairwinds.com/enabled: "true"

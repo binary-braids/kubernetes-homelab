@@ -4,3 +4,4 @@ metadata:
   name: teamspeak
   labels:
     name: teamspeak
+    goldilocks.fairwinds.com/enabled: "true"
