@@ -1,7 +1,7 @@
 variables:
   - group: terraform_esxi_host_01
   - group: terraform_k3s_host_01
-  - group: terraform_esxi_host_01_workspace
+  - group: terraform_esxi_host_01_k3s_workspace
 
 parameters:
   - name: terraformVersion
