@@ -1,5 +1,4 @@
 ## K3s Node
-
 resource "esxi_guest" "k3s_02" {
   guest_name          = var.k3s_02_guest_name
   boot_firmware       = var.k3s_02_boot_firmware

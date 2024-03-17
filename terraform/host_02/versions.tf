@@ -5,10 +5,6 @@ terraform {
       source  = "registry.terraform.io/josenk/esxi"
       version = "1.10.3"
     }
-    tfe = {
-      source = "hashicorp/tfe"
-      version = "0.53.0"   
-    }
   }
   backend "remote" {
     hostname     = "app.terraform.io"
