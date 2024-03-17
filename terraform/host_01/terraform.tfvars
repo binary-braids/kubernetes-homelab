@@ -5,12 +5,6 @@ esxi_hostssl  = "#{esxi_hostssl}#"
 esxi_username = "#{esxi_username}#"
 esxi_password = "#{esxi_password}#"
 
-# Networking
-vswitch_name = "#{vswitch_name}#"
-uplink_name = "#{uplink_name}#"
-port_group_name = "#{port_group_name}#"
-port_group_vlan = #{port_group_vlan}#
-
 #K3s Node
 k3s_01_guest_name = "#{k3s_01_guest_name}#"
 k3s_01_boot_firmware = "#{k3s_01_boot_firmware}#"
@@ -38,6 +32,3 @@ k3s_03_clone_from_vm = "#{k3s_03_clone_from_vm}#"
 k3s_03_virtual_network = "#{k3s_03_virtual_network}#"
 k3s_03_nic_type = "#{k3s_03_nic_type}#"
 k3s_03_notes = "#{k3s_03_notes}#"
-
-#TFE
-tfe_token = "#{terraform_token}#"
