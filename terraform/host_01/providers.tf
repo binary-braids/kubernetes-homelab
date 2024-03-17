@@ -5,3 +5,8 @@ provider "esxi" {
   esxi_username = var.esxi_username
   esxi_password = var.esxi_password
 }
+
+provider "tfe" {
+  hostname = "app.terraform.io"
+  token = var.tfe_token
+}
