@@ -1,9 +1,3 @@
-# Data Source
-data "tfe_outputs" "networking" {
-  organization = "#{terraform_orginization}#"
-  workspace = "#{terraform_networking_workspace}#"
-}
-
 ## K3s Node
 resource "esxi_guest" "k3s_01" {
   guest_name          = var.k3s_01_guest_name
