@@ -38,3 +38,6 @@ k3s_03_clone_from_vm = "#{k3s_03_clone_from_vm}#"
 k3s_03_virtual_network = "#{k3s_03_virtual_network}#"
 k3s_03_nic_type = "#{k3s_03_nic_type}#"
 k3s_03_notes = "#{k3s_03_notes}#"
+
+#TFE
+tfe_token = "#{terraform_token}#"

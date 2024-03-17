@@ -24,4 +24,10 @@ variable "esxi_password" {
   description = "password for ESXI host"
 }
 
+#TFE Variables
+variable "tfe_token" {
+  type = string
+  description = "The TFE Token"
+}
+
 
