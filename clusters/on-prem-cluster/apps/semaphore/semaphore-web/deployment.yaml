@@ -43,7 +43,7 @@ spec:
             secretKeyRef:
               name: semaphore-secret
               key: semaphore_access_key_encryption
-        - name: MYSQL_ENV_MYSQL_HOST
+        - name: SEMAPHORE_DB_HOST
           valueFrom:
             configMapKeyRef:
               name: semaphore-configmap
