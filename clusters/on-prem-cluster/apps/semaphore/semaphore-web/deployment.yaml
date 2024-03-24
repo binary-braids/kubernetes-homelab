@@ -1,0 +1,50 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: semaphore
+  namespace: semaphore
+  labels:
+    app: semaphore
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: semaphore
+  template:
+    metadata:
+      labels:
+        app: semaphore
+    spec:
+      containers:
+      - name: semaphore
+        image: semaphoreui/semaphore:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 3000
+          protocol: TCP
+        env:
+        - name: SEMAPHORE_DB
+          valueFrom:
+            secretKeyRef:
+              name: semaphore-secret
+              key: mysql_database
+        - name: SEMAPHORE_DB_USER
+          valueFrom:
+            secretKeyRef:
+              name: semaphore-secret
+              key: mysql_user
+        - name: SEMAPHORE_ADMIN_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: semaphore-secret
+              key: semaphore_admin_password
+        - name: SEMAPHORE_ACCESS_KEY_ENCRYPTION
+          valueFrom:
+            secretKeyRef:
+              name: semaphore-secret
+              key: semaphore_access_key_encryption
+        - name: MYSQL_ENV_MYSQL_HOST
+          valueFrom:
+            configMapKeyRef:
+              name: semaphore-configmap
+              key: database_url
