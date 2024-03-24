@@ -1,0 +1,7 @@
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: semaphore
+  labels:
+    name: semaphore
+    goldilocks.fairwinds.com/enabled: "true"
