@@ -33,6 +33,11 @@ spec:
             secretKeyRef:
               name: semaphore-secret
               key: mysql_user
+        - name: SEMAPHORE_DB_PASS
+          valueFrom:
+            secretKeyRef:
+              name: semaphore-secret
+              key: mysql_password
         - name: SEMAPHORE_ADMIN_PASSWORD
           valueFrom:
             secretKeyRef:

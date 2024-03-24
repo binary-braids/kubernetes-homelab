@@ -39,6 +39,11 @@ spec:
             secretKeyRef:
               name: semaphore-secret
               key: mysql_user
+        - name: MYSQL_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: semaphore-secret
+              key: mysql_password
         volumeMounts:
         - mountPath: /var/lib/mysql
           name: semaphore-mysql-volume
