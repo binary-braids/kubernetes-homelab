@@ -53,3 +53,5 @@ spec:
             configMapKeyRef:
               name: semaphore-configmap
               key: database_url
+        - name: SEMAPHORE_DB_PORT
+          value: "3306"
