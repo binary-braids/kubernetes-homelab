@@ -1,0 +1,43 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+    name: semaphore-ingress
+    namespace: semaphore
+    annotations:
+        kubernetes.io/ingress.class: traefik
+        cert-manager.io/cluster-issuer: letsencrypt-prod
+spec:
+    tls:
+        - hosts:
+            - ENC[AES256_GCM,data:XFbUTlPQqC543YUxoa7dtq8bWhq+oWya7aA=,iv:IajwJvew83szUxkvnYCPMMSgpiwxkR+JVCUpdk5Y1FI=,tag:dB3WYvE44rTPF9ILDCfvpA==,type:str]
+    rules:
+        - host: ENC[AES256_GCM,data:Zqe/uxnWwKEluZ6tUSltCOv5jmbnWNqxju4=,iv:wDSVHsgfE2CDHhOtIaDbZrCtzv6DFmoaNqmw8EUJXDo=,tag:ubmhoNStPGFKJigwPTSsZg==,type:str]
+          http:
+            paths:
+                - path: /
+                  pathType: Prefix
+                  backend:
+                    service:
+                        name: semaphore-service
+                        port:
+                            number: 3000
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1xl8mrtu70kvhjdl2nva6dpt8wsy3fhmz6605fmwjujc3zztyeyzqd07nvv
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBwR3h6bDd4QzdFMjcxVFhH
+            anc4WlV2YWJqVDRDTEUycURZM1E2SHVnMm1NCi9ybVVtK0RGQ2kzVUpacXBNVmlr
+            akowUnhEWDZUUloyYzZOWFhDTnJOTEEKLS0tIFJYTUtRUHR0QjJjNmgrQTZ6NURs
+            bC9SL0ZHdDc2Y3ZzU2pnL2pCSWtyaXMKz21SdP4TQZuGX7hMB6pbBVbRZ25doWKu
+            slV7N7D/9ZKKxo7YwsL6s0Eei1IQJANZD8NNxDjMTreFNPa5nSBJ+g==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2024-03-24T14:57:38Z"
+    mac: ENC[AES256_GCM,data:c8PL5MHwzxbOBjgD5y5AA3LxvJbI4cIVjzd6+B5be2pzERtrhkGbvsu2xJWHkcZmcHYikBuNUSaqMX4sYzRQcpdNwMeyruX2wxD9/hKCzuGNtEkz+lscXk7RoTDqkf19Gxg8/KXmOYU0cu6m0Nt9A+I407h++0gvTYOM8WQxVN8=,iv:dEiQFeFthR295eI6fc0h+mZuIcsiVypvNoxsv8txMfY=,tag:vzpBEdHxrKpABy3dBnKnfg==,type:str]
+    pgp: []
+    encrypted_regex: ^(data|stringData|email|dnsNames|hosts|host|externalUrl)$
+    version: 3.8.1

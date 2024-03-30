@@ -20,6 +20,13 @@ spec:
       - name: mealie
         image: hkotel/mealie:latest
         imagePullPolicy: Always
+        resources:
+          requests:
+            cpu: 15m
+            memory: 164M
+          limits:
+            cpu: 15m
+            memory: 164M
         ports:
         - containerPort: 80
           protocol: TCP
