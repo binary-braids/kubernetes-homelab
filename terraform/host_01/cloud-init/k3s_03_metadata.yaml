@@ -1,0 +1,21 @@
+#cloud-config
+
+instance-id: #{k3s_03_guest_name}#
+local-hostname: #{k3s_03_guest_name}#
+network:
+  version: 2
+  renderer: networkd
+  ethernets:
+    ens33:
+      dhcp4: no
+      addresses:
+        - #{k3s_03_ip_address}#/24
+      routes:
+        - to: default
+          via: #{production_network_gateway}# 
+      nameservers:
+        addresses:
+          - #{dns_server_01}#
+          - #{dns_server_02}#
+        search:
+          - #{dns_domain}#

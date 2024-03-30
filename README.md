@@ -15,17 +15,30 @@ This repo contains all my config for my On-Prem and Oracle based k3s clusters. T
 The Git repository contains the following directories:
 
 ```sh
+📁 ansible
 📁 clusters
 ├─📁 on-prem-cluster
-│  ├─📁 apps
-│  ├─📁 core
-│  └─📁 flux-system
-└─📁 oracle cluster
-   ├─📁 apps
-   ├─📁 core
-   └─📁 flux-system
+│ ├─📁 apps
+│ ├─📁 core
+│ └─📁 flux-system
+├─📁 oracle cluster
+│ ├─📁 apps
+│ ├─📁 core
+│ └─📁 flux-system
+📁 pipelines
+📁 terraform
 ```
 ## Getting started
+
+### Ansible
+
+The `site.yml` playbook will full configure a working k3s cluster within your environment. There are a few variables you will need to modify before hand such as the `inventory`
+
+The `reset.yml` playbook will remove the k3s components from your machines
+
+### Terraform 
+
+I utilised Terraform with ESXI to build my k3s nodes. If you have standalone ESXI hosts like me you can make use of the Terraform modules to build your nodes replacing the relevant variables and such depending on the amount of hosts/nodes you have.
 
 The following assumptions are made:
 

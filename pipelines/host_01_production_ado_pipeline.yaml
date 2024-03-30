@@ -1,0 +1,122 @@
+variables:
+  - group: terraform_esxi_host_01
+  - group: terraform_k3s_host_01
+  - group: terraform_esxi_host_01_k3s_workspace
+
+parameters:
+  - name: terraformVersion
+    type: string
+    default: 'latest'
+  - name: agentPool
+    displayName: 'Agent Pool Selection'
+    type: string
+    default: Self-Hosted
+    values:
+    - Self-Hosted
+    - Oracle-Cloud
+
+trigger:
+- none
+
+stages:
+  - stage: 'KubernetesHost01Plan'
+    dependsOn: []
+    displayName: 'Kubernetes Host 01 Terraform Plan'
+
+    jobs:
+      - job: 'terraforminitplan'
+        displayName: 'Initialize and Plan Terraform for Host 01 Resources'
+        pool: ${{ parameters.agentPool }}
+
+        steps:
+
+          - task: TerraformInstaller@1
+            displayName: 'Terraform Install'
+            inputs:
+              terraformVersion: ${{ parameters.terraformVersion }}
+
+          - task: replacetokens@5
+            displayName: Replace tokens
+            inputs:
+              rootDirectory: '$(System.DefaultWorkingDirectory)/terraform/host_01/'
+              targetFiles: |
+                **/*.*
+              encoding: 'auto'
+              tokenPattern: 'default'
+              writeBOM: true
+              actionOnMissing: 'warn'
+              enableTelemetry: false
+
+          - task: CmdLine@2
+            displayName: 'Terraform Init'
+            name: terraformInit
+            inputs:
+              script: |
+                terraform init
+              workingDirectory: '$(System.DefaultWorkingDirectory)/terraform/host_01/'
+
+          - task: CmdLine@2
+            displayName: 'Terraform Plan'
+            name: terraformPlan
+            inputs:
+              script: |
+                terraform plan -input=false -no-color -out ${BUILD_BUILDNUMBER}.tfplan -detailed-exitcode
+
+                if [ $? -eq 2 ]; then
+                  echo "##vso[task.setvariable variable=planChanged;isOutput=true]true"
+                else
+                  echo "##vso[task.setvariable variable=planChanged;isOutput=true]false"
+                fi 
+              workingDirectory: '$(System.DefaultWorkingDirectory)/terraform/host_01/'
+
+          - task: ArchiveFiles@2
+            condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
+            displayName: 'Create Plan Artifact'
+            inputs:
+              rootFolderOrFile: '$(System.DefaultWorkingDirectory)/terraform/host_01/'
+              includeRootFolder: false
+              archiveType: 'tar'
+              tarCompression: 'gz'
+              archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildNumber).tgz'
+              replaceExistingArchive: true
+
+          - task: PublishPipelineArtifact@1
+            condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
+            displayName: 'Publish Plan Artifact'
+            inputs:
+              targetPath: '$(Build.ArtifactStagingDirectory)'
+              artifactName: 'kubernetes-host-01-plan'
+
+  - stage: 'KubernetesHost01Apply'
+    dependsOn: 'KubernetesHost01Plan'
+    condition: and(succeeded(), eq(dependencies.KubernetesHost01Plan.outputs['terraforminitplan.terraformPlan.planChanged'], 'true'))
+    displayName: Kubernetes Host 01 Apply
+
+    jobs:
+      - deployment: 'TerraformApplyKubernetesHost01'
+        displayName: ' Apply Terraform for Kubernetes Host 01 Resources'
+        pool: ${{ parameters.agentPool }}
+        environment: 'ESXI - Kubernetes'
+        strategy:
+          runOnce:
+            deploy:
+              steps:
+
+              - task: TerraformInstaller@1
+                displayName: 'Terraform Install'
+                inputs:
+                  terraformVersion: ${{ parameters.terraformVersion }}
+
+              - task: ExtractFiles@1
+                displayName: 'Extract Plan Artifact'
+                inputs:
+                  archiveFilePatterns: '$(Pipeline.Workspace)/kubernetes-host-01-plan/$(Build.BuildNumber).tgz'
+                  destinationFolder: '$(System.DefaultWorkingDirectory)/terraform/host_01/'
+                  cleanDestinationFolder: true
+
+              - task: CmdLine@2
+                displayName: 'Terraform Apply'
+                inputs:
+                  script: |
+                    terraform apply ${BUILD_BUILDNUMBER}.tfplan
+                  workingDirectory: '$(System.DefaultWorkingDirectory)/terraform/host_01/'
