@@ -4,3 +4,4 @@ metadata:
   name: mealie
   labels:
     name: mealie
+    goldilocks.fairwinds.com/enabled: "true"

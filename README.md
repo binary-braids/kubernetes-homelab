@@ -1,4 +1,4 @@
-[![k3s](https://img.shields.io/badge/k8s-v1.25.4+k3s1-orange?style=for-the-badge&logo=kubernetes)](https://k3s.io/)
+[![k3s](https://img.shields.io/badge/k3s-orange?style=for-the-badge&logo=k3s)](https://k3s.io/)
 [![flux](https://img.shields.io/badge/GitOps-Flux-blue?style=for-the-badge&logo=git)](https://fluxcd.io/)
 [![renovate](https://img.shields.io/badge/renovate-enabled-brightgreen?style=for-the-badge&logo=renovatebot)](https://github.com/renovatebot/renovate)
 

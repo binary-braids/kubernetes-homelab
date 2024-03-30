@@ -4,6 +4,6 @@ kind: Kustomization
 resources:
 - namespace.yaml
 - service.yaml
-- deployment.yaml
+- statefulset.yaml
 - ingress.sops.yaml
 - secret.sops.yaml

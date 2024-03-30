@@ -4,3 +4,4 @@ metadata:
   name: minecraft-creative
   labels:
     name: minecraft-creative
+    goldilocks.fairwinds.com/enabled: "true"

@@ -4,3 +4,4 @@ metadata:
   name: media
   labels:
     name: media
+    goldilocks.fairwinds.com/enabled: "true"
