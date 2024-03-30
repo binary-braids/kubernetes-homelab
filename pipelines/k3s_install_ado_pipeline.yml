@@ -45,5 +45,5 @@ stages:
           ansibleInterface: 'agentMachine'
           playbookPathOnAgentMachine: '$(System.DefaultWorkingDirectory)/ansible/site.yml'
           inventoriesAgentMachine: 'file'
-          inventoryFileOnAgentMachine: '$(System.DefaultWorkingDirectory)/ansible/inventory/inventory.ini'
+          inventoryFileOnAgentMachine: '$(System.DefaultWorkingDirectory)/ansible/inventory/hosts.ini'
           failOnStdErr: false
