@@ -4,7 +4,7 @@ kind: Kustomization
 resources:
 # - monitoring
 - longhorn-system
-- minio
+#- minio
 - cert-manager
 - keycloak
 - oauth2-proxy
