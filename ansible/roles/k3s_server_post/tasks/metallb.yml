@@ -64,7 +64,7 @@
 
 - name: Test metallb-system webhook-service endpoint
   command: >-
-    k3s kubectl -n metallb-system get endpoints webhook-service
+    k3s kubectl -n metallb-system get endpoints metallb-webhook-service
   changed_when: false
   with_items: "{{ groups[group_name_master | default('master')] }}"
   run_once: true
