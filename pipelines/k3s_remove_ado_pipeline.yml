@@ -1,0 +1,64 @@
+variables:
+  - group: kubernetes_variables
+
+parameters:
+- name: agentPool
+  displayName: 'Agent Pool Selection'
+  type: string
+  default: Self-Hosted
+  values:
+  - Self-Hosted
+  - Oracle-Cloud
+
+trigger:
+  - none
+
+stages:
+
+- stage: 'k3sremoval'
+  dependsOn: []
+  displayName: 'k3s Removal'
+
+  jobs:
+
+    - job: 'k3sremovalconfirmation'
+      displayName: 'Confirm removal of K3s Cluster'
+      pool: server
+
+      steps:
+      - task: ManualValidation@0 
+        timeoutInMinutes: 1440 
+        name: manualValidation
+        displayName: 'Confirm deletion of K3s Cluster'
+        inputs:
+          notifyUsers: ''
+          instructions: 'Are you sure you want to delete the K3s Cluster?'
+          onTimeout: 'reject'
+
+    - job: 'k3sremovaljob'
+      displayName: 'k3s Removal Job'
+      dependsOn: 'k3sremovalconfirmation'
+      pool: ${{ parameters.agentPool }}
+
+      steps:
+
+      - task: replacetokens@5
+        displayName: Replace tokens
+        inputs:
+          rootDirectory: '$(System.DefaultWorkingDirectory)/ansible/'
+          targetFiles: |
+            **/*.*
+          encoding: 'auto'
+          tokenPattern: 'default'
+          writeBOM: true
+          actionOnMissing: 'warn'
+          enableTelemetry: false
+
+      - task: Ansible@0
+        displayName: Run k3s Removal Ansible Playbook
+        inputs:
+          ansibleInterface: 'agentMachine'
+          playbookPathOnAgentMachine: '$(System.DefaultWorkingDirectory)/ansible/reset.yml'
+          inventoriesAgentMachine: 'file'
+          inventoryFileOnAgentMachine: '$(System.DefaultWorkingDirectory)/ansible/inventory/hosts.ini'
+          failOnStdErr: false
