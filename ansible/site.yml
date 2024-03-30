@@ -16,7 +16,7 @@
       become: true
 
 - name: Setup k3s agents
-  hosts: k3s_cluster
+  hosts: node
   roles:
     - role: k3s_agent
       become: true
