@@ -23,7 +23,7 @@ k3s_token: "#{k3s_install_secret}#"
 k3s_node_ip: '{{ ansible_facts[flannel_iface]["ipv4"]["address"] }}'
 
 # Disable the taint manually by setting: k3s_master_taint = false
-k3s_master_taint: "false"
+k3s_master_taint: "{{ true if groups['node'] | default([]) | length >= 1 else false }}"
 
 # these arguments are recommended for servers as well as agents:
 extra_args: >-
