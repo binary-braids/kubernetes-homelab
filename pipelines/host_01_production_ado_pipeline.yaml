@@ -49,6 +49,7 @@ stages:
 
           - task: CmdLine@2
             displayName: 'Terraform Init'
+            name: terraformInit
             inputs:
               script: |
                 terraform init
@@ -56,9 +57,16 @@ stages:
 
           - task: CmdLine@2
             displayName: 'Terraform Plan'
+            name: terraformPlan
             inputs:
               script: |
-                terraform plan -out ${BUILD_BUILDNUMBER}.tfplan
+                terraform plan -input=false -no-color -out ${BUILD_BUILDNUMBER}.tfplan -detailed-exitcode
+
+                if [ $? -eq 2 ]; then
+                  echo "##vso[task.setvariable variable=planChanged;isOutput=true]true"
+                else
+                  echo "##vso[task.setvariable variable=planChanged;isOutput=true]false"
+                fi 
               workingDirectory: '$(System.DefaultWorkingDirectory)/terraform/host_01/'
 
           - task: ArchiveFiles@2
@@ -81,6 +89,7 @@ stages:
 
   - stage: 'KubernetesHost01Apply'
     dependsOn: 'KubernetesHost01Plan'
+    condition: and(succeeded(), eq(dependencies.KubernetesHost01Plan.outputs['terraforminitplan.terraformPlan.planChanged'], 'true'))
     displayName: Kubernetes Host 01 Apply
 
     jobs:
