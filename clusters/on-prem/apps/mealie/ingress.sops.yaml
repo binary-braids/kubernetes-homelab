@@ -4,15 +4,14 @@ metadata:
     name: mealie-ingress
     namespace: mealie
     annotations:
-        kubernetes.io/ingress.class: traefik-external
+        kubernetes.io/ingress.class: traefik
         cert-manager.io/cluster-issuer: letsencrypt-prod
 spec:
     tls:
         - hosts:
-            - ENC[AES256_GCM,data:mKpTIOyC8WVqrEZcItOCjOy62zaSSzY=,iv:4pn2QD7EFmsmUmDZIaDf+qHZDTXccU78Hz8FuS8QW0U=,tag:abw06rrreGWU6S7sOOGMig==,type:str]
-          secretName: wildcard-prod-cert-tls
+            - ENC[AES256_GCM,data:epv5LCvNz1Q4s6gq69xH4Nglsz/c3lU=,iv:T/dU6c3wVY4QtAAR5Adf4F0Scyvp7Y5+qGrHTnjsod8=,tag:JAmKO/cptTXvAyLhFyJWtQ==,type:str]
     rules:
-        - host: ENC[AES256_GCM,data:YOY2HF37UUVuL/RhEjsUshJ5vb/+k9E=,iv:LNnR6IAkrhqMq5Dhr8x3/BygzaSRhwdyiATh/B66gZU=,tag:Tt3YQ+pGHk61WFeYUlQ5pA==,type:str]
+        - host: ENC[AES256_GCM,data:0eVxAYFO,iv:4GK9q5WrKEY6KWXc98tQGZaG+JYEHii5/I3VK1ZI+eE=,tag:QRnFDxq1vAiLnlXhIXgt9A==,type:str]
           http:
             paths:
                 - pathType: Prefix
@@ -31,14 +30,14 @@ sops:
         - recipient: age1xl8mrtu70kvhjdl2nva6dpt8wsy3fhmz6605fmwjujc3zztyeyzqd07nvv
           enc: |
             -----BEGIN AGE ENCRYPTED FILE-----
-            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBxMHIxNm8rWVRzNzRRcXc4
-            MDZHbUFpVDNxK0JjZkZxaW1OeDFSclZzWTJRCjRMWS8wTXZQZ20rbFM5dlRBcm8w
-            QllkOVNtbm44OWo5eVpFbmJXUGl5NkEKLS0tIFdmdlJ0cENQVUpDWjJKYXJTQnZj
-            ZmtUZ25qK3BEK0Yxb3JsaWZ4UzQ2TGMKUGUpaBvvJAcCW822z8YNJm16TlfVdrQx
-            pMj5PKcHjwUIOqqTgJ3TrscYQwURWZaKCr0yTUc9Zio8RQ+IgsIfcA==
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSAwQVU0SWIvcm5SYVZuZEs4
+            OWJManZOcTZtV1JFMEdIR2pHM25FaUlnN0g4Cm83em4yUGFPb2Q4ZGR3eHVWZGdq
+            NnZmRlVVMEk3KzBHKzN0RlFZTnFxdDQKLS0tIDdPdEp3R0cwYUEzbkxWeHlGVmZR
+            Z3Vva2dGckVKbzdCbGRNYUJVdmk5aW8K97730v6JHqi6gNpPJmPEz+Ze5LNgmGmE
+            ZHjN+3335qP18yyp+SEOEsBfu9/VuokzFnG36c7wU2iF1dtcFTPINg==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2024-03-31T13:03:41Z"
-    mac: ENC[AES256_GCM,data:76pYj50cOeYpWDWMWBAlU5xY5C6l/Df5jltZ46ay6d10v7gFZ1pd3ieEum/etqg2YsXoBsfJzduHeEcQA92fDaBD/DWJtp+ps00MPRXeZdzfIoRGoHlyG69CAVh+V3CxSaJpdi0MF0va7e/mz8m1aWQwc+7VD9lz8P2oabkDuXU=,iv:mhWH/+sNsU6NZ7hdAxVq1zO12RUlCx2PvSjUSFZFbhw=,tag:uAXA0b6sWLOmQXQLHrLRUw==,type:str]
+    lastmodified: "2024-03-31T13:23:26Z"
+    mac: ENC[AES256_GCM,data:faZSBmstmzu/z7gd8z8QcIF0p7MIlZu7AWXhpQ4mLFnOgEdQTRhCXDoK1ADxAgEUI20F7jwB0M5WOjdn40Iwnhu1kXEVjnXG5JCu22E3eHY25RkfWJxWzB1NG+8WiqF4Ar2sz9bP91fAjFIOYLTSCShYSYcWYC47H5qeLHLGi50=,iv:4IlbwEraeynm8J6FpThP1c/xEz7bMPZsGU8x99vb6xM=,tag:UyE3xZt14FManCuproi8iA==,type:str]
     pgp: []
     encrypted_regex: ^(data|stringData|email|dnsNames|hosts|host|externalUrl|loadBalancerIP|match)$
     version: 3.8.1
