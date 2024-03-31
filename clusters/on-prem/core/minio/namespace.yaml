@@ -1,0 +1,7 @@
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: minio
+  labels:
+    name: minio
+    goldilocks.fairwinds.com/enabled: "true"
