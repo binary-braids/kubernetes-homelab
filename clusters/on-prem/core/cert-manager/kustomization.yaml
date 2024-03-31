@@ -8,5 +8,4 @@ resources:
 - prod-certificate.sops.yaml
 - prod-clusterissuer.sops.yaml
 - secret.sops.yaml
-- tlsstore.yaml
 - namespace.yaml
