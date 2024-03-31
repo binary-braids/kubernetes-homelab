@@ -5,7 +5,7 @@ resources:
 #- adguard-home
 #- ansible
 #- minecraft-creative
-#- minecraft-survival
+- minecraft-survival
 - mealie
 #- teamspeak
 - phpipam
