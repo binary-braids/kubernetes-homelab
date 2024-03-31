@@ -1,3 +1,9 @@
+- name: Install cifs-utils package
+  ansible.builtin.apt:
+    name: cifs-utils
+    update_cache: yes
+    state: present
+
 - name: Copy Media Share Credentials
   template:
     src: "mediasharecredentials.j2"
