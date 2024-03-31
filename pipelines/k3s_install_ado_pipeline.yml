@@ -47,3 +47,36 @@ stages:
           inventoriesAgentMachine: 'file'
           inventoryFileOnAgentMachine: '$(System.DefaultWorkingDirectory)/ansible/inventory/hosts.ini'
           failOnStdErr: false
+
+- stage: 'mediasharemount'
+  dependsOn: []
+  displayName: 'Mount Media Share on k3s nodes'
+
+  jobs:
+
+    - job: 'mediasharemountjob'
+      displayName: 'Media Share mount Job'
+      pool: ${{ parameters.agentPool }}
+
+      steps:
+
+      - task: replacetokens@5
+        displayName: Replace tokens
+        inputs:
+          rootDirectory: '$(System.DefaultWorkingDirectory)/ansible/'
+          targetFiles: |
+            **/*.*
+          encoding: 'auto'
+          tokenPattern: 'default'
+          writeBOM: true
+          actionOnMissing: 'warn'
+          enableTelemetry: false
+
+      - task: Ansible@0
+        displayName: Run Media Share Mount Ansible Playbook
+        inputs:
+          ansibleInterface: 'agentMachine'
+          playbookPathOnAgentMachine: '$(System.DefaultWorkingDirectory)/ansible/media_share.yml'
+          inventoriesAgentMachine: 'file'
+          inventoryFileOnAgentMachine: '$(System.DefaultWorkingDirectory)/ansible/inventory/hosts.ini'
+          failOnStdErr: false

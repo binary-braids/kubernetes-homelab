@@ -1,0 +1,8 @@
+---
+
+- name: Mount Media Share on k3s nodes
+  hosts: k3s_cluster
+  gather_facts: yes
+  roles:
+    - role: media_share
+      become: true
