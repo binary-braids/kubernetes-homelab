@@ -9,5 +9,5 @@ spec:
     type: LoadBalancer
     ports:
         - protocol: UDP
-          port: 19133
+          port: 19132
           targetPort: 19132
