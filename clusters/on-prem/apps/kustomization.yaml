@@ -10,7 +10,7 @@ resources:
 #- teamspeak
 - phpipam
 #- zabbix
-#- media
+- media
 #- osticket
 #- tftp
 #- your-spotify
