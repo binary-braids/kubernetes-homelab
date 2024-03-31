@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tftpd-hpa
+  namespace: tftpd-hpa
+  labels:
+    app: tftpd-hpa
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tftpd-hpa
+  template:
+    metadata:
+      labels:
+        app: tftpd-hpa
+    spec:
+      containers:
+      - name: tftpd-hpa
+        image: 3x3cut0r/tftpd-hpa:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 69
+          protocol: UDP
+        env:
+        - name: TIMEZONE
+          value: Africa/Johannesburg
+        - name: CREATE
+          value: "1"
+        - name: PUID
+          value: "1000"
+        - name: PGID
+          value: "1000"
+        volumeMounts:
+        - name: tftpd-hpa-data
+          mountPath: /tftpboot
+      volumes:
+        - name: tftpd-hpa-data
+          hostPath:
+            path: /mnt/media/tftpd-hpa
+            type: DirectoryOrCreate

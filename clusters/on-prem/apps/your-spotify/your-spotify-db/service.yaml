@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: your-spotify-db-service
+  namespace: your-spotify
+spec:
+  selector:
+    app: your-spotify-db
+  ports:
+    - protocol: TCP
+      port: 27017
+      targetPort: 27017

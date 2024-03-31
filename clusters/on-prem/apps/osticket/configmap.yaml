@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: osticket-configmap
+  namespace: osticket
+data:
+  db_host_url: osticket-mariadb-service
