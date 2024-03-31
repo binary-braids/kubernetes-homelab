@@ -6,4 +6,4 @@ metadata:
 data:
     values.yaml: |-
           persistence:
-            defaultClassReplicaCount: 2
+            defaultClassReplicaCount: 3
