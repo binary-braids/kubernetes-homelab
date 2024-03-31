@@ -20,4 +20,4 @@ spec:
   targetNamespace: traefik
   valuesFrom:
     - kind: Secret
-      name: encrypted-values
+      name: traefik-encrypted-values
