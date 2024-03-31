@@ -4,18 +4,18 @@ metadata:
     name: mealie-ingress
     namespace: mealie
     annotations:
-        kubernetes.io/ingress.class: traefik
+        kubernetes.io/ingress.class: traefik-external
         cert-manager.io/cluster-issuer: letsencrypt-prod
 spec:
     tls:
         - hosts:
-            - ENC[AES256_GCM,data:V4mpB69htuS4NpT6+kJUzE2DSS7uBH0=,iv:qm2ZMH+T17wJtFtlqX8ujjGbNM0Whj9qEbGJB3JQDNY=,tag:QQ+oeHSWkoa3sUil9pCG/A==,type:str]
+            - ENC[AES256_GCM,data:onBskFweeq0JLkCwWWrV5h3bz4KYgbc=,iv:BllnVdnOBfYjUV/KjnDjNahc1UHGmzYa+8hrKMOMK8M=,tag:Fa4eLwPu72yafVh7McDTdg==,type:str]
     rules:
-        - host: ENC[AES256_GCM,data:7A702eQ+zwweOBK47o3sTTOi30p5KWQ=,iv:R3p6pXe8iyjaaRwdusgKZKACDbq/uLb5CwLnV3ZazCw=,tag:tyKWviQZVSb8ClvGhiMkzQ==,type:str]
+        - host: ENC[AES256_GCM,data:4WptTAY37j+iq8I0gJLS34gBTwCOSOw=,iv:9Bcckj6bgEsMql5yDqXSLF4jJwbi0aK0L9AATcZQxts=,tag:HhwSCWpe3Ft0XGi1yxO6JA==,type:str]
           http:
             paths:
-                - path: /
-                  pathType: Prefix
+                - pathType: Prefix
+                  path: /
                   backend:
                     service:
                         name: mealie-service
@@ -30,14 +30,14 @@ sops:
         - recipient: age1xl8mrtu70kvhjdl2nva6dpt8wsy3fhmz6605fmwjujc3zztyeyzqd07nvv
           enc: |
             -----BEGIN AGE ENCRYPTED FILE-----
-            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSA3b2p0d0VtclFOMXZxNWNq
-            dy9qKzhUVDBSdjZEaFphSlN4cGdmRTVOQjIwCnpvckltdWl1RjVSbVZvK1l4Q3Y3
-            MTZ1aVp6eTlqMkhFT1V5WUVJYnhjWTgKLS0tIEF4cnM0eTA1UEJTL2NKWXczbmU1
-            NkFBZUdKamNITnBPV2Z0Vi9memJJcEEKufd4NkDFpOKrzGhvnhiFBDu/urI2lE2T
-            /4HhO43XQgkUGt/IuIFSxQMFq3f+FyWnqmOCjH4zW6xwS8IV6XYryQ==
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBNalUrbDVZSzhjNVd2NTR0
+            U2JBbXhFZDY3blVVbWZCcUVrTmRVTVArbTM4Cm9JRmFGQ1h6S0NDaHJzQ0NiZjA5
+            Z1p6R0NOZUlWdWhQS29OMUVVWFJPV28KLS0tIC9BcWJOOVhpWlVmcVRLMTU2TVpv
+            Mlp6Um42akhST1JITjk0d1FQVUJ0ZDgKz0bckQNNbvspq6q65oSsMXfOwvNPYuJu
+            YhZ4x+Ktqw0z236QD1wnTUbfNFGiry5wdwaH3kkawG5qMdjRg0sYqA==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2022-12-28T12:07:26Z"
-    mac: ENC[AES256_GCM,data:axrD8DLLGifIuV+J/O9ePoblyeFenDqFweKWCp6rTeJgWaLNFgS3FahH1CeGMuHPVqLSKTKbWzSHkVuXFbSlFDFqXkl9IS8xNpTxtENuSlUj1Z+5DCClLKDqsRGIFYPH1rl55c+9+tHiCZvmXin8hh9iMOpNwWNQ8XWyXT0tess=,iv:BITmJMP8M+h+FH5CvGKBFhwq0pIxFjyrdfole8muhrE=,tag:xeO3M3EJwD9ngHVPGIOU2Q==,type:str]
+    lastmodified: "2024-03-31T12:10:22Z"
+    mac: ENC[AES256_GCM,data:/hucIjZ3HZC0eb0v7WA92jns7bwH8KKu1xwwuw3w7dATc7TTvHJf3QV5OcqI+jyYTM0YoqAtiosnWHegXEoen+StS0yZQz1BwYMugMKtza3IZDsUCqCZJEZaqRGVARywo939wxo9SGhCV2aNYqyeJQ6MavU686Sf/3cyjrADcMk=,iv:6lQ1yeeg3Ehj+OISSra+utGHBFgnyI6aaAWfYGit+rI=,tag:iEF3brV2tkT4T0kCm+0J2Q==,type:str]
     pgp: []
-    encrypted_regex: ^(data|stringData|email|dnsNames|hosts|host|externalIPs)$
-    version: 3.7.3
+    encrypted_regex: ^(data|stringData|email|dnsNames|hosts|host|externalUrl|loadBalancerIP|match)$
+    version: 3.8.1
