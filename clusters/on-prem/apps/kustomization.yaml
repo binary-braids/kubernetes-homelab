@@ -4,7 +4,7 @@ kind: Kustomization
 resources:
 #- adguard-home
 #- ansible
-#- minecraft-creative
+- minecraft-creative
 - minecraft-survival
 - mealie
 #- teamspeak
@@ -15,4 +15,4 @@ resources:
 #- tftp
 #- your-spotify
 #- openssh-server
-#- semaphore
+- semaphore
