@@ -1,0 +1,7 @@
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: phpipam
+  labels:
+    name: phpipam
+    goldilocks.fairwinds.com/enabled: "true"

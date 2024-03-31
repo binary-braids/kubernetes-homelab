@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: your-spotify-client-service
+  namespace: your-spotify
+spec:
+  selector:
+    app: your-spotify-client
+  ports:
+    - port: 3000
+      targetPort: 3000
