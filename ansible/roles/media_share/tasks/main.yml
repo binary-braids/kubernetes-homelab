@@ -1,0 +1,15 @@
+- name: Copy Media Share Credentials
+  template:
+    src: "mediasharecredentials.j2"
+    dest: "/root/.mediasharecredentials"
+    owner: root
+    group: root
+    mode: 0400
+
+- name: Add fstab entry
+  ansible.posix.mount:
+    path: /mnt/media
+    src: #{media_share_source}#
+    fstype: cifs
+    opts: "vers=3.0,credentials=/root/.mediasharecredentials,x-systemd.automount,x-systemd.requires=network-online.target,uid=#{media_share_uid}#,file_mode=0777,dir_mode=077,noperm"
+    state: mounted  
