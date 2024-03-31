@@ -10,3 +10,4 @@ resources:
 #- oauth2-proxy
 #- uptime-kuma
 - goldilocks
+- traefik
