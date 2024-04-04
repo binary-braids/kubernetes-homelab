@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: your-spotify-db
-        image: mongo:7.0.7
+        image: mongo:7.0.8
         imagePullPolicy: Always
         resources:
           limits:
