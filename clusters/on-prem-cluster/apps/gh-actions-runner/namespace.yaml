@@ -1,6 +1,0 @@
-kind: Namespace
-apiVersion: v1
-metadata:
-  name: gh-actions-runner
-  labels:
-    name: gh-actions-runner

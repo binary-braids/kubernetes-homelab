@@ -1,8 +1,0 @@
-apiVersion: source.toolkit.fluxcd.io/v1
-kind: HelmRepository
-metadata:
-  name: keycloak
-  namespace: flux-system
-spec:
-  interval: 2m
-  url: https://charts.bitnami.com/bitnami

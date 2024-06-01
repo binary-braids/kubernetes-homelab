@@ -1,8 +1,0 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: zabbix-configmap
-  namespace: zabbix
-data:
-  database_url: zabbix-postgres-service
-  server_url: zabbix-server-service
