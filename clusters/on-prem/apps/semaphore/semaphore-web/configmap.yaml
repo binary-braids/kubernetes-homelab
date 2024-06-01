@@ -6,3 +6,5 @@ metadata:
 data:
   requirements.txt: | 
     pywinrm
+    requests
+    pykerberos
