@@ -1,7 +1,0 @@
-kind: Namespace
-apiVersion: v1
-metadata:
-  name: media
-  labels:
-    name: media
-    goldilocks.fairwinds.com/enabled: "true"
