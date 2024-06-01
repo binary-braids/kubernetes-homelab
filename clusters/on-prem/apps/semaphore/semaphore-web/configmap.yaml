@@ -3,6 +3,6 @@ kind: ConfigMap
 metadata:
   name: semaphore-requirements-configmap
   namespace: semaphore
-stringData:
-  requirements: | 
+data:
+  requirements.txt: | 
     pywinrm
