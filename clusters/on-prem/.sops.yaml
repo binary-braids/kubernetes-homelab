@@ -1,5 +1,5 @@
 creation_rules:
   - path_regex: .*values.sops.yaml$
     age: age1xl8mrtu70kvhjdl2nva6dpt8wsy3fhmz6605fmwjujc3zztyeyzqd07nvv
-  - encrypted_regex: '^(data|stringData|email|dnsNames|hosts|host|externalUrl|loadBalancerIP|match)$'
+  - encrypted_regex: '^(data|stringData|email|dnsNames|hosts|host|externalUrl|loadBalancerIP|match|krb5.conf)$'
     age: age1xl8mrtu70kvhjdl2nva6dpt8wsy3fhmz6605fmwjujc3zztyeyzqd07nvv

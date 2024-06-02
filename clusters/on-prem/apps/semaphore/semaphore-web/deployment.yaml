@@ -55,3 +55,11 @@ spec:
               key: database_url
         - name: SEMAPHORE_DB_PORT
           value: "3306"
+        volumeMounts:
+          - name: kerberos
+            mountPath: /etc/krb5.conf
+            subPath: krb5.conf
+      volumes:
+        - name: kerberos
+          configMap:
+            name: semaphore-kerberos-configmap

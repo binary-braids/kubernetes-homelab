@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+    name: semaphore-kerberos-configmap
+    namespace: semaphore
+data:
+    krb5.conf: ENC[AES256_GCM,data:CBXQa4q4Y+RxND0FN3q1XBuUfjtWjH1vaeEBj5zVp0HiHwpXzmJ26lGTuoDuuBgCYxFgJGtOvJEpZE/4ZSaBx/LF1Hn1ABElz/IVcvjPwLnciWdI+vT/ECjoNNsKosL5PWG/1f/RiQIk/RlNUiwOu166QwpXAdvwgRsrnWQNL449xQufQ1PsLBqwsaYtClBCIx68FH8a/fVFP0hdZOEvsiUzdt0DDbQkIQKFVy/R3NZn3yaQMb4A810v7Ge/LVnedSqPM6WAe/FWraE3taKiLtfV0wsj9nsbVTrSGsQf80xKEOPoY31lJGmy1BySJdVfamcPf3BUgfLjdhveFgMHrJxJudYieapYfP2f4dQ9BRvkTuC8aw6UN79Aw+n6LpshbCcuEcnRMMZgFDAMNVL+qMnlJavRoyZKVRPvDQ1qyldMgtn4IwZ4I3hy8xgeHSuHAwPPYw==,iv:eR98IM+S2PqGGDIvTh8g5wuvzwXQuZywa1REBoYXbtc=,tag:c+15B5yiqe+9GrN5SamfYg==,type:str]
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1xl8mrtu70kvhjdl2nva6dpt8wsy3fhmz6605fmwjujc3zztyeyzqd07nvv
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBvaERHY01wTTVBRGNyWEIz
+            T1RxZFJENGpPa2xkaFBRUTdPeW9kZmhmK0RZCkVwRk9OQW1VTEJyVGxNN2RmUGt3
+            TzVQYnhNSE11ckQ2bWtCZm0ydDQwcjQKLS0tIGhWdHQrbGF0Zk9SUms2d2dRaTVP
+            bFNzT0Vac2FRTGJrclRmM045WWU4VGcKGUvKoZ/VMslnhU1saaon2I5uNrgnneZQ
+            eTbbAeSWFXTKkW3e7gSX2dgltDIHAWdZxIpUmIFnXvN2LvKVQW0wpA==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2024-06-02T13:57:07Z"
+    mac: ENC[AES256_GCM,data:OCcCHxzZC7xzdOv9P6OxtwA09fjkEdo3YtciTj6QBqlTVeuHa7We0b9AkdOSeRDCXjMBOiFUHEvSM4PEdTl0ikQTjOnTfTA0IFAhDOviMvwQO0YxwP2IeY9p8BhJNwQAmpj0RoS0VyNK3Ar8aJYsscCRe/OyU83SgUpT2O73jvc=,iv:lmoYmiqxvqTJ9D9sd6Pij04akWZyQ1azfF51/qRRPuk=,tag:teqlnGzpUnY0SKk/NDUxjg==,type:str]
+    pgp: []
+    encrypted_regex: ^(data|stringData|email|dnsNames|hosts|host|externalUrl|loadBalancerIP|match|krb5.conf)$
+    version: 3.8.1
