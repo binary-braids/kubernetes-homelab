@@ -55,11 +55,3 @@ spec:
               key: database_url
         - name: SEMAPHORE_DB_PORT
           value: "3306"
-        volumeMounts:
-          - name: requirements
-            mountPath: /etc/semaphore/requirements.txt
-            subPath: requirements.txt
-      volumes:
-        - name: requirements
-          configMap:
-            name: semaphore-requirements-configmap

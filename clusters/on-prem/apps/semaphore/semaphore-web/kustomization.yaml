@@ -6,4 +6,3 @@ resources:
 - ingress.sops.yaml
 - service.yaml
 - deployment.yaml
-- configmap.yaml
