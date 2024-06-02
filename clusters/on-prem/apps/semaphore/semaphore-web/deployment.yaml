@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: semaphore
-        image: ghcr.io/binary-braids/ansible-semaphore:bf584580583b7109d5a5ea0033edf7d3421334ff@sha256:5a16d945bd02869634887e3a727321028245e8c32da45e52504ace0fc24524e6
+        image: ghcr.io/binary-braids/ansible-semaphore:3ef71da7ad70ca385c07348eb984799adb8502fa@sha256:72feaeb735bffbe0f037d04b2d30f2bfd0e718b0852a7c9537dfd726889e2cd3
         imagePullPolicy: Always
         ports:
         - containerPort: 3000
