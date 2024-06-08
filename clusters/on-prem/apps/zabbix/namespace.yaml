@@ -4,3 +4,4 @@ metadata:
   name: zabbix
   labels:
     name: zabbix
+    goldilocks.fairwinds.com/enabled: "true"

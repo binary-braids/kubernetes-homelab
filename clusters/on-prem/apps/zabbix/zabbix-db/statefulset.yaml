@@ -1,43 +1,46 @@
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
-  name: zabbix-postgres
+  name: zabbix-mariadb
   namespace: zabbix
   labels:
-    app: zabbix-postgres
+    app: zabbix-mariadb
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: zabbix-postgres
-  serviceName: zabbix-postgres
+      app: zabbix-mariadb
+  serviceName: zabbix-mariadb
   template:
     metadata:
       labels:
-        app: zabbix-postgres
+        app: zabbix-mariadb
     spec:
       containers:
-      - name: zabbix-postgres
-        image: postgres:16.3
+      - name: zabbix-mariadb
+        image: mariadb:11.4.2-noble
         ports:
         - containerPort: 5432
         env:
-        - name: POSTGRES_USER
+        - name: MYSQL_USER
           valueFrom:
             secretKeyRef:
               name: zabbix-secret
-              key: zabbix_postgres_user
-        - name: POSTGRES_PASSWORD
+              key: zabbix_mariadb_user
+        - name: MYSQL_PASSWORD
           valueFrom:
             secretKeyRef:
               name: zabbix-secret
-              key: zabbix_postgres_password
-        - name: PGDATA
-          value: /var/lib/postgresql/data/pgdata
+              key: zabbix_mariadb_password
+        - name: MYSQL_ROOT_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: zabbix-secret
+              key: zabbix_mariadb_root_password
         volumeMounts:
-          - mountPath: "/var/lib/postgresql/data"
-            name: postgres-volume
+          - mountPath: "/var/lib/mysql"
+            name: mariadb-volume
       volumes:
-      - name: postgres-volume
+      - name: mariadb-volume
         persistentVolumeClaim:
-          claimName: zabbix-postgres-pvc
+          claimName: zabbix-mariadb-pvc

@@ -17,20 +17,20 @@ spec:
     spec:
       containers:
       - name: zabbix-web
-        image: zabbix/zabbix-web-apache-pgsql
+        image: zabbix/zabbix-web-apache-mysql:ubuntu-7.0-latest
         ports:
         - containerPort: 8080
         env:
-        - name: POSTGRES_USER
+        - name: MYSQL_USER
           valueFrom:
             secretKeyRef:
               name: zabbix-secret
-              key: zabbix_postgres_user
-        - name: POSTGRES_PASSWORD
+              key: zabbix_mariadb_user
+        - name: MYSQL_PASSWORD
           valueFrom:
             secretKeyRef:
               name: zabbix-secret
-              key: zabbix_postgres_password
+              key: zabbix_mariadb_password
         - name: DB_SERVER_HOST
           valueFrom:
             configMapKeyRef:
