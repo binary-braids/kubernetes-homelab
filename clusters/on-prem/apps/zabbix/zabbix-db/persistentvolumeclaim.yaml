@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: zabbix-postgres-pvc
+  name: zabbix-mariadb-pvc
   namespace: zabbix
 spec:
   accessModes:

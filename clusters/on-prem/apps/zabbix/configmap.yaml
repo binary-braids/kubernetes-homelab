@@ -4,5 +4,5 @@ metadata:
   name: zabbix-configmap
   namespace: zabbix
 data:
-  database_url: zabbix-postgres-service
+  database_url: zabbix-mariadb-service
   server_url: zabbix-server-service
