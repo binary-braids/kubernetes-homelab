@@ -28,6 +28,18 @@ spec:
             secretKeyRef:
               name: zabbix-secret
               key: zabbix_mariadb_root_password
+        - name: MYSQL_USER
+          valueFrom:
+            secretKeyRef:
+              name: zabbix-secret
+              key: zabbix_mariadb_user
+        - name: MYSQL_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: zabbix-secret
+              key: zabbix_mariadb_password
+        - name: MYSQL_DATABASE
+          value: zabbix
         - name: DB_SERVER_HOST
           valueFrom:
             configMapKeyRef:

@@ -21,6 +21,13 @@ spec:
         ports:
         - containerPort: 8080
         env:
+        - name: MYSQL_ROOT_USER
+          value: root
+        - name: MYSQL_ROOT_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: zabbix-secret
+              key: zabbix_mariadb_root_password
         - name: MYSQL_USER
           valueFrom:
             secretKeyRef:
@@ -31,6 +38,8 @@ spec:
             secretKeyRef:
               name: zabbix-secret
               key: zabbix_mariadb_password
+        - name: MYSQL_DATABASE
+          value: zabbix
         - name: DB_SERVER_HOST
           valueFrom:
             configMapKeyRef:
