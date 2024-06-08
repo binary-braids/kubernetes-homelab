@@ -21,8 +21,6 @@ spec:
         ports:
         - containerPort: 10051
         env:
-        - name: MYSQL_ROOT_USER
-          value: root
         - name: MYSQL_ROOT_PASSWORD
           valueFrom:
             secretKeyRef:
