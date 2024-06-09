@@ -43,13 +43,3 @@ spec:
             configMapKeyRef:
               name: zabbix-configmap
               key: database_url
-      - name: zabbix-agent
-        image: zabbix/zabbix-agent
-        ports:
-        - containerPort: 10050
-        env:
-        - name: ZBX_SERVER_HOST
-          valueFrom:
-            configMapKeyRef:
-              name: zabbix-configmap
-              key: server_url
