@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: zabbix-mariadb
-        image: mariadb:11.2.4-jammy@sha256:7830bb0df5a8eff943f32eb5455924570a23c7083e2d21a16f0377a5e50a8a4d
+        image: mariadb:11.3.2-jammy@sha256:e101f9db31916a5d4d7d594dd0dd092fb23ab4f499f1d7a7425d1afd4162c4bc
         args:
           - mariadbd          
           - --character-set-server=utf8
