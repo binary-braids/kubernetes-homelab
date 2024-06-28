@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: your-spotify-server
-        image: yooooomi/your_spotify_server
+        image: yooooomi/your_spotify_server@sha256:6ba8c9671153011baad9e8fe5047a378ab835a7c652a7211a591e2d24472a2f6
         imagePullPolicy: Always
         resources:
           limits:

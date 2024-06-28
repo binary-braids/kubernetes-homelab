@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: osticket
-        image: tiredofit/osticket:3.6.2
+        image: tiredofit/osticket:3.6.2@sha256:291cfbac7156aefbd9695766540c605b025ad9a10838798f90c9dd33c1ca57a2
         imagePullPolicy: Always
         ports:
         - containerPort: 80
