@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: ansible
-        image: ghcr.io/data-tangles/ansible:latest
+        image: ghcr.io/data-tangles/ansible:latest@sha256:4423c894acc6ab0dfd87da646cf4f5e70664694e461404d1d76712126ee9fceb
         imagePullPolicy: Always
         ports:
         - containerPort: 69

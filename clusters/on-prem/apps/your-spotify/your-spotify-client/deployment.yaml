@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: your-spotify-client
-        image: yooooomi/your_spotify_client
+        image: yooooomi/your_spotify_client@sha256:57f38321e5ce8f0851845b304106d1b116d30c2026a8a87cada0d3e14a30dfc8
         imagePullPolicy: Always
         resources:
           limits:
