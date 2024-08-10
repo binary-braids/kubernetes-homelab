@@ -5,9 +5,25 @@ metadata:
     namespace: flux-system
 data:
     values.yaml: |-
+        namespaceOverride: monitoring
+        windowsMonitoring:
+          enabled: true
         prometheus:
           prometheusSpec:
+            retention: 10d
+            retentionSize: "500MB"
             storageSpec:
+              volumeClaimTemplate:
+                spec:
+                  storageClassName: longhorn
+                  resources:
+                    requests:
+                      storage: 1Gi
+        alertmanager:
+          alertmanagerSpec:
+            retention: 10d
+            retentionSize: "500MB"
+            storage:
               volumeClaimTemplate:
                 spec:
                   storageClassName: longhorn

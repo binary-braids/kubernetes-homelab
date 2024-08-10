@@ -1,0 +1,43 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+    name: alertmanager-ingress
+    namespace: monitoring
+    annotations:
+        kubernetes.io/ingress.class: traefik
+        cert-manager.io/cluster-issuer: letsencrypt-prod
+spec:
+    tls:
+        - hosts:
+            - ENC[AES256_GCM,data:A85EhLjJMhDjg7ndgusYkzzHqKg46O4G7+ab0DU=,iv:3HrnHrx6tvtntgGWmE2qOBqfAyLeEZNN5UeBKNfy/hk=,tag:u6FGGnRjUVKscDGW9NPQ2Q==,type:str]
+    rules:
+        - host: ENC[AES256_GCM,data:rkgBBY22ko2CeRmZvw4c8Ay1LkhLVh7/tyf9QmU=,iv:QPdGKi8F+20B2lQoU7mqFUda/fl2g5Cxd0/HTO4l5VI=,tag:2ZPOCPq/w3KJYEI4PHuX3Q==,type:str]
+          http:
+            paths:
+                - pathType: Prefix
+                  path: /
+                  backend:
+                    service:
+                        name: monitoring-kube-prometheus-alertmanager
+                        port:
+                            number: 9093
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1xl8mrtu70kvhjdl2nva6dpt8wsy3fhmz6605fmwjujc3zztyeyzqd07nvv
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBTaDZSanNXa2pKSGlrTi9J
+            SFlZN0gySXQ5c0RqRlg4REVvMUxuekJNK1dVCmdYNXFXbWkyeUg4bzFrNEc4K1hB
+            ajZWVkZUOG5CbVkyeXFScDRDWFFKTzAKLS0tIElxUmNsSTROUGt2NDVXNVFSdVFt
+            MnU3ZFh3WDhDdENKTjZPZXFlUEpzakEKZhqB3OKC/ewUD5l9akBzWUvTZtc1Wii+
+            moqBVEw1iybySM/DDIZFtRyMPo9rBon6katwhgYpsg1Y7yTG9Ssf/Q==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2024-08-10T10:10:16Z"
+    mac: ENC[AES256_GCM,data:Y0ZZU+cRxqEUUBci1IASBKAbqEBQPIKSkdhSBsVVJrOj96BB7oEBz76jLNixIMqzmoRXEYp3K8UugQ0b+Au9FrofiuNsF2iuRN/m2khBNU0eHHhdVMrH8N6lU5nKtBHWv3Zk5Ct/5XmXcJYNS8ZbumrEaSKUKnp4VCLtYxNkygo=,iv:3t/iYUINgwyvVkjwVdGB3qb/rXAVjd1nikN2kgdu9Zg=,tag:mitXHxV866BW6Y9ajK5fYQ==,type:str]
+    pgp: []
+    encrypted_regex: ^(data|stringData|email|dnsNames|hosts|host|externalUrl|loadBalancerIP|match|krb5.conf)$
+    version: 3.8.1
