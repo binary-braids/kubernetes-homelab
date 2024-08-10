@@ -1,0 +1,43 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+    name: grafana-ingress
+    namespace: monitoring
+    annotations:
+        kubernetes.io/ingress.class: traefik
+        cert-manager.io/cluster-issuer: letsencrypt-prod
+spec:
+    tls:
+        - hosts:
+            - ENC[AES256_GCM,data:63MbkPRlMo52ANHDrvkrhkBEN4NzkUNA,iv:E3uFUyhAz/ZpSZTFe6JbkHvcB2/HaG+HlqY/4ghPprU=,tag:IkKgiLhpoIu3ZRAhd9pHsw==,type:str]
+    rules:
+        - host: ENC[AES256_GCM,data:OTvwsKSiB6Y9D2n8wiIvqIPII0/L1gO5,iv:k612YjBoh+hdZirD9tQyEoMKuWZMKBAL5FjYoWK8vHs=,tag:9mPfO16kW/OWN/EHW3yxuA==,type:str]
+          http:
+            paths:
+                - pathType: Prefix
+                  path: /
+                  backend:
+                    service:
+                        name: monitoring-kube-prometheus-stack-grafana
+                        port:
+                            number: 80
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1xl8mrtu70kvhjdl2nva6dpt8wsy3fhmz6605fmwjujc3zztyeyzqd07nvv
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBoSmlDL2RBSmFkQjFib0hP
+            KzVjdTBNSEo4ZnI0eGttQmUyVWpPTzlLUGdBCkFkcFV2d2J3K2pJc0haN3NHQyt1
+            NTFvUHdnZ3pxS1B1bE5TZFl1c0EvbVUKLS0tIG1qbVd5NTNuVkd0TkhIb0JrN1lM
+            MVlSbjJMV3VBaUJUNXVjNkZ3K01PNHcKp8EsF1sn+LNjJdg8CUevcyIhJRgPOMVo
+            Ay2WhG/W9AdXPd7SwYtnmxfNqXTKeMprHl1XNh504CJb7js3+TEhLg==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2024-08-10T10:07:02Z"
+    mac: ENC[AES256_GCM,data:kQbVoqzV1mexGIDmSIDM+Cg8TcSMv23rlNBIUt+m/w53piVcu34x7uI4f+SPDEt+ApIzPRaz70LDteAaneyHTsHN+mph/DBgnC+sJCQOw1d2O0zyAU31cU7dnyb4e5FNhiypkX3QJQUA9rPntFskdgZ+i7IhtoOArVqH0Ctjw8U=,iv:1xI3txyX99vXhOenG13FkGnREx4vWobDX3hf4G23rzM=,tag:Z0aBI6JRyFbyvsWm8Bls1A==,type:str]
+    pgp: []
+    encrypted_regex: ^(data|stringData|email|dnsNames|hosts|host|externalUrl|loadBalancerIP|match|krb5.conf)$
+    version: 3.8.1

@@ -1,0 +1,43 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+    name: prometheus-ingress
+    namespace: monitoring
+    annotations:
+        kubernetes.io/ingress.class: traefik
+        cert-manager.io/cluster-issuer: letsencrypt-prod
+spec:
+    tls:
+        - hosts:
+            - ENC[AES256_GCM,data:7Xubfv7Aovb4IuDrDonjAjuWiXiJBEyM5HQg,iv:z8qDjQFEKN1TIdknG6w9+GVN9FamVBTz84/MTQ+AdQo=,tag:6uFVHITitriy9UQeP5JHHw==,type:str]
+    rules:
+        - host: ENC[AES256_GCM,data:qEWwg8VLm44j9CcIbUbUCwxx+Kx5PA08bZyA,iv:Iqz+4flEq2GnFvnP8gickMlVGaRDwjFF5N3D9rTs6WQ=,tag:aZZyrX2RoLpPC6Ss3cXxoA==,type:str]
+          http:
+            paths:
+                - pathType: Prefix
+                  path: /
+                  backend:
+                    service:
+                        name: monitoring-kube-prometheus-prometheus
+                        port:
+                            number: 9090
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1xl8mrtu70kvhjdl2nva6dpt8wsy3fhmz6605fmwjujc3zztyeyzqd07nvv
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSB0MzZlZUFPVzc2NjJmQWxV
+            dk1GWUN5elhXMG5QN29INUJ4VTR5S253SDNFClZKeFgwaGlSWk9ZYWlndFErMGFl
+            ZkN3dGRtS3N3V0dCMlNWMW81YjVZQmcKLS0tIENKUjZaczhWR3F0TTAwVVdnTloz
+            K3RiZ2V6YkF0L3gyYTF3OTdhaDd6NVkKq2V5br8qc/F9jaS/A0krRVxSqiHdy1SG
+            75xctjxZUA7ZTNB2fbrDPvDFMhix1olzAbFMzgvlYy2GOcL9lm/ZkA==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2024-08-10T10:07:08Z"
+    mac: ENC[AES256_GCM,data:6V10jRfvEgOyr5CYGSBQoALwvWoAFS2BMD+XHzcec/h1be+Lu6k4o1so6VIFmK2SdcTaj74CmhQrn6aW92MT+nq1uJAj7r8aekFrD8kqW+y73ycpfI3f9ewqEt5B1IKKHKUPrhVzb67vZtEuuAdWgaxb+p9E9xrZwZg96/XpvCA=,iv:Ld8g18vieYxqD8U7rk0qHXwCurGiDkRkJldg8ft0Kfc=,tag:XTMVNpBu5oxHJeupec/ESQ==,type:str]
+    pgp: []
+    encrypted_regex: ^(data|stringData|email|dnsNames|hosts|host|externalUrl|loadBalancerIP|match|krb5.conf)$
+    version: 3.8.1
