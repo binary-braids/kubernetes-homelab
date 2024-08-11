@@ -10,7 +10,7 @@ data:
       enabled: true
     prometheus:
       prometheusSpec:
-        retentionSize: "500MB"
+        retentionSize: 500MB
         storageSpec:
           volumeClaimTemplate:
             spec:
@@ -20,7 +20,7 @@ data:
                   storage: 1Gi
     alertmanager:
       alertmanagerSpec:
-        retentionSize: "500MB"
+        retentionSize: 500MB
         storage:
           volumeClaimTemplate:
             spec:
