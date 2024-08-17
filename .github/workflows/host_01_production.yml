@@ -1,0 +1,98 @@
+name: Host 01 Production CD
+
+on:
+  workflow_dispatch:
+  pull_request: 
+    
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  init_and_plan:
+    name: Terraform Init and Plan
+    runs-on: Self-Hosted
+
+    outputs:
+      planExitcode: ${{ steps.terraformPlan.outputs.exitcode }}
+
+    steps:
+
+      - name: Checkout 🔔
+        uses: actions/checkout@v4
+
+      - name: Map Secrets to Environment Variables 🗺️ 
+        uses: oNaiPs/secrets-to-env-action@v1.5
+        with:
+            secrets: ${{ toJSON(secrets) }}        
+
+      - name: Replace Tokens 🪙
+        uses: cschleiden/replace-tokens@v1.3
+        with:
+          files: '["./terraform/host_01/**/*"]'
+
+      - name: Install NodeJS 🖥️
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install Terraform ⛰️
+        uses: hashicorp/setup-terraform@v3
+
+      - name: Terraform Init 🏃
+        id: terraformInit
+        run: terraform init
+        working-directory: ./terraform/host_01
+
+      - name: Terraform Plan 🗺️
+        id: terraformPlan
+        run: |
+          terraform plan -input=false -no-color -out ${{ github.sha }}.tfplan -detailed-exitcode 
+        working-directory: ./terraform/host_01
+
+      - name: Cache Terraform Plan 📦
+        uses: actions/cache/save@v4.0.2
+        with:
+          path: ./terraform/host_01/**
+          key: ${{ github.sha }}
+
+  apply:
+    name: Terraform Apply
+    needs:
+      - init_and_plan
+    if: needs.init_and_plan.outputs.planExitcode == 2
+    runs-on: Self-Hosted
+
+    steps:
+
+      - name: Manual Approval 🚦
+        uses: trstringer/manual-approval@v1
+        with:
+          secret: ${{ github.TOKEN }}
+          approvers: data-tangles
+          minimum-approvals: 1
+          issue-title: "Terraform Apply"
+          issue-body: "Please approve or deny the Terraform Apply operation"
+          exclude-workflow-initiator-as-approver: false
+
+      - name: Checkout 🔔
+        uses: actions/checkout@v4
+
+      - name: Restore Terraform Plan 🗺️
+        uses: actions/cache/restore@v4.0.2
+        with:
+          path: ./terraform/host_01/**
+          key: ${{ github.sha }}
+
+      - name: Install NodeJS 🖥️
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install Terraform ⛰️
+        uses: hashicorp/setup-terraform@v3
+
+      - name: Terraform Apply 🚀
+        run: terraform apply ${{ github.sha }}.tfplan
+        working-directory: ./terraform/host_01
+
