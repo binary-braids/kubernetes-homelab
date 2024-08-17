@@ -27,7 +27,7 @@ spec:
         - name: REPO_OWNER_NAME
           value: "binary-braids"
         - name: REPO_NAMES
-          value: "*"
+          value: "kubernetes-homelab,github-actions-runner,ansible-semaphore,terraform-ibm-cloud,terraform-esxi,packer-esxi"
         - name: ENABLE_GITHUB_SECRETS_SCAN_ALERTS_MONITORING
           value: "true"
         - name: ENABLE_GITHUB_CODE_SCAN_ALERTS_MONITORING
