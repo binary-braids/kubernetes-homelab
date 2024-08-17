@@ -1,10 +1,3 @@
-# ESXI Host
-esxi_hostname = "#{HOST_01_ESXI_HOSTNAME}#"
-esxi_hostport = 22
-esxi_hostssl  = 433
-esxi_username = "terraform"
-esxi_password = "#{HOST_01_ESXI_PASSWORD}#"
-
 #K3s Node
 k3s_01_guest_name = "#{K3S_01_GUEST_NAME}#"
 k3s_01_boot_firmware = "efi"
