@@ -15,6 +15,7 @@ This repo contains all my config for my On-Prem and Oracle based k3s clusters. T
 The Git repository contains the following directories:
 
 ```sh
+📁 .github
 📁 ansible
 📁 clusters
 ├─📁 on-prem-cluster
@@ -25,7 +26,6 @@ The Git repository contains the following directories:
 │ ├─📁 apps
 │ ├─📁 core
 │ └─📁 flux-system
-📁 pipelines
 📁 terraform
 ```
 ## Getting started

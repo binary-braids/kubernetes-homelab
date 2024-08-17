@@ -1,8 +1,10 @@
-name: Host 02 Production CD
+name: Host 02 Terraform CD
 
 on:
   workflow_dispatch: 
   pull_request:
+    paths:
+      - 'terraform/host_02/**'
     
 permissions:
   contents: write
