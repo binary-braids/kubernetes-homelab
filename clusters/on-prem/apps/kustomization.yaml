@@ -16,3 +16,4 @@ resources:
 #- your-spotify
 #- openssh-server
 - semaphore
+- gitactionboard

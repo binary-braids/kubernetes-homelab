@@ -1,0 +1,43 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+    name: gitactionboard-ingress
+    namespace: gitactionboard
+    annotations:
+        kubernetes.io/ingress.class: traefik
+        cert-manager.io/cluster-issuer: letsencrypt-prod
+spec:
+    tls:
+        - hosts:
+            - ENC[AES256_GCM,data:2Wl7Ad6QQ8uq8vDs/edrMzUd4H5Z9Rwqjk6FWN3mFQ==,iv:uX5GNoBHQaYdNbNlqwwH1D8rcmVUPg3Y++0wkzvs/9c=,tag:E8v28apdGKa23U2liCLm7g==,type:str]
+    rules:
+        - host: ENC[AES256_GCM,data:u3ujMZh5N4QCxZREkpr6TiXMWxeX1dhO7nICBv16wA==,iv:F4BeWJXvnBT+6vZFqcTKuZxcUG7Kwep62KT8oSDWAg8=,tag:uTdut48mXxKCBjk4Ekz67w==,type:str]
+          http:
+            paths:
+                - pathType: Prefix
+                  path: /
+                  backend:
+                    service:
+                        name: gitactionboard-service
+                        port:
+                            number: 8080
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1xl8mrtu70kvhjdl2nva6dpt8wsy3fhmz6605fmwjujc3zztyeyzqd07nvv
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSAvL2FjdzFMU3ZZb2tFakky
+            V3M3Qnk3Z0I4WmxzVVFnRUk2WDhBNGo2a3pjCjJJYURiZGRsT2liRzVYVkdIU0NB
+            Nk94RTF0bHByajROL01EWmxCWVB5QkEKLS0tIEVkWmNLY1V6a3VCbyt3V2NTMVUx
+            Vmh2OTY4M285MjdyTS83Snh1U3VFcDQKoImLPzy2lQ42VkRhMllWF0KT+QkrwS+9
+            OVs3Fw4+ufjQu5AImTpDvSQOzhCCxqqoD1xwU9xkYSwrr45tFD74jQ==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2024-08-17T12:53:12Z"
+    mac: ENC[AES256_GCM,data:2ZIa/W8VDD1rphNoJoawa7nTqp1SLuXdYFZSdshgKkl86zSJXjxGf8EV6SvPKcoWLg3fybxx2fOhaMv8kocmKyE/5am32Elq705rO3EO/3Sc7X1O5imLGE04rFzqkUmaiCORcTnPfH+eU42+mGsDUgYtiyLqzF98G3oMp3F8/64=,iv:IDenhs+szyRca3lGs91SXcK8k4Dg6ONUhgWOpB+KozQ=,tag:fH4ACWhyLcC8SVXSvOC9Hg==,type:str]
+    pgp: []
+    encrypted_regex: ^(data|stringData|email|dnsNames|hosts|host|externalUrl|loadBalancerIP|match|krb5.conf)$
+    version: 3.8.1
