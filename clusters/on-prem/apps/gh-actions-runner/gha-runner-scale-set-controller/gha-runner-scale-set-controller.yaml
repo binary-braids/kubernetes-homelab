@@ -12,6 +12,8 @@ spec:
         kind: HelmRepository
         name: actions-runner-controller
         namespace: flux-system
+  dependsOn:
+    - secret: controller-manager
   interval: 5m
   install:
     remediation:
