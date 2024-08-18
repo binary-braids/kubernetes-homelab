@@ -2,8 +2,8 @@ apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
 metadata:
   name: gha-runner-scale-set
-  namespace: flux-system
 spec:
+  interval: 30m
   chart:
     spec:
       chart: gha-runner-scale-set
@@ -12,15 +12,21 @@ spec:
         kind: HelmRepository
         name: gha-runner-scale-set
         namespace: flux-system
+  install:
+    remediation:
+      retries: 3
+  upgrade:
+    cleanupOnFail: true
+    remediation:
+      strategy: rollback
+      retries: 3
   dependsOn:
     - name: gha-runner-scale-set-controller
       namespace: actions-runner-system
-  interval: 5m
-  install:
-    remediation:
-        retries: 3
-    createNamespace: true
   targetNamespace: actions-runner-system
   valuesFrom:
     - kind: Secret
       name: gha-runner-scale-set-secret
+  values:
+    nameOverride: gha-runner-scale-set
+    runnerScaleSetName: gha-runner-scale-set
