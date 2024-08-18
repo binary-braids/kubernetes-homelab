@@ -13,7 +13,7 @@ permissions:
 jobs:
   init_and_plan:
     name: Terraform Init and Plan
-    runs-on: Self-Hosted
+    runs-on: gha-runner-scale-set
 
     outputs:
       planExitcode: ${{ steps.terraformPlan.outputs.exitcode }}
