@@ -1,7 +1,7 @@
 kind: Namespace
 apiVersion: v1
 metadata:
-  name: teamspeak
+  name: actions-runner-system
   labels:
-    name: teamspeak
+    name: actions-runner-system
     goldilocks.fairwinds.com/enabled: "true"

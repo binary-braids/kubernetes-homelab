@@ -13,7 +13,7 @@ spec:
         name: actions-runner-controller
         namespace: flux-system
   dependsOn:
-    - secret: controller-manager
+    - namespace: actions-runner-system
   interval: 5m
   install:
     remediation:
