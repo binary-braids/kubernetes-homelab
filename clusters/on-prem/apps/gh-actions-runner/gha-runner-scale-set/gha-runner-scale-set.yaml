@@ -31,6 +31,9 @@ spec:
   values:
     nameOverride: gha-runner-scale-set
     runnerScaleSetName: gha-runner-scale-set
+    githubConfigUrl: https://github.com/binary-braids
+    minRunners: 1
+    maxRunners: 2
     containerMode:
       type: dind
     controllerServiceAccount:
