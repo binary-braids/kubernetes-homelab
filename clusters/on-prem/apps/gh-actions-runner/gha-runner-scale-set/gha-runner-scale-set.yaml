@@ -36,6 +36,12 @@ spec:
     maxRunners: 2
     containerMode:
       type: dind
+    template:
+      spec:
+        containers:
+          - name: runner
+            image: ghcr.io/binary-braids/github-actions-runner:af90c49ddb63a8ba969515c1580ca2142b855630@sha256:b1a29623c3fc8ea33df29ffb056953fd76030a8ec2e19d99737fc68250354d78
+            command: ["/home/runner/run.sh"]
     controllerServiceAccount:
       name: gha-runner-scale-set-controller
       namespace: actions-runner-system
