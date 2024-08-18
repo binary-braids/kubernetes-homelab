@@ -3,6 +3,7 @@ kind: Kustomization
 
 resources:
 - namespace.yaml
+- actions-runner-controller-source.yaml
 - gha-runner-scale-set-controller
 - gha-runner-scale-set
 
