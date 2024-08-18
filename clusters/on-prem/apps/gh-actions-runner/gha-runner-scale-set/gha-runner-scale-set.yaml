@@ -19,7 +19,7 @@ spec:
     remediation:
         retries: 3
     createNamespace: true
-  targetNamespace: gha-runner-scale-set
+  targetNamespace: actions-runner-system
   valuesFrom:
     - kind: Secret
       name: gha-runner-scale-set-secret

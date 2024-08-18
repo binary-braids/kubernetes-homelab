@@ -17,4 +17,4 @@ spec:
     remediation:
         retries: 3
     createNamespace: true
-  targetNamespace: gha-runner-scale-set-controller 
+  targetNamespace: actions-runner-system
