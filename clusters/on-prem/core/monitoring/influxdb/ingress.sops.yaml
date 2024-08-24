@@ -1,0 +1,43 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+    name: influxdb-ingress
+    namespace: monitoring
+    annotations:
+        kubernetes.io/ingress.class: traefik
+        cert-manager.io/cluster-issuer: letsencrypt-prod
+spec:
+    tls:
+        - hosts:
+            - ENC[AES256_GCM,data:LHDaKmLNeEJDQe0z0d4idNjQPcZ+HOVZ/A==,iv:Oa93T25DKFNbgfoT7lvZlcw+MzDlGs+dDjPso0PRc/E=,tag:CLyNYBg+aXCDMaUbDwA0jQ==,type:str]
+    rules:
+        - host: ENC[AES256_GCM,data:3fVEpcZckYrSCCiLaF7NSSFj4XvwxD3csw==,iv:RGqVZapmGiwJKI7PS6t1y2Tzd3pdD9pveNG30LAtS+E=,tag:fBHvoRD7cu9v9+mNZS8CCQ==,type:str]
+          http:
+            paths:
+                - pathType: Prefix
+                  path: /
+                  backend:
+                    service:
+                        name: influxdb-service
+                        port:
+                            number: 8086
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1xl8mrtu70kvhjdl2nva6dpt8wsy3fhmz6605fmwjujc3zztyeyzqd07nvv
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBldXNXa2N3L3FQV2t5V21y
+            a3UrSWRubzhrNWVETU1hUDE1UEJwNnhzU1ZzCkVSdnhtZkRYUGQyOG45cVJCTmhs
+            aGVKendxR09aWjlld1hpQ3NDdDk4SjgKLS0tIHJKb3pKMytKNjA1NWJ3dVBaeHYz
+            ejJGSGVhSndobk90V2w3WkJBWEhybDAKbJVbl77fCEKLNutnE4S+PJrJwIDVg+i5
+            XBMvyrADrKSEtBUe7tj4Jfb9gVb7ocnqvXCoUBy5lJGugujqQRy9LA==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2024-08-24T08:33:54Z"
+    mac: ENC[AES256_GCM,data:gtHdkgozYTuH036JLktLHls0ylZMPNW3YZExZsQ5R1umAS21jRByK4BrSgHWmUUSZ/SkpyPQsjjgcrSSminq0jtuiMM0fwa1KxunjQl8jiyXc04OH6pYsX/rOdQHpzJban+r04AVMOouhg25BGJh+Jp7fDBqr8dD96DkybdzbnQ=,iv:anmhkxZFC3u8nAi0ZFxdNNB3DW1ORnUSY142JwBmSFE=,tag:sCTCvOLrS9K3HWkl9+QrUA==,type:str]
+    pgp: []
+    encrypted_regex: ^(data|stringData|email|dnsNames|hosts|host|externalUrl|loadBalancerIP|match|krb5.conf)$
+    version: 3.8.1

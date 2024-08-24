@@ -1,0 +1,43 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+    name: prometheus-ingress
+    namespace: monitoring
+    annotations:
+        kubernetes.io/ingress.class: traefik
+        cert-manager.io/cluster-issuer: letsencrypt-prod
+spec:
+    tls:
+        - hosts:
+            - ENC[AES256_GCM,data:nZkk89q7s3s0BTiLkoW4nrnkf4HJoM0gTy+G,iv:AuKgRFEe9AxkUp5Ddgoig9rRhuEAzfdb5BDhlpGqMw4=,tag:XkvqUgodKFJLTSB+sAf8AQ==,type:str]
+    rules:
+        - host: ENC[AES256_GCM,data:KxbJx3Ww0vv5Iv8NLTMEE2Ek3EOM6aS3s9wo,iv:tnHDryOosysaYLPvMoXJIDbKTp2lKStED2KR9vluWns=,tag:YB7YxDRroj3zTS+nomXLYw==,type:str]
+          http:
+            paths:
+                - pathType: Prefix
+                  path: /
+                  backend:
+                    service:
+                        name: prometheus-service
+                        port:
+                            number: 9090
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1xl8mrtu70kvhjdl2nva6dpt8wsy3fhmz6605fmwjujc3zztyeyzqd07nvv
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBvd0g3RUJPTzFpRnlxdGZq
+            UHVDNTlGaldzK0ZLTm5naUsyMkZ0aHkwaEhrCnU5TjNUbTFmcTc0TmdUVzVxZXl3
+            NDN0MENRZi9PYVFKMklkQ0x4WDNQT28KLS0tIFUyLzdoMmV1aFNldUVaUnRxOWNZ
+            Q3NuOVU5bTRYbE5nWmVkRm9YUmdHRncKAh2OZv5HhvXs8BIDG+3uHen/nntom6MF
+            oiG4Fy4X2ch8403oRhySt9FlAC7dVkRxOc6lpAhh2w7rXCmLtBEezw==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2024-08-24T08:43:13Z"
+    mac: ENC[AES256_GCM,data:jViSOrYS+6HsJmUiPspdvxFI7gRN8y+xhFpmMCaKdzJSgW/l1JUg3VC4z7GNKpcaRtMJ3GYtCC8qb2fYSe5L4Ks2BBmHacxlV7qLJOIwNlCDtAQidRQeboYG1+qwBgLl9mLWka1o5p4TLnN1QagA9rFQ4PiSrBatMRiLs/eBtto=,iv:yTYWuvFR6Nnjf0SDVsuJHlB0nMeeeij6KDws2JuTpZI=,tag:eZ15EOC2qH74gb25Z/T2AA==,type:str]
+    pgp: []
+    encrypted_regex: ^(data|stringData|email|dnsNames|hosts|host|externalUrl|loadBalancerIP|match|krb5.conf)$
+    version: 3.8.1

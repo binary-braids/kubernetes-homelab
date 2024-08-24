@@ -1,0 +1,43 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+    name: grafana-ingress
+    namespace: monitoring
+    annotations:
+        kubernetes.io/ingress.class: traefik
+        cert-manager.io/cluster-issuer: letsencrypt-prod
+spec:
+    tls:
+        - hosts:
+            - ENC[AES256_GCM,data:4qK3OTFbJB08L/8DcTrDZZ7ZtTvpS4kU,iv:0lUsBZ6OlLf6DOV7ExRsi+zm+kUfYev4DMqZ8/IenbQ=,tag:8W355SQbBWPRO8appJjiJQ==,type:str]
+    rules:
+        - host: ENC[AES256_GCM,data:zwyipB+nZcJpSASq7HGHkJt5x/kJDqmv,iv:om0XT3fleUOrF7HAQizzZPIPJGrntEIk44KTIwegJQI=,tag:p3nCfGCBXIpEftMSxa+0eA==,type:str]
+          http:
+            paths:
+                - pathType: Prefix
+                  path: /
+                  backend:
+                    service:
+                        name: grafana-service
+                        port:
+                            number: 3000
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1xl8mrtu70kvhjdl2nva6dpt8wsy3fhmz6605fmwjujc3zztyeyzqd07nvv
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSAwVS9KcmRjc0tPZm9TVkZR
+            cmtLQnYzTHFxRlNYMkUzRkZJRmJSbkhrbTM4Ck90L3pHMzlrNnNaUmFPZmJYQVpF
+            ZVpGOHl6TTZxZFVPell1RXRsOW94RTgKLS0tIE0vbFh1enhwYkZrK3Z4VUtsNUpR
+            TW1rQ0VWNnQ0NGVxdHhCNHozekIzNVUKIFH3qAMxyVv2W1kTAaNPxKPaTeasrPaf
+            7bkBjwMgMx/RJp2u+HFFIYGztxqY8xqaDSZdjCbI6d77WraudqVdcw==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2024-08-24T08:40:14Z"
+    mac: ENC[AES256_GCM,data:kL/J5h3KUFhXa+n1QqlX+P8j6iWBgT7p5HyFNvggRgUushlmIxkWomkIqnMXc04dUDAb7sOkC2b47fIxLZ9YLD88wry2fQlCeNi3dz5eqOm9cl9orSJBrkjDClnNJBijZ3+t5bKO3oFXyomvrVHZMYLxQg1Ysc3CJvYIHZ+3UJE=,iv:BlTloioG68WHjfWyXcLX1FfpCPXAnQhGuQWBt69z4Oc=,tag:WmujDRE6z4/XCSKZ7mzz2g==,type:str]
+    pgp: []
+    encrypted_regex: ^(data|stringData|email|dnsNames|hosts|host|externalUrl|loadBalancerIP|match|krb5.conf)$
+    version: 3.8.1

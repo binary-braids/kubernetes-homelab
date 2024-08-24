@@ -40,8 +40,8 @@ spec:
       spec:
         containers:
           - name: runner
-            image: ghcr.io/binary-braids/github-actions-runner:af90c49ddb63a8ba969515c1580ca2142b855630@sha256:b1a29623c3fc8ea33df29ffb056953fd76030a8ec2e19d99737fc68250354d78
-            command: ["/home/docker/run.sh"]
+            image: ghcr.io/onedr0p/actions-runner:2.319.1@sha256:a4089b96bb4561051c954cc1f9019497dcc166c027b8e1474da7246a16796b43
+            command: ["/home/runner/run.sh"]
     controllerServiceAccount:
       name: gha-runner-scale-set-controller
       namespace: actions-runner-system
