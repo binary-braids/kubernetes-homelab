@@ -9,6 +9,7 @@ resources:
 #- grafana-ingress.sops.yaml
 #- prometheus-ingress.sops.yaml
 - influxdb
+- namespace.yaml
 
 # secretGenerator:
 #  - name: encrypted-values
