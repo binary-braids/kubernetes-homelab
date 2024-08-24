@@ -20,15 +20,12 @@ spec:
       - name: telegraf
         image: telegraf:1.31.3
         imagePullPolicy: Always
-        ports:
-        - containerPort: 8181
-          protocol: TCP
         volumeMounts:
         - mountPath: /etc/telegraf/telegraf.conf
-          subPath: telgraf.conf
+          subPath: telegraf.conf
           name: telegraf-volume
           readOnly: true
       volumes:
-        - name: telegraf-configmap
-          configMap:
-            name: telegraf-configmap
+        - name: telegraf-volume
+          secret:
+            secretName: telegraf-secret
