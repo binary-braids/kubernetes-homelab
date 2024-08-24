@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: influxdb
-        image: influxdb:2.0.6
+        image: influxdb:2.0.6@sha256:44ba18313fca5cceeffe31dcc208b9f4ddf77d0c7b5a54a3aa7cd998f04768a8
         imagePullPolicy: Always
         ports:
         - containerPort: 8086

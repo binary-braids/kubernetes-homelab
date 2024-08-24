@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: telegraf
-        image: telegraf:1.31.3
+        image: telegraf:1.31.3@sha256:748909683a796fd737c24c30d48d5762079a85e0a11d8789029fbd911cf4c1b9
         imagePullPolicy: Always
         ports:
         - containerPort: 8181

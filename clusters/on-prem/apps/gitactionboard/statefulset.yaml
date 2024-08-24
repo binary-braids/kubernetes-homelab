@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: gitactionboard
-        image: ottoopensource/gitactionboard:4.1.4
+        image: ottoopensource/gitactionboard:4.1.4@sha256:035db9b590034410c76a064fa501701bc35988d5a8953e5a1d1acc64a247d069
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
