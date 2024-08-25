@@ -11,7 +11,7 @@ resources:
 - influxdb
 - namespace.yaml
 - telegraf
-
+- grafana
 # secretGenerator:
 #  - name: encrypted-values
 #    namespace: flux-system
