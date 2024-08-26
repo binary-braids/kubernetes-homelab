@@ -24,6 +24,6 @@ spec:
         - mountPath: /usr/share/snmp/mibs
           name: telegraf-snmp-volume
       volumes:
-      - name: influxdb-volume
+      - name: telegraf-snmp-volume
         persistentVolumeClaim:
-          claimName: telegraf-snmp-volume
+          claimName: telegraf-snmp-data-pvc
