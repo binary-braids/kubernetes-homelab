@@ -21,11 +21,9 @@ spec:
         image: telegraf:1.31.3@sha256:748909683a796fd737c24c30d48d5762079a85e0a11d8789029fbd911cf4c1b9
         imagePullPolicy: Always
         volumeMounts:
-        - mountPath: /etc/telegraf/telegraf.conf
-          subPath: telegraf.conf
-          name: telegraf-volume
-          readOnly: true
+        - mountPath: /usr/share/snmp/mibs
+          name: telegraf-snmp-volume
       volumes:
-        - name: telegraf-volume
-          secret:
-            secretName: telegraf-secret
+      - name: influxdb-volume
+        persistentVolumeClaim:
+          claimName: telegraf-snmp-volume
