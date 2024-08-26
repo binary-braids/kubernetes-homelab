@@ -23,7 +23,14 @@ spec:
         volumeMounts:
         - mountPath: /usr/share/snmp/mibs
           name: telegraf-snmp-volume
+        - mountPath: /etc/telegraf/telegraf.conf
+          subPath: telegraf.conf
+          name: telegraf-volume
+          readOnly: true          
       volumes:
       - name: telegraf-snmp-volume
         persistentVolumeClaim:
           claimName: telegraf-snmp-data-pvc
+      - name: telegraf-volume
+        secret:
+          secretName: telegraf-secret
