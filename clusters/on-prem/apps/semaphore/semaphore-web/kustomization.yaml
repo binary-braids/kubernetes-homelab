@@ -3,7 +3,7 @@ kind: Kustomization
 namespace: semaphore
 
 resources:
-- ingress.sops.yaml
+- ingress.yaml
 - service.yaml
 - deployment.yaml
 - configmap.sops.yaml
