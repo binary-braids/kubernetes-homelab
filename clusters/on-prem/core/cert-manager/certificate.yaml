@@ -1,13 +1,13 @@
 apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
-  name: prod-cert
+  name: wildcard-prod-cert
   namespace: traefik
 spec:
-  secretName: prod-cert-secret
+  secretName: wildcard-prod-cert-tls
   dnsNames:
     - '*.binarybraids.com'
     - 'binarybraids.com'
   issuerRef:
-    name: letsencrypt
+    name: letsencrypt-prod
     kind: ClusterIssuer
