@@ -5,16 +5,16 @@ metadata:
 spec:
     acme:
         server: https://acme-v02.api.letsencrypt.org/directory
-        email: ENC[AES256_GCM,data:06C6AGmD3lz8tmRmk0s7uUE=,iv:qk8cHDrEd07c7g8sdZ8rsHp17u5Pk2tbuG6igreY8e0=,tag:50t+o+n6nTLAaK9QOUH/Kw==,type:str]
+        email: ENC[AES256_GCM,data:lXKR/PRYyxys3KpF8ooePeA=,iv:ri4hNTwgVvAQqR3FjbbYR75WnnBnS0/sG6kGAtXbqdI=,tag:hzIa38CNwTFgGlNeZqSWaQ==,type:str]
         privateKeySecretRef:
-            name: wildcard-prod-cert-tls
+            name: letsencrypt-prod
         solvers:
             - dns01:
-                cloudflare: null
-                email: ENC[AES256_GCM,data:85o95WdglKL4SFsi2+z/OVg=,iv:Cv3EYoqnWeFp93kknCbFy4HZrmPHgMuBKeicLmVsS7w=,tag:Xzp903f2cHarjrKv3dYCDA==,type:str]
-                apiTokenSecretRef:
-                    name: cloudflare-api-token-secret
-                    key: api-token
+                cloudflare:
+                    email: ENC[AES256_GCM,data:5nzbLRsniorHbUmo9vhCUyU=,iv:kbYbthkgegXI2L8faHTNqpUFDE8mB6I4tmFAPMwXdoY=,tag:5SDDmtlmvpLJtBOT1H5vYA==,type:str]
+                    apiTokenSecretRef:
+                        name: cloudflare-api-token-secret
+                        key: api-token
 sops:
     kms: []
     gcp_kms: []
@@ -24,14 +24,14 @@ sops:
         - recipient: age1xl8mrtu70kvhjdl2nva6dpt8wsy3fhmz6605fmwjujc3zztyeyzqd07nvv
           enc: |
             -----BEGIN AGE ENCRYPTED FILE-----
-            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSAwUUt0bHRRbUdsL0JJaURG
-            QlB1OWJFSHYwYmJhRFFqaitXYyt2L01DYTJRCnZjUlAyMnFSZm0yN1liSDhVUVVj
-            RkRKdDNKdVo2VWoweFB1WmpqQWJCZ00KLS0tIHErVHkzTTMyU3RnZDNkS2tTcFF3
-            bEtoN0g3YVRjbzJiZDhXLzNCa1FvSXMKQ52TKiyn/TVddbfmzh6XVjKPQ4bxbj/f
-            04DjQDHPKuD2xErv0g3qNCjNh4HanziLzzo7i5pg4JGxTNcIjmRGRQ==
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBTa1lQQitlalNXRFQxYXNi
+            ZVg3K3ZycUpyRXI2TXpYUUVRLytzVjBoT3lZCm81VUpHd0Q4MnZGYXpzYWU3ZlhL
+            MUFSRjc2VFlYclZyMElSYTlPVm14SWcKLS0tIC9NUUtEOWREZUFmRXVtc0hQUVpU
+            czU4OWRSaGQzb0dldkZWL1QvbEwxZXcKfNPb4+4DQBeRraYUHTJijcvFDfBJyl/e
+            YNTY7xqkzsXvc4PnArWCSP+UMHbovkK+NBa8BoFLfzZKTfi9u9BsMw==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2024-08-28T17:29:42Z"
-    mac: ENC[AES256_GCM,data:TcF6G13L7ed3I1LlD+w/VaWor7YNb1PsilzfAL/MshB/s2cK7Y6NDRp/+FZiVNBtZYQR7/THQen29noT2zC9MVVOfjQ1j7u/6RETzzBcxiuFJDTYfo/kgA4Weg8QB7b1Tw4LqByBMPh9ie/qUaN8JZtfLMlok1zUSWTlwPsHiVs=,iv:ApcyOomyDloXi8WH0VvzWX7z/xVQKOwBOJOC5W0hn0s=,tag:hNUb6AIdxXE6CDgiiLQMwQ==,type:str]
+    lastmodified: "2024-08-28T17:46:32Z"
+    mac: ENC[AES256_GCM,data:j3PIcDIMzHmxMdwapwXmYduXyZE6sV9RpJjNv58uXSGfq1pTljWm2ZKK4ZyNKlg+UFLEnY40nJ0RosOhNMTcuoSPH+Ww1KKCODtEXh9rmxJqGIa4YRJI2qGamvnK+qRCRa93VNsY+hH8zZayT3L+QSODGH2u7Z8k/6udwomncO4=,iv:A7Wby46tJ9++ODfFnyupW4GA3KRFTi6MqSTYB5nQRSQ=,tag:/0/QQdis8rRL7/zB3ybmpA==,type:str]
     pgp: []
     encrypted_regex: ^(data|stringData|email|dnsNames|hosts|host|externalUrl|loadBalancerIP|match|krb5.conf)$
     version: 3.8.1
