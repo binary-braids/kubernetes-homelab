@@ -10,7 +10,6 @@ spec:
   tls:
     - hosts:
       - semaphore.binarybraids.com
-      secretName: prod-cert-secret
   rules:
   - host: semaphore.binarybraids.com
     http:
