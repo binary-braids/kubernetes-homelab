@@ -9,3 +9,6 @@ resources:
 - prod-clusterissuer.sops.yaml
 - secret.sops.yaml
 - namespace.yaml
+- certificate.yaml
+- cf-secret.sops.yaml
+- clusterissuer.sops.yaml
