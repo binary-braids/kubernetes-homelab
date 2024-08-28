@@ -6,8 +6,8 @@ metadata:
 spec:
   secretName: prod-cert-secret
   dnsNames:
-    - *.binarybraids.com
-    - binarybraids.com
+    - '*.binarybraids.com'
+    - 'binarybraids.com'
   issuerRef:
     name: letsencrypt
     kind: ClusterIssuer
