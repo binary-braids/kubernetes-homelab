@@ -6,4 +6,4 @@ resources:
 - helm-source.yaml
 - namespace.yaml
 - vpa-helm-release.yaml
-- ingress.sops.yaml
+- ingress.yaml

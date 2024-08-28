@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: goldilocks-ingress
+  namespace: goldilocks
+  annotations:
+    kubernetes.io/ingress.class: traefik
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+spec:
+  tls:
+    - hosts:
+      - goldilocks.binarybraids.com
+  rules:
+  - host: goldilocks.binarybraids.com
+    http:
+      paths:
+      - pathType: Prefix
+        path: /
+        backend:
+          service:
+            name: goldilocks-goldilocks-dashboard
+            port: 
+              number: 80
