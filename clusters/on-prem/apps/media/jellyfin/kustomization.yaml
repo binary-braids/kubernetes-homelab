@@ -6,4 +6,4 @@ resources:
 - service.yaml
 - persistentvolumeclaim.yaml
 - statefulset.yaml
-- ingress.sops.yaml
+- ingress.yaml
