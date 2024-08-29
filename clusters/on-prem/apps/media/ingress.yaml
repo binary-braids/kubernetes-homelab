@@ -16,6 +16,16 @@ spec:
     http:
       paths:
       - pathType: Prefix
+        path: /sonarr
+        backend:
+          service:
+            name: sonarr-service
+            port: 
+              number: 8989 
+  - host: media.binarybraids.com
+    http:
+      paths:
+      - pathType: Prefix
         path: /qbittorrent
         backend:
           service:
