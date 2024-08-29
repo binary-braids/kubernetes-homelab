@@ -4,14 +4,10 @@ kind: Kustomization
 resources:
 - qbittorrent
 - sonarr
-#- lidarr
 - prowlarr
 - radarr
 - jellyfin
-#- readarr
 - bazarr
-#- calibre-web
 - namespace.yaml
 - ingress.yaml
 - middleware.yaml
-#- calibre
