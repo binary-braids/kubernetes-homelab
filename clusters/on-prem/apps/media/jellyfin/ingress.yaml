@@ -8,7 +8,8 @@ metadata:
     cert-manager.io/cluster-issuer: letsencrypt-prod
 spec:
   tls:
-    - jellyfin.binarybraids.com
+    - hosts:
+      - jellyfin.binarybraids.com
   rules:
   - host: jellyfin.binarybraids.com
     http:
