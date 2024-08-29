@@ -12,6 +12,6 @@ resources:
 - bazarr
 #- calibre-web
 - namespace.yaml
-- ingress.yaml
+#- ingress.yaml
 - middleware.yaml
 #- calibre
