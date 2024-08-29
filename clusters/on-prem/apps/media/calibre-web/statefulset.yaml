@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: calibre-web
-        image: lscr.io/linuxserver/calibre-web:latest@sha256:604ae903f520bd5485bcbdb2f70ea460c90a559bca3d4ac3fc05b93da2737a0a
+        image: lscr.io/linuxserver/calibre-web:latest@sha256:bd3365c877cc432dc047e4c04adbf78a481e252c441886b774eb6faf7d36f960
         ports:
         - containerPort: 8083
         env:
