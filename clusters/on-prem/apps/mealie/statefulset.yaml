@@ -21,12 +21,9 @@ spec:
         image: hkotel/mealie:latest@sha256:c43d5db470109478c3299c6229d6cde5403cbf9ada8b4fc735f91a259360fc32
         imagePullPolicy: Always
         resources:
-          requests:
-            cpu: 15m
-            memory: 164M
           limits:
-            cpu: 15m
-            memory: 164M
+            cpu: 23m
+            memory: 324M
         ports:
         - containerPort: 80
           protocol: TCP
