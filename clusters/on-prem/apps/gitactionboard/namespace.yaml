@@ -1,7 +1,0 @@
-kind: Namespace
-apiVersion: v1
-metadata:
-  name: gitactionboard
-  labels:
-    name: gitactionboard
-    goldilocks.fairwinds.com/enabled: "true"

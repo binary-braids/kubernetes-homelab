@@ -3,6 +3,6 @@ kind: Kustomization
 namespace: phpipam
 
 resources:
-- ingress.sops.yaml
+- ingress.yaml
 - service.yaml
 - deployment.yaml

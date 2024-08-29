@@ -4,10 +4,6 @@ kind: Kustomization
 resources:
 - monitoring
 - longhorn-system
-#- minio
 - cert-manager
-#- keycloak
-#- oauth2-proxy
-#- uptime-kuma
 - goldilocks
 - traefik

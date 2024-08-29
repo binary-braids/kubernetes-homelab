@@ -4,7 +4,7 @@ kind: Kustomization
 resources:
 - backup-secret.sops.yaml
 - configmap.yaml
-- ingress.sops.yaml
+- ingress.yaml
 - longhorn-system-source.yaml
 - longhorn-system.yaml
 - namespace.yaml
