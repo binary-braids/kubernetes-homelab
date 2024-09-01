@@ -3,7 +3,7 @@ kind: Kustomization
 
 resources:
 - deployment.yaml
-- ingress.sops.yaml
+- ingress.yaml
 - service.yaml
 - persistentvolumeclaim.yaml
 
