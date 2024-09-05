@@ -15,7 +15,7 @@ apiserver_endpoint: "10.4.20.50"
 
 # k3s_token is required  masters can talk together securely
 # this token should be alpha numeric only
-k3s_token: "#{k3s_install_secret}#"
+k3s_token: "{{ k3s_token }}"
 
 # The IP on which the node is reachable in the cluster.
 # Here, a sensible default is provided, you can still override
