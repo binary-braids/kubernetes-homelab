@@ -8,7 +8,7 @@ resources:
 - longhorn-system-source.yaml
 - longhorn-system.yaml
 - namespace.yaml
-#- recurringjob.yaml
+- recurringjob.yaml
 
 secretGenerator:
   - name: encrypted-values
