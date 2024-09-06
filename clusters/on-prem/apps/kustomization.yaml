@@ -2,11 +2,11 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 resources:
-- minecraft-creative
-- minecraft-survival
-- mealie
-- phpipam
+#- minecraft-creative
+#- minecraft-survival
+#- mealie
+#- phpipam
 #- zabbix
-- media
-- semaphore
-- gh-actions-runner
+#- media
+#- semaphore
+#- gh-actions-runner
