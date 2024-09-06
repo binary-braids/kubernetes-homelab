@@ -7,4 +7,4 @@ resources:
 - secret.sops.yaml
 - namespace.yaml
 #- certificate.yaml
-- clusterissuer.sops.yaml
+#- clusterissuer.sops.yaml
