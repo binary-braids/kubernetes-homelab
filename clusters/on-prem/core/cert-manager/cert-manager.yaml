@@ -16,12 +16,12 @@ spec:
   install:
     remediation:
       retries: 3
+    createNamespace: true
   upgrade:
     cleanupOnFail: true
     remediation:
       strategy: rollback
       retries: 3
-    createNamespace: true
   targetNamespace: cert-manager
   values:
     installCRDs: true
