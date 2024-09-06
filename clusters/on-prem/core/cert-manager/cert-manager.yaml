@@ -4,17 +4,25 @@ metadata:
   name: cert-manager
   namespace: flux-system
 spec:
+  interval: 30m
   chart:
     spec:
       chart: cert-manager
-      version: "1.12.0"
+      version: "1.15.3"
       sourceRef:
         kind: HelmRepository
         name: cert-manager-charts
         namespace: flux-system
-  interval: 5m
   install:
     remediation:
-        retries: 3
+      retries: 3
+  upgrade:
+    cleanupOnFail: true
+    remediation:
+      strategy: rollback
+      retries: 3
     createNamespace: true
   targetNamespace: cert-manager
+  values:
+    installCRDs: true
+

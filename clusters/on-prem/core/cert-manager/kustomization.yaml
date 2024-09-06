@@ -3,7 +3,6 @@ kind: Kustomization
 
 resources:
 - cert-manager-source.yaml
-- cert-manager.crds.yaml
 - cert-manager.yaml
 - secret.sops.yaml
 - namespace.yaml

@@ -4,6 +4,6 @@ kind: Kustomization
 resources:
 #- monitoring
 - longhorn-system
-#- cert-manager
+- cert-manager
 #- goldilocks
 #- traefik
