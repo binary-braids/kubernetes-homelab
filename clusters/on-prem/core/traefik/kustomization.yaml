@@ -6,7 +6,7 @@ resources:
 - namespace.yaml
 - traefik-source.yaml
 - traefik.yaml
-- tlsstore.yaml
+#- tlsstore.yaml
 
 secretGenerator:
   - name: traefik-encrypted-values
