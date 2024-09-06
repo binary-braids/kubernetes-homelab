@@ -5,5 +5,5 @@ resources:
 #- monitoring
 - longhorn-system
 - cert-manager
-#- goldilocks
-#- traefik
+- goldilocks
+- traefik
