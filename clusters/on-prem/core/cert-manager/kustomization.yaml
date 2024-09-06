@@ -6,5 +6,5 @@ resources:
 - cert-manager.yaml
 - secret.sops.yaml
 - namespace.yaml
-#- certificate.yaml
-#- clusterissuer.sops.yaml
+- certificate.yaml
+- clusterissuer.sops.yaml
