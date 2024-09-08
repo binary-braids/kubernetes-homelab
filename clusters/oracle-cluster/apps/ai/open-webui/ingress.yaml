@@ -9,9 +9,9 @@ metadata:
 spec:
   tls:
     - hosts:
-      - chat.binarybraids.com
+      - chat.dreddrealm.co.za
   rules:
-  - host: chat.binarybraids.com
+  - host: chat.dreddrealm.co.za
     http:
       paths:
       - pathType: Prefix
