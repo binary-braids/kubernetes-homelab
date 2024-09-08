@@ -5,4 +5,5 @@ resources:
 - ollama
 - open-webui
 - searxng
+- namespace.yaml
 
