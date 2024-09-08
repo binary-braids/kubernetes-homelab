@@ -33,7 +33,7 @@ spec:
         - name: RAG_WEB_SEARCH_CONCURRENT_REQUESTS
           value: "10"
         - name: SEARXNG_QUERY_URL
-          value: "http://searxng-service/search?q=<query>"
+          value: "http://searxng-service:8080/search?q=<query>"
         volumeMounts:
         - mountPath: /app/backend/data
           name: open-webui-volume
