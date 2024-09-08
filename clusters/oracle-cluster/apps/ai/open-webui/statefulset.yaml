@@ -25,7 +25,7 @@ spec:
           protocol: TCP
         env:
         - name: OLLAMA_BASE_URL
-          value: "http://ollama-service"
+          value: "http://ollama-service:11434"
         - name: RAG_WEB_SEARCH_ENGINE
           value: "searxng"
         - name: RAG_WEB_SEARCH_RESULT_COUNT
