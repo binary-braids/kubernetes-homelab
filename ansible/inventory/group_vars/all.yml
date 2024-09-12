@@ -8,10 +8,10 @@ systemd_dir: /etc/systemd/system
 system_timezone: "Africa/Johannesburg"
 
 # interface which will be used for flannel
-flannel_iface: "ens18"
+flannel_iface: "enp0s6"
 
 # apiserver_endpoint is virtual ip-address which will be configured on each master
-apiserver_endpoint: "10.4.20.50"
+apiserver_endpoint: "192.168.1.20"
 
 # k3s_token is required  masters can talk together securely
 # this token should be alpha numeric only
@@ -35,7 +35,7 @@ extra_server_args: >-
   {{ extra_args }}
   {{ '--node-taint node-role.kubernetes.io/master=true:NoSchedule' if k3s_master_taint else '' }}
   --tls-san {{ apiserver_endpoint }}
-  --tls-san k3s-cluster.ad.binarybraids.com
+  --tls-san k3s-cluster-oc.ad.binarybraids.com
   --disable traefik
   --disable servicelb
 extra_agent_args: >-
@@ -60,4 +60,4 @@ metal_lb_speaker_tag_version: "v0.14.8"
 metal_lb_controller_tag_version: "v0.14.8"
 
 # metallb ip range for load balancer
-metal_lb_ip_range: "10.4.20.51-10.4.20.60"
+metal_lb_ip_range: "192.168.1.21-192.168.1.29"
