@@ -1,4 +1,13 @@
-# 0.1.0 (2024-09-14)
+## [0.1.1](https://github.com/binary-braids/kubernetes-homelab/compare/v0.1.0...v0.1.1) (2024-09-15)
+
+
+### Bug Fixes
+
+* replace monitoring components with prometheus agent ([dd6d3ab](https://github.com/binary-braids/kubernetes-homelab/commit/dd6d3abc47791caf25b8f77e7efcb8875f2263eb))
+
+
+
+# [0.1.0](https://github.com/binary-braids/kubernetes-homelab/compare/f4b8599678cca0cc763b6fbabf72e55178442e85...v0.1.0) (2024-09-14)
 
 
 ### Bug Fixes
