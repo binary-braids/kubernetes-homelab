@@ -4,7 +4,8 @@ kind: Kustomization
 resources:
 - clusterrole.yaml
 - clusterrolebinding.yaml
-- configmap.yaml
 - deployment.yaml
 - namespace.yaml
+- service.yaml
+- ingress.yaml
 
