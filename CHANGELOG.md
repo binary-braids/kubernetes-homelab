@@ -1,3 +1,12 @@
+## [0.1.4](https://github.com/binary-braids/kubernetes-homelab/compare/v0.1.3...v0.1.4) (2024-09-15)
+
+
+### Bug Fixes
+
+* correct kubernetes_sd for nodes ([6e6ee9a](https://github.com/binary-braids/kubernetes-homelab/commit/6e6ee9add387e4f10d6351df4e1198b5d5eb4bec))
+
+
+
 ## [0.1.3](https://github.com/binary-braids/kubernetes-homelab/compare/v0.1.2...v0.1.3) (2024-09-15)
 
 
