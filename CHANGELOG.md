@@ -1,3 +1,12 @@
+## [0.1.2](https://github.com/binary-braids/kubernetes-homelab/compare/v0.1.1...v0.1.2) (2024-09-15)
+
+
+### Bug Fixes
+
+* change relabel config for prometheus ([d8bc7eb](https://github.com/binary-braids/kubernetes-homelab/commit/d8bc7eb3785fc279b873261aaaf71dbdcd74a19b))
+
+
+
 ## [0.1.1](https://github.com/binary-braids/kubernetes-homelab/compare/v0.1.0...v0.1.1) (2024-09-15)
 
 
