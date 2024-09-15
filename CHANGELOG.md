@@ -1,3 +1,12 @@
+## [0.1.3](https://github.com/binary-braids/kubernetes-homelab/compare/v0.1.2...v0.1.3) (2024-09-15)
+
+
+### Bug Fixes
+
+* expand prometheus config to scrape more kubernetes metrics ([1d9f160](https://github.com/binary-braids/kubernetes-homelab/commit/1d9f160964b277773345c869e3d52179f44886c7))
+
+
+
 ## [0.1.2](https://github.com/binary-braids/kubernetes-homelab/compare/v0.1.1...v0.1.2) (2024-09-15)
 
 
