@@ -1,3 +1,12 @@
+## [0.1.5](https://github.com/binary-braids/kubernetes-homelab/compare/v0.1.4...v0.1.5) (2024-09-15)
+
+
+### Bug Fixes
+
+* replace prometheus with kube-state-metrics ([65bc0f6](https://github.com/binary-braids/kubernetes-homelab/commit/65bc0f6de2c55149d45423ca384684d8c1ba9cfb))
+
+
+
 ## [0.1.4](https://github.com/binary-braids/kubernetes-homelab/compare/v0.1.3...v0.1.4) (2024-09-15)
 
 
