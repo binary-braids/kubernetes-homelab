@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: open-webui
-        image: ghcr.io/open-webui/open-webui:latest
+        image: ghcr.io/open-webui/open-webui:latest@sha256:15fe2fa9554a897424f6d57972fcdf4d62de459e153eb2e724cf1882fe65cdbb
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
