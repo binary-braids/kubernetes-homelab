@@ -1,3 +1,12 @@
+## [0.1.6](https://github.com/binary-braids/kubernetes-homelab/compare/v0.1.5...v0.1.6) (2024-10-17)
+
+
+### Bug Fixes
+
+* correct minecraft image ref ([0b38322](https://github.com/binary-braids/kubernetes-homelab/commit/0b38322f8f9281bff0556f06ab874aef59eb0f76))
+
+
+
 ## [0.1.5](https://github.com/binary-braids/kubernetes-homelab/compare/v0.1.4...v0.1.5) (2024-09-15)
 
 
