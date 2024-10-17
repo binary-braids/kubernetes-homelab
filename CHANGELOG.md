@@ -1,3 +1,12 @@
+## [0.1.7](https://github.com/binary-braids/kubernetes-homelab/compare/v0.1.6...v0.1.7) (2024-10-17)
+
+
+### Bug Fixes
+
+* specify October image for minecraft ([f427800](https://github.com/binary-braids/kubernetes-homelab/commit/f4278002f329fd7108cf6e83c85c506b5723122a))
+
+
+
 ## [0.1.6](https://github.com/binary-braids/kubernetes-homelab/compare/v0.1.5...v0.1.6) (2024-10-17)
 
 
