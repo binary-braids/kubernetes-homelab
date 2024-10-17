@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: ollama
-        image: ollama/ollama:latest
+        image: ollama/ollama:latest@sha256:2e620e1066fd098b388cd8a40a214f510807c619a80092133546f0d0d271f5f1
         imagePullPolicy: Always
         ports:
         - containerPort: 11434
