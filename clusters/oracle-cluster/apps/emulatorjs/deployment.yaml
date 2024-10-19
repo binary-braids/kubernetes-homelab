@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: emulatorjs
-        image: lscr.io/linuxserver/emulatorjs:1.9.0@sha256:9a2f02fc950d978817fb285b0913e70e2ca047c98958ff54b6d163595d0c88af
+        image: lscr.io/linuxserver/emulatorjs:1.9.0@sha256:72bc643a59bffb6172fc20f8306e1c1b20eafc4d21fb7c3b99139f110bbfb5d2
         ports:
           - containerPort: 80
             protocol: TCP
