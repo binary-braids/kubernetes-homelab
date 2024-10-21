@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: kube-state-metrics
-          image: bitnami/kube-state-metrics:latest
+          image: bitnami/kube-state-metrics:latest@sha256:087600d5c1a462ad73195b926fd1810df2efae57547e4b795b90966c534ca03d
           ports:
           - containerPort: 8080
             name: http-metrics
