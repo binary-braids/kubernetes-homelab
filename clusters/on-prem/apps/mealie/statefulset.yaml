@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: mealie
-        image: hkotel/mealie:latest@sha256:c43d5db470109478c3299c6229d6cde5403cbf9ada8b4fc735f91a259360fc32
+        image: hkotel/mealie:latest@sha256:562ba8b1c98fbfa98a019ab6e0e45c88dae9a2e9a858ec4eac8f6321e46e9227
         imagePullPolicy: Always
         resources:
           limits:
