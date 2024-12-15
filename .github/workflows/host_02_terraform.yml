@@ -21,7 +21,7 @@ jobs:
     steps:
 
       - name: Checkout 🔔
-        uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
 
       - name: Map Secrets to Environment Variables 🗺️ 
         uses: oNaiPs/secrets-to-env-action@ec46a22bfc9b37e014b627b3208b07eb8909ea0f # v1.5
@@ -78,7 +78,7 @@ jobs:
           exclude-workflow-initiator-as-approver: false
 
       - name: Checkout 🔔
-        uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
 
       - name: Restore Terraform Plan 🗺️
         uses: actions/cache/restore@0c45773b623bea8c8e75f6c82b208c3cf94ea4f9 # v4.0.2
