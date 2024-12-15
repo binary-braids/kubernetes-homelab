@@ -1,3 +1,12 @@
+## [0.1.8](https://github.com/binary-braids/kubernetes-homelab/compare/v0.1.7...v0.1.8) (2024-12-15)
+
+
+### Bug Fixes
+
+* remove traefik dashboard ([f0b4ea6](https://github.com/binary-braids/kubernetes-homelab/commit/f0b4ea6e530c431bc98b55c9645523f416d11c8a))
+
+
+
 ## [0.1.7](https://github.com/binary-braids/kubernetes-homelab/compare/v0.1.6...v0.1.7) (2024-10-17)
 
 
