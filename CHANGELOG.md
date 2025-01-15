@@ -1,3 +1,12 @@
+## [0.1.9](https://github.com/binary-braids/kubernetes-homelab/compare/v0.1.8...v0.1.9) (2025-01-15)
+
+
+### Bug Fixes
+
+* remove certmanager ([520bf71](https://github.com/binary-braids/kubernetes-homelab/commit/520bf71c17a228046f546a8d3e3b391a1e545301))
+
+
+
 ## [0.1.8](https://github.com/binary-braids/kubernetes-homelab/compare/v0.1.7...v0.1.8) (2024-12-15)
 
 
