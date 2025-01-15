@@ -1,9 +1,15 @@
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
-  name: flux-system
+  name: sops-decryption
   namespace: flux-system
 spec:
+  interval: 10m0s
+  path: ./clusters/on-prem
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
   decryption:
     provider: sops
     secretRef:
