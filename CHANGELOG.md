@@ -1,3 +1,12 @@
+## [0.1.15](https://github.com/binary-braids/kubernetes-homelab/compare/v0.1.14...v0.1.15) (2025-01-15)
+
+
+### Bug Fixes
+
+* change renovate config ([cd04ec3](https://github.com/binary-braids/kubernetes-homelab/commit/cd04ec3ce8fa55ef803b5ef45d776f94c123215b))
+
+
+
 ## [0.1.14](https://github.com/binary-braids/kubernetes-homelab/compare/v0.1.13...v0.1.14) (2025-01-15)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * correct minecraft image ref ([0b38322](https://github.com/binary-braids/kubernetes-homelab/commit/0b38322f8f9281bff0556f06ab874aef59eb0f76))
-
-
-
-## [0.1.5](https://github.com/binary-braids/kubernetes-homelab/compare/v0.1.4...v0.1.5) (2024-09-15)
-
-
-### Bug Fixes
-
-* replace prometheus with kube-state-metrics ([65bc0f6](https://github.com/binary-braids/kubernetes-homelab/commit/65bc0f6de2c55149d45423ca384684d8c1ba9cfb))
 
 
 
