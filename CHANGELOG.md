@@ -1,3 +1,12 @@
+## [0.1.14](https://github.com/binary-braids/kubernetes-homelab/compare/v0.1.13...v0.1.14) (2025-01-15)
+
+
+### Bug Fixes
+
+* remove sops decryption reference ([ad059d3](https://github.com/binary-braids/kubernetes-homelab/commit/ad059d3e53a82d25cea1106aebcdc0bd30055377))
+
+
+
 ## [0.1.13](https://github.com/binary-braids/kubernetes-homelab/compare/v0.1.12...v0.1.13) (2025-01-15)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * replace prometheus with kube-state-metrics ([65bc0f6](https://github.com/binary-braids/kubernetes-homelab/commit/65bc0f6de2c55149d45423ca384684d8c1ba9cfb))
-
-
-
-## [0.1.4](https://github.com/binary-braids/kubernetes-homelab/compare/v0.1.3...v0.1.4) (2024-09-15)
-
-
-### Bug Fixes
-
-* correct kubernetes_sd for nodes ([6e6ee9a](https://github.com/binary-braids/kubernetes-homelab/commit/6e6ee9add387e4f10d6351df4e1198b5d5eb4bec))
 
 
 
