@@ -1,3 +1,12 @@
+## [0.1.12](https://github.com/binary-braids/kubernetes-homelab/compare/v0.1.11...v0.1.12) (2025-01-15)
+
+
+### Bug Fixes
+
+* correct kustomization for sops decryption ([1811b8d](https://github.com/binary-braids/kubernetes-homelab/commit/1811b8d87ef84a52e9d9b81481f8b02a3d5f25cb))
+
+
+
 ## [0.1.11](https://github.com/binary-braids/kubernetes-homelab/compare/v0.1.10...v0.1.11) (2025-01-15)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * expand prometheus config to scrape more kubernetes metrics ([1d9f160](https://github.com/binary-braids/kubernetes-homelab/commit/1d9f160964b277773345c869e3d52179f44886c7))
-
-
-
-## [0.1.2](https://github.com/binary-braids/kubernetes-homelab/compare/v0.1.1...v0.1.2) (2024-09-15)
-
-
-### Bug Fixes
-
-* change relabel config for prometheus ([d8bc7eb](https://github.com/binary-braids/kubernetes-homelab/commit/d8bc7eb3785fc279b873261aaaf71dbdcd74a19b))
 
 
 
