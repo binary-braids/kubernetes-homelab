@@ -1,3 +1,12 @@
+## [0.1.20](https://github.com/binary-braids/kubernetes-homelab/compare/v0.1.19...v0.1.20) (2025-01-16)
+
+
+### Bug Fixes
+
+* correct kustomization ([3ec3e5d](https://github.com/binary-braids/kubernetes-homelab/commit/3ec3e5dbc45bf0f2761a2985db1208913b0e1c0f))
+
+
+
 ## [0.1.19](https://github.com/binary-braids/kubernetes-homelab/compare/v0.1.18...v0.1.19) (2025-01-16)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * add sops decryption kustomization ([777acf2](https://github.com/binary-braids/kubernetes-homelab/commit/777acf2809960a8ed5e1b7dce502719b3c89f224))
-
-
-
-## [0.1.10](https://github.com/binary-braids/kubernetes-homelab/compare/v0.1.9...v0.1.10) (2025-01-15)
-
-
-### Bug Fixes
-
-* add certmanager ([84852b9](https://github.com/binary-braids/kubernetes-homelab/commit/84852b9d842fba3a0a13ff91a8258f403c968b54))
 
 
 
