@@ -1,3 +1,12 @@
+## [0.1.18](https://github.com/binary-braids/kubernetes-homelab/compare/v0.1.17...v0.1.18) (2025-01-16)
+
+
+### Bug Fixes
+
+* correct flux kustomization file names ([a36f2cc](https://github.com/binary-braids/kubernetes-homelab/commit/a36f2ccf30e92142dafbf3a5ca5767494296799b))
+
+
+
 ## [0.1.17](https://github.com/binary-braids/kubernetes-homelab/compare/v0.1.16...v0.1.17) (2025-01-16)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * remove certmanager ([520bf71](https://github.com/binary-braids/kubernetes-homelab/commit/520bf71c17a228046f546a8d3e3b391a1e545301))
-
-
-
-## [0.1.8](https://github.com/binary-braids/kubernetes-homelab/compare/v0.1.7...v0.1.8) (2024-12-15)
-
-
-### Bug Fixes
-
-* remove traefik dashboard ([f0b4ea6](https://github.com/binary-braids/kubernetes-homelab/commit/f0b4ea6e530c431bc98b55c9645523f416d11c8a))
 
 
 
