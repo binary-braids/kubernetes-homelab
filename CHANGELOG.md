@@ -1,3 +1,12 @@
+## [0.1.19](https://github.com/binary-braids/kubernetes-homelab/compare/v0.1.18...v0.1.19) (2025-01-16)
+
+
+### Bug Fixes
+
+* correct kustomization path ([769c194](https://github.com/binary-braids/kubernetes-homelab/commit/769c194dfedb55a6e1a540e907efa33f9d28ac6c))
+
+
+
 ## [0.1.18](https://github.com/binary-braids/kubernetes-homelab/compare/v0.1.17...v0.1.18) (2025-01-16)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * add certmanager ([84852b9](https://github.com/binary-braids/kubernetes-homelab/commit/84852b9d842fba3a0a13ff91a8258f403c968b54))
-
-
-
-## [0.1.9](https://github.com/binary-braids/kubernetes-homelab/compare/v0.1.8...v0.1.9) (2025-01-15)
-
-
-### Bug Fixes
-
-* remove certmanager ([520bf71](https://github.com/binary-braids/kubernetes-homelab/commit/520bf71c17a228046f546a8d3e3b391a1e545301))
 
 
 
