@@ -1,3 +1,12 @@
+## [0.1.16](https://github.com/binary-braids/kubernetes-homelab/compare/v0.1.15...v0.1.16) (2025-01-16)
+
+
+### Bug Fixes
+
+* modify kustomizations ([d5c8f9a](https://github.com/binary-braids/kubernetes-homelab/commit/d5c8f9a290a973edf71b070c54f96800ce58d2b1))
+
+
+
 ## [0.1.15](https://github.com/binary-braids/kubernetes-homelab/compare/v0.1.14...v0.1.15) (2025-01-15)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * specify October image for minecraft ([f427800](https://github.com/binary-braids/kubernetes-homelab/commit/f4278002f329fd7108cf6e83c85c506b5723122a))
-
-
-
-## [0.1.6](https://github.com/binary-braids/kubernetes-homelab/compare/v0.1.5...v0.1.6) (2024-10-17)
-
-
-### Bug Fixes
-
-* correct minecraft image ref ([0b38322](https://github.com/binary-braids/kubernetes-homelab/commit/0b38322f8f9281bff0556f06ab874aef59eb0f76))
 
 
 
