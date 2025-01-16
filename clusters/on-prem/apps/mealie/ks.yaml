@@ -7,7 +7,7 @@ spec:
   targetNamespace: mealie
   dependsOn:
     - name: traefik
-  path: ./cluster/on-prem/apps/mealie/app
+  path: ./clusters/on-prem/apps/mealie/app
   prune: true
   sourceRef:
     kind: GitRepository

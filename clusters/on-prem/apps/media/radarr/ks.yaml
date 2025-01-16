@@ -7,7 +7,7 @@ spec:
   targetNamespace: media
   dependsOn:
     - name: traefik
-  path: ./cluster/on-prem/apps/media/radarr/app
+  path: ./clusters/on-prem/apps/media/radarr/app
   prune: true
   sourceRef:
     kind: GitRepository

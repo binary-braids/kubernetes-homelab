@@ -7,7 +7,7 @@ spec:
   targetNamespace: minecraft-creative
   dependsOn:
     - name: traefik
-  path: ./cluster/on-prem/apps/minecraft-creative/app
+  path: ./clusters/on-prem/apps/minecraft-creative/app
   prune: true
   sourceRef:
     kind: GitRepository

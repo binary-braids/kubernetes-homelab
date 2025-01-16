@@ -7,7 +7,7 @@ spec:
   targetNamespace: minecraft-survival
   dependsOn:
     - name: traefik
-  path: ./cluster/on-prem/apps/minecraft-survival/app
+  path: ./clusters/on-prem/apps/minecraft-survival/app
   prune: true
   sourceRef:
     kind: GitRepository
