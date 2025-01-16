@@ -1,3 +1,12 @@
+## [0.1.17](https://github.com/binary-braids/kubernetes-homelab/compare/v0.1.16...v0.1.17) (2025-01-16)
+
+
+### Bug Fixes
+
+* correct apps kustomization ([10755f0](https://github.com/binary-braids/kubernetes-homelab/commit/10755f0eb80d3a434edc7e0e44cf5f962569180c))
+
+
+
 ## [0.1.16](https://github.com/binary-braids/kubernetes-homelab/compare/v0.1.15...v0.1.16) (2025-01-16)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * remove traefik dashboard ([f0b4ea6](https://github.com/binary-braids/kubernetes-homelab/commit/f0b4ea6e530c431bc98b55c9645523f416d11c8a))
-
-
-
-## [0.1.7](https://github.com/binary-braids/kubernetes-homelab/compare/v0.1.6...v0.1.7) (2024-10-17)
-
-
-### Bug Fixes
-
-* specify October image for minecraft ([f427800](https://github.com/binary-braids/kubernetes-homelab/commit/f4278002f329fd7108cf6e83c85c506b5723122a))
 
 
 
