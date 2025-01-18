@@ -1,3 +1,12 @@
+## [0.1.22](https://github.com/binary-braids/kubernetes-homelab/compare/v0.1.21...v0.1.22) (2025-01-18)
+
+
+### Bug Fixes
+
+* change minecraft load balancer ips ([b80f162](https://github.com/binary-braids/kubernetes-homelab/commit/b80f16291e9a6d1c34c1241cdaffa4f378510461))
+
+
+
 ## [0.1.21](https://github.com/binary-braids/kubernetes-homelab/compare/v0.1.20...v0.1.21) (2025-01-18)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * revert changes ([8abe31a](https://github.com/binary-braids/kubernetes-homelab/commit/8abe31a03a99f4fc5fb674243ed1cc3e4db187cc))
-
-
-
-## [0.1.12](https://github.com/binary-braids/kubernetes-homelab/compare/v0.1.11...v0.1.12) (2025-01-15)
-
-
-### Bug Fixes
-
-* correct kustomization for sops decryption ([1811b8d](https://github.com/binary-braids/kubernetes-homelab/commit/1811b8d87ef84a52e9d9b81481f8b02a3d5f25cb))
 
 
 
