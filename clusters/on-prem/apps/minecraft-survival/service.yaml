@@ -11,3 +11,4 @@ spec:
         - protocol: UDP
           port: 19132
           targetPort: 19132
+    loadBalancerIP: 10.4.20.52
