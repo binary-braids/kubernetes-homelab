@@ -1,3 +1,12 @@
+## [0.1.28](https://github.com/binary-braids/kubernetes-homelab/compare/v0.1.27...v0.1.28) (2025-01-25)
+
+
+### Bug Fixes
+
+* remove ldap config for mealie ([85710b2](https://github.com/binary-braids/kubernetes-homelab/commit/85710b29034227df2d06608712024d55581dbf52))
+
+
+
 ## [0.1.27](https://github.com/binary-braids/kubernetes-homelab/compare/v0.1.26...v0.1.27) (2025-01-25)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * correct kustomization path ([769c194](https://github.com/binary-braids/kubernetes-homelab/commit/769c194dfedb55a6e1a540e907efa33f9d28ac6c))
-
-
-
-## [0.1.18](https://github.com/binary-braids/kubernetes-homelab/compare/v0.1.17...v0.1.18) (2025-01-16)
-
-
-### Bug Fixes
-
-* correct flux kustomization file names ([a36f2cc](https://github.com/binary-braids/kubernetes-homelab/commit/a36f2ccf30e92142dafbf3a5ca5767494296799b))
 
 
 
