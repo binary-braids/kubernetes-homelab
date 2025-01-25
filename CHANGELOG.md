@@ -1,3 +1,12 @@
+## [0.1.24](https://github.com/binary-braids/kubernetes-homelab/compare/v0.1.23...v0.1.24) (2025-01-25)
+
+
+### Bug Fixes
+
+* update mealie parameters ([48dc3e4](https://github.com/binary-braids/kubernetes-homelab/commit/48dc3e42a4421574e86595c96700faff95ab11b8))
+
+
+
 ## [0.1.23](https://github.com/binary-braids/kubernetes-homelab/compare/v0.1.22...v0.1.23) (2025-01-19)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * change renovate config ([cd04ec3](https://github.com/binary-braids/kubernetes-homelab/commit/cd04ec3ce8fa55ef803b5ef45d776f94c123215b))
-
-
-
-## [0.1.14](https://github.com/binary-braids/kubernetes-homelab/compare/v0.1.13...v0.1.14) (2025-01-15)
-
-
-### Bug Fixes
-
-* remove sops decryption reference ([ad059d3](https://github.com/binary-braids/kubernetes-homelab/commit/ad059d3e53a82d25cea1106aebcdc0bd30055377))
 
 
 
