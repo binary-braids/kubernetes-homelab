@@ -1,3 +1,12 @@
+## [0.1.27](https://github.com/binary-braids/kubernetes-homelab/compare/v0.1.26...v0.1.27) (2025-01-25)
+
+
+### Bug Fixes
+
+* correct mealie  config ([a9efa11](https://github.com/binary-braids/kubernetes-homelab/commit/a9efa1146f4c4f534cdaafc0035f80c11be95136))
+
+
+
 ## [0.1.26](https://github.com/binary-braids/kubernetes-homelab/compare/v0.1.25...v0.1.26) (2025-01-25)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * correct flux kustomization file names ([a36f2cc](https://github.com/binary-braids/kubernetes-homelab/commit/a36f2ccf30e92142dafbf3a5ca5767494296799b))
-
-
-
-## [0.1.17](https://github.com/binary-braids/kubernetes-homelab/compare/v0.1.16...v0.1.17) (2025-01-16)
-
-
-### Bug Fixes
-
-* correct apps kustomization ([10755f0](https://github.com/binary-braids/kubernetes-homelab/commit/10755f0eb80d3a434edc7e0e44cf5f962569180c))
 
 
 
