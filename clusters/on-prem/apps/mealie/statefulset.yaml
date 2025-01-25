@@ -30,6 +30,8 @@ spec:
         env:
         - name: DB_ENGINE
           value: "sqlite"
+        - name: BASE_URL
+          value: "https://mealie.binarybraids.com"
         - name: UVICORN_WORKERS
           value: "1"
         - name: LDAP_AUTH_ENABLED
