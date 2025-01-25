@@ -1,3 +1,12 @@
+## [0.1.26](https://github.com/binary-braids/kubernetes-homelab/compare/v0.1.25...v0.1.26) (2025-01-25)
+
+
+### Bug Fixes
+
+* change mealie frontend port ([5cf7e14](https://github.com/binary-braids/kubernetes-homelab/commit/5cf7e14343781cebedfddf8b4d76cbf57235fc1f))
+
+
+
 ## [0.1.25](https://github.com/binary-braids/kubernetes-homelab/compare/v0.1.24...v0.1.25) (2025-01-25)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * correct apps kustomization ([10755f0](https://github.com/binary-braids/kubernetes-homelab/commit/10755f0eb80d3a434edc7e0e44cf5f962569180c))
-
-
-
-## [0.1.16](https://github.com/binary-braids/kubernetes-homelab/compare/v0.1.15...v0.1.16) (2025-01-16)
-
-
-### Bug Fixes
-
-* modify kustomizations ([d5c8f9a](https://github.com/binary-braids/kubernetes-homelab/commit/d5c8f9a290a973edf71b070c54f96800ce58d2b1))
 
 
 
