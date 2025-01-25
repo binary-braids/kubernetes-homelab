@@ -34,12 +34,6 @@ spec:
           value: "https://mealie.binarybraids.com"
         - name: UVICORN_WORKERS
           value: "1"
-        - name: LDAP_AUTH_ENABLED
-          value: "true"
-        - name: LDAP_SERVER_URL
-          value: "ldap://ad.binarybraids.com"
-        - name: LDAP_BASE_DN
-          value: "OU=End Users,OU=BB Users,DC=ad,DC=binarybraids,DC=com"
         volumeMounts:
         - mountPath: /app/data
           name: mealie-volume
