@@ -1,3 +1,12 @@
+## [0.1.25](https://github.com/binary-braids/kubernetes-homelab/compare/v0.1.24...v0.1.25) (2025-01-25)
+
+
+### Bug Fixes
+
+* add base url for mealie ([b786a59](https://github.com/binary-braids/kubernetes-homelab/commit/b786a59663a00befdb02e5dcd4247519b7f0fba7))
+
+
+
 ## [0.1.24](https://github.com/binary-braids/kubernetes-homelab/compare/v0.1.23...v0.1.24) (2025-01-25)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * modify kustomizations ([d5c8f9a](https://github.com/binary-braids/kubernetes-homelab/commit/d5c8f9a290a973edf71b070c54f96800ce58d2b1))
-
-
-
-## [0.1.15](https://github.com/binary-braids/kubernetes-homelab/compare/v0.1.14...v0.1.15) (2025-01-15)
-
-
-### Bug Fixes
-
-* change renovate config ([cd04ec3](https://github.com/binary-braids/kubernetes-homelab/commit/cd04ec3ce8fa55ef803b5ef45d776f94c123215b))
 
 
 
