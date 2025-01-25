@@ -20,4 +20,4 @@ spec:
           service:
             name: mealie-service
             port: 
-              number: 9925
+              number: 9000
