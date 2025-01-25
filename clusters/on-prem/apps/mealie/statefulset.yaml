@@ -18,34 +18,26 @@ spec:
     spec:
       containers:
       - name: mealie
-        image: hkotel/mealie:latest@sha256:4c97581d31546fc5cbfeacf00a8fa5f866d0b48cd1a2cd4441e48afe260b317c
+        image: ghcr.io/mealie-recipes/mealie:v2.5.0
         imagePullPolicy: Always
         resources:
           limits:
             cpu: 23m
-            memory: 324M
+            memory: 500M
         ports:
-        - containerPort: 80
+        - containerPort: 9000
           protocol: TCP
         env:
-        - name: RECIPE_PUBLIC
-          value: "true"
-        - name: RECIPE_SHOW_NUTRITION
-          value: "true"
-        - name: RECIPE_SHOW_ASSETS
-          value: "true"
-        - name: RECIPE_LANDSCAPE_VIEW
-          value: "true"
-        - name: SERVER_NAME
-          value: "false"
-        - name: RECIPE_DISABLE_AMOUNT
-          value: "false"
-        - name: WEB_CONCURRENCY
+        - name: DB_ENGINE
+          value: "sqlite"
+        - name: UVICORN_WORKERS
           value: "1"
-        - name: WORKERS_PER_CORE
-          value: "0.5"
-        - name: MAX_WORKERS
-          value: "1"
+        - name: LDAP_AUTH_ENABLED
+          value: "true"
+        - name: LDAP_SERVER_URL
+          value: "ldap://ad.binarybraids.com"
+        - name: LDAP_BASE_DN
+          value: "OU=End Users,OU=BB Users,DC=ad,DC=binarybraids,DC=com"
         volumeMounts:
         - mountPath: /app/data
           name: mealie-volume
