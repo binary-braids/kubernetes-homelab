@@ -1,3 +1,12 @@
+## [0.1.29](https://github.com/binary-braids/kubernetes-homelab/compare/v0.1.28...v0.1.29) (2025-01-26)
+
+
+### Bug Fixes
+
+* change jellyfin pod tag to latest to ensure client server compatibility ([49f94e8](https://github.com/binary-braids/kubernetes-homelab/commit/49f94e8bb95267f80298bb7bff6b492c12f7a3ee))
+
+
+
 ## [0.1.28](https://github.com/binary-braids/kubernetes-homelab/compare/v0.1.27...v0.1.28) (2025-01-25)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * correct kustomization ([3ec3e5d](https://github.com/binary-braids/kubernetes-homelab/commit/3ec3e5dbc45bf0f2761a2985db1208913b0e1c0f))
-
-
-
-## [0.1.19](https://github.com/binary-braids/kubernetes-homelab/compare/v0.1.18...v0.1.19) (2025-01-16)
-
-
-### Bug Fixes
-
-* correct kustomization path ([769c194](https://github.com/binary-braids/kubernetes-homelab/commit/769c194dfedb55a6e1a540e907efa33f9d28ac6c))
 
 
 
