@@ -1,3 +1,12 @@
+# [0.2.0](https://github.com/binary-braids/kubernetes-homelab/compare/v0.1.29...v0.2.0) (2025-01-26)
+
+
+### Features
+
+* Upgrade Longhorn from 1.7.2 to 1.8.0 ([64f26d3](https://github.com/binary-braids/kubernetes-homelab/commit/64f26d3bf80b91a2a27d9f79831efed069206fbb))
+
+
+
 ## [0.1.29](https://github.com/binary-braids/kubernetes-homelab/compare/v0.1.28...v0.1.29) (2025-01-26)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * re-add kustomizations ([a4f1314](https://github.com/binary-braids/kubernetes-homelab/commit/a4f1314529f307ca33cae3344a2f22b67e5c8416))
-
-
-
-## [0.1.20](https://github.com/binary-braids/kubernetes-homelab/compare/v0.1.19...v0.1.20) (2025-01-16)
-
-
-### Bug Fixes
-
-* correct kustomization ([3ec3e5d](https://github.com/binary-braids/kubernetes-homelab/commit/3ec3e5dbc45bf0f2761a2985db1208913b0e1c0f))
 
 
 
