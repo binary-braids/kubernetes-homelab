@@ -1,3 +1,12 @@
+## [0.2.14](https://github.com/binary-braids/kubernetes-homelab/compare/v0.2.13...v0.2.14) (2025-02-09)
+
+
+### Bug Fixes
+
+* change helmrelease parameters ([ed6b486](https://github.com/binary-braids/kubernetes-homelab/commit/ed6b486046deeb9dbbf3b0eef49b156b32240ee1))
+
+
+
 ## [0.2.13](https://github.com/binary-braids/kubernetes-homelab/compare/v0.2.12...v0.2.13) (2025-02-09)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * add decryption kustomization ([0abb85d](https://github.com/binary-braids/kubernetes-homelab/commit/0abb85ddf65de3114807fea5e8a2f405e7f561b7))
-
-
-
-## [0.2.4](https://github.com/binary-braids/kubernetes-homelab/compare/v0.2.3...v0.2.4) (2025-02-09)
-
-
-### Bug Fixes
-
-* correct longhorn oci configuration ([3ed9737](https://github.com/binary-braids/kubernetes-homelab/commit/3ed9737632851c25a0afce699f248a9c815c943d))
 
 
 
