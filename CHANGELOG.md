@@ -1,3 +1,12 @@
+## [0.2.7](https://github.com/binary-braids/kubernetes-homelab/compare/v0.2.6...v0.2.7) (2025-02-09)
+
+
+### Bug Fixes
+
+* add additional layer for longhorn ([1fd6103](https://github.com/binary-braids/kubernetes-homelab/commit/1fd610364a438764cb5fbbbcf91e24572dde1caa))
+
+
+
 ## [0.2.6](https://github.com/binary-braids/kubernetes-homelab/compare/v0.2.5...v0.2.6) (2025-02-09)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * remove ldap config for mealie ([85710b2](https://github.com/binary-braids/kubernetes-homelab/commit/85710b29034227df2d06608712024d55581dbf52))
-
-
-
-## [0.1.27](https://github.com/binary-braids/kubernetes-homelab/compare/v0.1.26...v0.1.27) (2025-01-25)
-
-
-### Bug Fixes
-
-* correct mealie  config ([a9efa11](https://github.com/binary-braids/kubernetes-homelab/commit/a9efa1146f4c4f534cdaafc0035f80c11be95136))
 
 
 
