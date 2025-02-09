@@ -2,8 +2,8 @@ apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
 metadata:
   name: longhorn-system
-  namespace: flux-system
 spec:
+  interval: 30m
   chart:
     spec:
       chart: longhorn
@@ -12,13 +12,20 @@ spec:
         kind: HelmRepository
         name: longhorn-charts
         namespace: flux-system
-  interval: 5m
   install:
+    crds: CreateReplace
     remediation:
         retries: 3
-    createNamespace: true
+  upgrade:
+    cleanupOnFail: true
+    crds: CreateReplace
+    remediation:
+      strategy: rollback
+      retries: 3
   targetNamespace: longhorn-system
   valuesFrom:
     - kind: ConfigMap
       name: values
       valuesKey: values.yaml
+  values:
+    fullnameOverride: *name
