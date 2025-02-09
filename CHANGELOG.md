@@ -1,3 +1,12 @@
+## [0.2.16](https://github.com/binary-braids/kubernetes-homelab/compare/v0.2.15...v0.2.16) (2025-02-09)
+
+
+### Bug Fixes
+
+* remove targetNamespace ([43e29ac](https://github.com/binary-braids/kubernetes-homelab/commit/43e29acc598add8559bd4f0b7b5358fce27566c2))
+
+
+
 ## [0.2.15](https://github.com/binary-braids/kubernetes-homelab/compare/v0.2.14...v0.2.15) (2025-02-09)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * add additional layer for longhorn ([1fd6103](https://github.com/binary-braids/kubernetes-homelab/commit/1fd610364a438764cb5fbbbcf91e24572dde1caa))
-
-
-
-## [0.2.6](https://github.com/binary-braids/kubernetes-homelab/compare/v0.2.5...v0.2.6) (2025-02-09)
-
-
-### Bug Fixes
-
-* add flux kustomization for dependancy management for longhorn CRD ([39a9d9a](https://github.com/binary-braids/kubernetes-homelab/commit/39a9d9a6f96de59e1307b5841e2375bf29e190a7))
 
 
 
