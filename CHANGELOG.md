@@ -1,3 +1,12 @@
+## [0.2.13](https://github.com/binary-braids/kubernetes-homelab/compare/v0.2.12...v0.2.13) (2025-02-09)
+
+
+### Bug Fixes
+
+* add ns kustomization inclusion ([282659f](https://github.com/binary-braids/kubernetes-homelab/commit/282659f516bdb3fec46ee047bded3b16dd195d75))
+
+
+
 ## [0.2.12](https://github.com/binary-braids/kubernetes-homelab/compare/v0.2.11...v0.2.12) (2025-02-09)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * correct longhorn oci configuration ([3ed9737](https://github.com/binary-braids/kubernetes-homelab/commit/3ed9737632851c25a0afce699f248a9c815c943d))
-
-
-
-## [0.2.3](https://github.com/binary-braids/kubernetes-homelab/compare/v0.2.2...v0.2.3) (2025-02-09)
-
-
-### Bug Fixes
-
-* add additional kustomization ([24dd4bf](https://github.com/binary-braids/kubernetes-homelab/commit/24dd4bf97f4aa5ca16b94b168ea00432bd512f4f))
 
 
 
