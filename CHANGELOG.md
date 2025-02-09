@@ -1,3 +1,12 @@
+## [0.2.9](https://github.com/binary-braids/kubernetes-homelab/compare/v0.2.8...v0.2.9) (2025-02-09)
+
+
+### Bug Fixes
+
+* namespace ([9b3a0da](https://github.com/binary-braids/kubernetes-homelab/commit/9b3a0da3c83c355e9244899f572d2fce45f6eaa4))
+
+
+
 ## [0.2.8](https://github.com/binary-braids/kubernetes-homelab/compare/v0.2.7...v0.2.8) (2025-02-09)
 
 
@@ -76,15 +85,6 @@
 ### Features
 
 * Upgrade Longhorn from 1.7.2 to 1.8.0 ([64f26d3](https://github.com/binary-braids/kubernetes-homelab/commit/64f26d3bf80b91a2a27d9f79831efed069206fbb))
-
-
-
-## [0.1.29](https://github.com/binary-braids/kubernetes-homelab/compare/v0.1.28...v0.1.29) (2025-01-26)
-
-
-### Bug Fixes
-
-* change jellyfin pod tag to latest to ensure client server compatibility ([49f94e8](https://github.com/binary-braids/kubernetes-homelab/commit/49f94e8bb95267f80298bb7bff6b492c12f7a3ee))
 
 
 
