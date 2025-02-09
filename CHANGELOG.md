@@ -1,3 +1,12 @@
+## [0.2.11](https://github.com/binary-braids/kubernetes-homelab/compare/v0.2.10...v0.2.11) (2025-02-09)
+
+
+### Bug Fixes
+
+* add yaml reference ([a196fdf](https://github.com/binary-braids/kubernetes-homelab/commit/a196fdf3bc8f3df1a011abc97f6bd93616cf50c8))
+
+
+
 ## [0.2.10](https://github.com/binary-braids/kubernetes-homelab/compare/v0.2.9...v0.2.10) (2025-02-09)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * remove incorrect ingress entry and disable oci apps ([08bbd27](https://github.com/binary-braids/kubernetes-homelab/commit/08bbd2715f70e6b53a3916383b22e14ac556e601))
-
-
-
-## [0.2.1](https://github.com/binary-braids/kubernetes-homelab/compare/v0.2.0...v0.2.1) (2025-02-09)
-
-
-### Bug Fixes
-
-* change sops age key for oracle cluster ([447a48e](https://github.com/binary-braids/kubernetes-homelab/commit/447a48e3256bd286a4110ad7d84579afbf58455e))
 
 
 
