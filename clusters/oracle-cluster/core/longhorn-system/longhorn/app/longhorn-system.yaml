@@ -27,5 +27,3 @@ spec:
     - kind: ConfigMap
       name: values
       valuesKey: values.yaml
-  values:
-    fullnameOverride: *name
