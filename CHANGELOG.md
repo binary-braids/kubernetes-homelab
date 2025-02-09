@@ -1,3 +1,12 @@
+## [0.2.12](https://github.com/binary-braids/kubernetes-homelab/compare/v0.2.11...v0.2.12) (2025-02-09)
+
+
+### Bug Fixes
+
+* added namespace reference to dependsOn ([1218636](https://github.com/binary-braids/kubernetes-homelab/commit/121863689035d8324a89b955802362e3fc6e9ac3))
+
+
+
 ## [0.2.11](https://github.com/binary-braids/kubernetes-homelab/compare/v0.2.10...v0.2.11) (2025-02-09)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * add additional kustomization ([24dd4bf](https://github.com/binary-braids/kubernetes-homelab/commit/24dd4bf97f4aa5ca16b94b168ea00432bd512f4f))
-
-
-
-## [0.2.2](https://github.com/binary-braids/kubernetes-homelab/compare/v0.2.1...v0.2.2) (2025-02-09)
-
-
-### Bug Fixes
-
-* remove incorrect ingress entry and disable oci apps ([08bbd27](https://github.com/binary-braids/kubernetes-homelab/commit/08bbd2715f70e6b53a3916383b22e14ac556e601))
 
 
 
