@@ -3,7 +3,5 @@ kind: Kustomization
 
 resources:
 - ingress.sops.yaml
-- oauth2-proxy-source.yaml
-- oauth2-proxy.yaml
-- namespace.yaml
+- middleware.yaml
 - secret.sops.yaml

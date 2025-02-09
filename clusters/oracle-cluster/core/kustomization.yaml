@@ -4,7 +4,5 @@ kind: Kustomization
 resources:
 - cert-manager
 - longhorn-system
-- monitoring
-- keycloak
-- oauth2-proxy
-- bitnami-chart-source.yaml
+#- monitoring
+- traefik
