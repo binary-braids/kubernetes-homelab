@@ -1,3 +1,12 @@
+## [0.2.10](https://github.com/binary-braids/kubernetes-homelab/compare/v0.2.9...v0.2.10) (2025-02-09)
+
+
+### Bug Fixes
+
+* correct yaml syntax ([62680c5](https://github.com/binary-braids/kubernetes-homelab/commit/62680c52ea79c71f999c5317b162f76ff5eec602))
+
+
+
 ## [0.2.9](https://github.com/binary-braids/kubernetes-homelab/compare/v0.2.8...v0.2.9) (2025-02-09)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * change sops age key for oracle cluster ([447a48e](https://github.com/binary-braids/kubernetes-homelab/commit/447a48e3256bd286a4110ad7d84579afbf58455e))
-
-
-
-# [0.2.0](https://github.com/binary-braids/kubernetes-homelab/compare/v0.1.29...v0.2.0) (2025-01-26)
-
-
-### Features
-
-* Upgrade Longhorn from 1.7.2 to 1.8.0 ([64f26d3](https://github.com/binary-braids/kubernetes-homelab/commit/64f26d3bf80b91a2a27d9f79831efed069206fbb))
 
 
 
