@@ -1,3 +1,12 @@
+## [0.2.15](https://github.com/binary-braids/kubernetes-homelab/compare/v0.2.14...v0.2.15) (2025-02-09)
+
+
+### Bug Fixes
+
+* correct longhorn-system.yaml ([a6ae6cb](https://github.com/binary-braids/kubernetes-homelab/commit/a6ae6cb503c88c3297dd63e994351401652b074d))
+
+
+
 ## [0.2.14](https://github.com/binary-braids/kubernetes-homelab/compare/v0.2.13...v0.2.14) (2025-02-09)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * add flux kustomization for dependancy management for longhorn CRD ([39a9d9a](https://github.com/binary-braids/kubernetes-homelab/commit/39a9d9a6f96de59e1307b5841e2375bf29e190a7))
-
-
-
-## [0.2.5](https://github.com/binary-braids/kubernetes-homelab/compare/v0.2.4...v0.2.5) (2025-02-09)
-
-
-### Bug Fixes
-
-* add decryption kustomization ([0abb85d](https://github.com/binary-braids/kubernetes-homelab/commit/0abb85ddf65de3114807fea5e8a2f405e7f561b7))
 
 
 
