@@ -1,3 +1,12 @@
+## [0.2.6](https://github.com/binary-braids/kubernetes-homelab/compare/v0.2.5...v0.2.6) (2025-02-09)
+
+
+### Bug Fixes
+
+* add flux kustomization for dependancy management for longhorn CRD ([39a9d9a](https://github.com/binary-braids/kubernetes-homelab/commit/39a9d9a6f96de59e1307b5841e2375bf29e190a7))
+
+
+
 ## [0.2.5](https://github.com/binary-braids/kubernetes-homelab/compare/v0.2.4...v0.2.5) (2025-02-09)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * correct mealie  config ([a9efa11](https://github.com/binary-braids/kubernetes-homelab/commit/a9efa1146f4c4f534cdaafc0035f80c11be95136))
-
-
-
-## [0.1.26](https://github.com/binary-braids/kubernetes-homelab/compare/v0.1.25...v0.1.26) (2025-01-25)
-
-
-### Bug Fixes
-
-* change mealie frontend port ([5cf7e14](https://github.com/binary-braids/kubernetes-homelab/commit/5cf7e14343781cebedfddf8b4d76cbf57235fc1f))
 
 
 
