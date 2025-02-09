@@ -1,3 +1,12 @@
+## [0.2.8](https://github.com/binary-braids/kubernetes-homelab/compare/v0.2.7...v0.2.8) (2025-02-09)
+
+
+### Bug Fixes
+
+* correct kustomization ([9140fc1](https://github.com/binary-braids/kubernetes-homelab/commit/9140fc14fed3cbfd57a5a3bbe7b74194598b4252))
+
+
+
 ## [0.2.7](https://github.com/binary-braids/kubernetes-homelab/compare/v0.2.6...v0.2.7) (2025-02-09)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * change jellyfin pod tag to latest to ensure client server compatibility ([49f94e8](https://github.com/binary-braids/kubernetes-homelab/commit/49f94e8bb95267f80298bb7bff6b492c12f7a3ee))
-
-
-
-## [0.1.28](https://github.com/binary-braids/kubernetes-homelab/compare/v0.1.27...v0.1.28) (2025-01-25)
-
-
-### Bug Fixes
-
-* remove ldap config for mealie ([85710b2](https://github.com/binary-braids/kubernetes-homelab/commit/85710b29034227df2d06608712024d55581dbf52))
 
 
 
