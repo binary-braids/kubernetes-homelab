@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://kubernetes-schemas.pages.dev/kustomize.toolkit.fluxcd.io/kustomization_v1.json
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
@@ -15,6 +16,7 @@ spec:
   timeout: 5m
   wait: false
 ---
+# yaml-language-server: $schema=https://kubernetes-schemas.pages.dev/kustomize.toolkit.fluxcd.io/kustomization_v1.json
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
@@ -22,7 +24,7 @@ metadata:
   namespace: longhorn-system
 spec:
   dependsOn:
-    - longhorn
+    - name: longhorn
   interval: 30m
   path: ./clusters/oracle-cluster/core/longhorn-system/longhorn/recurringjob
   prune: true
