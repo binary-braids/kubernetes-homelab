@@ -1,3 +1,12 @@
+## [0.2.2](https://github.com/binary-braids/kubernetes-homelab/compare/v0.2.1...v0.2.2) (2025-02-09)
+
+
+### Bug Fixes
+
+* remove incorrect ingress entry and disable oci apps ([08bbd27](https://github.com/binary-braids/kubernetes-homelab/commit/08bbd2715f70e6b53a3916383b22e14ac556e601))
+
+
+
 ## [0.2.1](https://github.com/binary-braids/kubernetes-homelab/compare/v0.2.0...v0.2.1) (2025-02-09)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * correct minecraft lb ip ([c330c90](https://github.com/binary-braids/kubernetes-homelab/commit/c330c90113fa90232a8bf151ea9b6ba0f9a82304))
-
-
-
-## [0.1.22](https://github.com/binary-braids/kubernetes-homelab/compare/v0.1.21...v0.1.22) (2025-01-18)
-
-
-### Bug Fixes
-
-* change minecraft load balancer ips ([b80f162](https://github.com/binary-braids/kubernetes-homelab/commit/b80f16291e9a6d1c34c1241cdaffa4f378510461))
 
 
 
