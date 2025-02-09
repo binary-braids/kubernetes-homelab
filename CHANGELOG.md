@@ -1,3 +1,12 @@
+## [0.2.19](https://github.com/binary-braids/kubernetes-homelab/compare/v0.2.18...v0.2.19) (2025-02-09)
+
+
+### Bug Fixes
+
+* remove decryption kustomization ([536af51](https://github.com/binary-braids/kubernetes-homelab/commit/536af513e7ac41627c81786feb78685d2a7d1b58))
+
+
+
 ## [0.2.18](https://github.com/binary-braids/kubernetes-homelab/compare/v0.2.17...v0.2.18) (2025-02-09)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * correct yaml syntax ([62680c5](https://github.com/binary-braids/kubernetes-homelab/commit/62680c52ea79c71f999c5317b162f76ff5eec602))
-
-
-
-## [0.2.9](https://github.com/binary-braids/kubernetes-homelab/compare/v0.2.8...v0.2.9) (2025-02-09)
-
-
-### Bug Fixes
-
-* namespace ([9b3a0da](https://github.com/binary-braids/kubernetes-homelab/commit/9b3a0da3c83c355e9244899f572d2fce45f6eaa4))
 
 
 
