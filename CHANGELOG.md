@@ -1,3 +1,12 @@
+## [0.2.3](https://github.com/binary-braids/kubernetes-homelab/compare/v0.2.2...v0.2.3) (2025-02-09)
+
+
+### Bug Fixes
+
+* add additional kustomization ([24dd4bf](https://github.com/binary-braids/kubernetes-homelab/commit/24dd4bf97f4aa5ca16b94b168ea00432bd512f4f))
+
+
+
 ## [0.2.2](https://github.com/binary-braids/kubernetes-homelab/compare/v0.2.1...v0.2.2) (2025-02-09)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * update mealie parameters ([48dc3e4](https://github.com/binary-braids/kubernetes-homelab/commit/48dc3e42a4421574e86595c96700faff95ab11b8))
-
-
-
-## [0.1.23](https://github.com/binary-braids/kubernetes-homelab/compare/v0.1.22...v0.1.23) (2025-01-19)
-
-
-### Bug Fixes
-
-* correct minecraft lb ip ([c330c90](https://github.com/binary-braids/kubernetes-homelab/commit/c330c90113fa90232a8bf151ea9b6ba0f9a82304))
 
 
 
