@@ -1,3 +1,12 @@
+## [0.2.17](https://github.com/binary-braids/kubernetes-homelab/compare/v0.2.16...v0.2.17) (2025-02-09)
+
+
+### Bug Fixes
+
+* change helmrelease config ([ebc59b4](https://github.com/binary-braids/kubernetes-homelab/commit/ebc59b4d7edb866846f9946193a3eb2183194489))
+
+
+
 ## [0.2.16](https://github.com/binary-braids/kubernetes-homelab/compare/v0.2.15...v0.2.16) (2025-02-09)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * correct kustomization ([9140fc1](https://github.com/binary-braids/kubernetes-homelab/commit/9140fc14fed3cbfd57a5a3bbe7b74194598b4252))
-
-
-
-## [0.2.7](https://github.com/binary-braids/kubernetes-homelab/compare/v0.2.6...v0.2.7) (2025-02-09)
-
-
-### Bug Fixes
-
-* add additional layer for longhorn ([1fd6103](https://github.com/binary-braids/kubernetes-homelab/commit/1fd610364a438764cb5fbbbcf91e24572dde1caa))
 
 
 
