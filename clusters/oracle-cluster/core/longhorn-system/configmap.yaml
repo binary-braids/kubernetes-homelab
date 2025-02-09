@@ -7,3 +7,6 @@ data:
     values.yaml: |-
           persistence:
             defaultClassReplicaCount: 2
+          defaultSettings:
+            backupTarget: s3://osb-prod-kube-uk-01@uk-london-1/
+            backupTargetCredentialSecret: backup-secret
