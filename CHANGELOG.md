@@ -1,3 +1,12 @@
+## [0.2.4](https://github.com/binary-braids/kubernetes-homelab/compare/v0.2.3...v0.2.4) (2025-02-09)
+
+
+### Bug Fixes
+
+* correct longhorn oci configuration ([3ed9737](https://github.com/binary-braids/kubernetes-homelab/commit/3ed9737632851c25a0afce699f248a9c815c943d))
+
+
+
 ## [0.2.3](https://github.com/binary-braids/kubernetes-homelab/compare/v0.2.2...v0.2.3) (2025-02-09)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * add base url for mealie ([b786a59](https://github.com/binary-braids/kubernetes-homelab/commit/b786a59663a00befdb02e5dcd4247519b7f0fba7))
-
-
-
-## [0.1.24](https://github.com/binary-braids/kubernetes-homelab/compare/v0.1.23...v0.1.24) (2025-01-25)
-
-
-### Bug Fixes
-
-* update mealie parameters ([48dc3e4](https://github.com/binary-braids/kubernetes-homelab/commit/48dc3e42a4421574e86595c96700faff95ab11b8))
 
 
 
