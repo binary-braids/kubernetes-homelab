@@ -1,3 +1,12 @@
+## [0.2.5](https://github.com/binary-braids/kubernetes-homelab/compare/v0.2.4...v0.2.5) (2025-02-09)
+
+
+### Bug Fixes
+
+* add decryption kustomization ([0abb85d](https://github.com/binary-braids/kubernetes-homelab/commit/0abb85ddf65de3114807fea5e8a2f405e7f561b7))
+
+
+
 ## [0.2.4](https://github.com/binary-braids/kubernetes-homelab/compare/v0.2.3...v0.2.4) (2025-02-09)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * change mealie frontend port ([5cf7e14](https://github.com/binary-braids/kubernetes-homelab/commit/5cf7e14343781cebedfddf8b4d76cbf57235fc1f))
-
-
-
-## [0.1.25](https://github.com/binary-braids/kubernetes-homelab/compare/v0.1.24...v0.1.25) (2025-01-25)
-
-
-### Bug Fixes
-
-* add base url for mealie ([b786a59](https://github.com/binary-braids/kubernetes-homelab/commit/b786a59663a00befdb02e5dcd4247519b7f0fba7))
 
 
 
