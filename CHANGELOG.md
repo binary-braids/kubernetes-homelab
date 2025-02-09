@@ -1,3 +1,12 @@
+## [0.2.20](https://github.com/binary-braids/kubernetes-homelab/compare/v0.2.19...v0.2.20) (2025-02-09)
+
+
+### Bug Fixes
+
+* remove targetnamespace ([0afeb86](https://github.com/binary-braids/kubernetes-homelab/commit/0afeb867d6208ac72334a62ae031bc77baaadfe6))
+
+
+
 ## [0.2.19](https://github.com/binary-braids/kubernetes-homelab/compare/v0.2.18...v0.2.19) (2025-02-09)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * add yaml reference ([a196fdf](https://github.com/binary-braids/kubernetes-homelab/commit/a196fdf3bc8f3df1a011abc97f6bd93616cf50c8))
-
-
-
-## [0.2.10](https://github.com/binary-braids/kubernetes-homelab/compare/v0.2.9...v0.2.10) (2025-02-09)
-
-
-### Bug Fixes
-
-* correct yaml syntax ([62680c5](https://github.com/binary-braids/kubernetes-homelab/commit/62680c52ea79c71f999c5317b162f76ff5eec602))
 
 
 
