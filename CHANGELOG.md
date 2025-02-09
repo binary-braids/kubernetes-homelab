@@ -1,3 +1,12 @@
+## [0.2.1](https://github.com/binary-braids/kubernetes-homelab/compare/v0.2.0...v0.2.1) (2025-02-09)
+
+
+### Bug Fixes
+
+* change sops age key for oracle cluster ([447a48e](https://github.com/binary-braids/kubernetes-homelab/commit/447a48e3256bd286a4110ad7d84579afbf58455e))
+
+
+
 # [0.2.0](https://github.com/binary-braids/kubernetes-homelab/compare/v0.1.29...v0.2.0) (2025-01-26)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * change minecraft load balancer ips ([b80f162](https://github.com/binary-braids/kubernetes-homelab/commit/b80f16291e9a6d1c34c1241cdaffa4f378510461))
-
-
-
-## [0.1.21](https://github.com/binary-braids/kubernetes-homelab/compare/v0.1.20...v0.1.21) (2025-01-18)
-
-
-### Bug Fixes
-
-* re-add kustomizations ([a4f1314](https://github.com/binary-braids/kubernetes-homelab/commit/a4f1314529f307ca33cae3344a2f22b67e5c8416))
 
 
 
