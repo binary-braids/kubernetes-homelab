@@ -22,7 +22,6 @@ spec:
     remediation:
       strategy: rollback
       retries: 3
-  targetNamespace: longhorn-system
   valuesFrom:
     - kind: ConfigMap
       name: values
