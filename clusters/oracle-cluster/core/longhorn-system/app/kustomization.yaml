@@ -7,7 +7,6 @@ resources:
 - ingress.yaml
 - longhorn-system-source.yaml
 - longhorn-system.yaml
-- recurringjob.yaml
 
 configurations:
   - kustomizeconfig.yaml
