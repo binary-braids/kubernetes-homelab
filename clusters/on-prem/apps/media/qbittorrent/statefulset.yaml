@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: qbittorrent
-        image: lscr.io/linuxserver/qbittorrent:latest@sha256:8e541cfd4dc991ba43901314b465067fe287728d7d6fd8ae911958d0b9df184c
+        image: lscr.io/linuxserver/qbittorrent:latest@sha256:f8d719940b59472f9a29f1de799a3fa180e051ad5d29c50052ae9129b09bfd9c
         ports:
         - containerPort: 8080
         - containerPort: 6881
