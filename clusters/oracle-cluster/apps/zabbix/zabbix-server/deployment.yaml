@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: zabbix-server
-        image: zabbix/zabbix-server-pgsql@sha256:0c40f97ac5e911f191c3ce2129dbb5e93cac02a83f7562466f15cf5a6882e44b
+        image: zabbix/zabbix-server-pgsql@sha256:c8db24a3fc509ea4b1a3d9f4ef197e1ee46f2656f586c3c5f9014ca6de61804b
         ports:
         - containerPort: 10051
         env:
