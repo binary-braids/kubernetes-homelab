@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: radarr
-        image: lscr.io/linuxserver/radarr:latest@sha256:3329fbf778701cf53703b342b3a84da31caafec970ef9310be5723dd057666dc
+        image: lscr.io/linuxserver/radarr:latest@sha256:fe049905ecdfaedf6f37698a3974261c1ef7e5bb165bed6c6d9616c7b9002a88
         ports:
         - containerPort: 7878
         env:
