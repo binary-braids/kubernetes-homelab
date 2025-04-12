@@ -6,7 +6,7 @@ metadata:
   namespace: longhorn-system
 spec:
   interval: 30m
-  path: ./clusters/oracle-cluster/core/longhorn-system/longhorn/app
+  path: ./apps/oracle-cluster/longhorn-system/longhorn/app
   prune: true
   sourceRef:
     kind: GitRepository
@@ -26,7 +26,7 @@ spec:
     - name: longhorn
       namespace: longhorn-system
   interval: 30m
-  path: ./clusters/oracle-cluster/core/longhorn-system/longhorn/recurringjob
+  path: ./apps/oracle-cluster/longhorn-system/longhorn/recurringjob
   prune: true
   sourceRef:
     kind: GitRepository
