@@ -1,3 +1,12 @@
+## [0.4.2](https://github.com/binary-braids/kubernetes-homelab/compare/v0.4.1...v0.4.2) (2025-04-12)
+
+
+### Bug Fixes
+
+* **apps.yaml:** increase interval for GitRepository and Kustomization to 5 minutes ([2bca8ce](https://github.com/binary-braids/kubernetes-homelab/commit/2bca8ce25af764d0838a0ecdc87e270d77a2b1cb))
+
+
+
 ## [0.4.1](https://github.com/binary-braids/kubernetes-homelab/compare/v0.4.0...v0.4.1) (2025-04-12)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * remove targetNamespace ([43e29ac](https://github.com/binary-braids/kubernetes-homelab/commit/43e29acc598add8559bd4f0b7b5358fce27566c2))
-
-
-
-## [0.2.15](https://github.com/binary-braids/kubernetes-homelab/compare/v0.2.14...v0.2.15) (2025-02-09)
-
-
-### Bug Fixes
-
-* correct longhorn-system.yaml ([a6ae6cb](https://github.com/binary-braids/kubernetes-homelab/commit/a6ae6cb503c88c3297dd63e994351401652b074d))
 
 
 
