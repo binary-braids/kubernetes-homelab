@@ -1,3 +1,12 @@
+# [0.3.0](https://github.com/binary-braids/kubernetes-homelab/compare/v0.2.21...v0.3.0) (2025-04-12)
+
+
+### Features
+
+* **kustomization:** add core and apps resources to flux-system ([ddafa14](https://github.com/binary-braids/kubernetes-homelab/commit/ddafa14e4c52947c47ecae92777d4cbd5748f053))
+
+
+
 ## [0.2.21](https://github.com/binary-braids/kubernetes-homelab/compare/v0.2.20...v0.2.21) (2025-04-12)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * add ns kustomization inclusion ([282659f](https://github.com/binary-braids/kubernetes-homelab/commit/282659f516bdb3fec46ee047bded3b16dd195d75))
-
-
-
-## [0.2.12](https://github.com/binary-braids/kubernetes-homelab/compare/v0.2.11...v0.2.12) (2025-02-09)
-
-
-### Bug Fixes
-
-* added namespace reference to dependsOn ([1218636](https://github.com/binary-braids/kubernetes-homelab/commit/121863689035d8324a89b955802362e3fc6e9ac3))
 
 
 
