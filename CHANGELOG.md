@@ -1,3 +1,12 @@
+## [0.4.1](https://github.com/binary-braids/kubernetes-homelab/compare/v0.4.0...v0.4.1) (2025-04-12)
+
+
+### Bug Fixes
+
+* **persistentvolumeclaim:** add prune label to disable pruning for multiple PVCs ([a120165](https://github.com/binary-braids/kubernetes-homelab/commit/a1201658e6919bdb724a71126fe428b7c8d8678f))
+
+
+
 # [0.4.0](https://github.com/binary-braids/kubernetes-homelab/compare/v0.3.0...v0.4.0) (2025-04-12)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * correct longhorn-system.yaml ([a6ae6cb](https://github.com/binary-braids/kubernetes-homelab/commit/a6ae6cb503c88c3297dd63e994351401652b074d))
-
-
-
-## [0.2.14](https://github.com/binary-braids/kubernetes-homelab/compare/v0.2.13...v0.2.14) (2025-02-09)
-
-
-### Bug Fixes
-
-* change helmrelease parameters ([ed6b486](https://github.com/binary-braids/kubernetes-homelab/commit/ed6b486046deeb9dbbf3b0eef49b156b32240ee1))
 
 
 
