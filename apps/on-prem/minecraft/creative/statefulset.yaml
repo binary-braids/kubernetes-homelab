@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
-  name: minecraft-survival
-  namespace: minecraft-survival
+  name: minecraft-creative
+  namespace: minecraft
   labels:
-    app: minecraft-bedrock-survival
+    app: minecraft-creative
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: minecraft-survival
-  serviceName: minecraft-survival
+      app: minecraft-creative
+  serviceName: minecraft-creative
   template:
     metadata:
       labels:
-        app: minecraft-survival
+        app: minecraft-creative
     spec:
       containers:
-      - name: minecraft-survival
+      - name: minecraft-creative
         image: itzg/minecraft-bedrock-server:2024.10.0@sha256:6fa0efe1e80c0d04a9d9150df49b81b769896439eabe90afea1cee6bd46ac13e
         imagePullPolicy: Always
         ports:
@@ -25,19 +25,20 @@ spec:
           protocol: UDP
         env:
         - name: DIFFICULTY
-          value: easy
+          value: peaceful
         - name: EULA
           value: "true"
         - name: GAMEMODE
-          value: survival
+          value: creative
         - name: ONLINE_MODE
           value: "false"
         - name: SERVER_NAME
-          value: minecraft-survival
+          value: minecraft-creative
         volumeMounts:
-        - mountPath: /data
-          name: minecraft-volume
+        - mountPath: data
+          name: vol1
+          subPath: data
       volumes:
-      - name: minecraft-volume
+      - name: vol1
         persistentVolumeClaim:
-          claimName: minecraft-data-pvc
+          claimName: minecraft-bedrock-creative-data

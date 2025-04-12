@@ -5,4 +5,3 @@ resources:
 - persistentvolumeclaim.yaml
 - service.yaml
 - statefulset.yaml
-- namespace.yaml

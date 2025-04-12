@@ -7,8 +7,7 @@ resources:
 - cert-manager
 - goldilocks
 - traefik
-- minecraft-creative
-- minecraft-survival
+- minecraft
 - mealie
 #- phpipam
 #- zabbix
