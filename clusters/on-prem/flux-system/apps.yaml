@@ -5,7 +5,7 @@ metadata:
   name: apps
   namespace: flux-system
 spec:
-  interval: 1m0s
+  interval: 5m0s
   ref:
     branch: main
   secretRef:
@@ -23,7 +23,7 @@ spec:
   dependsOn:
     - name: flux-system
       namespace: flux-system
-  interval: 1m
+  interval: 5m
   path: ./apps/on-prem
   prune: true
   sourceRef:
