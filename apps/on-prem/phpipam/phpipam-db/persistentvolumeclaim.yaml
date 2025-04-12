@@ -3,6 +3,8 @@ kind: PersistentVolumeClaim
 metadata:
   name: phpipam-data-pvc
   namespace: phpipam
+  labels:
+    kustomize.toolkit.fluxcd.io/prune: "disabled"
 spec:
   accessModes:
     - ReadWriteOnce

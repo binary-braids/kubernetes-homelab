@@ -3,6 +3,8 @@ kind: PersistentVolumeClaim
 metadata:
   name: radarr-pvc
   namespace: media
+  labels:
+    kustomize.toolkit.fluxcd.io/prune: "disabled"
 spec:
   accessModes:
     - ReadWriteOnce
