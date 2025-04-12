@@ -5,6 +5,7 @@ resources:
 #- dashboard
 - namespace.yaml
 - traefik-source.yaml
+- traefik-crds.yaml
 - traefik.yaml
 - tlsstore.yaml
 
