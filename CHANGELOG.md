@@ -1,3 +1,12 @@
+## [0.2.21](https://github.com/binary-braids/kubernetes-homelab/compare/v0.2.20...v0.2.21) (2025-04-12)
+
+
+### Bug Fixes
+
+* **kustomization:** update sops secret reference from sops-keys to sops-age ([373e6c3](https://github.com/binary-braids/kubernetes-homelab/commit/373e6c34c191fa86d92468d68568c60cd549408f))
+
+
+
 ## [0.2.20](https://github.com/binary-braids/kubernetes-homelab/compare/v0.2.19...v0.2.20) (2025-02-09)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * added namespace reference to dependsOn ([1218636](https://github.com/binary-braids/kubernetes-homelab/commit/121863689035d8324a89b955802362e3fc6e9ac3))
-
-
-
-## [0.2.11](https://github.com/binary-braids/kubernetes-homelab/compare/v0.2.10...v0.2.11) (2025-02-09)
-
-
-### Bug Fixes
-
-* add yaml reference ([a196fdf](https://github.com/binary-braids/kubernetes-homelab/commit/a196fdf3bc8f3df1a011abc97f6bd93616cf50c8))
 
 
 
