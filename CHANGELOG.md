@@ -1,3 +1,12 @@
+# [0.6.0](https://github.com/binary-braids/kubernetes-homelab/compare/v0.5.0...v0.6.0) (2025-04-12)
+
+
+### Features
+
+* refactor oracle cloud cluster apps ([e3472e6](https://github.com/binary-braids/kubernetes-homelab/commit/e3472e69fdd062de71cfe49b8a6149b739047a2a))
+
+
+
 # [0.5.0](https://github.com/binary-braids/kubernetes-homelab/compare/v0.4.2...v0.5.0) (2025-04-12)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * remove decryption yaml ([f144b62](https://github.com/binary-braids/kubernetes-homelab/commit/f144b622b53adc4e1b1d8e85bc7f4d475ded2ad6))
-
-
-
-## [0.2.17](https://github.com/binary-braids/kubernetes-homelab/compare/v0.2.16...v0.2.17) (2025-02-09)
-
-
-### Bug Fixes
-
-* change helmrelease config ([ebc59b4](https://github.com/binary-braids/kubernetes-homelab/commit/ebc59b4d7edb866846f9946193a3eb2183194489))
 
 
 
