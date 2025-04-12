@@ -18,5 +18,4 @@ patches:
             name: sops-age
     target:
       kind: Kustomization
-      name: flux-system
-      namespace: flux-system
+      labelSelector: app.kubernetes.io/sops=enabled
