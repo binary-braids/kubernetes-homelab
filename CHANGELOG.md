@@ -1,3 +1,12 @@
+# [0.4.0](https://github.com/binary-braids/kubernetes-homelab/compare/v0.3.0...v0.4.0) (2025-04-12)
+
+
+### Features
+
+* Reconfigure repo structure ([dc4a103](https://github.com/binary-braids/kubernetes-homelab/commit/dc4a103fbbe1af1dd51b1aa87adc2588089cf2ea))
+
+
+
 # [0.3.0](https://github.com/binary-braids/kubernetes-homelab/compare/v0.2.21...v0.3.0) (2025-04-12)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * change helmrelease parameters ([ed6b486](https://github.com/binary-braids/kubernetes-homelab/commit/ed6b486046deeb9dbbf3b0eef49b156b32240ee1))
-
-
-
-## [0.2.13](https://github.com/binary-braids/kubernetes-homelab/compare/v0.2.12...v0.2.13) (2025-02-09)
-
-
-### Bug Fixes
-
-* add ns kustomization inclusion ([282659f](https://github.com/binary-braids/kubernetes-homelab/commit/282659f516bdb3fec46ee047bded3b16dd195d75))
 
 
 
