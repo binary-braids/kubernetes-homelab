@@ -24,7 +24,7 @@ spec:
     - name: flux-system
       namespace: flux-system
   interval: 1m
-  path: ./clusters/on-prem/core
+  path: ./apps/on-prem
   prune: true
   sourceRef:
     kind: GitRepository
