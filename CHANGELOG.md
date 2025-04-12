@@ -1,3 +1,12 @@
+## [0.6.1](https://github.com/binary-braids/kubernetes-homelab/compare/v0.6.0...v0.6.1) (2025-04-12)
+
+
+### Bug Fixes
+
+* update paths in longhorn kustomization files and remove unused kustomization.yaml ([3d58429](https://github.com/binary-braids/kubernetes-homelab/commit/3d58429e6894e78901eff9609172cc838dcfc558))
+
+
+
 # [0.6.0](https://github.com/binary-braids/kubernetes-homelab/compare/v0.5.0...v0.6.0) (2025-04-12)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * remove decryption kustomization ([536af51](https://github.com/binary-braids/kubernetes-homelab/commit/536af513e7ac41627c81786feb78685d2a7d1b58))
-
-
-
-## [0.2.18](https://github.com/binary-braids/kubernetes-homelab/compare/v0.2.17...v0.2.18) (2025-02-09)
-
-
-### Bug Fixes
-
-* remove decryption yaml ([f144b62](https://github.com/binary-braids/kubernetes-homelab/commit/f144b622b53adc4e1b1d8e85bc7f4d475ded2ad6))
 
 
 
