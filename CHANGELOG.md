@@ -1,3 +1,12 @@
+# [0.5.0](https://github.com/binary-braids/kubernetes-homelab/compare/v0.4.2...v0.5.0) (2025-04-12)
+
+
+### Features
+
+* **minecraft:** restructure Minecraft resources and add creative and survival configurations ([ddcd19a](https://github.com/binary-braids/kubernetes-homelab/commit/ddcd19a66d86a262ea44db6beb0860103448c2a2))
+
+
+
 ## [0.4.2](https://github.com/binary-braids/kubernetes-homelab/compare/v0.4.1...v0.4.2) (2025-04-12)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * change helmrelease config ([ebc59b4](https://github.com/binary-braids/kubernetes-homelab/commit/ebc59b4d7edb866846f9946193a3eb2183194489))
-
-
-
-## [0.2.16](https://github.com/binary-braids/kubernetes-homelab/compare/v0.2.15...v0.2.16) (2025-02-09)
-
-
-### Bug Fixes
-
-* remove targetNamespace ([43e29ac](https://github.com/binary-braids/kubernetes-homelab/commit/43e29acc598add8559bd4f0b7b5358fce27566c2))
 
 
 
