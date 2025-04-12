@@ -20,6 +20,9 @@ metadata:
   labels:
     app.kubernetes.io/sops: "enabled"
 spec:
+  dependsOn:
+    - name: flux-system
+      namespace: flux-system
   interval: 1m
   path: ./clusters/on-prem/apps
   prune: true

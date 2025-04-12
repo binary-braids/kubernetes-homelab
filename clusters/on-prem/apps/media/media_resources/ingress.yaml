@@ -52,3 +52,13 @@ spec:
             name: prowlarr-service
             port: 
               number: 9696
+  - host: media.binarybraids.com
+    http:
+      paths:
+      - pathType: Prefix
+        path: /bazarr
+        backend:
+          service:
+            name: bazarr-service
+            port: 
+              number: 6767
