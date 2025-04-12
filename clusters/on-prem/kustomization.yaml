@@ -15,7 +15,7 @@ patches:
         decryption:
           provider: sops
           secretRef:
-            name: sops-keys
+            name: sops-age
     target:
       kind: Kustomization
       name: flux-system
