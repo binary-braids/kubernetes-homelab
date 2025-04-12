@@ -11,7 +11,7 @@ spec:
     branch: main
   secretRef:
     name: flux-system
-  url: https://github.com/binary-braids/kubernetes-homelab.git
+  url: ssh://git@github.com/binary-braids/kubernetes-homelab
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
