@@ -1,3 +1,12 @@
+## [0.6.2](https://github.com/binary-braids/kubernetes-homelab/compare/v0.6.1...v0.6.2) (2025-04-13)
+
+
+### Bug Fixes
+
+* enable traefik resource in kustomization.yaml ([52997c1](https://github.com/binary-braids/kubernetes-homelab/commit/52997c1dc0e640b41187bd0daeb381868d11e631))
+
+
+
 ## [0.6.1](https://github.com/binary-braids/kubernetes-homelab/compare/v0.6.0...v0.6.1) (2025-04-12)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * remove targetnamespace ([0afeb86](https://github.com/binary-braids/kubernetes-homelab/commit/0afeb867d6208ac72334a62ae031bc77baaadfe6))
-
-
-
-## [0.2.19](https://github.com/binary-braids/kubernetes-homelab/compare/v0.2.18...v0.2.19) (2025-02-09)
-
-
-### Bug Fixes
-
-* remove decryption kustomization ([536af51](https://github.com/binary-braids/kubernetes-homelab/commit/536af513e7ac41627c81786feb78685d2a7d1b58))
 
 
 
