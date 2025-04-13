@@ -1,3 +1,12 @@
+## [0.6.4](https://github.com/binary-braids/kubernetes-homelab/compare/v0.6.3...v0.6.4) (2025-04-13)
+
+
+### Bug Fixes
+
+* restructure cert-manager resources and remove unused files ([d7c7573](https://github.com/binary-braids/kubernetes-homelab/commit/d7c7573cfdd012130f46c35ccf0d517675687c12))
+
+
+
 ## [0.6.3](https://github.com/binary-braids/kubernetes-homelab/compare/v0.6.2...v0.6.3) (2025-04-13)
 
 
@@ -76,15 +85,6 @@
 ### Features
 
 * **kustomization:** add core and apps resources to flux-system ([ddafa14](https://github.com/binary-braids/kubernetes-homelab/commit/ddafa14e4c52947c47ecae92777d4cbd5748f053))
-
-
-
-## [0.2.21](https://github.com/binary-braids/kubernetes-homelab/compare/v0.2.20...v0.2.21) (2025-04-12)
-
-
-### Bug Fixes
-
-* **kustomization:** update sops secret reference from sops-keys to sops-age ([373e6c3](https://github.com/binary-braids/kubernetes-homelab/commit/373e6c34c191fa86d92468d68568c60cd549408f))
 
 
 
