@@ -5,12 +5,3 @@ resources:
 #- dashboard
 - traefik.yaml
 - tlsstore.yaml
-
-secretGenerator:
-  - name: traefik-encrypted-values
-    namespace: flux-system
-    files:
-      - values.yaml=values.sops.yaml
-
-configurations:
-  - kustomizeconfig.yaml
