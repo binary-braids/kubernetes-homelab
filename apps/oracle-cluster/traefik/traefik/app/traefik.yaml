@@ -23,6 +23,3 @@ spec:
     remediation:
       strategy: rollback
       retries: 3
-  valuesFrom:
-    - kind: Secret
-      name: traefik-encrypted-values
