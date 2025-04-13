@@ -5,7 +5,7 @@ resources:
 #- cert-manager
 - longhorn-system
 #- monitoring
-#- traefik
+- traefik
 #- ai
 #- emulatorjs
 #- freshrss
