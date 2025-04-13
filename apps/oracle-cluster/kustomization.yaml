@@ -4,10 +4,9 @@ kind: Kustomization
 resources:
 - cert-manager
 - longhorn-system
-- monitoring
+#- monitoring
 - traefik
 #- ai
 #- emulatorjs
 #- freshrss
-#- osticket
 #- zabbix
