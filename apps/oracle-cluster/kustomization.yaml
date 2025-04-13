@@ -3,9 +3,9 @@ kind: Kustomization
 
 resources:
 - cert-manager
-- longhorn-system
+#- longhorn-system
 #- monitoring
-- traefik
+#- traefik
 #- ai
 #- emulatorjs
 #- freshrss
