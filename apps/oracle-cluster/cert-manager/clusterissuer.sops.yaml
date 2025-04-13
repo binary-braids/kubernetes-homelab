@@ -1,0 +1,37 @@
+apiVersion: cert-manager.io/v1
+kind: ClusterIssuer
+metadata:
+    name: letsencrypt-prod
+spec:
+    acme:
+        server: https://acme-v02.api.letsencrypt.org/directory
+        email: ENC[AES256_GCM,data:JwBV5v5Hr6Js4M0ntQcMrew=,iv:bEArtrh2vrOA2atFpz5mzhlggFXqsjCcc1moQ3kMAGQ=,tag:T1Hl2DizWJw4k5rc6uBV1g==,type:str]
+        privateKeySecretRef:
+            name: letsencrypt-prod
+        solvers:
+            - dns01:
+                cloudflare:
+                    email: ENC[AES256_GCM,data:ah2FNXlcd/6Ie2LSyMj7rBc=,iv:ggAf6h0u8IHMI/ZrQr46yfcqb3AP83rG05RQKBRugpg=,tag:vGhLnkAp0iGnaUtc7M50ag==,type:str]
+                    apiTokenSecretRef:
+                        name: cloudflare-api-token-secret
+                        key: api-token
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age:
+        - recipient: age1ak57wwfff6rekjlj3cy6nqyze829gqy9mad00dshc3e2cq89ya3qfph538
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBaSXNvTVQycVU3aWxjQmM4
+            NjFFVVJyMXRCRXlkWVhVbXN1bW5ZRllkeERJCk8rSnU2TmJ3eUlRWUJDeXlmc09z
+            c0d0ZzV0RmJHSWdFdmFlVzhLMFpqREEKLS0tIFhHSjlSSzBpMjVJeUVZbUV2Y2FM
+            NWVhOHFyeE5IZkI4NkhqdzlPbW8wMFkKrfEuUQ+x+30jilIZlpV+O6q+0l2uH8Yx
+            bj5jVJM6dIB2HSW0Z+KeDKvmZMulGSjyaQ6PUEsOhoI2Z1Mpnmzm/w==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2025-04-13T11:59:49Z"
+    mac: ENC[AES256_GCM,data:Wt5TZeppYQ3R5p2JywY+/DKpIR7pLk1mFOyETIiYE3gPb7oNrc1dtgUrEidss9xeSIRZUumHeZQmiQ98w42kr5awkZ+B2XHXHTh/8TylZ0XBAxHE0cEuEI/hLZiH6W4/YAxZCzcdNt8NjOEG0rKQyVuFUfOQee64wsR7ymCH3gM=,iv:6dZVyG8LKf9TueQEj70S3zdz6yQBt8UMmjiH1qWjC8I=,tag:IzYqvKNgfFMlZVY1sovF6Q==,type:str]
+    pgp: []
+    encrypted_regex: ^(data|stringData|email|dnsNames|hosts|host|externalIPs)$
+    version: 3.8.1

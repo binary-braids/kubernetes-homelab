@@ -5,6 +5,6 @@ resources:
 - cert-manager-source.yaml
 - cert-manager.yaml
 - certificate.yaml
+- clusterissuer.sops.yaml
 - namespace.yaml
-- prod-clusterissuer.sops.yaml
 - secret.sops.yaml

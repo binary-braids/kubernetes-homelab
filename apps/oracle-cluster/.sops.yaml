@@ -1,3 +1,5 @@
 creation_rules:
+  - path_regex: .*values.sops.yaml$
+    age: age1ak57wwfff6rekjlj3cy6nqyze829gqy9mad00dshc3e2cq89ya3qfph538
   - encrypted_regex: '^(data|stringData|email|dnsNames|hosts|host|externalIPs)$'
     age: age1ak57wwfff6rekjlj3cy6nqyze829gqy9mad00dshc3e2cq89ya3qfph538
