@@ -1,0 +1,25 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: traefik-crds
+  namespace: flux-system
+spec:
+  chart:
+    spec:
+      chart: traefik-crds
+      version: "1.6.0"
+      sourceRef:
+        kind: HelmRepository
+        name: traefik-charts
+        namespace: flux-system
+  interval: 30m
+  targetNamespace: traefik
+  install:
+    createNamespace: true
+    remediation:
+        retries: 3
+  upgrade:
+    cleanupOnFail: true
+    remediation:
+      strategy: rollback
+      retries: 3
