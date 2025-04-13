@@ -1,3 +1,12 @@
+## [0.6.5](https://github.com/binary-braids/kubernetes-homelab/compare/v0.6.4...v0.6.5) (2025-04-13)
+
+
+### Bug Fixes
+
+* update cert-manager configuration and remove unused prod-clusterissuer resource ([ed0273b](https://github.com/binary-braids/kubernetes-homelab/commit/ed0273b4669ee626bb76dd42577ca8d27f1c7b99))
+
+
+
 ## [0.6.4](https://github.com/binary-braids/kubernetes-homelab/compare/v0.6.3...v0.6.4) (2025-04-13)
 
 
@@ -76,15 +85,6 @@
 ### Features
 
 * Reconfigure repo structure ([dc4a103](https://github.com/binary-braids/kubernetes-homelab/commit/dc4a103fbbe1af1dd51b1aa87adc2588089cf2ea))
-
-
-
-# [0.3.0](https://github.com/binary-braids/kubernetes-homelab/compare/v0.2.21...v0.3.0) (2025-04-12)
-
-
-### Features
-
-* **kustomization:** add core and apps resources to flux-system ([ddafa14](https://github.com/binary-braids/kubernetes-homelab/commit/ddafa14e4c52947c47ecae92777d4cbd5748f053))
 
 
 
