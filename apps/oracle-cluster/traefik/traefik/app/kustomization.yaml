@@ -3,5 +3,6 @@ kind: Kustomization
 
 resources:
 #- dashboard
+- configmap.yaml
 - traefik.yaml
 - tlsstore.yaml
