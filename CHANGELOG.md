@@ -1,3 +1,12 @@
+## [0.6.3](https://github.com/binary-braids/kubernetes-homelab/compare/v0.6.2...v0.6.3) (2025-04-13)
+
+
+### Bug Fixes
+
+* uncomment cert-manager and monitoring resources in kustomization.yaml ([576de00](https://github.com/binary-braids/kubernetes-homelab/commit/576de0027c458e67a1550d22a0391664b6b19256))
+
+
+
 ## [0.6.2](https://github.com/binary-braids/kubernetes-homelab/compare/v0.6.1...v0.6.2) (2025-04-13)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * **kustomization:** update sops secret reference from sops-keys to sops-age ([373e6c3](https://github.com/binary-braids/kubernetes-homelab/commit/373e6c34c191fa86d92468d68568c60cd549408f))
-
-
-
-## [0.2.20](https://github.com/binary-braids/kubernetes-homelab/compare/v0.2.19...v0.2.20) (2025-02-09)
-
-
-### Bug Fixes
-
-* remove targetnamespace ([0afeb86](https://github.com/binary-braids/kubernetes-homelab/commit/0afeb867d6208ac72334a62ae031bc77baaadfe6))
 
 
 
