@@ -8,5 +8,5 @@ data:
           deployment:
             kind: DaemonSet
           service:
-            loadBalancerIP: 192.168.1.21
+            loadBalancerIP: 192.168.1.8
           
