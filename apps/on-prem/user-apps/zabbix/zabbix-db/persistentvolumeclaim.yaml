@@ -3,8 +3,6 @@ kind: PersistentVolumeClaim
 metadata:
   name: zabbix-mariadb-pvc
   namespace: zabbix
-  labels:
-    kustomize.toolkit.fluxcd.io/prune: "disabled"
 spec:
   accessModes:
     - ReadWriteOnce

@@ -3,8 +3,6 @@ kind: PersistentVolumeClaim
 metadata:
   name: qbittorrent-pvc
   namespace: media
-  labels:
-    kustomize.toolkit.fluxcd.io/prune: "disabled"
 spec:
   accessModes:
     - ReadWriteOnce

@@ -3,8 +3,6 @@ kind: PersistentVolumeClaim
 metadata:
   name: prowlarr-pvc
   namespace: media
-  labels:
-    kustomize.toolkit.fluxcd.io/prune: "disabled"
 spec:
   accessModes:
     - ReadWriteOnce

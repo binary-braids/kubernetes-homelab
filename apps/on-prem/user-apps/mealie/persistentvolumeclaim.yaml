@@ -3,8 +3,6 @@ kind: PersistentVolumeClaim
 metadata:
   name: mealie-data-pvc
   namespace: mealie
-  labels:
-    kustomize.toolkit.fluxcd.io/prune: "disabled"
 spec:
   accessModes:
     - ReadWriteOnce

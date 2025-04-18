@@ -3,8 +3,6 @@ kind: PersistentVolumeClaim
 metadata:
   name: minecraft-data-pvc
   namespace: minecraft
-  labels:
-    kustomize.toolkit.fluxcd.io/prune: "disabled"
 spec:
   accessModes:
     - ReadWriteOnce

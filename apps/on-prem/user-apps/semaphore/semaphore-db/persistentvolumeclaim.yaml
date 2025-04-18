@@ -3,8 +3,6 @@ kind: PersistentVolumeClaim
 metadata:
   name: semaphore-data-pvc
   namespace: semaphore
-  labels:
-    kustomize.toolkit.fluxcd.io/prune: "disabled"
 spec:
   accessModes:
     - ReadWriteOnce
