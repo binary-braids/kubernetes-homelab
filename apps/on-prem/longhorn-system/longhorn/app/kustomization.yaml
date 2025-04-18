@@ -1,0 +1,20 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+- backup-secret.sops.yaml
+- configmap.yaml
+- ingress.yaml
+- longhorn-system-source.yaml
+- longhorn-system.yaml
+- namespace.yaml
+- recurringjob.yaml
+
+secretGenerator:
+  - name: encrypted-values
+    namespace: flux-system
+    files:
+      - values.yaml=values.sops.yaml
+
+configurations:
+  - kustomizeconfig.yaml
