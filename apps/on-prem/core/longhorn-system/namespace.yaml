@@ -5,3 +5,4 @@ metadata:
   labels:
     name: longhorn-system
     goldilocks.fairwinds.com/enabled: "true"
+    kustomize.toolkit.fluxcd.io/prune: "disabled"
