@@ -10,3 +10,4 @@ resources:
 - ingress.yaml
 - longhorn-system-source.yaml
 - longhorn-system.yaml
+- namespace.yaml
