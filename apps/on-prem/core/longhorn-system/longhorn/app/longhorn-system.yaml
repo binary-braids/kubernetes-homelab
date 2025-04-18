@@ -4,20 +4,27 @@ metadata:
   name: longhorn-system
   namespace: flux-system
 spec:
+  interval: 30m
   chart:
     spec:
       chart: longhorn
-      version: "1.8.0"
+      version: "1.8.1"
       sourceRef:
         kind: HelmRepository
         name: longhorn-charts
         namespace: flux-system
-  interval: 5m
+  targetNamespace: longhorn-system
   install:
+    createNamespace: true
+    crds: CreateReplace
     remediation:
         retries: 3
-    createNamespace: true
-  targetNamespace: longhorn-system
+  upgrade:
+    cleanupOnFail: true
+    crds: CreateReplace
+    remediation:
+      strategy: rollback
+      retries: 3
   valuesFrom:
     - kind: ConfigMap
       name: values

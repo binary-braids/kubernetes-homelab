@@ -7,6 +7,6 @@ data:
     values.yaml: |-
           persistence:
             defaultClassReplicaCount: 3
-          defaultBackupStore:
+          defaultSettings:
             backupTarget: s3://longhorn-backups@homelab/
             backupTargetCredentialSecret: backup-secret
