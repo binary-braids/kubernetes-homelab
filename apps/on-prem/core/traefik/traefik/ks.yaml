@@ -6,7 +6,7 @@ metadata:
   namespace: traefik
 spec:
   interval: 30m
-  path: ./apps/on-prem/traefik/traefik/crds
+  path: ./apps/on-prem/core/traefik/traefik/crds
   prune: true
   retryInterval: 2m
   sourceRef:
@@ -28,7 +28,7 @@ spec:
     - name: traefik-crds
       namespace: traefik
   interval: 30m
-  path: ./apps/on-prem/traefik/traefik/app
+  path: ./apps/on-prem/core/traefik/traefik/app
   prune: true
   retryInterval: 2m
   sourceRef:
