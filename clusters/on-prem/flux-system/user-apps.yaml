@@ -31,3 +31,7 @@ spec:
     name: user-apps
     namespace: flux-system
   timeout: 2m
+  decryption:
+    provider: sops
+    secretRef:
+      name: sops-age

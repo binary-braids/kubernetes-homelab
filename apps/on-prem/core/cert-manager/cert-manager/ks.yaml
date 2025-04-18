@@ -16,3 +16,7 @@ spec:
     name: core
     namespace: flux-system
   timeout: 5m
+  decryption:
+    provider: sops
+    secretRef:
+      name: sops-age
