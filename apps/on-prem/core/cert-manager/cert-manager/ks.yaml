@@ -8,7 +8,7 @@ metadata:
     app.kubernetes.io/sops: "enabled"
 spec:
   interval: 30m
-  path: ./apps/on-prem/cert-manager/cert-manager/app
+  path: ./apps/on-prem/core/cert-manager/cert-manager/app
   prune: true
   retryInterval: 2m
   sourceRef:
