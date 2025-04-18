@@ -3,7 +3,7 @@ apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
   name: longhorn
-  namespace: longhorn-system
+  namespace: flux-system
 spec:
   interval: 30m
   path: ./apps/on-prem/core/longhorn-system/longhorn/app
@@ -24,13 +24,13 @@ apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
   name: longhorn-recurring-job
-  namespace: longhorn-system
+  namespace: flux-system
   labels:
     app.kubernetes.io/sops: "enabled"
 spec:
   dependsOn:
     - name: longhorn
-      namespace: longhorn-system
+      namespace: flux-system
   interval: 30m
   path: ./apps/on-prem/core/longhorn-system/longhorn/recurringjob
   prune: true
