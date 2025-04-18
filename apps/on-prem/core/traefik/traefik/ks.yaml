@@ -2,16 +2,16 @@
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
-  name: longhorn
-  namespace: longhorn-system
+  name: traefik-crds
+  namespace: traefik
 spec:
   interval: 30m
-  path: ./apps/on-prem/core/longhorn-system/longhorn/app
+  path: ./apps/on-prem/traefik/traefik/crds
   prune: true
   retryInterval: 2m
   sourceRef:
     kind: GitRepository
-    name: flux-system
+    name: traefik
     namespace: flux-system
   timeout: 5m
 ---
@@ -19,20 +19,20 @@ spec:
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
-  name: longhorn-recurring-job
-  namespace: longhorn-system
+  name: traefik
+  namespace: traefik
   labels:
     app.kubernetes.io/sops: "enabled"
 spec:
   dependsOn:
-    - name: longhorn
-      namespace: longhorn-system
+    - name: traefik-crds
+      namespace: traefik
   interval: 30m
-  path: ./apps/on-prem/core/longhorn-system/longhorn/recurringjob
+  path: ./apps/on-prem/traefik/traefik/app
   prune: true
   retryInterval: 2m
   sourceRef:
     kind: GitRepository
-    name: flux-system
+    name: traefik
     namespace: flux-system
   timeout: 5m

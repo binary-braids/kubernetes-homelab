@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+    name: values
+    namespace: traefik
+data:
+    values.yaml: |-
+          deployment:
+            kind: DaemonSet
+          service:
+            loadBalancerIP: 10.4.20.51
+          
