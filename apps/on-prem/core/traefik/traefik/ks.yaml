@@ -11,7 +11,7 @@ spec:
   retryInterval: 2m
   sourceRef:
     kind: GitRepository
-    name: traefik
+    name: core
     namespace: flux-system
   timeout: 5m
 ---
@@ -33,6 +33,6 @@ spec:
   retryInterval: 2m
   sourceRef:
     kind: GitRepository
-    name: traefik
+    name: core
     namespace: flux-system
   timeout: 5m
