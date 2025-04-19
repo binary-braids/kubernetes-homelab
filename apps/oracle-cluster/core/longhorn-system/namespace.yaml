@@ -1,0 +1,8 @@
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: longhorn-system
+  labels:
+    name: longhorn-system
+    goldilocks.fairwinds.com/enabled: "true"
+    kustomize.toolkit.fluxcd.io/prune: "disabled"
