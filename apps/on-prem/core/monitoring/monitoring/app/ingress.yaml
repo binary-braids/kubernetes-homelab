@@ -18,6 +18,6 @@ spec:
         path: /
         backend:
           service:
-            name: kube-state-metrics-service
+            name: monitoring-kube-state-metrics
             port: 
               number: 8080
