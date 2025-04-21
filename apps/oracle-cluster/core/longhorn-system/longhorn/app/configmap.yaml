@@ -8,5 +8,7 @@ data:
           persistence:
             defaultClassReplicaCount: 2
           defaultSettings:
+            storageMinimalAvailablePercentage: 10
+          defaultBackupStore:
             backupTarget: s3://osb-prod-kube-uk-01@uk-london-1/
             backupTargetCredentialSecret: backup-secret
