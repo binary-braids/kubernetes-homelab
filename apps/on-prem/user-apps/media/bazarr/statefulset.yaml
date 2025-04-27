@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: bazarr
-        image: lscr.io/linuxserver/bazarr:latest@sha256:6fb83511c0dca70a400fde79cb45ed59c4f66ea30dcba8c6f9274f01d77e5aef
+        image: lscr.io/linuxserver/bazarr:latest@sha256:2219fa5f4db9b33fa187553177daae80e7baa6b0350a3132395c7bf6b4ded771
         resources:
           requests:
             cpu: 15m
