@@ -16,7 +16,7 @@
     }
   ],
   "kubernetes": {
-    "fileMatch": ["clusters/.+\\.yaml$"]
+    "fileMatch": ["apps/.+\\.yaml$"]
   },
   "automergeSchedule": [
       "after 2am",
