@@ -36,19 +36,18 @@ spec:
         - name: PGID
           value: "1000"
         volumeMounts:
-          - name: config
+          - name: pvc
             mountPath: /config
-          - name: data
+            subPath: config
+          - name: pvc
             mountPath: /data
+            subPath: data
           - name: tvshows
             mountPath: /tvshows
           - name: movies
             mountPath: /movies
       volumes:
-        - name: config
-          persistentVolumeClaim:
-            claimName: bazarr-pvc
-        - name: data
+        - name: pvc
           persistentVolumeClaim:
             claimName: bazarr-pvc
         - name: tvshows
