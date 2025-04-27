@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: bazarr
-        image: lscr.io/linuxserver/bazarr:latest@sha256:2219fa5f4db9b33fa187553177daae80e7baa6b0350a3132395c7bf6b4ded771
+        image: ghcr.io/hotio/bazarr:latest
         resources:
           requests:
             cpu: 15m
@@ -38,12 +38,17 @@ spec:
         volumeMounts:
           - name: config
             mountPath: /config
+          - name: data
+            mountPath: /data
           - name: tvshows
             mountPath: /tvshows
           - name: movies
             mountPath: /movies
       volumes:
         - name: config
+          persistentVolumeClaim:
+            claimName: bazarr-pvc
+        - name: data
           persistentVolumeClaim:
             claimName: bazarr-pvc
         - name: tvshows
