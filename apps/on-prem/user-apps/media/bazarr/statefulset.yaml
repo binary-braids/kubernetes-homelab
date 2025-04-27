@@ -18,14 +18,7 @@ spec:
     spec:
       containers:
       - name: bazarr
-        image: hotio/bazarr:latest
-        resources:
-          requests:
-            cpu: 15m
-            memory: 226M
-          limits:
-            cpu: 15m
-            memory: 226M
+        image: lscr.io/linuxserver/bazarr:latest
         ports:
         - containerPort: 6767
         env:
@@ -38,10 +31,6 @@ spec:
         volumeMounts:
           - name: pvc
             mountPath: /config
-            subPath: config
-          - name: pvc
-            mountPath: /data
-            subPath: data
           - name: tvshows
             mountPath: /tvshows
           - name: movies
