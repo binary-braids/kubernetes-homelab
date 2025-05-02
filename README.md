@@ -17,9 +17,10 @@ This repo contains all my config for my On-Prem and Oracle based k3s clusters. T
 The Git repository contains the following directories:
 
 ```sh
-📁 .github
-📁 ansible
-📁 clusters
+📁 .github                  # GitHub Workflows
+📁 ansible                  # Ansible Playbooks for Kubernetes bootstrap
+📁 apps                     # Core and User Apps utilised within cluster
+📁 clusters                 # FluxCD files for applicable clusters
 ├─📁 on-prem-cluster
 │ ├─📁 apps
 │ ├─📁 core
@@ -28,7 +29,7 @@ The Git repository contains the following directories:
 │ ├─📁 apps
 │ ├─📁 core
 │ └─📁 flux-system
-📁 terraform
+📁 terraform                # Terraform modules for Kubernetes node VM's
 ```
 ## Getting started
 
@@ -40,7 +41,7 @@ The `reset.yml` playbook will remove the k3s components from your machines
 
 ### Terraform 
 
-I utilised Terraform with ESXI to build my k3s nodes. If you have standalone ESXI hosts like me you can make use of the Terraform modules to build your nodes replacing the relevant variables and such depending on the amount of hosts/nodes you have.
+I utilised Terraform with Promox to build my k3s nodes. If you have standalone Promox hosts like me you can make use of the Terraform modules to build your nodes replacing the relevant variables and such depending on the amount of hosts/nodes you have.
 
 The following assumptions are made:
 
