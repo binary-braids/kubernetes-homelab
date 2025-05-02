@@ -2,7 +2,9 @@
 [![flux](https://img.shields.io/badge/GitOps-Flux-blue?style=for-the-badge&logo=git)](https://fluxcd.io/)
 [![renovate](https://img.shields.io/badge/renovate-enabled-brightgreen?style=for-the-badge&logo=renovatebot)](https://github.com/renovatebot/renovate)
 
-[![HitCount](https://hits.dwyl.com/qman-being/kubernetes-homelab.svg?style=for-the-badge&show=unique)](http://hits.dwyl.com/qman-being/kubernetes-homelab)
+[![CI](https://github.com/binary-braids/kubernetes-homelab/actions/workflows/ci.yml/badge.svg)](https://github.com/binary-braids/kubernetes-homelab/actions/workflows/ci.yml)
+[![Host 01 Terraform CD](https://github.com/binary-braids/kubernetes-homelab/actions/workflows/host_01_terraform.yml/badge.svg)](https://github.com/binary-braids/kubernetes-homelab/actions/workflows/host_01_terraform.yml)
+[![Host 02 Terraform CD](https://github.com/binary-braids/kubernetes-homelab/actions/workflows/host_02_terraform.yml/badge.svg)](https://github.com/binary-braids/kubernetes-homelab/actions/workflows/host_02_terraform.yml)
 
 # Kubernetes Homelab
 
