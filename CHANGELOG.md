@@ -1,3 +1,12 @@
+## [0.8.1](https://github.com/binary-braids/kubernetes-homelab/compare/v0.8.0...v0.8.1) (2025-05-04)
+
+
+### Bug Fixes
+
+* correct app selector from radarr to readarr in service configuration ([f708441](https://github.com/binary-braids/kubernetes-homelab/commit/f7084411c20db43d3161eac5a11de61930aad061))
+
+
+
 # [0.8.0](https://github.com/binary-braids/kubernetes-homelab/compare/v0.7.0...v0.8.0) (2025-05-04)
 
 
@@ -76,15 +85,6 @@
 ### Features
 
 * **minecraft:** restructure Minecraft resources and add creative and survival configurations ([ddcd19a](https://github.com/binary-braids/kubernetes-homelab/commit/ddcd19a66d86a262ea44db6beb0860103448c2a2))
-
-
-
-## [0.4.2](https://github.com/binary-braids/kubernetes-homelab/compare/v0.4.1...v0.4.2) (2025-04-12)
-
-
-### Bug Fixes
-
-* **apps.yaml:** increase interval for GitRepository and Kustomization to 5 minutes ([2bca8ce](https://github.com/binary-braids/kubernetes-homelab/commit/2bca8ce25af764d0838a0ecdc87e270d77a2b1cb))
 
 
 
