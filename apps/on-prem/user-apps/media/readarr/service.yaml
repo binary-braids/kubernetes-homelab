@@ -5,7 +5,7 @@ metadata:
   namespace: media
 spec:
   selector:
-    app: radarr
+    app: readarr
   ports:
     - protocol: TCP
       port: 8787
