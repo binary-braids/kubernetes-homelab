@@ -1,3 +1,12 @@
+# [0.8.0](https://github.com/binary-braids/kubernetes-homelab/compare/v0.7.0...v0.8.0) (2025-05-04)
+
+
+### Features
+
+* add Readarr service to ingress configuration ([a24c073](https://github.com/binary-braids/kubernetes-homelab/commit/a24c073aaa2680dec966323b582d1fc231dbe6fd))
+
+
+
 # [0.7.0](https://github.com/binary-braids/kubernetes-homelab/compare/v0.6.5...v0.7.0) (2025-05-04)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * **apps.yaml:** increase interval for GitRepository and Kustomization to 5 minutes ([2bca8ce](https://github.com/binary-braids/kubernetes-homelab/commit/2bca8ce25af764d0838a0ecdc87e270d77a2b1cb))
-
-
-
-## [0.4.1](https://github.com/binary-braids/kubernetes-homelab/compare/v0.4.0...v0.4.1) (2025-04-12)
-
-
-### Bug Fixes
-
-* **persistentvolumeclaim:** add prune label to disable pruning for multiple PVCs ([a120165](https://github.com/binary-braids/kubernetes-homelab/commit/a1201658e6919bdb724a71126fe428b7c8d8678f))
 
 
 
