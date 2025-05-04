@@ -1,3 +1,12 @@
+# [0.7.0](https://github.com/binary-braids/kubernetes-homelab/compare/v0.6.5...v0.7.0) (2025-05-04)
+
+
+### Features
+
+* add Readarr application configuration with persistent volume claim, service, and stateful set ([a5787b2](https://github.com/binary-braids/kubernetes-homelab/commit/a5787b211c009f947c34593ee05b27c57e4017a3))
+
+
+
 ## [0.6.5](https://github.com/binary-braids/kubernetes-homelab/compare/v0.6.4...v0.6.5) (2025-04-13)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * **persistentvolumeclaim:** add prune label to disable pruning for multiple PVCs ([a120165](https://github.com/binary-braids/kubernetes-homelab/commit/a1201658e6919bdb724a71126fe428b7c8d8678f))
-
-
-
-# [0.4.0](https://github.com/binary-braids/kubernetes-homelab/compare/v0.3.0...v0.4.0) (2025-04-12)
-
-
-### Features
-
-* Reconfigure repo structure ([dc4a103](https://github.com/binary-braids/kubernetes-homelab/commit/dc4a103fbbe1af1dd51b1aa87adc2588089cf2ea))
 
 
 
