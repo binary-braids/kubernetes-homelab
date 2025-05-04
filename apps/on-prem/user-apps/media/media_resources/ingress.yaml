@@ -62,3 +62,13 @@ spec:
             name: bazarr-service
             port: 
               number: 6767
+  - host: media.binarybraids.com
+    http:
+      paths:
+      - pathType: Prefix
+        path: /readarr
+        backend:
+          service:
+            name: readarr-service
+            port: 
+              number: 8787           
