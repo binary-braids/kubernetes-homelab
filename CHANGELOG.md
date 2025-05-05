@@ -1,3 +1,12 @@
+## [0.10.2](https://github.com/binary-braids/kubernetes-homelab/compare/v0.10.1...v0.10.2) (2025-05-05)
+
+
+### Bug Fixes
+
+* change pathType to ImplementationSpecific for qbittorrent ingress ([0d89fb4](https://github.com/binary-braids/kubernetes-homelab/commit/0d89fb423e58696b300e8d1e90b227564c9965cc))
+
+
+
 ## [0.10.1](https://github.com/binary-braids/kubernetes-homelab/compare/v0.10.0...v0.10.1) (2025-05-05)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * add externalTrafficPolicy to service configuration in ConfigMap ([9b660fb](https://github.com/binary-braids/kubernetes-homelab/commit/9b660fb345e5af525eef0ba9ab0b2d51355077cb))
-
-
-
-## [0.8.1](https://github.com/binary-braids/kubernetes-homelab/compare/v0.8.0...v0.8.1) (2025-05-04)
-
-
-### Bug Fixes
-
-* correct app selector from radarr to readarr in service configuration ([f708441](https://github.com/binary-braids/kubernetes-homelab/commit/f7084411c20db43d3161eac5a11de61930aad061))
 
 
 
