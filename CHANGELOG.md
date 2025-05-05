@@ -1,3 +1,12 @@
+## [0.10.3](https://github.com/binary-braids/kubernetes-homelab/compare/v0.10.2...v0.10.3) (2025-05-05)
+
+
+### Bug Fixes
+
+* add externalTrafficPolicy to nginx ConfigMap ([99d8411](https://github.com/binary-braids/kubernetes-homelab/commit/99d841122531b74e8459ecdcf1aadb6095d0a5cf))
+
+
+
 ## [0.10.2](https://github.com/binary-braids/kubernetes-homelab/compare/v0.10.1...v0.10.2) (2025-05-05)
 
 
@@ -76,15 +85,6 @@
 ### Features
 
 * update nginx configuration and add necessary resources for deployment ([b9c2bfc](https://github.com/binary-braids/kubernetes-homelab/commit/b9c2bfc72d37bcd7f5fc047a28c94ecfa17903f4))
-
-
-
-## [0.8.2](https://github.com/binary-braids/kubernetes-homelab/compare/v0.8.1...v0.8.2) (2025-05-05)
-
-
-### Bug Fixes
-
-* add externalTrafficPolicy to service configuration in ConfigMap ([9b660fb](https://github.com/binary-braids/kubernetes-homelab/commit/9b660fb345e5af525eef0ba9ab0b2d51355077cb))
 
 
 
