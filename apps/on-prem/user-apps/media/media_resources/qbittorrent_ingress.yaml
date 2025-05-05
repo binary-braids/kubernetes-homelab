@@ -16,7 +16,7 @@ spec:
   - host: media.binarybraids.com
     http:
       paths:
-      - pathType: Prefix
+      - pathType: ImplementationSpecific
         path: /qbittorrent(/|$)(.*)
         backend:
           service:
