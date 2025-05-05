@@ -1,3 +1,12 @@
+## [0.9.5](https://github.com/binary-braids/kubernetes-homelab/compare/v0.9.4...v0.9.5) (2025-05-05)
+
+
+### Bug Fixes
+
+* update qbittorrent path to use regex for improved routing ([f227b43](https://github.com/binary-braids/kubernetes-homelab/commit/f227b43d060dc6e81596a7704178e824de7380e9))
+
+
+
 ## [0.9.4](https://github.com/binary-braids/kubernetes-homelab/compare/v0.9.3...v0.9.4) (2025-05-05)
 
 
@@ -76,15 +85,6 @@
 ### Features
 
 * add Readarr application configuration with persistent volume claim, service, and stateful set ([a5787b2](https://github.com/binary-braids/kubernetes-homelab/commit/a5787b211c009f947c34593ee05b27c57e4017a3))
-
-
-
-## [0.6.5](https://github.com/binary-braids/kubernetes-homelab/compare/v0.6.4...v0.6.5) (2025-04-13)
-
-
-### Bug Fixes
-
-* update cert-manager configuration and remove unused prod-clusterissuer resource ([ed0273b](https://github.com/binary-braids/kubernetes-homelab/commit/ed0273b4669ee626bb76dd42577ca8d27f1c7b99))
 
 
 
