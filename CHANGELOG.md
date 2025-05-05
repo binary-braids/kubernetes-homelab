@@ -1,3 +1,12 @@
+## [0.9.3](https://github.com/binary-braids/kubernetes-homelab/compare/v0.9.2...v0.9.3) (2025-05-05)
+
+
+### Bug Fixes
+
+* change ingress class from traefik to nginx in multiple ingress configurations ([b09d9d5](https://github.com/binary-braids/kubernetes-homelab/commit/b09d9d5d352a5af3809ddf25100f6e14be541c52))
+
+
+
 ## [0.9.2](https://github.com/binary-braids/kubernetes-homelab/compare/v0.9.1...v0.9.2) (2025-05-05)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * restructure cert-manager resources and remove unused files ([d7c7573](https://github.com/binary-braids/kubernetes-homelab/commit/d7c7573cfdd012130f46c35ccf0d517675687c12))
-
-
-
-## [0.6.3](https://github.com/binary-braids/kubernetes-homelab/compare/v0.6.2...v0.6.3) (2025-04-13)
-
-
-### Bug Fixes
-
-* uncomment cert-manager and monitoring resources in kustomization.yaml ([576de00](https://github.com/binary-braids/kubernetes-homelab/commit/576de0027c458e67a1550d22a0391664b6b19256))
 
 
 
