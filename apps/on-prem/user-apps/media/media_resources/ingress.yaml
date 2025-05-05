@@ -4,9 +4,8 @@ metadata:
   name: media-ingress
   namespace: media
   annotations:
-    kubernetes.io/ingress.class: traefik
+    kubernetes.io/ingress.class: nginx
     cert-manager.io/cluster-issuer: letsencrypt-prod
-    traefik.ingress.kubernetes.io/router.middlewares: media-ingress-stripprefix@kubernetescrd
 spec:
   tls:
     - hosts:
