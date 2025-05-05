@@ -5,9 +5,9 @@ metadata:
     namespace: flux-system
 data:
     values.yaml: |-
-        deployment:
+        controller:
           kind: DaemonSet
-        service:
-          loadBalancerIP: 10.4.20.51
-        extraArgs:
-          default-ssl-certificate: nginx/wildcard-prod-cert-tls
+          service:
+            loadBalancerIP: 10.4.20.51
+          extraArgs:
+            default-ssl-certificate: nginx/wildcard-prod-cert-tls
