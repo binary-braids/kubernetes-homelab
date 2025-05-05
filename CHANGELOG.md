@@ -1,3 +1,12 @@
+## [0.9.1](https://github.com/binary-braids/kubernetes-homelab/compare/v0.9.0...v0.9.1) (2025-05-05)
+
+
+### Bug Fixes
+
+* change ingress class from traefik to nginx in longhorn ingress configuration ([8a39590](https://github.com/binary-braids/kubernetes-homelab/commit/8a39590404791913169e7be1ebb43d5205224fbf))
+
+
+
 # [0.9.0](https://github.com/binary-braids/kubernetes-homelab/compare/v0.8.2...v0.9.0) (2025-05-05)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * enable traefik resource in kustomization.yaml ([52997c1](https://github.com/binary-braids/kubernetes-homelab/commit/52997c1dc0e640b41187bd0daeb381868d11e631))
-
-
-
-## [0.6.1](https://github.com/binary-braids/kubernetes-homelab/compare/v0.6.0...v0.6.1) (2025-04-12)
-
-
-### Bug Fixes
-
-* update paths in longhorn kustomization files and remove unused kustomization.yaml ([3d58429](https://github.com/binary-braids/kubernetes-homelab/commit/3d58429e6894e78901eff9609172cc838dcfc558))
 
 
 
