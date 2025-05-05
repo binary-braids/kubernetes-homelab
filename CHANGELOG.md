@@ -1,3 +1,12 @@
+## [0.9.2](https://github.com/binary-braids/kubernetes-homelab/compare/v0.9.1...v0.9.2) (2025-05-05)
+
+
+### Bug Fixes
+
+* update nginx ConfigMap structure to correctly nest controller settings ([12b47eb](https://github.com/binary-braids/kubernetes-homelab/commit/12b47eb1a285c6d2c8fffc994b2f5cb37b4f2aa3))
+
+
+
 ## [0.9.1](https://github.com/binary-braids/kubernetes-homelab/compare/v0.9.0...v0.9.1) (2025-05-05)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * uncomment cert-manager and monitoring resources in kustomization.yaml ([576de00](https://github.com/binary-braids/kubernetes-homelab/commit/576de0027c458e67a1550d22a0391664b6b19256))
-
-
-
-## [0.6.2](https://github.com/binary-braids/kubernetes-homelab/compare/v0.6.1...v0.6.2) (2025-04-13)
-
-
-### Bug Fixes
-
-* enable traefik resource in kustomization.yaml ([52997c1](https://github.com/binary-braids/kubernetes-homelab/commit/52997c1dc0e640b41187bd0daeb381868d11e631))
 
 
 
