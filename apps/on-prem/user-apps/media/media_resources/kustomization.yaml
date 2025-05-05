@@ -3,4 +3,5 @@ kind: Kustomization
 
 resources:
 - ingress.yaml
+- qbittorrent_ingress.yaml
 - namespace.yaml
