@@ -1,3 +1,12 @@
+## [0.10.1](https://github.com/binary-braids/kubernetes-homelab/compare/v0.10.0...v0.10.1) (2025-05-05)
+
+
+### Bug Fixes
+
+* update ingress class for jellyfin and rename qbittorrent ingress ([90d2009](https://github.com/binary-braids/kubernetes-homelab/commit/90d2009e536749412013645f0b2021ecde999b0d))
+
+
+
 # [0.10.0](https://github.com/binary-braids/kubernetes-homelab/compare/v0.9.5...v0.10.0) (2025-05-05)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * correct app selector from radarr to readarr in service configuration ([f708441](https://github.com/binary-braids/kubernetes-homelab/commit/f7084411c20db43d3161eac5a11de61930aad061))
-
-
-
-# [0.8.0](https://github.com/binary-braids/kubernetes-homelab/compare/v0.7.0...v0.8.0) (2025-05-04)
-
-
-### Features
-
-* add Readarr service to ingress configuration ([a24c073](https://github.com/binary-braids/kubernetes-homelab/commit/a24c073aaa2680dec966323b582d1fc231dbe6fd))
 
 
 
