@@ -1,3 +1,12 @@
+## [0.9.4](https://github.com/binary-braids/kubernetes-homelab/compare/v0.9.3...v0.9.4) (2025-05-05)
+
+
+### Bug Fixes
+
+* remove middleware.yaml from kustomization resources ([d8a2237](https://github.com/binary-braids/kubernetes-homelab/commit/d8a22370104fef76f456e988817ab864322f562a))
+
+
+
 ## [0.9.3](https://github.com/binary-braids/kubernetes-homelab/compare/v0.9.2...v0.9.3) (2025-05-05)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * update cert-manager configuration and remove unused prod-clusterissuer resource ([ed0273b](https://github.com/binary-braids/kubernetes-homelab/commit/ed0273b4669ee626bb76dd42577ca8d27f1c7b99))
-
-
-
-## [0.6.4](https://github.com/binary-braids/kubernetes-homelab/compare/v0.6.3...v0.6.4) (2025-04-13)
-
-
-### Bug Fixes
-
-* restructure cert-manager resources and remove unused files ([d7c7573](https://github.com/binary-braids/kubernetes-homelab/commit/d7c7573cfdd012130f46c35ccf0d517675687c12))
 
 
 
