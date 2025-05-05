@@ -1,3 +1,12 @@
+## [0.8.2](https://github.com/binary-braids/kubernetes-homelab/compare/v0.8.1...v0.8.2) (2025-05-05)
+
+
+### Bug Fixes
+
+* add externalTrafficPolicy to service configuration in ConfigMap ([9b660fb](https://github.com/binary-braids/kubernetes-homelab/commit/9b660fb345e5af525eef0ba9ab0b2d51355077cb))
+
+
+
 ## [0.8.1](https://github.com/binary-braids/kubernetes-homelab/compare/v0.8.0...v0.8.1) (2025-05-04)
 
 
@@ -76,15 +85,6 @@
 ### Features
 
 * refactor oracle cloud cluster apps ([e3472e6](https://github.com/binary-braids/kubernetes-homelab/commit/e3472e69fdd062de71cfe49b8a6149b739047a2a))
-
-
-
-# [0.5.0](https://github.com/binary-braids/kubernetes-homelab/compare/v0.4.2...v0.5.0) (2025-04-12)
-
-
-### Features
-
-* **minecraft:** restructure Minecraft resources and add creative and survival configurations ([ddcd19a](https://github.com/binary-braids/kubernetes-homelab/commit/ddcd19a66d86a262ea44db6beb0860103448c2a2))
 
 
 
