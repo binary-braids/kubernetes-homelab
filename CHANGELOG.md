@@ -1,3 +1,12 @@
+# [0.9.0](https://github.com/binary-braids/kubernetes-homelab/compare/v0.8.2...v0.9.0) (2025-05-05)
+
+
+### Features
+
+* update nginx configuration and add necessary resources for deployment ([b9c2bfc](https://github.com/binary-braids/kubernetes-homelab/commit/b9c2bfc72d37bcd7f5fc047a28c94ecfa17903f4))
+
+
+
 ## [0.8.2](https://github.com/binary-braids/kubernetes-homelab/compare/v0.8.1...v0.8.2) (2025-05-05)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * update paths in longhorn kustomization files and remove unused kustomization.yaml ([3d58429](https://github.com/binary-braids/kubernetes-homelab/commit/3d58429e6894e78901eff9609172cc838dcfc558))
-
-
-
-# [0.6.0](https://github.com/binary-braids/kubernetes-homelab/compare/v0.5.0...v0.6.0) (2025-04-12)
-
-
-### Features
-
-* refactor oracle cloud cluster apps ([e3472e6](https://github.com/binary-braids/kubernetes-homelab/commit/e3472e69fdd062de71cfe49b8a6149b739047a2a))
 
 
 
