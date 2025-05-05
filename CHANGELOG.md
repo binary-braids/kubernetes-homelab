@@ -1,3 +1,12 @@
+## [0.10.4](https://github.com/binary-braids/kubernetes-homelab/compare/v0.10.3...v0.10.4) (2025-05-05)
+
+
+### Bug Fixes
+
+* **configmap:** correct indentation for externalTrafficPolicy in nginx ConfigMap ([0e641a2](https://github.com/binary-braids/kubernetes-homelab/commit/0e641a241843b2b58af0a33b8c76e7f15905fb1d))
+
+
+
 ## [0.10.3](https://github.com/binary-braids/kubernetes-homelab/compare/v0.10.2...v0.10.3) (2025-05-05)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * change ingress class from traefik to nginx in longhorn ingress configuration ([8a39590](https://github.com/binary-braids/kubernetes-homelab/commit/8a39590404791913169e7be1ebb43d5205224fbf))
-
-
-
-# [0.9.0](https://github.com/binary-braids/kubernetes-homelab/compare/v0.8.2...v0.9.0) (2025-05-05)
-
-
-### Features
-
-* update nginx configuration and add necessary resources for deployment ([b9c2bfc](https://github.com/binary-braids/kubernetes-homelab/commit/b9c2bfc72d37bcd7f5fc047a28c94ecfa17903f4))
 
 
 
