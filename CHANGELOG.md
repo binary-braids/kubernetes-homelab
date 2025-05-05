@@ -1,3 +1,12 @@
+# [0.10.0](https://github.com/binary-braids/kubernetes-homelab/compare/v0.9.5...v0.10.0) (2025-05-05)
+
+
+### Features
+
+* add qbittorrent ingress configuration and update kustomization ([298e425](https://github.com/binary-braids/kubernetes-homelab/commit/298e4257d4e488762b4677e4ea967410fa2aefef))
+
+
+
 ## [0.9.5](https://github.com/binary-braids/kubernetes-homelab/compare/v0.9.4...v0.9.5) (2025-05-05)
 
 
@@ -76,15 +85,6 @@
 ### Features
 
 * add Readarr service to ingress configuration ([a24c073](https://github.com/binary-braids/kubernetes-homelab/commit/a24c073aaa2680dec966323b582d1fc231dbe6fd))
-
-
-
-# [0.7.0](https://github.com/binary-braids/kubernetes-homelab/compare/v0.6.5...v0.7.0) (2025-05-04)
-
-
-### Features
-
-* add Readarr application configuration with persistent volume claim, service, and stateful set ([a5787b2](https://github.com/binary-braids/kubernetes-homelab/commit/a5787b211c009f947c34593ee05b27c57e4017a3))
 
 
 
