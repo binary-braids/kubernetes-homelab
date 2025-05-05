@@ -9,3 +9,4 @@ data:
           kind: DaemonSet
         service:
           loadBalancerIP: 10.4.20.51
+          externalTrafficPolicy: Local
