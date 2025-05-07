@@ -11,15 +11,19 @@
   ],
   "packageRules": [
     {
-      "matchDepTypes": ["devDependencies"],
+      "matchDepTypes": [
+        "devDependencies"
+      ],
       "automerge": true
     }
   ],
   "kubernetes": {
-    "fileMatch": ["apps/.+\\.yaml$"]
+    "managerFilePatterns": [
+      "/apps/.+\\.yaml$/"
+    ]
   },
   "automergeSchedule": [
-      "after 2am",
-      "before 5am"
+    "after 2am",
+    "before 5am"
   ]
 }
