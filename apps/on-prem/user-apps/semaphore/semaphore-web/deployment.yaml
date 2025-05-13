@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: semaphore
-        image: ghcr.io/binary-braids/ansible-semaphore:3ef71da7ad70ca385c07348eb984799adb8502fa@sha256:72feaeb735bffbe0f037d04b2d30f2bfd0e718b0852a7c9537dfd726889e2cd3
+        image: ghcr.io/binary-braids/ansible-semaphore:3ef71da7ad70ca385c07348eb984799adb8502fa@sha256:62cfa188c4ae36f0f1e043df27984ec0e24f47022c653519151f99cb27b5327c
         imagePullPolicy: Always
         resources:
           limits:
