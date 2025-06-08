@@ -3,6 +3,6 @@ kind: Kustomization
 
 resources:
 - ai
-- emulatorjs
+#- emulatorjs
 #- freshrss
 #- zabbix
