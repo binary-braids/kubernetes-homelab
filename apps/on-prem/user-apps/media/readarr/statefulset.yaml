@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: readarr
-        image: lscr.io/linuxserver/readarr:develop
+        image: lscr.io/linuxserver/readarr:develop@sha256:d71c575745ab4579ae0dbb4f91244cf9a74d7085d28a927218146466f8e6418c
         ports:
         - containerPort: 8787
         env:
