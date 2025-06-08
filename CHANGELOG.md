@@ -1,3 +1,12 @@
+## [0.10.5](https://github.com/binary-braids/kubernetes-homelab/compare/v0.10.4...v0.10.5) (2025-06-08)
+
+
+### Bug Fixes
+
+* **ingress:** update host in Ingress configuration to chat.binarybraids.com ([621c594](https://github.com/binary-braids/kubernetes-homelab/commit/621c594de553b4e9297da604cdd59e7a985cc40a))
+
+
+
 ## [0.10.4](https://github.com/binary-braids/kubernetes-homelab/compare/v0.10.3...v0.10.4) (2025-05-05)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * update nginx ConfigMap structure to correctly nest controller settings ([12b47eb](https://github.com/binary-braids/kubernetes-homelab/commit/12b47eb1a285c6d2c8fffc994b2f5cb37b4f2aa3))
-
-
-
-## [0.9.1](https://github.com/binary-braids/kubernetes-homelab/compare/v0.9.0...v0.9.1) (2025-05-05)
-
-
-### Bug Fixes
-
-* change ingress class from traefik to nginx in longhorn ingress configuration ([8a39590](https://github.com/binary-braids/kubernetes-homelab/commit/8a39590404791913169e7be1ebb43d5205224fbf))
 
 
 
