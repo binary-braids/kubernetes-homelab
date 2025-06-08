@@ -1,3 +1,12 @@
+## [0.10.6](https://github.com/binary-braids/kubernetes-homelab/compare/v0.10.5...v0.10.6) (2025-06-08)
+
+
+### Bug Fixes
+
+* **kustomization:** uncomment emulatorjs resource in user-apps kustomization ([d7b994f](https://github.com/binary-braids/kubernetes-homelab/commit/d7b994f70f72bccd7b02b1a99f27fbbdb1272f22))
+
+
+
 ## [0.10.5](https://github.com/binary-braids/kubernetes-homelab/compare/v0.10.4...v0.10.5) (2025-06-08)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * change ingress class from traefik to nginx in multiple ingress configurations ([b09d9d5](https://github.com/binary-braids/kubernetes-homelab/commit/b09d9d5d352a5af3809ddf25100f6e14be541c52))
-
-
-
-## [0.9.2](https://github.com/binary-braids/kubernetes-homelab/compare/v0.9.1...v0.9.2) (2025-05-05)
-
-
-### Bug Fixes
-
-* update nginx ConfigMap structure to correctly nest controller settings ([12b47eb](https://github.com/binary-braids/kubernetes-homelab/commit/12b47eb1a285c6d2c8fffc994b2f5cb37b4f2aa3))
 
 
 
