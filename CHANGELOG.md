@@ -1,3 +1,12 @@
+## [0.10.8](https://github.com/binary-braids/kubernetes-homelab/compare/v0.10.7...v0.10.8) (2025-06-08)
+
+
+### Bug Fixes
+
+* **persistentvolumeclaim:** increase storage request from 1Gi to 2Gi ([c73fb90](https://github.com/binary-braids/kubernetes-homelab/commit/c73fb9049ffe4857029d37603a5fd60b7cfd3357))
+
+
+
 ## [0.10.7](https://github.com/binary-braids/kubernetes-homelab/compare/v0.10.6...v0.10.7) (2025-06-08)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * update qbittorrent path to use regex for improved routing ([f227b43](https://github.com/binary-braids/kubernetes-homelab/commit/f227b43d060dc6e81596a7704178e824de7380e9))
-
-
-
-## [0.9.4](https://github.com/binary-braids/kubernetes-homelab/compare/v0.9.3...v0.9.4) (2025-05-05)
-
-
-### Bug Fixes
-
-* remove middleware.yaml from kustomization resources ([d8a2237](https://github.com/binary-braids/kubernetes-homelab/commit/d8a22370104fef76f456e988817ab864322f562a))
 
 
 
