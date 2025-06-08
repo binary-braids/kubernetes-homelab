@@ -1,3 +1,12 @@
+## [0.10.7](https://github.com/binary-braids/kubernetes-homelab/compare/v0.10.6...v0.10.7) (2025-06-08)
+
+
+### Bug Fixes
+
+* **persistentvolumeclaim:** increase storage request from 500Mi to 1Gi ([88d5754](https://github.com/binary-braids/kubernetes-homelab/commit/88d5754d4385456204b9d0e8012f0bf4c56c51a1))
+
+
+
 ## [0.10.6](https://github.com/binary-braids/kubernetes-homelab/compare/v0.10.5...v0.10.6) (2025-06-08)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * remove middleware.yaml from kustomization resources ([d8a2237](https://github.com/binary-braids/kubernetes-homelab/commit/d8a22370104fef76f456e988817ab864322f562a))
-
-
-
-## [0.9.3](https://github.com/binary-braids/kubernetes-homelab/compare/v0.9.2...v0.9.3) (2025-05-05)
-
-
-### Bug Fixes
-
-* change ingress class from traefik to nginx in multiple ingress configurations ([b09d9d5](https://github.com/binary-braids/kubernetes-homelab/commit/b09d9d5d352a5af3809ddf25100f6e14be541c52))
 
 
 
