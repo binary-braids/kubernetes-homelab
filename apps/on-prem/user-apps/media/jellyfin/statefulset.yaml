@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: jellyfin
-        image: lscr.io/linuxserver/jellyfin:latest@sha256:3c967e55bed1b36332629e1896e9f2ef82e176bd19f495838deef4e4bbdaed05
+        image: lscr.io/linuxserver/jellyfin:latest@sha256:615b294ebdc3508e1529ff20f6ff2ba882c9a1abfee6dcedd2ed9e6f2243521c
         ports:
         - containerPort: 8096
         env:
