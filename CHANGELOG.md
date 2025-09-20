@@ -1,3 +1,12 @@
+## [0.10.9](https://github.com/binary-braids/kubernetes-homelab/compare/v0.10.8...v0.10.9) (2025-09-20)
+
+
+### Bug Fixes
+
+* remove readarr container ([cce7099](https://github.com/binary-braids/kubernetes-homelab/commit/cce70994db43d52e6a9831796a11864464dc7fff))
+
+
+
 ## [0.10.8](https://github.com/binary-braids/kubernetes-homelab/compare/v0.10.7...v0.10.8) (2025-06-08)
 
 
@@ -76,15 +85,6 @@
 ### Features
 
 * add qbittorrent ingress configuration and update kustomization ([298e425](https://github.com/binary-braids/kubernetes-homelab/commit/298e4257d4e488762b4677e4ea967410fa2aefef))
-
-
-
-## [0.9.5](https://github.com/binary-braids/kubernetes-homelab/compare/v0.9.4...v0.9.5) (2025-05-05)
-
-
-### Bug Fixes
-
-* update qbittorrent path to use regex for improved routing ([f227b43](https://github.com/binary-braids/kubernetes-homelab/commit/f227b43d060dc6e81596a7704178e824de7380e9))
 
 
 
