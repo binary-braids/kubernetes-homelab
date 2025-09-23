@@ -1,3 +1,12 @@
+## [0.10.10](https://github.com/binary-braids/kubernetes-homelab/compare/v0.10.9...v0.10.10) (2025-09-23)
+
+
+### Bug Fixes
+
+* increase radarr pvc volume size ([d51afd5](https://github.com/binary-braids/kubernetes-homelab/commit/d51afd511286b6e51ac64ef7a7e087182c9e4c57))
+
+
+
 ## [0.10.9](https://github.com/binary-braids/kubernetes-homelab/compare/v0.10.8...v0.10.9) (2025-09-20)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * update ingress class for jellyfin and rename qbittorrent ingress ([90d2009](https://github.com/binary-braids/kubernetes-homelab/commit/90d2009e536749412013645f0b2021ecde999b0d))
-
-
-
-# [0.10.0](https://github.com/binary-braids/kubernetes-homelab/compare/v0.9.5...v0.10.0) (2025-05-05)
-
-
-### Features
-
-* add qbittorrent ingress configuration and update kustomization ([298e425](https://github.com/binary-braids/kubernetes-homelab/commit/298e4257d4e488762b4677e4ea967410fa2aefef))
 
 
 
