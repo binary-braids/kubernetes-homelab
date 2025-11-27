@@ -10,5 +10,5 @@ data:
           defaultSettings:
             storageMinimalAvailablePercentage: 10
           defaultBackupStore:
-            backupTarget: s3://longhorn-backups@homelab/
+            backupTarget: s3://longhorn-backups@binarybraids/
             backupTargetCredentialSecret: backup-secret
