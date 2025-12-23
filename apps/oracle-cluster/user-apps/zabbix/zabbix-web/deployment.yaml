@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: zabbix-web
-        image: zabbix/zabbix-web-apache-pgsql@sha256:3afbee430ba29f683a34485314811bb36c096be613038fbb9d3bcc4b9e481b2d
+        image: zabbix/zabbix-web-apache-pgsql@sha256:9b5ad53c684c9f5d7b15c626e22e3d2c97c2b0b2b05ce811d1a8fe42416cd01b
         ports:
         - containerPort: 8080
         env:
