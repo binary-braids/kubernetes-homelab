@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: semaphore-mysql
-        image: mysql:8.4@sha256:dab7049abafe3a0e12cbe5e49050cf149881c0cd9665c289e5808b9dad39c9e0
+        image: mysql:9.5@sha256:5ca0a273ed28c73acaef91da8bf1eca3711bee94bce4c378d42846375e645a72
         imagePullPolicy: Always
         ports:
         - containerPort: 3306
