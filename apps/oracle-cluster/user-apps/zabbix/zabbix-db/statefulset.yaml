@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: zabbix-postgres
-        image: postgres:16.3@sha256:46aa2ee5d664b275f05d1a963b30fff60fb422b4b594d509765c42db46d48881
+        image: postgres:16.12@sha256:e4842c8a99ca99339e1693e6fe5fe62c7becb31991f066f989047dfb2fbf47af
         ports:
         - containerPort: 5432
         env:
