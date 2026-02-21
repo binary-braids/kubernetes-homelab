@@ -24,7 +24,7 @@ jobs:
         uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5
 
       - name: Map Secrets to Environment Variables 🗺️ 
-        uses: oNaiPs/secrets-to-env-action@ec46a22bfc9b37e014b627b3208b07eb8909ea0f # v1.5
+        uses: oNaiPs/secrets-to-env-action@be0f849b5f57bce2c73624f006578c3b16e98e0c # v1.7
         with:
             secrets: ${{ toJSON(secrets) }}        
 
