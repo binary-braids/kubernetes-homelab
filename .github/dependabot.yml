@@ -1,9 +1,19 @@
 version: 2
 updates:
-  - package-ecosystem: "docker-compose" # See documentation for possible values
+  - package-ecosystem: "docker-compose"
     directories:
       - "**/*"
     schedule:
       interval: "weekly"
     exclude-paths:
       - "**/*.sops.*"
+      - "**/sops.yaml"
+  
+  - package-ecosystem: "gitops"
+    directories:
+      - "**/*"
+    schedule:
+      interval: "weekly"
+    exclude-paths:
+      - "**/*.sops.*"
+      - "**/sops.yaml"
