@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: zabbix-web
-        image: zabbix/zabbix-web-apache-mysql:ubuntu-7.0-latest@sha256:524070fe86612d1e46c0dc8e7b634f43648968e1ad9bcb22c37ad87843ac2fda
+        image: zabbix/zabbix-web-apache-mysql:ubuntu-7.0-latest@sha256:895f7d5d77b67873a46d72ae83697f9631e1d6d8d73f107bc4b819e27eb4aae5
         ports:
         - containerPort: 8080
         env:
