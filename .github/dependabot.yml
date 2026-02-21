@@ -2,18 +2,15 @@ version: 2
 updates:
   - package-ecosystem: "docker-compose"
     directories:
-      - "**/*"
+      - "/apps/*"
     schedule:
       interval: "weekly"
     exclude-paths:
       - "**/*.sops.*"
       - "**/sops.yaml"
   
-  - package-ecosystem: "gitops"
+  - package-ecosystem: "terraform"
     directories:
-      - "**/*"
+      - "/terraform/*"
     schedule:
       interval: "weekly"
-    exclude-paths:
-      - "**/*.sops.*"
-      - "**/sops.yaml"
