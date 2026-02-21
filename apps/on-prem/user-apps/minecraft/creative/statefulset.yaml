@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: minecraft-creative
-        image: itzg/minecraft-bedrock-server:2025.9.0@sha256:5db52aa35919573eaa4f2d8e0f934aab3e306ab66080d642d4d22da988fe2463
+        image: itzg/minecraft-bedrock-server:2026.2.0@sha256:100df9e09dd658261f9d657ef8b7d39d284a0ddb80bb1db7421b4d55e0684e28
         imagePullPolicy: Always
         ports:
         - containerPort: 19132
