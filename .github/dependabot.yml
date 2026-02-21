@@ -2,7 +2,7 @@ version: 2
 updates:
   - package-ecosystem: "docker-compose"
     directories:
-      - "/apps/*"
+      - "./apps/*"
     schedule:
       interval: "weekly"
     exclude-paths:
@@ -11,6 +11,6 @@ updates:
   
   - package-ecosystem: "terraform"
     directories:
-      - "/terraform/*"
+      - "./terraform/*"
     schedule:
       interval: "weekly"
