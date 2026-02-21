@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: freshrss
-        image: linuxserver/freshrss:latest@sha256:12e07317c30cde13b12e8880b563c2b0dca4528ab8a08da1ea1686c96bfc7e48
+        image: linuxserver/freshrss:latest@sha256:5af0875104eafb11298f7b2614e4216628d3735382e8b356bdb1c060bb8d9de9
         ports:
           - containerPort: 80
             protocol: TCP
