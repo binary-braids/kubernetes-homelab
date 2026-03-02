@@ -25,5 +25,5 @@ spec:
       retries: 3
   valuesFrom:
     - kind: ConfigMap
-      name: values
+      name: traefik-values
       valuesKey: values.yaml

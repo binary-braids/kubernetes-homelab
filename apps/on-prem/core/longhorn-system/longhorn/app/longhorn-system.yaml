@@ -27,5 +27,5 @@ spec:
       retries: 3
   valuesFrom:
     - kind: ConfigMap
-      name: values
+      name: longhorn-values
       valuesKey: values.yaml
