@@ -8,3 +8,4 @@ resources:
 - namespace.yaml
 - certificate.yaml
 - clusterissuer.sops.yaml
+- referencegrant.yaml
