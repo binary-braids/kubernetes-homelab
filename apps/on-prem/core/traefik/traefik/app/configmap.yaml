@@ -10,3 +10,27 @@ data:
         service:
           loadBalancerIP: 10.4.20.51
           externalTrafficPolicy: Local
+        providers:
+          kubernetesGateway:
+            enabled:true
+        gateway:
+          enabled: true
+          name: traefik-gateway
+          listeners:
+            web:
+              port: 80
+              protocol: HTTP
+              namespacePolicy:
+                from: All
+            websecure:
+              port: 443
+              protocol: HTTPS
+              namespacePolicy:
+                from: All
+              tls:
+                certificateRefs:
+                - kind: Secret
+                  name: letsencrypt-prod
+        gatewayClass:
+          enabled: true
+          name: traefik-gateway-class
