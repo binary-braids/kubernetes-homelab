@@ -5,5 +5,4 @@ resources:
 - longhorn-system
 - cert-manager
 - monitoring
-#- nginx
 - traefik

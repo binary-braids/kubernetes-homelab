@@ -1,0 +1,57 @@
+apiVersion: gateway.networking.k8s.io/v1
+kind: HTTPRoute
+metadata:
+  name: media-httproute
+  namespace: media
+spec:
+  parentRefs:
+  - name: traefik-gateway
+    namespace: traefik
+  hostnames:
+  - media.binarybraids.com
+  rules:
+    - matches:
+      - path:
+          type: PathPrefix
+          value: /sonarr
+      backendRefs:
+      - kind: Service
+        name: sonarr-service
+        namespace: media
+        port: 8989
+    - matches:
+      - path:
+          type: PathPrefix
+          value: /radarr
+      backendRefs:
+      - kind: Service
+        name: radarr-service
+        namespace: media
+        port: 7878
+    - matches:
+      - path:
+          type: PathPrefix
+          value: /prowlarr
+      backendRefs:
+      - kind: Service
+        name: prowlarr-service
+        namespace: media
+        port: 9696
+    - matches:
+      - path:
+          type: PathPrefix
+          value: /bazarr
+      backendRefs:
+      - kind: Service
+        name: bazarr-service
+        namespace: media
+        port: 6767
+    - matches:
+      - path:
+          type: PathPrefix
+          value: /qbittorrent
+      backendRefs:
+      - kind: Service
+        name: qbittorrent-service
+        namespace: media
+        port: 8080

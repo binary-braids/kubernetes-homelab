@@ -7,6 +7,6 @@ metadata:
 resources:
 - backup-secret.sops.yaml
 - configmap.yaml
-- ingress.yaml
+- httproute.yaml
 - longhorn-system-source.yaml
 - longhorn-system.yaml

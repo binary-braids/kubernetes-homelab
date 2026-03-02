@@ -1,8 +1,0 @@
-kind: Namespace
-apiVersion: v1
-metadata:
-  name: nginx
-  labels:
-    name: nginx
-    goldilocks.fairwinds.com/enabled: "true"
-    kustomize.toolkit.fluxcd.io/prune: "disabled"
