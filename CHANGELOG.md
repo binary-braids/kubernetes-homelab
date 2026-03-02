@@ -1,3 +1,12 @@
+## [0.12.1](https://github.com/binary-braids/kubernetes-homelab/compare/v0.12.0...v0.12.1) (2026-03-02)
+
+
+### Bug Fixes
+
+* update secret name for wildcard certificate in Traefik config ([9f7d5fc](https://github.com/binary-braids/kubernetes-homelab/commit/9f7d5fcf72f6401224716b3e2fe15ef865f6b119))
+
+
+
 # [0.12.0](https://github.com/binary-braids/kubernetes-homelab/compare/v0.11.1...v0.12.0) (2026-03-02)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * remove readarr container ([cce7099](https://github.com/binary-braids/kubernetes-homelab/commit/cce70994db43d52e6a9831796a11864464dc7fff))
-
-
-
-## [0.10.8](https://github.com/binary-braids/kubernetes-homelab/compare/v0.10.7...v0.10.8) (2025-06-08)
-
-
-### Bug Fixes
-
-* **persistentvolumeclaim:** increase storage request from 1Gi to 2Gi ([c73fb90](https://github.com/binary-braids/kubernetes-homelab/commit/c73fb9049ffe4857029d37603a5fd60b7cfd3357))
 
 
 
