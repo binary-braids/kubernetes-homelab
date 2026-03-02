@@ -1,3 +1,12 @@
+## [0.12.2](https://github.com/binary-braids/kubernetes-homelab/compare/v0.12.1...v0.12.2) (2026-03-02)
+
+
+### Bug Fixes
+
+* update Longhorn chart version to 1.9.2 ([213e27a](https://github.com/binary-braids/kubernetes-homelab/commit/213e27a19aabd8f3d67b20660a15468b117adf20))
+
+
+
 ## [0.12.1](https://github.com/binary-braids/kubernetes-homelab/compare/v0.12.0...v0.12.1) (2026-03-02)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * increase radarr pvc volume size ([d51afd5](https://github.com/binary-braids/kubernetes-homelab/commit/d51afd511286b6e51ac64ef7a7e087182c9e4c57))
-
-
-
-## [0.10.9](https://github.com/binary-braids/kubernetes-homelab/compare/v0.10.8...v0.10.9) (2025-09-20)
-
-
-### Bug Fixes
-
-* remove readarr container ([cce7099](https://github.com/binary-braids/kubernetes-homelab/commit/cce70994db43d52e6a9831796a11864464dc7fff))
 
 
 
