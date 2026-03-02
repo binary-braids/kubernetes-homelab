@@ -29,7 +29,7 @@ data:
     tlsStore:
       default:
         defaultCertificate:
-          secretName: wildcard-prod-cert
+          secretName: wildcard-prod-cert-tls
     gateway:
       enabled: true
       name: traefik-gateway
@@ -41,8 +41,8 @@ data:
           protocol: HTTPS
           port: 8443
           certificateRefs:
-            - kind: Certificate
-              name: wildcard-prod-cert
+            - kind: Secret
+              name: wildcard-prod-cert-tls
     gatewayClass:
       enabled: true
       name: traefik-gateway-class
