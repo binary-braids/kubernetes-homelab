@@ -2,7 +2,7 @@ apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
   name: wildcard-prod-cert
-  namespace: nginx
+  namespace: traefik
 spec:
   secretName: wildcard-prod-cert-tls
   dnsNames:
