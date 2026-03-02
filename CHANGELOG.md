@@ -1,3 +1,12 @@
+## [0.11.1](https://github.com/binary-braids/kubernetes-homelab/compare/v0.11.0...v0.11.1) (2026-03-02)
+
+
+### Bug Fixes
+
+* update reference grant and configmap to use Certificate instead of Secret ([9c1e7d7](https://github.com/binary-braids/kubernetes-homelab/commit/9c1e7d77ebe4783f28573402a93ccc5b511614f1))
+
+
+
 # [0.11.0](https://github.com/binary-braids/kubernetes-homelab/compare/v0.10.14...v0.11.0) (2026-03-02)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * **persistentvolumeclaim:** increase storage request from 500Mi to 1Gi ([88d5754](https://github.com/binary-braids/kubernetes-homelab/commit/88d5754d4385456204b9d0e8012f0bf4c56c51a1))
-
-
-
-## [0.10.6](https://github.com/binary-braids/kubernetes-homelab/compare/v0.10.5...v0.10.6) (2025-06-08)
-
-
-### Bug Fixes
-
-* **kustomization:** uncomment emulatorjs resource in user-apps kustomization ([d7b994f](https://github.com/binary-braids/kubernetes-homelab/commit/d7b994f70f72bccd7b02b1a99f27fbbdb1272f22))
 
 
 
