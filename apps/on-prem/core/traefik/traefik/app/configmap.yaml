@@ -13,22 +13,38 @@ data:
         providers:
           kubernetesGateway:
             enabled: true
+        ports:
+          web:
+            http:
+              redirections:
+                entryPoint:
+                  to: websecure
+                  scheme: https
+                  permanent: true
+          websecure:
+            http:
+              transport:
+                respondingTimeouts:
+                  readTimeout: 180s  
+        tlsStore:
+          default:
+            defaultCertificate:
+              secretName: letsencrypt-prod
         gateway:
           enabled: true
           name: traefik-gateway
+          namespacePolicy: All
           listeners:
-            web:
-              protocol: HTTP
-              namespacePolicy:
-                from: All
             websecure:
-              protocol: HTTPS
               namespacePolicy:
                 from: All
+              protocol: HTTPS
+              port: 8443
               tls:
                 certificateRefs:
                 - kind: Secret
                   name: letsencrypt-prod
+                  namespace: cert-manager
         gatewayClass:
           enabled: true
           name: traefik-gateway-class
