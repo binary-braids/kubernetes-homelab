@@ -1,3 +1,12 @@
+## [0.12.3](https://github.com/binary-braids/kubernetes-homelab/compare/v0.12.2...v0.12.3) (2026-03-02)
+
+
+### Bug Fixes
+
+* update Longhorn chart version to 1.10.2 ([34201ce](https://github.com/binary-braids/kubernetes-homelab/commit/34201ced27e824d548e7230e41450ae20f96cbc2))
+
+
+
 ## [0.12.2](https://github.com/binary-braids/kubernetes-homelab/compare/v0.12.1...v0.12.2) (2026-03-02)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * correct traefik helm chart values ([f7e4e1e](https://github.com/binary-braids/kubernetes-homelab/commit/f7e4e1eb3413074419f2dfadd21d1df919b72a2e))
-
-
-
-## [0.10.10](https://github.com/binary-braids/kubernetes-homelab/compare/v0.10.9...v0.10.10) (2025-09-23)
-
-
-### Bug Fixes
-
-* increase radarr pvc volume size ([d51afd5](https://github.com/binary-braids/kubernetes-homelab/commit/d51afd511286b6e51ac64ef7a7e087182c9e4c57))
 
 
 
