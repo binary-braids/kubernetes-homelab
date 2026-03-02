@@ -1,50 +1,49 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-    name: values
-    namespace: flux-system
+  name: values
+  namespace: flux-system
 data:
-    values.yaml: |-
-        deployment:
-          kind: DaemonSet
-        service:
-          loadBalancerIP: 10.4.20.51
-          externalTrafficPolicy: Local
-        providers:
-          kubernetesGateway:
-            enabled: true
-        ports:
-          web:
-            http:
-              redirections:
-                entryPoint:
-                  to: websecure
-                  scheme: https
-                  permanent: true
-          websecure:
-            http:
-              transport:
-                respondingTimeouts:
-                  readTimeout: 180s  
-        tlsStore:
-          default:
-            defaultCertificate:
-              secretName: letsencrypt-prod
-        gateway:
-          enabled: true
-          name: traefik-gateway
-          namespacePolicy: All
-          listeners:
-            websecure:
-              namespacePolicy:
-                from: All
-              protocol: HTTPS
-              port: 8443
-              tls:
-                certificateRefs:
-                - kind: Secret
-                  name: letsencrypt-prod
-                  namespace: cert-manager
-        gatewayClass:
-          enabled: true
-          name: traefik-gateway-class
+  values.yaml: |-
+    deployment:
+      kind: DaemonSet
+    service:
+      loadBalancerIP: 10.4.20.51
+      externalTrafficPolicy: Local
+    providers:
+      kubernetesGateway:
+        enabled: true
+    ports:
+      web:
+        http:
+          redirections:
+            entryPoint:
+              to: websecure
+              scheme: https
+              permanent: true
+      websecure:
+        http:
+          transport:
+            respondingTimeouts:
+              readTimeout: 180s  
+    tlsStore:
+      default:
+        defaultCertificate:
+          secretName: letsencrypt-prod
+    gateway:
+      enabled: true
+      name: traefik-gateway
+      namespacePolicy: All
+      listeners:
+        websecure:
+          namespacePolicy:
+            from: All
+          protocol: HTTPS
+          port: 8443
+          certificateRefs:
+            - kind: Secret
+              name: letsencrypt-prod
+              namespace: cert-manager
+    gatewayClass:
+      enabled: true
+      name: traefik-gateway-class
