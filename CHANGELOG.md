@@ -1,3 +1,12 @@
+## [0.10.13](https://github.com/binary-braids/kubernetes-homelab/compare/v0.10.12...v0.10.13) (2026-03-02)
+
+
+### Bug Fixes
+
+* correct traefik helmchart values ([8abf3ea](https://github.com/binary-braids/kubernetes-homelab/commit/8abf3ea66942ddccd0ec1b8bca592c9daf9390d1))
+
+
+
 ## [0.10.12](https://github.com/binary-braids/kubernetes-homelab/compare/v0.10.11...v0.10.12) (2026-03-02)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * **configmap:** correct indentation for externalTrafficPolicy in nginx ConfigMap ([0e641a2](https://github.com/binary-braids/kubernetes-homelab/commit/0e641a241843b2b58af0a33b8c76e7f15905fb1d))
-
-
-
-## [0.10.3](https://github.com/binary-braids/kubernetes-homelab/compare/v0.10.2...v0.10.3) (2025-05-05)
-
-
-### Bug Fixes
-
-* add externalTrafficPolicy to nginx ConfigMap ([99d8411](https://github.com/binary-braids/kubernetes-homelab/commit/99d841122531b74e8459ecdcf1aadb6095d0a5cf))
 
 
 
