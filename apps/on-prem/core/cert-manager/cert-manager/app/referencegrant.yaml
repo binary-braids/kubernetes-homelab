@@ -10,4 +10,4 @@ spec:
     namespace: traefik
   to:
   - group: ""
-    kind: Secret
+    kind: Certificate

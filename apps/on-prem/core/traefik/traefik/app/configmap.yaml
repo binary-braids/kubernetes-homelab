@@ -41,7 +41,7 @@ data:
           protocol: HTTPS
           port: 8443
           certificateRefs:
-            - kind: Secret
+            - kind: Certificate
               name: letsencrypt-prod
               namespace: cert-manager
     gatewayClass:
