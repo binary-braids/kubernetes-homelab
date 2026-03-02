@@ -3,6 +3,6 @@ kind: Kustomization
 
 resources:
 - persistentvolumeclaim.yaml
-- ingress.yaml
+- httproute.yaml
 - service.yaml
 - statefulset.yaml
