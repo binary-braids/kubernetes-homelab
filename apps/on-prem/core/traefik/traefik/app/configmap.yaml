@@ -12,7 +12,7 @@ data:
           externalTrafficPolicy: Local
         providers:
           kubernetesGateway:
-            enabled:true
+            enabled: true
         gateway:
           enabled: true
           name: traefik-gateway
