@@ -1,3 +1,12 @@
+# [0.12.0](https://github.com/binary-braids/kubernetes-homelab/compare/v0.11.1...v0.12.0) (2026-03-02)
+
+
+### Features
+
+* add HTTPRoute for kube-state-metrics in monitoring namespace ([cf7e278](https://github.com/binary-braids/kubernetes-homelab/commit/cf7e2783d660d56b7c42f3d0d73df77454da88fc))
+
+
+
 ## [0.11.1](https://github.com/binary-braids/kubernetes-homelab/compare/v0.11.0...v0.11.1) (2026-03-02)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * **persistentvolumeclaim:** increase storage request from 1Gi to 2Gi ([c73fb90](https://github.com/binary-braids/kubernetes-homelab/commit/c73fb9049ffe4857029d37603a5fd60b7cfd3357))
-
-
-
-## [0.10.7](https://github.com/binary-braids/kubernetes-homelab/compare/v0.10.6...v0.10.7) (2025-06-08)
-
-
-### Bug Fixes
-
-* **persistentvolumeclaim:** increase storage request from 500Mi to 1Gi ([88d5754](https://github.com/binary-braids/kubernetes-homelab/commit/88d5754d4385456204b9d0e8012f0bf4c56c51a1))
 
 
 
