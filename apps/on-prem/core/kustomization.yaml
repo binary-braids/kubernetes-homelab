@@ -6,4 +6,4 @@ resources:
 - cert-manager
 - monitoring
 #- nginx
-#- traefik
+- traefik
