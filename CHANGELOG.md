@@ -1,3 +1,12 @@
+## [0.10.11](https://github.com/binary-braids/kubernetes-homelab/compare/v0.10.10...v0.10.11) (2026-03-02)
+
+
+### Bug Fixes
+
+* correct traefik helm chart values ([f7e4e1e](https://github.com/binary-braids/kubernetes-homelab/commit/f7e4e1eb3413074419f2dfadd21d1df919b72a2e))
+
+
+
 ## [0.10.10](https://github.com/binary-braids/kubernetes-homelab/compare/v0.10.9...v0.10.10) (2025-09-23)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * change pathType to ImplementationSpecific for qbittorrent ingress ([0d89fb4](https://github.com/binary-braids/kubernetes-homelab/commit/0d89fb423e58696b300e8d1e90b227564c9965cc))
-
-
-
-## [0.10.1](https://github.com/binary-braids/kubernetes-homelab/compare/v0.10.0...v0.10.1) (2025-05-05)
-
-
-### Bug Fixes
-
-* update ingress class for jellyfin and rename qbittorrent ingress ([90d2009](https://github.com/binary-braids/kubernetes-homelab/commit/90d2009e536749412013645f0b2021ecde999b0d))
 
 
 
