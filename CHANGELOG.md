@@ -1,3 +1,12 @@
+# [0.11.0](https://github.com/binary-braids/kubernetes-homelab/compare/v0.10.14...v0.11.0) (2026-03-02)
+
+
+### Features
+
+* add reference grant for traefik gateway in cert-manager ([0f801a3](https://github.com/binary-braids/kubernetes-homelab/commit/0f801a30dc891091da781e634e06abf65fefd4cb))
+
+
+
 ## [0.10.14](https://github.com/binary-braids/kubernetes-homelab/compare/v0.10.13...v0.10.14) (2026-03-02)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * **kustomization:** uncomment emulatorjs resource in user-apps kustomization ([d7b994f](https://github.com/binary-braids/kubernetes-homelab/commit/d7b994f70f72bccd7b02b1a99f27fbbdb1272f22))
-
-
-
-## [0.10.5](https://github.com/binary-braids/kubernetes-homelab/compare/v0.10.4...v0.10.5) (2025-06-08)
-
-
-### Bug Fixes
-
-* **ingress:** update host in Ingress configuration to chat.binarybraids.com ([621c594](https://github.com/binary-braids/kubernetes-homelab/commit/621c594de553b4e9297da604cdd59e7a985cc40a))
 
 
 
