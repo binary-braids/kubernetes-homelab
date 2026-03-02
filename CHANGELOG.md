@@ -1,3 +1,12 @@
+## [0.10.14](https://github.com/binary-braids/kubernetes-homelab/compare/v0.10.13...v0.10.14) (2026-03-02)
+
+
+### Bug Fixes
+
+* change mealie to use httproute instead of ingress to test gateway api functionality ([d52b7d6](https://github.com/binary-braids/kubernetes-homelab/commit/d52b7d6b7b3390fadaed8cb5db2242c9469af3dd))
+
+
+
 ## [0.10.13](https://github.com/binary-braids/kubernetes-homelab/compare/v0.10.12...v0.10.13) (2026-03-02)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * **ingress:** update host in Ingress configuration to chat.binarybraids.com ([621c594](https://github.com/binary-braids/kubernetes-homelab/commit/621c594de553b4e9297da604cdd59e7a985cc40a))
-
-
-
-## [0.10.4](https://github.com/binary-braids/kubernetes-homelab/compare/v0.10.3...v0.10.4) (2025-05-05)
-
-
-### Bug Fixes
-
-* **configmap:** correct indentation for externalTrafficPolicy in nginx ConfigMap ([0e641a2](https://github.com/binary-braids/kubernetes-homelab/commit/0e641a241843b2b58af0a33b8c76e7f15905fb1d))
 
 
 
