@@ -1,3 +1,12 @@
+## [0.10.12](https://github.com/binary-braids/kubernetes-homelab/compare/v0.10.11...v0.10.12) (2026-03-02)
+
+
+### Bug Fixes
+
+* correct traefik helm chart values ([66d8cdf](https://github.com/binary-braids/kubernetes-homelab/commit/66d8cdf64c5f509295a382bdb7f518a4c81c21cd))
+
+
+
 ## [0.10.11](https://github.com/binary-braids/kubernetes-homelab/compare/v0.10.10...v0.10.11) (2026-03-02)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * add externalTrafficPolicy to nginx ConfigMap ([99d8411](https://github.com/binary-braids/kubernetes-homelab/commit/99d841122531b74e8459ecdcf1aadb6095d0a5cf))
-
-
-
-## [0.10.2](https://github.com/binary-braids/kubernetes-homelab/compare/v0.10.1...v0.10.2) (2025-05-05)
-
-
-### Bug Fixes
-
-* change pathType to ImplementationSpecific for qbittorrent ingress ([0d89fb4](https://github.com/binary-braids/kubernetes-homelab/commit/0d89fb423e58696b300e8d1e90b227564c9965cc))
 
 
 
