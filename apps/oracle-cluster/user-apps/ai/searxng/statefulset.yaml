@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: searxng
-        image: searxng/searxng:latest@sha256:83c8aeff4ea3ecf1b9ad7694dcba0e2ae1478650a17fb56aecb6adddeba2d7af
+        image: searxng/searxng:latest@sha256:3e11c8454e62de8b5cbb5ba7f5b9568a6eb3d40414af1a884d435bf79b3bfe9f
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
