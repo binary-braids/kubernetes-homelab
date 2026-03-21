@@ -1,3 +1,12 @@
+# [0.13.0](https://github.com/binary-braids/kubernetes-homelab/compare/v0.12.3...v0.13.0) (2026-03-21)
+
+
+### Features
+
+* Remove unused apps and Oracle Cluster configuration ([288bbbb](https://github.com/binary-braids/kubernetes-homelab/commit/288bbbb5de66f5869629166feea7e55a6437a90e))
+
+
+
 ## [0.12.3](https://github.com/binary-braids/kubernetes-homelab/compare/v0.12.2...v0.12.3) (2026-03-02)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * correct traefik helm chart values ([66d8cdf](https://github.com/binary-braids/kubernetes-homelab/commit/66d8cdf64c5f509295a382bdb7f518a4c81c21cd))
-
-
-
-## [0.10.11](https://github.com/binary-braids/kubernetes-homelab/compare/v0.10.10...v0.10.11) (2026-03-02)
-
-
-### Bug Fixes
-
-* correct traefik helm chart values ([f7e4e1e](https://github.com/binary-braids/kubernetes-homelab/commit/f7e4e1eb3413074419f2dfadd21d1df919b72a2e))
 
 
 
