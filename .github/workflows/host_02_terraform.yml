@@ -13,7 +13,7 @@ permissions:
 jobs:
   init_and_plan:
     name: Terraform Init and Plan
-    runs-on: gha-runner-scale-set
+    runs-on: Self-Hosted
 
     outputs:
       planExitcode: ${{ steps.terraformPlan.outputs.exitcode }}
@@ -32,11 +32,6 @@ jobs:
         uses: cschleiden/replace-tokens@4d5a042c84c3568b3858b7af9394923d2d5195c9 # v1.3
         with:
           files: '["./terraform/host_02/**/*"]'
-
-      - name: Install NodeJS 🖥️   
-        uses: actions/setup-node@6044e13b5dc448c55e2357c09f80417699197238 # v6
-        with:
-          node-version: 22
 
       - name: Install Terraform ⛰️
         uses: hashicorp/setup-terraform@b9cd54a3c349d3f38e8881555d616ced269862dd # v3
