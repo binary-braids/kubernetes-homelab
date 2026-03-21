@@ -7,8 +7,7 @@
     "data-tangles"
   ],
   "reviewers": [
-    "data-tangles",
-    "gemini-code-assist[bot]"
+    "data-tangles"
   ],
   "packageRules": [
     {
