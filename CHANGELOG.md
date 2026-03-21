@@ -1,3 +1,12 @@
+## [0.13.1](https://github.com/binary-braids/kubernetes-homelab/compare/v0.13.0...v0.13.1) (2026-03-21)
+
+
+### Bug Fixes
+
+* update runner type to Self-Hosted and remove NodeJS installation step ([cebd2f1](https://github.com/binary-braids/kubernetes-homelab/commit/cebd2f19d60b94a2e72149bde9b1a0fe420a8393))
+
+
+
 # [0.13.0](https://github.com/binary-braids/kubernetes-homelab/compare/v0.12.3...v0.13.0) (2026-03-21)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * correct traefik helmchart values ([8abf3ea](https://github.com/binary-braids/kubernetes-homelab/commit/8abf3ea66942ddccd0ec1b8bca592c9daf9390d1))
-
-
-
-## [0.10.12](https://github.com/binary-braids/kubernetes-homelab/compare/v0.10.11...v0.10.12) (2026-03-02)
-
-
-### Bug Fixes
-
-* correct traefik helm chart values ([66d8cdf](https://github.com/binary-braids/kubernetes-homelab/commit/66d8cdf64c5f509295a382bdb7f518a4c81c21cd))
 
 
 
