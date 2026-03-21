@@ -8,7 +8,7 @@
 
 # Kubernetes Homelab
 
-This repo contains all my config for my On-Prem and Oracle based k3s clusters. The clusters are backed by [Flux](https://fluxcd.io/) for GitOps and secrets are encrypted using [SOPS](https://github.com/mozilla/sops) with [Age](https://github.com/FiloSottile/age) encryption.
+This repo contains all my config for my On-Prem k3s cluster. The cluster is backed by [Flux](https://fluxcd.io/) for GitOps and secrets are encrypted using [SOPS](https://github.com/mozilla/sops) with [Age](https://github.com/FiloSottile/age) encryption.
 
 
 
@@ -22,12 +22,6 @@ The Git repository contains the following directories:
 📁 apps                     # Core and User Apps utilised within cluster
 📁 clusters                 # FluxCD files for applicable clusters
 ├─📁 on-prem-cluster
-│ ├─📁 apps
-│ ├─📁 core
-│ └─📁 flux-system
-├─📁 oracle cluster
-│ ├─📁 apps
-│ ├─📁 core
 │ └─📁 flux-system
 📁 terraform                # Terraform modules for Kubernetes node VM's
 ```
