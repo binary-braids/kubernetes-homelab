@@ -5,8 +5,4 @@ resources:
 - goldilocks
 - minecraft
 - mealie
-#- phpipam
-#- zabbix
 - media
-#- semaphore
-#- gh-actions-runner

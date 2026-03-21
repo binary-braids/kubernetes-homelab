@@ -1,7 +1,0 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: semaphore-configmap
-  namespace: semaphore
-data:
-  database_url: semaphore-mysql-service
