@@ -1,7 +1,0 @@
-kind: Namespace
-apiVersion: v1
-metadata:
-  name: zabbix
-  labels:
-    name: zabbix
-    goldilocks.fairwinds.com/enabled: "true"
