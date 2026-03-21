@@ -1,3 +1,12 @@
+## [0.13.3](https://github.com/binary-braids/kubernetes-homelab/compare/v0.13.2...v0.13.3) (2026-03-21)
+
+
+### Bug Fixes
+
+* update longhorn chart version to 1.11.1 ([92113ff](https://github.com/binary-braids/kubernetes-homelab/commit/92113ff36f3be8879959f113b9087c4924d299c5))
+
+
+
 ## [0.13.2](https://github.com/binary-braids/kubernetes-homelab/compare/v0.13.1...v0.13.2) (2026-03-21)
 
 
@@ -76,15 +85,6 @@
 ### Features
 
 * add reference grant for traefik gateway in cert-manager ([0f801a3](https://github.com/binary-braids/kubernetes-homelab/commit/0f801a30dc891091da781e634e06abf65fefd4cb))
-
-
-
-## [0.10.14](https://github.com/binary-braids/kubernetes-homelab/compare/v0.10.13...v0.10.14) (2026-03-02)
-
-
-### Bug Fixes
-
-* change mealie to use httproute instead of ingress to test gateway api functionality ([d52b7d6](https://github.com/binary-braids/kubernetes-homelab/commit/d52b7d6b7b3390fadaed8cb5db2242c9469af3dd))
 
 
 
