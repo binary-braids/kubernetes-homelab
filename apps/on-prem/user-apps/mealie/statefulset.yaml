@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: mealie
-        image: ghcr.io/mealie-recipes/mealie:v3.11.0@sha256:d99fc2844c04288526d6cbecc9ac1b6c32d8ea6054236d56857107bbaf70ea5c
+        image: ghcr.io/mealie-recipes/mealie:v3.13.1@sha256:4ee2b9e807627fac79eb7509bbf6577271747346e3d16208a0de939276ccaac2
         imagePullPolicy: Always
         resources:
           limits:
