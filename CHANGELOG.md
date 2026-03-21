@@ -1,3 +1,12 @@
+## [0.13.2](https://github.com/binary-braids/kubernetes-homelab/compare/v0.13.1...v0.13.2) (2026-03-21)
+
+
+### Bug Fixes
+
+* add newline character ([8e65cf5](https://github.com/binary-braids/kubernetes-homelab/commit/8e65cf571457f4857341f1b67734b374e77fac13))
+
+
+
 ## [0.13.1](https://github.com/binary-braids/kubernetes-homelab/compare/v0.13.0...v0.13.1) (2026-03-21)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * change mealie to use httproute instead of ingress to test gateway api functionality ([d52b7d6](https://github.com/binary-braids/kubernetes-homelab/commit/d52b7d6b7b3390fadaed8cb5db2242c9469af3dd))
-
-
-
-## [0.10.13](https://github.com/binary-braids/kubernetes-homelab/compare/v0.10.12...v0.10.13) (2026-03-02)
-
-
-### Bug Fixes
-
-* correct traefik helmchart values ([8abf3ea](https://github.com/binary-braids/kubernetes-homelab/commit/8abf3ea66942ddccd0ec1b8bca592c9daf9390d1))
 
 
 
