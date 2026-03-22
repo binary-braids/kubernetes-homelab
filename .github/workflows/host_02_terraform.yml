@@ -1,14 +1,17 @@
-name: Host 02 Terraform CD
+name: Host 03 Terraform CD
 
 on:
-  workflow_dispatch: 
-  pull_request:
+  workflow_dispatch:
+  pull_request: 
     paths:
       - 'terraform/host_02/**'
     
 permissions:
   contents: write
   issues: write
+
+env:
+  WORKING_DIRECTORY: './terraform/host_02/'
 
 jobs:
   init_and_plan:
@@ -21,36 +24,36 @@ jobs:
     steps:
 
       - name: Checkout 🔔
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
+        uses: actions/checkout@v6.0.2
 
       - name: Map Secrets to Environment Variables 🗺️ 
-        uses: oNaiPs/secrets-to-env-action@75f319b3c8c926ac2eabcca34daa6cf531daf32f # v1.8
+        uses: oNaiPs/secrets-to-env-action@v1.8
         with:
             secrets: ${{ toJSON(secrets) }}        
 
       - name: Replace Tokens 🪙
-        uses: cschleiden/replace-tokens@4d5a042c84c3568b3858b7af9394923d2d5195c9 # v1.3
+        uses: cschleiden/replace-tokens@v1.3
         with:
-          files: '["./terraform/host_02/**/*"]'
+          files: '["${{ env.WORKING_DIRECTORY }}**/*"]'
 
       - name: Install Terraform ⛰️
-        uses: hashicorp/setup-terraform@5e8dbf3c6d9deaf4193ca7a8fb23f2ac83bb6c85 # v4
+        uses: hashicorp/setup-terraform@v4.0.0
 
       - name: Terraform Init 🏃
         id: terraformInit
         run: terraform init
-        working-directory: ./terraform/host_02
+        working-directory: ${{ env.WORKING_DIRECTORY }}
 
       - name: Terraform Plan 🗺️
         id: terraformPlan
         run: |
           terraform plan -input=false -no-color -out ${{ github.sha }}.tfplan -detailed-exitcode 
-        working-directory: ./terraform/host_02
+        working-directory: ${{ env.WORKING_DIRECTORY }}
 
       - name: Cache Terraform Plan 📦
-        uses: actions/cache/save@668228422ae6a00e4ad889ee87cd7109ec5666a7 # v5.0.4
+        uses: actions/cache/save@v5.0.4
         with:
-          path: ./terraform/host_02/**
+          path: '${{ env.WORKING_DIRECTORY }}**'
           key: ${{ github.sha }}
 
   apply:
@@ -63,7 +66,7 @@ jobs:
     steps:
 
       - name: Manual Approval 🚦
-        uses: trstringer/manual-approval@9f5e5d6bc511762e17f849775a3c56bdea6b4493 # v1
+        uses: trstringer/manual-approval@v1.12.0
         with:
           secret: ${{ github.TOKEN }}
           approvers: data-tangles
@@ -73,18 +76,17 @@ jobs:
           exclude-workflow-initiator-as-approver: false
 
       - name: Checkout 🔔
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
+        uses: actions/checkout@v6.0.2
 
       - name: Restore Terraform Plan 🗺️
-        uses: actions/cache/restore@668228422ae6a00e4ad889ee87cd7109ec5666a7 # v5.0.4
+        uses: actions/cache/restore@v5.0.4
         with:
-          path: ./terraform/host_02/**
+          path: '${{ env.WORKING_DIRECTORY }}**'
           key: ${{ github.sha }}
 
       - name: Install Terraform ⛰️
-        uses: hashicorp/setup-terraform@5e8dbf3c6d9deaf4193ca7a8fb23f2ac83bb6c85 # v4
+        uses: hashicorp/setup-terraform@v4.0.0
 
       - name: Terraform Apply 🚀
         run: terraform apply ${{ github.sha }}.tfplan
-        working-directory: ./terraform/host_02
-
+        working-directory: ${{ env.WORKING_DIRECTORY }}
