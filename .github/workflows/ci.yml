@@ -23,21 +23,21 @@ jobs:
     steps:
 
       - name: Generate GitHub App Token 🪙
-        uses: actions/create-github-app-token@v3.0.0
+        uses: actions/create-github-app-token@f8d387b68d61c58ab83c6c016672934102569859 # v3.0.0
         id: generate-token
         with:
           app-id: ${{ secrets.BRAID_BOT_APP_ID }}
           private-key: ${{ secrets.BRAID_BOT_PRIVATE_KEY }}
 
       - name: Checkout 🔔
-        uses: actions/checkout@v6.0.2
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
           ref: ${{ github.head_ref }}
           token: ${{ steps.generate-token.outputs.token }}
 
       - name: Conventional Changelog Action 📋
         id: changelog
-        uses: TriPSs/conventional-changelog-action@v6.3.0
+        uses: TriPSs/conventional-changelog-action@91be4f3188da74fe85de9caffcebc80b26d43b5b # v6.3.0
         with:
           github-token: ${{ steps.generate-token.outputs.token }}
           git-user-name: "braid-bot[bot]"
@@ -48,7 +48,7 @@ jobs:
 
       - name: Generate Release 📦
         if: ${{ steps.changelog.outputs.skipped == 'false' }}
-        uses: softprops/action-gh-release@v2.6.1
+        uses: softprops/action-gh-release@153bb8e04406b158c6c84fc1615b65b24149a1fe # v2.6.1
         with:
           tag_name: ${{ steps.changelog.outputs.tag }}
           name: ${{ steps.changelog.outputs.tag }}
