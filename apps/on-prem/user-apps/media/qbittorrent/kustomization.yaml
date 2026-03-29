@@ -5,3 +5,4 @@ resources:
 - persistentvolumeclaim.yaml
 - service.yaml
 - statefulset.yaml
+- httproute.yaml

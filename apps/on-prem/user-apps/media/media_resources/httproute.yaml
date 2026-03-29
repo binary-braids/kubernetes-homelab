@@ -46,12 +46,3 @@ spec:
         name: bazarr-service
         namespace: media
         port: 6767
-    - matches:
-      - path:
-          type: PathPrefix
-          value: /qbittorrent
-      backendRefs:
-      - kind: Service
-        name: qbittorrent-service
-        namespace: media
-        port: 8080
