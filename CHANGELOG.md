@@ -1,3 +1,12 @@
+# [0.14.0](https://github.com/binary-braids/kubernetes-homelab/compare/v0.13.3...v0.14.0) (2026-03-29)
+
+
+### Features
+
+* add seperate qbittorrent httproute ([33cea75](https://github.com/binary-braids/kubernetes-homelab/commit/33cea759d9c4916f08ffb358f02ca53f7d70653b))
+
+
+
 ## [0.13.3](https://github.com/binary-braids/kubernetes-homelab/compare/v0.13.2...v0.13.3) (2026-03-21)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * update reference grant and configmap to use Certificate instead of Secret ([9c1e7d7](https://github.com/binary-braids/kubernetes-homelab/commit/9c1e7d77ebe4783f28573402a93ccc5b511614f1))
-
-
-
-# [0.11.0](https://github.com/binary-braids/kubernetes-homelab/compare/v0.10.14...v0.11.0) (2026-03-02)
-
-
-### Features
-
-* add reference grant for traefik gateway in cert-manager ([0f801a3](https://github.com/binary-braids/kubernetes-homelab/commit/0f801a30dc891091da781e634e06abf65fefd4cb))
 
 
 
