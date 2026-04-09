@@ -3,8 +3,6 @@
 [![renovate](https://img.shields.io/badge/renovate-enabled-brightgreen?style=for-the-badge&logo=renovatebot)](https://github.com/renovatebot/renovate)
 
 [![CI](https://github.com/binary-braids/kubernetes-homelab/actions/workflows/ci.yml/badge.svg)](https://github.com/binary-braids/kubernetes-homelab/actions/workflows/ci.yml)
-[![Host 01 Terraform CD](https://github.com/binary-braids/kubernetes-homelab/actions/workflows/host_01_terraform.yml/badge.svg)](https://github.com/binary-braids/kubernetes-homelab/actions/workflows/host_01_terraform.yml)
-[![Host 02 Terraform CD](https://github.com/binary-braids/kubernetes-homelab/actions/workflows/host_02_terraform.yml/badge.svg)](https://github.com/binary-braids/kubernetes-homelab/actions/workflows/host_02_terraform.yml)
 
 # Kubernetes Homelab
 
