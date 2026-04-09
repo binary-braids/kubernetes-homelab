@@ -23,7 +23,6 @@ The Git repository contains the following directories:
 📁 clusters                 # FluxCD files for applicable clusters
 ├─📁 on-prem-cluster
 │ └─📁 flux-system
-📁 terraform                # Terraform modules for Kubernetes node VM's
 ```
 ## Getting started
 
