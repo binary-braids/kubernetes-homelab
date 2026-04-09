@@ -1,3 +1,12 @@
+## [0.14.1](https://github.com/binary-braids/kubernetes-homelab/compare/v0.14.0...v0.14.1) (2026-04-09)
+
+
+### Bug Fixes
+
+* remove gemini config file from repo ([f9fa24a](https://github.com/binary-braids/kubernetes-homelab/commit/f9fa24a59309db476cd7a71fb9069209980e8045))
+
+
+
 # [0.14.0](https://github.com/binary-braids/kubernetes-homelab/compare/v0.13.3...v0.14.0) (2026-03-29)
 
 
@@ -76,15 +85,6 @@
 ### Features
 
 * add HTTPRoute for kube-state-metrics in monitoring namespace ([cf7e278](https://github.com/binary-braids/kubernetes-homelab/commit/cf7e2783d660d56b7c42f3d0d73df77454da88fc))
-
-
-
-## [0.11.1](https://github.com/binary-braids/kubernetes-homelab/compare/v0.11.0...v0.11.1) (2026-03-02)
-
-
-### Bug Fixes
-
-* update reference grant and configmap to use Certificate instead of Secret ([9c1e7d7](https://github.com/binary-braids/kubernetes-homelab/commit/9c1e7d77ebe4783f28573402a93ccc5b511614f1))
 
 
 
