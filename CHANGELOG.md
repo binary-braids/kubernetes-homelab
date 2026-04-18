@@ -1,3 +1,12 @@
+## [0.14.2](https://github.com/binary-braids/kubernetes-homelab/compare/v0.14.1...v0.14.2) (2026-04-18)
+
+
+### Bug Fixes
+
+* move Traefik to Deployment type instead of DaemonSet ([f09925f](https://github.com/binary-braids/kubernetes-homelab/commit/f09925faa1cb58ad6bc347d0cbbe6baea55357f0))
+
+
+
 ## [0.14.1](https://github.com/binary-braids/kubernetes-homelab/compare/v0.14.0...v0.14.1) (2026-04-09)
 
 
@@ -76,15 +85,6 @@
 ### Bug Fixes
 
 * update secret name for wildcard certificate in Traefik config ([9f7d5fc](https://github.com/binary-braids/kubernetes-homelab/commit/9f7d5fcf72f6401224716b3e2fe15ef865f6b119))
-
-
-
-# [0.12.0](https://github.com/binary-braids/kubernetes-homelab/compare/v0.11.1...v0.12.0) (2026-03-02)
-
-
-### Features
-
-* add HTTPRoute for kube-state-metrics in monitoring namespace ([cf7e278](https://github.com/binary-braids/kubernetes-homelab/commit/cf7e2783d660d56b7c42f3d0d73df77454da88fc))
 
 
 
