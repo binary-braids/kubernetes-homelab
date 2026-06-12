@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: minecraft-survival
-        image: itzg/minecraft-bedrock-server:2026.5.3@sha256:d0aa4e6726adba217e6a38fcc56320ac948272f06fc21b8a0788dc8f56edaad7
+        image: itzg/minecraft-bedrock-server:2026.6.0@sha256:2847bb60a884afe54d6731dde32698743c5d794b3f6a9785b80d0fdcd7a7d824
         imagePullPolicy: Always
         ports:
         - containerPort: 19132
