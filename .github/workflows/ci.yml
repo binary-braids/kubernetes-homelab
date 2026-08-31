@@ -37,7 +37,7 @@ jobs:
 
       - name: Conventional Changelog Action 📋
         id: changelog
-        uses: TriPSs/conventional-changelog-action@952b14bbc4be87e8458a6ac5926fc655608b1b19 # v6.3.1
+        uses: TriPSs/conventional-changelog-action@469f0e5e35831fbd1962706f29f65daf0a5723f2 # v6.5.0
         with:
           github-token: ${{ steps.generate-token.outputs.token }}
           git-user-name: "braid-bot[bot]"
